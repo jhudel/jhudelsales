@@ -4,11 +4,12 @@
 html,body {
   scroll-behavior: smooth;
   height:100%;
-  width:100%;
   font-family:'Poppins', sans-serif;
-  color:#222;
-  
+  color:#646363;
+  max-width: 100%; 
 }
+
+
 /*nav bar
 .navbar{
   padding: .8rem;
@@ -22,15 +23,38 @@ html,body {
 */
 
 /*nav bar js*/
+textarea{
+  resize:none;
+}
+.logo{
+    width: 4.1rem;
+    height: 4.3rem;
+    margin-left: 2rem;
+    padding-bottom: -12rem;
+    position: sticky;
+    margin-bottom: -9px;
+    margin-top: -8px;
+}
+#logo2{
+    margin-top: -3rem;
+    margin-bottom: -1rem;
+    opacity:0;
+}
 .navbar{
     margin-bottom: 2rem;
+    background-color:#0A242A;
 }
 .navbar-default {
-    background: #F24259;
+    background: #0A242A;
+    box-shadow: 1px 1px 11px #474747;
+    min-height:0rem;
 }
 
+/*kailangan kung ano laman nung taas same lang sa kanya*/
 .navbar-transparent {
     background-color: transparent;
+    box-shadow: 0px 0px 0px #474747;
+    min-height:0rem;
 }
 /*nav bar js*/
 
@@ -47,33 +71,89 @@ html,body {
   width:100%;
 }*/
 .masthead {
-  height: 100vh;
-  min-height: 500px;
-  background-image: url('img/mac.png');
+  height:100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-.masthead h1{
-  text-shadow:1px 1px 10px #6B6B6B;
-  margin-top: 13rem;
+  background-image: url('masthead-wallpaper.jpg');
   color:white;
-  transform: translateY(0%);
 }
+
+.masthead h1 {
+       font-size: 4.6vw;
+    padding-top: -9rem;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+}
+
 .masthead p{
-  color:white;
-  font-family:Calibri;
+       color: white;
+    font-family: Calibri;
+    line-height: 35px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    letter-spacing: 0px;
+    margin: 0px 6rem;
+}
+#masthead-caption{
+  font-weight: bold;
+  /* line-height: 13px; */
+  color: white;
+  transform: translateY(0%);
+  letter-spacing: -0.2vw;
+  margin-top: 17rem;
+  transition: all .18s ease-in;
+  transition-delay: .11s;
+  animation: jquery 2s ease-out;
 }
 .container-fluid row{
   background-color:white;
 }
+.sub-intro{
+      height: 25rem;
+  background-color: #efefef;
+}
+.sub-intro h1{
+  padding: 4rem 0rem;
+}
+.sub-intro p{
+      /* padding: 4rem 0rem; */
+    margin: 0rem 7rem;
+    font-size: 1.6rem;
+    padding-top: -6rem;
+    margin-top: -2rem;
+    font-family: cambri;
+}
+
+/*CONTACT FORM */
+.contactform{
+  
+}
+.contact-form{
+ margin: 1rem 10rem;
+    margin-bottom: 5rem;
+}
+.submit{
+      height: 3rem;
+    width: 8rem;
+    background-color: transparent;
+    color: #646363;
+    font-weight: bold;
+    border: 1px solid #ced4da;
+}
+.submit:hover{
+  background-color:#3FC4D7;
+  border: 0px solid ;
+  color:white;
+  }
+
 /*
 div{
   border: 1px solid #151515;
 }*/
 /*team css*/
 #about{
-  padding:2rem 21px 3rem 21px;
+  padding:2rem 21px 0rem 21px;
 }
 /*team css*/
 .caption span.caption-text{
@@ -114,17 +194,18 @@ div{
 }
 
 .fa-code{
-  color:#e54d26;
+  
 }
 .fa-bold{
-  color:#563d7c;
+  
 }
 .fa-css3{
-  color:#216eaf;
+  
 }
 .fa-code, .fa-bold, .fa-css3{
-  font-size:4em;
+  font-size:2em;
   margin: 1rem;
+  color:black;
 }
 .team-line{
   border-top: 1px solid #B8B8B8;
@@ -140,32 +221,525 @@ div{
   color:#00aced;
 }
 .fa-instagram{
-  color:#517fa4;
+  color:#FFC662;
 }
 .fa-google{
   color:#dd4b39;
 }
 .fa-facebook, .fa-twitter, .fa-instagram, .fa-google{
-  font-size: 30px;
+  font-size: 40px;
   padding:0px 0;
 }
 footer{
-  background-color:#525252;
-  color:white;
+      background-color: #393939;
+    height: 11rem;
+    color: white;
+    font-size: 0.85rem;
 }
 hr.light{
   border-top:1px solid white;
 }
 .contact-area{
-     box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
     padding: 2% 12px;
     margin-bottom: 30px;
 }
+#contact h1{
+    color:white;
+    padding-bottom: 2px;
+    letter-spacing: 6px;
+    font-weight:bolder;
+}
+#contact p,h5{
+    color:white;
+}
+#contact p{
+       color: white;
+    font-size: 1.3rem;
+}
+
+#contact{
+    padding-top: 5rem;
+    height: 36rem;
+    background-color: #d24d57;
+
+}
+#philosophy {
+    padding-top: 0vh;
+}
+.rowskills{
+  padding-top: 4vh;
+}
+
+.rowskills h1{
+ font-size: 3rem;
+padding-bottom: 2rem;
+}
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+  border-radius: 50%;
+}
+.icon-background1 {
+    color: #68D2EB;
+    position: relative;
+    
+}
+.fa-circle{
+     left: -2.5rem;
+     bottom:3.5rem;
+    font-size: 4rem;
+    /* padding-left: 4rem; */
+    /* margin: 0px 0px 0px -5px; */
+    position: absolute;
+
+}
+.fa-stack-1x{
+  font-size:2.5rem;
+  position: relative;
+  top: -1.59rem;
+  left: 0.2rem;
+  color:white;
+}
+.iconic{
+margin:2rem 0rem;
+}
+.jhudel-pic {
+    width: 15rem;
+    /* height: 11rem; */
+    margin-bottom: 2rem;
+}
+
+#work-experience{
+  height: 100%;
+  min-height: 500px;
+  width:100%;
+  background-color:#E9B82D;
+  color:white;
+   
+}
+#work-experience h1{
+  line-height: 24px;
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+  /* margin-bottom: -15px; */
+  z-index: 1;
+}
+#work-experience .work-experience-content1{
+
+}
+.wallpaper1-pic{
+ height: 100%;
+    width: 100%;
+    padding-top: -5rem;
+    margin-top: -2rem;
+}
+#photoshop-arts{
+  background-color:white;
+}
+
+.image1 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.container1:hover .overlay1 {
+  width: 100%;
+}
+
+.text1 {
+  color: white;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.photoshopwork{
+  margin: 0px 100px;
+}
+#photoshop h1{
+  margin-top:2rem;
+}
+#photoshop p{
+  font-size: 1.3rem;
+}
+#workexperience p{
+  font-size: 1.3rem;
+}
+
+.intro-logo{
+  background-color: #3C3C3C;
+  color: white;
+  padding-bottom: 3rem;
+}
+.intro-caption h1{
+  padding-top:2rem; 
+}
 
 
+#contact{
+  color:#646363;
+}
+
+/*sarili nyang css para sa logo*/
+.overlay2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #898888;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.container-picture:hover .overlay2 {
+  width: 100%;
+}
+
+
+.aboutme{
+  height:100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('wallpaper-aboutme.jpg');
+  color:white;
+}
+
+#aboutme-caption{
+  
+     /* line-height: 13px; */
+    color: white;
+    transform: translateY(0%);
+    margin-top: 14rem;
+    transition: all .18s ease-in;
+    transition-delay: .11s;
+    animation: jquery 2s ease-out;
+}
+
+/*buttons lang to hindi sa aboutmepage*/
+.button-aboutme1{
+  background-color:transparent;
+  border:1.5px solid white;
+  width: 9rem;
+  color:white;
+  height: 2.2rem;
+}
+.button-aboutme1:hover{
+background-color:#70BDEE;
+}
+.aboutme-align{
+   margin:3REM 100px;
+   padding-bottom:2rem;
+}
+.aboutme p{
+  font-size:1.2rem;
+}
+
+
+/*border*/
+
+.container-picture {
+
+}
+.image-picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay-picture {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.container-picture:hover .overlay-picture {
+  width: 100%;
+  left: 0;
+}
+
+.text2 {
+  color: white;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.fa-twitter{
+     font-size: 1.5rem;
+    /* text-align: center; */
+    /* padding-left: 1rem; */
+    float: left;
+    margin-left: 0rem;
+}
+.fa-twitter h1{
+  color:white;
+}
+.fa-instagram{
+     font-size: 1.5rem;
+    /* text-align: center; */
+    /* padding-left: 1rem; */
+    float: left;
+    margin-left: 0rem;
+    color:#FFC662;
+}
+.fa-instagram h1{
+  color:white;
+}
+.button-aboutme2{
+  background-color:transparent;
+  border:1.5px solid white;
+  width: 9rem;
+  color:white;
+  height: 2.2rem;
+}
+.button-aboutme2:hover{
+background-color:#FE7C7C;
+}
+
+.button-aboutme3{
+    background-color:transparent;
+    border:2px white solid;
+    width: 15rem;
+    color: #595959;
+    /* height: 1.7rem; */
+    min-height: 4rem;  
+    margin-top:2rem;
+}
+.button-aboutme3:hover{
+background-color:#7096D0;
+
+}
+.button-aboutme3 h6 {
+    font-size: 1rem;
+    /* text-align: center; */
+    margin-top: 6px;
+    color:white;
+}
+.button-aboutme3 a{
+  text-decoration:none;
+}
+
+
+.fa-facebook{
+     font-size: 1.5rem;
+    /* text-align: center; */
+    /* padding-left: 1rem; */
+    float: left;
+    margin-left: 0rem;
+    color:white;
+}
+.fa-facebook h1{
+  color:white;
+}
+.button-aboutme4{
+  background-color:transparent;
+  border:1.5px solid white;
+  width: 9rem;
+  color:white;
+  height: 2.2rem;
+}
+.button-aboutme4:hover{
+background-color:#5776A4;
+}
 
 /*progress bar animation*/
+.skill-area{
+  padding:60px 2rem;
+}
+.skill-area h1{
+  font-size: 24px;
+}
+.skill-banner{
+  margin-bottom: 25px;
+}
+.skillbar {
+position:relative;
+display:block;
+margin-bottom:15px;
+width:100%;
+background:#eee;
+height:35px;
+border-radius:3px;
+transition:0.1s linear;
+transition-property:width, background-color;
+}
+.skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 13px;
+  color: #ffffff;
+  background: #6adcfa;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.skillbar-title span {
+  display:block;
+  background:rgba(0, 0, 0, 0.1);
+  padding:0 20px;
+  height:35px;
+  line-height:35px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+.skill-bar-percent {
+  position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
+    color: #898989;
+  /*color:rgba(0, 0, 0, 0.4);*/
+}
+.skillbar-bar1{
+  height:35px;
+  width:0%;
+  background:#6adcfa;
+  border-radius:3px;
+transition:3s linear;
+}
+.skillbar-bar2{
+  height:35px;
+  width:0%;
+  background:#6adcfa;
+  border-radius:3px;
+transition:3s linear;
+}
+.skillbar-bar3{
+  height:35px;
+  width:0%;
+  background:#6adcfa;
+  border-radius:3px;
+transition:3s linear;
+}
+.skillbar-bar4{
+  height:35px;
+  width:0%;
+  background:#6adcfa;
+  border-radius:3px;
+transition:3s linear;
+}
+.skillbar-bar5{
+  height:35px;
+  width:0%;
+  background:#6adcfa;
+  border-radius:3px;
+transition:3s linear;
+}
+.skillbar-bar6{
+  height:35px;
+  width:0%;
+  background:#6adcfa;
+  border-radius:3px;
+transition:3s linear;
+}
+.skillbar-bar7{
+  height:35px;
+  width:0%;
+  background:#6adcfa;
+  border-radius:3px;
+transition:3s linear;
+}
+.skillbar-bar8{
+  height:35px;
+  width:0%;
+  background:#6adcfa;
+  border-radius:3px;
+transition:3s linear;
+}
+.skillbar-bar9{
+  height:35px;
+  width:0%;
+  background:#6adcfa;
+  border-radius:3px;
+transition:3s linear;
+}
 
+.button-aboutme33{
+    background-color: transparent;
+    border: 1.5px solid white;
+    width: 15rem;
+    color: white;
+    height: 5.3rem;
+    /* padding-top: 6rem; */
+    margin-top: 5rem;
+    transition: all .18s ease-in;
+  transition-delay: .11s;
+  animation: jquery 2s ease-out;
+  }
+
+  .button-aboutme33:hover{
+       background-color: white;
+    border: 1.5px solid white;
+    width: 15rem;
+    color: #d24d57;
+    height: 5.3rem;
+    /* padding-top: 6rem; */
+    margin-top: 5rem;
+  }
+  .button-aboutme34{
+    background-color: transparent;
+    border: 1.5px solid white;
+    width: 15rem;
+    color: white;
+    height: 5.3rem;
+    /* padding-top: 6rem; */
+    margin-top:2rem;
+    transition: all .18s ease-in;
+  transition-delay: .11s;
+  animation: jquery 2s ease-out;
+  }
+
+  .button-aboutme34:hover{
+       background-color: white;
+    border: 1.5px solid white;
+    width: 15rem;
+    color: #3C3C3C;
+    height: 5.3rem;
+    /* padding-top: 6rem; */
+    margin-top: 2rem;
+  }
+
+.arrow-up{
+  width:5rem;
+  height:5rem;
+  background-color:red;
+
+}
 /*progress bar*/
 
 
@@ -174,15 +748,182 @@ hr.light{
 /*---Media Queries --*/
 @media (max-width: 992px) {
 
+  .aboutme-align{
+   margin: 0px 0px;
+   padding-bottom:0rem;
+}
+.text1, .text2 {
+  color: white;
+  font-size: 1vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.masthead p{
+       color: white;
+    font-family: Calibri;
+    line-height: 35px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 0px;
+    margin: 0px 0rem;
+}
+.navbar-expand-lg li{
+  padding:0rem 0rem;
+  margin-top:1rem;
+}
+
+
   }
+
 @media (max-width: 768px) {
+.contact-form{
+  margin:1rem 0rem;
+
+}
+}
+
+@media (max-width: 768px) {
+
+    .aboutme-align{
+   margin: 0px 0px;
+   padding-bottom:0rem;
+}
+.text1, .text2 {
+  color: white;
+  font-size: 2vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+#contact {
+    padding-top: 5rem;
+    height: 36rem;
+    background-color: #d24d57;
+    height: 43rem;
+}
+
   
 }
 @media only screen and (max-width: 576px) {
+  .photoshopwork{
+      margin:0px 3rem;
+  }
+  .text1, .text2 {
+  color: white;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+  .contact-form{
+
+    margin-bottom: 5rem;
+}
+ 
   body h1,h2,h3,h4 {
     font-size:25px;
   }
+    .aboutme-align{
+   margin: 0px 0px;
+   padding-bottom:0rem;
 }
+
+.aboutme{
+  height:50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('wallpaper-aboutme.jpg');
+  color:white;
+}
+
+#aboutme-caption{
+  
+      /* line-height: 13px; */
+    color: white;
+    transform: translateY(0%);
+    margin-top: 2rem;
+    transition: all .18s ease-in;
+    transition-delay: .11s;
+    animation: jquery 2s ease-out;
+}
+#contact {
+    padding-top: 5rem;
+    height: 36rem;
+    background-color: #d24d57;
+    height: 43rem;
+}
+
+}
+@media (max-width: 575px) {
+.logo{
+    width: 4.1rem;
+    height: 4.3rem;
+    margin-left: 0rem;
+    padding-bottom: -12rem;
+    position: sticky;
+    margin-bottom: -9px;
+    margin-top: -8px;
+}
+#logo2{
+    margin-top: -3rem;
+    margin-bottom: -1rem;
+    opacity:0;
+}
+
+
+
+  .aboutme-align{
+   margin: 0px 0px;
+   padding-bottom:0rem;
+}
+
+.masthead h1 {
+ font-size:2.5rem;
+}
+
+
+.masthead p{
+       color: white;
+    font-family: Calibri;
+    line-height: 35px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 0px;
+    margin: 0px 0rem;
+}
+.aboutme p{
+  font-size:1rem;
+}
+#photoshop p{
+  font-size: 1rem;
+}
+#workexperience p{
+  font-size: 1rem;
+}
+#contact {
+    padding-top: 5rem;
+    height: 36rem;
+    background-color: #d24d57;
+    height: 43rem;
+}
+
+}
+
 
 
 /*---Firefox Bug Fix --*/
@@ -204,9 +945,10 @@ figure {
  
 }
 #fixed {
-    height: 80vh;
+  height: 80vh;
   min-height: 500px;
   background-image: url('img/mac.png');
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -219,6 +961,14 @@ figure {
 }
 .skill-area [class*="col-"] {
     padding: 0rem 1rem;
+}
+
+.photoshopwork [class*="col-"] {
+    padding: 0rem;
+}
+.aboutme-align [class*="col-"] {
+    padding: 1rem;
+    margin:0px 0rem;
 }
 
 

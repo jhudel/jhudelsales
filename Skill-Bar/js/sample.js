@@ -1,9 +1,6 @@
 $(document).ready(function () {
-var offsetTop = $('.skill-area').offset().top;
 
-    $(window).scroll(function () {
-        var height = $(window).height();
-        if ($(window).scrollTop() + height >= offsetTop) {
+         if ($document.scrollTop() >= 270) {
             jQuery('.skillbar').each(function () {
                 jQuery(this).find('.skillbar-bar').animate({
                     width: jQuery(this).attr('data-percent')
@@ -12,4 +9,4 @@ var offsetTop = $('.skill-area').offset().top;
         }
     });
 //skillbar
-});
+
