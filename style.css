@@ -449,7 +449,8 @@ margin:2rem 0rem;
 background-color:#70BDEE;
 }
 .aboutme-align{
-
+   margin:3REM 100px;
+   padding-bottom:2rem;
 }
 .aboutme p{
   font-size:1.2rem;
@@ -522,7 +523,6 @@ background-color:#70BDEE;
   width: 9rem;
   color:white;
   height: 2.2rem;
-  
 }
 .button-aboutme2:hover{
 background-color:#FE7C7C;
@@ -569,7 +569,6 @@ background-color:#7096D0;
   width: 9rem;
   color:white;
   height: 2.2rem;
-  
 }
 .button-aboutme4:hover{
 background-color:#5776A4;
