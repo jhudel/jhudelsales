@@ -569,6 +569,7 @@ background-color:#7096D0;
   width: 9rem;
   color:white;
   height: 2.2rem;
+  display: block;
 }
 .button-aboutme4:hover{
 background-color:#5776A4;
