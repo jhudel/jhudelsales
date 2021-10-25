@@ -220,13 +220,13 @@ div{
 .fa-twitter{
   color:#00aced;
 }
-.fa-instagram{
-  color:#FFC662;
+.fa-behance-square{
+  color:#2b15f3;
 }
 .fa-google{
   color:#dd4b39;
 }
-.fa-facebook, .fa-twitter, .fa-instagram, .fa-google{
+.fa-facebook, .fa-twitter, .fa-behance-square, .fa-google{
   font-size: 40px;
   padding:0px 0;
 }
@@ -506,15 +506,15 @@ background-color:#70BDEE;
 .fa-twitter h1{
   color:white;
 }
-.fa-instagram{
+.fa-behance-square{
      font-size: 1.5rem;
     /* text-align: center; */
     /* padding-left: 1rem; */
     float: left;
     margin-left: 0rem;
-    color:#FFC662;
+    color:#2b15f3;
 }
-.fa-instagram h1{
+.fa-behance-square h1{
   color:white;
 }
 .button-aboutme2{
