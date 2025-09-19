@@ -9,6 +9,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Web Developer | UI & UX Designer</title>
+
+    <!-- ADDED: No-flash theme bootstrap (sets data-theme ASAP) -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var start = saved || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', start);
+        } catch (e) {}
+      })();
+    </script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -18,22 +31,82 @@
     <link href="Skill-Bar/style2.css" rel="stylesheet">
     <link rel="stylesheet" href="animate.css">
 
-    <!-- ADDED: styles for Back-to-Top button (no other CSS touched) -->
+    <!-- ADDED: minimal theme variables + Back-to-Top + Theme Toggle styles -->
     <style>
+      /* Theme palette (safe, non-destructive) */
+      :root{
+        --bg:#ffffff;
+        --text:#111111;
+        --muted:#666666;
+        --card:#f6f7f9;
+        --brand:#1DAECC; /* your existing teal */
+        --link:#0a66c2;
+        --shadow:0 10px 30px rgba(0,0,0,.12);
+        --focus:0 0 0 3px rgba(29,174,204,.35);
+      }
+      html,body{ background:var(--bg); color:var(--text); }
+      a{ color:var(--link); }
+      [data-theme="dark"]{
+        --bg:#0b0c10;
+        --text:#e5e7eb;
+        --muted:#9aa0a6;
+        --card:#121317;
+        --brand:#6bd3e6; /* brighter teal in dark */
+        --link:#6ea8fe;
+        --shadow:0 10px 30px rgba(0,0,0,.35);
+        --focus:0 0 0 3px rgba(110,168,254,.35);
+      }
+      /* keep your navbar visible on dark */
+      [data-theme="dark"] .navbar.navbar-dark{
+        background-color: rgba(12,14,18,.88) !important;
+      }
+      /* General text contrast fix inside dark mode */
+      [data-theme="dark"] .container, 
+      [data-theme="dark"] .container-fluid, 
+      [data-theme="dark"] .row, 
+      [data-theme="dark"] p, 
+      [data-theme="dark"] h1, 
+      [data-theme="dark"] h2, 
+      [data-theme="dark"] h3, 
+      [data-theme="dark"] h4, 
+      [data-theme="dark"] h5, 
+      [data-theme="dark"] h6 {
+        color: var(--text);
+      }
+
+      /* ADDED: Back-to-Top */
       .back-to-top{
         position:fixed; right:24px; bottom:24px;
         width:48px; height:48px; border-radius:999px; border:0;
-        background:#1DAECC; color:#fff; font-size:20px; line-height:1;
+        background:#1DAECC; /* original color kept */
+        color:#fff; font-size:20px; line-height:1;
         display:none; align-items:center; justify-content:center;
         box-shadow:0 10px 30px rgba(0,0,0,.2); z-index:9999; cursor:pointer;
         transition:transform .15s ease;
+        background: var(--brand); /* theme-aware */
       }
       .back-to-top:hover{ transform:translateY(-1px); }
       .back-to-top:active{ transform:translateY(0); }
-      .back-to-top:focus{ outline:none; box-shadow:0 0 0 3px rgba(29,174,204,.35); }
+      .back-to-top:focus{ outline:none; box-shadow:var(--focus); }
       @media (prefers-reduced-motion: reduce){
         .back-to-top{ transition:none; }
       }
+
+      /* ADDED: Theme toggle button (navbar) */
+      .theme-toggle-btn{
+        border:1px solid var(--brand);
+        color:var(--brand);
+        background:transparent;
+        border-radius:999px;
+        width:38px;height:38px;
+        display:inline-flex;align-items:center;justify-content:center;
+        margin-left:12px;
+        box-shadow:none; cursor:pointer;
+        transition:background .15s ease, color .15s ease, transform .15s ease;
+      }
+      .theme-toggle-btn:hover{ background:var(--brand); color:#fff; transform:translateY(-1px); }
+      .theme-toggle-btn:active{ transform:translateY(0); }
+      .theme-toggle-btn:focus{ outline:none; box-shadow:var(--focus); }
     </style>
 </head>
 <body>
@@ -101,6 +174,11 @@
                 <a class="nav-link scroll" href="#contact">Contact</a>
             </li>
         </ul>   
+
+        <!-- ADDED: Theme toggle button (kept small & unobtrusive) -->
+        <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+          <i id="theme-icon" class="fas fa-moon" aria-hidden="true"></i>
+        </button>
     </div>
     </div>
 </nav>
@@ -422,7 +500,7 @@
 
 <header id="aboutme" class="aboutme">
 <div class="container">
-<div class="row text-center padding wow fadeInUp">
+<div class="row text-center padding wow FadeInUp">
     <div class="col-xl-12 " id="aboutme-caption">
         <h1 class="wow fadeInLeft" data-wow-delay="0.5s">ABOUT ME</h1><br>
         <p class="wow fadeInUp" data-wow-delay="0.6s">I am a web designer, Front/Back-end developer and a Graphic Artist. I am interested in all kinds of visual communication, but my major focus is on web development. I have a serious passion for Web Development and creating Vector Artworks/Logos. </p>
@@ -598,7 +676,7 @@ var offsetTop = $('.skill-area').offset().top;
 
 </script>
 
-<!-- ADDED: Build-stamp + Back-to-Top logic (standalone, doesn’t touch your existing scripts) -->
+<!-- ADDED: Build-stamp + Back-to-Top + Theme Toggle logic -->
 <script>
   // Build stamp (Asia/Manila)
   (function(){
@@ -630,8 +708,47 @@ var offsetTop = $('.skill-area').offset().top;
       try {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } catch(e) {
-        // fallback for old browsers
         document.documentElement.scrollTop = 0; document.body.scrollTop = 0;
+      }
+    });
+  })();
+
+  // Theme toggle (keeps your existing CSS; only applies high-level colors)
+  (function(){
+    var root = document.documentElement;
+    var key = 'theme';
+    function setIcon(theme){
+      var icon = document.getElementById('theme-icon');
+      if (!icon) return;
+      icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      icon.setAttribute('aria-hidden','true');
+    }
+    function apply(theme){
+      root.setAttribute('data-theme', theme);
+      setIcon(theme);
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch(e){}
+      var start = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      apply(start);
+      var btn = document.getElementById('theme-toggle');
+      if (btn){
+        btn.addEventListener('click', function(){
+          var next = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
+          apply(next);
+          try { localStorage.setItem(key, next); } catch(e){}
+        });
+      }
+      // React to OS changes if no manual choice this session
+      if (window.matchMedia) {
+        var mql = window.matchMedia('(prefers-color-scheme: dark)');
+        var onChange = function(e){
+          if (!localStorage.getItem(key)) {
+            apply(e.matches ? 'dark' : 'light');
+          }
+        };
+        mql.addEventListener ? mql.addEventListener('change', onChange) : mql.addListener(onChange);
       }
     });
   })();
