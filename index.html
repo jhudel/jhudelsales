@@ -1,87 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jhudel Sales — Web Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+    <!-- for animating -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/waypoints-master/lib/jquery.waypoints.min.js"></script>
+    <script src="js/sample.js"></script>
+    <!-- for animating -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Developer | UI & UX Designer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="Skill-Bar/style2.css" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
+
+    <!-- ADDED: styles for Back-to-Top button and Dark Mode -->
+    <style>
+      .back-to-top {
+        position: fixed; right: 24px; bottom: 24px;
+        width: 48px; height: 48px; border-radius: 999px; border: 0;
+        background: #1DAECC; color: #fff; font-size: 20px;
+        display: none; align-items: center; justify-content: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,.2); z-index: 9999; cursor: pointer;
+        transition: transform .15s ease;
+      }
+      .back-to-top:hover { transform: translateY(-1px); }
+      .back-to-top:active { transform: translateY(0); }
+      .back-to-top:focus { outline: none; box-shadow: 0 0 0 3px rgba(29,174,204,.35); }
+      @media (prefers-reduced-motion: reduce) {
+        .back-to-top { transition: none; }
+      }
+
+      body.dark-mode {
+        background-color: #121212;
+        color: #f5f5f5;
+      }
+      body.dark-mode .card,
+      body.dark-mode header,
+      body.dark-mode footer,
+      body.dark-mode section {
+        background-color: #1e1e1e;
+      }
+      body.dark-mode .navbar {
+        background-color: #222 !important;
+      }
+      .dark-toggle-btn {
+        border: none;
+        background: transparent;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+        margin-left: 15px;
+      }
+    </style>
 </head>
 <body>
+  <!-- Add inside your navbar ul.navbar-nav -->
+  <script>
+    const navDarkButton = document.createElement('li');
+    navDarkButton.classList.add('nav-item');
+    navDarkButton.innerHTML = '<button class="dark-toggle-btn" onclick="document.body.classList.toggle(\'dark-mode\')">🌙</button>';
+    window.addEventListener('DOMContentLoaded', () => {
+      const navRight = document.querySelector('.navbar-nav.ml-auto');
+      if(navRight) navRight.appendChild(navDarkButton);
+    });
+  </script>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <h1 class="logo">Jhudel</h1>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#work">Work Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </div>
-  </nav>
-
-  <!-- Home -->
-  <section id="home" class="section home">
-    <div class="container">
-      <h2>Jhudel Test Sales</h2>
-      <p>
-        I'm a Filipino-based web designer & front-end developer focused on crafting clean & user-friendly experiences.
-      </p>
-      <a href="#work" class="btn">Check My Work</a>
-    </div>
-  </section>
-
-  <!-- Work Experience -->
-  <section id="work" class="section work">
-    <div class="container">
-      <h2>Work Experience</h2>
-      <div class="work-entry">
-        <h3>Senior Full Stack Developer - MIMS</h3>
-        <p><strong>Dates:</strong> 2023 – Present</p>
-        <p>Building pharmaceutical web applications with .NET Core, Angular, SQL Server, and Razor. Lead developer for monograph export, drug interaction, and duplication systems using SQLite, Dapper, and Airflow-based ETL pipelines.</p>
+  <!-- ADDED: Work Experience Stylish Section -->
+  <section id="experience">
+    <div class="container padding">
+      <div class="row text-center wow fadeInUp">
+        <div class="col-xl-12">
+          <h1>WORK EXPERIENCE</h1>
+          <p class="mb-5">Here are the roles I've taken professionally in the tech industry.</p>
+        </div>
       </div>
-      <div class="work-entry">
-        <h3>Web Developer - [Previous Company]</h3>
-        <p><strong>Dates:</strong> 2020 – 2023</p>
-        <p>Worked on enterprise systems using ASP.NET, Web API, and Angular. Focused on component-driven design, reusable services, and CI/CD pipelines.</p>
+      <div class="row">
+        <div class="col-md-6 wow fadeInLeft">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h4 class="card-title">Lead Angular Developer</h4>
+              <h6 class="card-subtitle mb-2 text-muted">MIMS Philippines • 2021–Present</h6>
+              <p class="card-text">Lead frontend developer for FastTrack: managing components, integrations, and performance improvements using Angular and .NET stack.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 wow fadeInRight">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h4 class="card-title">.NET Full Stack Developer</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Freelance • 2019–2021</h6>
+              <p class="card-text">Built full-stack web apps for logistics and health domains using ASP.NET Core, Razor, Angular, and SQL Server. Delivered scalable admin dashboards.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul>
-        <li>✅ .NET Core / C# / ASP.NET</li>
-        <li>✅ Angular / TypeScript</li>
-        <li>✅ SQL Server / SQLite / Dapper</li>
-        <li>✅ Docker / Azure / Airflow</li>
-        <li>✅ HTML / CSS / JavaScript</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I’m Jhudel Sales — a full stack web developer passionate about delivering clean, performant, and scalable web applications. I love solving real-world problems through code.</p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: jhudelsales@gmail.com</p>
-      <p>GitHub: <a href="https://github.com/jhudel" target="_blank">github.com/jhudel</a></p>
-    </div>
-  </section>
-
 </body>
 </html>
