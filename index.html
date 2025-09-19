@@ -1,138 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jhudel Sales | Portfolio</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <style>
-    body {
-      background-color: #fff;
-      color: #333;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .dark-mode {
-      background-color: #121212;
-      color: #f5f5f5;
-    }
-
-    .dark-mode .card {
-      background-color: #1e1e1e;
-      border-color: #444;
-    }
-
-    .dark-mode .btn-primary {
-      background-color: #333;
-      border-color: #555;
-    }
-
-    .section-title {
-      font-weight: bold;
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
-
-    .card {
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 20px;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jhudel Sales — Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand font-weight-bold" href="#">Jhudel Sales</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
-        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#work-experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item">
-            <button class="btn btn-sm btn-outline-dark ml-2" onclick="toggleDarkMode()">🌙 Dark Mode</button>
-          </li>
-        </ul>
-      </div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Jhudel</h1>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#work">Work Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
     </div>
   </nav>
 
-  <!-- Main Container -->
-  <div class="container mt-5">
-    <header class="text-center mb-5">
-      <h1>Jhudel Sales</h1>
-      <p class="lead">Lead Angular Developer | Full-Stack .NET Developer</p>
-    </header>
+  <!-- Home -->
+  <section id="home" class="section home">
+    <div class="container">
+      <h2>Jhudel Test Sales</h2>
+      <p>
+        I'm a Filipino-based web designer & front-end developer focused on crafting clean & user-friendly experiences.
+      </p>
+      <a href="#work" class="btn">Check My Work</a>
+    </div>
+  </section>
 
-    <section id="about">
-      <h2 class="section-title">About Me</h2>
-      <p>Hello! I'm Jhudel, a passionate full-stack developer specializing in Angular and .NET technologies. I love building scalable applications and leading dev teams.</p>
-    </section>
-
-    <section id="work-experience">
-      <h2 class="section-title">Work Experience</h2>
-
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lead Angular Developer</h5>
-          <h6 class="card-subtitle mb-2 text-muted">MIMS Philippines | 2021 - Present</h6>
-          <p class="card-text">
-            Leading frontend development for FastTrack, implementing drug interaction features and product monograph processing. Collaborating with cross-functional teams using Agile methodologies.
-          </p>
-        </div>
+  <!-- Work Experience -->
+  <section id="work" class="section work">
+    <div class="container">
+      <h2>Work Experience</h2>
+      <div class="work-entry">
+        <h3>Senior Full Stack Developer - MIMS</h3>
+        <p><strong>Dates:</strong> 2023 – Present</p>
+        <p>Building pharmaceutical web applications with .NET Core, Angular, SQL Server, and Razor. Lead developer for monograph export, drug interaction, and duplication systems using SQLite, Dapper, and Airflow-based ETL pipelines.</p>
       </div>
-
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">.NET Full Stack Developer</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Freelance | 2019 - 2021</h6>
-          <p class="card-text">
-            Developed various custom web applications and dashboards for clients in health and logistics domains. Extensive use of ASP.NET Core, Razor Pages, Angular, and MSSQL.
-          </p>
-        </div>
+      <div class="work-entry">
+        <h3>Web Developer - [Previous Company]</h3>
+        <p><strong>Dates:</strong> 2020 – 2023</p>
+        <p>Worked on enterprise systems using ASP.NET, Web API, and Angular. Focused on component-driven design, reusable services, and CI/CD pipelines.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="projects">
-      <h2 class="section-title">Projects</h2>
+  <!-- Skills -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2>Skills</h2>
       <ul>
-        <li><strong>FastTrack Drug API</strong> – Drug interactions, lactation & pregnancy modules</li>
-        <li><strong>SQLite WebAPI</strong> – Country-specific exports with search (FTS5)</li>
-        <li><strong>ETL Pipelines with Airflow</strong> – Build-to-build drug data transformation</li>
+        <li>✅ .NET Core / C# / ASP.NET</li>
+        <li>✅ Angular / TypeScript</li>
+        <li>✅ SQL Server / SQLite / Dapper</li>
+        <li>✅ Docker / Azure / Airflow</li>
+        <li>✅ HTML / CSS / JavaScript</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2 class="section-title">Contact</h2>
+  <!-- About -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I’m Jhudel Sales — a full stack web developer passionate about delivering clean, performant, and scalable web applications. I love solving real-world problems through code.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Me</h2>
       <p>Email: jhudelsales@gmail.com</p>
-      <p>GitHub: <a href="https://github.com/jhudel" target="_blank">https://github.com/jhudel</a></p>
-    </section>
-  </div>
+      <p>GitHub: <a href="https://github.com/jhudel" target="_blank">github.com/jhudel</a></p>
+    </div>
+  </section>
 
-  <!-- Dark Mode Script -->
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
-
-  <!-- Bootstrap Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
