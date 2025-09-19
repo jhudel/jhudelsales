@@ -1,758 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- for animating -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/waypoints-master/lib/jquery.waypoints.min.js"></script>
-    <script src="js/sample.js"></script>
-    <!-- for animating -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web Developer | UI & UX Designer</title>
+  <!-- Prevent theme flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var start = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', start);
+      } catch (e) {}
+    })();
+  </script>
 
-    <!-- ADDED: No-flash theme bootstrap (sets data-theme ASAP) -->
-    <script>
-      (function () {
-        try {
-          var saved = localStorage.getItem('theme');
-          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-          var start = saved || (prefersDark ? 'dark' : 'light');
-          document.documentElement.setAttribute('data-theme', start);
-        } catch (e) {}
-      })();
-    </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jhudel Sales — Web Developer | UI & UX Designer</title>
+  <meta name="description" content="Portfolio of Jhudel Sales — Filipino web designer & front-end developer focused on crafting clean, user-friendly experiences." />
+  <meta name="theme-color" content="#1DAECC" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <link href="style.css" rel="stylesheet">
-    <link href="Skill-Bar/style2.css" rel="stylesheet">
-    <link rel="stylesheet" href="animate.css">
+  <!-- Bootstrap 4 (matches your original stack) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 
-    <!-- ADDED: minimal theme variables + Back-to-Top + Theme Toggle styles -->
-    <style>
-      /* Theme palette (safe, non-destructive) */
-      :root{
-        --bg:#ffffff;
-        --text:#111111;
-        --muted:#666666;
-        --card:#f6f7f9;
-        --brand:#1DAECC; /* your existing teal */
-        --link:#0a66c2;
-        --shadow:0 10px 30px rgba(0,0,0,.12);
-        --focus:0 0 0 3px rgba(29,174,204,.35);
-      }
-      html,body{ background:var(--bg); color:var(--text); }
-      a{ color:var(--link); }
-      [data-theme="dark"]{
-        --bg:#0b0c10;
-        --text:#e5e7eb;
-        --muted:#9aa0a6;
-        --card:#121317;
-        --brand:#6bd3e6; /* brighter teal in dark */
-        --link:#6ea8fe;
-        --shadow:0 10px 30px rgba(0,0,0,.35);
-        --focus:0 0 0 3px rgba(110,168,254,.35);
-      }
-      /* keep your navbar visible on dark */
-      [data-theme="dark"] .navbar.navbar-dark{
-        background-color: rgba(12,14,18,.88) !important;
-      }
-      /* General text contrast fix inside dark mode */
-      [data-theme="dark"] .container, 
-      [data-theme="dark"] .container-fluid, 
-      [data-theme="dark"] .row, 
-      [data-theme="dark"] p, 
-      [data-theme="dark"] h1, 
-      [data-theme="dark"] h2, 
-      [data-theme="dark"] h3, 
-      [data-theme="dark"] h4, 
-      [data-theme="dark"] h5, 
-      [data-theme="dark"] h6 {
-        color: var(--text);
-      }
+  <!-- Font Awesome (matches your original) -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-      /* ADDED: Back-to-Top */
-      .back-to-top{
-        position:fixed; right:24px; bottom:24px;
-        width:48px; height:48px; border-radius:999px; border:0;
-        background:#1DAECC; /* original color kept */
-        color:#fff; font-size:20px; line-height:1;
-        display:none; align-items:center; justify-content:center;
-        box-shadow:0 10px 30px rgba(0,0,0,.2); z-index:9999; cursor:pointer;
-        transition:transform .15s ease;
-        background: var(--brand); /* theme-aware */
-      }
-      .back-to-top:hover{ transform:translateY(-1px); }
-      .back-to-top:active{ transform:translateY(0); }
-      .back-to-top:focus{ outline:none; box-shadow:var(--focus); }
-      @media (prefers-reduced-motion: reduce){
-        .back-to-top{ transition:none; }
-      }
+  <!-- Your existing animate.css (keep file in the root) -->
+  <link rel="stylesheet" href="animate.css"/>
 
-      /* ADDED: Theme toggle button (navbar) */
-      .theme-toggle-btn{
-        border:1px solid var(--brand);
-        color:var(--brand);
-        background:transparent;
-        border-radius:999px;
-        width:38px;height:38px;
-        display:inline-flex;align-items:center;justify-content:center;
-        margin-left:12px;
-        box-shadow:none; cursor:pointer;
-        transition:background .15s ease, color .15s ease, transform .15s ease;
-      }
-      .theme-toggle-btn:hover{ background:var(--brand); color:#fff; transform:translateY(-1px); }
-      .theme-toggle-btn:active{ transform:translateY(0); }
-      .theme-toggle-btn:focus{ outline:none; box-shadow:var(--focus); }
-    </style>
+  <!-- New site styles -->
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-nav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <img src="logosales.png" class="logo mr-2" alt="Jhudel Sales logo" />
+        <strong>Jhudel Sales</strong>
+      </a>
 
-<!--- HEADER INTRO -->
-
-<header id="home" class="masthead">
-<div class="container">    
-<div class="row text-center wow fadeInUp">
-    <div class="col-xl-12 " id="masthead-caption">
-        <h1>Jhudel Test Sales</h1>
-        <p class="wow fadeInLeft" data-wow-delay="0.5s">I'm a Filipino based web designer & front-end developer focused on crafting clean & user-friendly experiences.</p>
-    </div>
-    <div class="col-xl-12">
-    <a href="#skills">
-    <button type="button" class="btn button-aboutme33">
-               <h6>CHECK MY WORK</h6>
-    </button></a>
-    </div>
-</div>
-</div>
-</header>
-
-<!--- END OF HEADER INTRO -->
-<!--- SUB INTRO  
-<div class="container-fluid">    
-<div class="row text-center wow fadeInUp">
-    <div class="col-xl-12 col-xs-12 col-sm-12 col-md-12 sub-intro">
-        <h1>PORTFOLIO</h1>
-        <p>Below you can see some projects I've been working on lately. I divide each project into four follow-up areas: comprehensive research, wireframing, design & development. This process allows me to create great product with client goals in mind.</p>
-    </div>
-</div>
-</div>
--->
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-transparent navbar-expand-lg navbar-dark fixed-top animated fadeIn fadeInDown">
-<div class="container-fluid">
-    <a class="navbar-brand scroll" href="#home">
-        <div id="logo">
-        <img src="logosales.png" class="logo"></img>
-        </div>
-        <div id="logo2">
-            <p>JHUDEL SALES</p>
-        </div>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link scroll" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link scroll" href="#skills">Skills</a>
-            </li>
-             <li class="nav-item">
-                <a class="nav-link scroll" href="#workexperience">Work</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link scroll" href="#aboutme">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link scroll" href="#contact">Contact</a>
-            </li>
-        </ul>   
+      </button>
 
-        <!-- ADDED: Theme toggle button (kept small & unobtrusive) -->
-        <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle dark mode" title="Toggle theme">
-          <i id="theme-icon" class="fas fa-moon" aria-hidden="true"></i>
-        </button>
+      <div id="navMenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link scroll" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link scroll" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link scroll" href="#workexperience">Work</a></li>
+          <li class="nav-item"><a class="nav-link scroll" href="#aboutme">About</a></li>
+          <li class="nav-item"><a class="nav-link scroll" href="#contact">Contact</a></li>
+          <li class="nav-item pl-lg-3">
+            <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+              <i id="theme-icon" class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-    </div>
-</nav>
-<!-- Navigation -->
+  </nav>
 
-
-<!--- ABOUT -->
-<section id="skills">
-<div class="container rowskills padding" >
-<div class="row text-center padding">
-    <div class="col-12 wow slideInLeft">
-        <h1>SKILLS</h1>
-    </div>
-    <div class="iconic col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 wow flipInY" data-wow-delay="0.1s">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x icon-background1"></i>
-          <i class="fa fa-tv fa-stack-1x"></i>
-        </span>
-        <br>
-        <br>
-        <h3>Responsive</h3>
-        <p>My layouts will work on any device, big or small.</p>
-    </div>
-
-    <div class="iconic col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 wow flipInY" data-wow-delay="0.2s">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x icon-background1"></i>
-          <i class="fa fa-rocket fa-stack-1x"></i>
-        </span>
-        <br>
-        <br>
-        <h3>Dynamic</h3>
-        <p>Websites don't have to be static, I love making pages come to life.</p>
-    </div>
-
-    <div class="iconic col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 wow flipInY" data-wow-delay="0.3s">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x icon-background1"></i>
-          <i class="fa fa-history fa-stack-1x"></i>
-        </span>
-        <br>
-        <br>
-        <h3>Fast</h3>
-        <p>Fast load times and lag free interaction, my highest priority.</p>
-    </div>
-
-    <div class="iconic col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 wow flipInY" data-wow-delay="0.4s">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x icon-background1"></i>
-          <i class="fa fa-handshake fa-stack-1x"></i>
-        </span>
-        <br>
-        <br>
-        <h3>Intuitive</h3>
-        <p>Strong preference for easy to use, intuitive UX/UI.</p>
-    </div>
-
-</div>
-</div>
-</section>
-<!--- END OF ABOUT -->
-
-<!-- PROGRESS BAR -->
-<section class="skill-area section-padding" id="about">
-<div class="container">
-<div class="row text-center">
-    <div class="col-sm-12 col-xl-6 col-md-6 col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-        <img src="jhudel2.png" class="jhudel-pic img-fluid">
-
-        <br>
-        <h1>Who's this guy?</h1>
-        <p>I am a Web Developer on one of the well-known BPO company on Philippines,
-        have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
-    </div>
-    <!--<div class="skill-banner container">
-        <h1>My skills</h1>
-    </div>-->
-    
-<div class="col-sm-12 col-lg-6 col-md-6 col-xl-6 " data-wow-delay="0.1s">
-<div class="skillbar clearfix "  data-percent="80%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>HTML5</span></div>
-    <div class="skillbar-bar1" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">80%</div>
-</div>
-
-<div class="skillbar clearfix "  data-percent="70%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>PHP</span></div>
-    <div class="skillbar-bar2" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">70%</div>
-</div>
-
-<div class="skillbar clearfix "  data-percent="50%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>MYSQL</span></div>
-    <div class="skillbar-bar3" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">50%</div>
-</div>
-
-<div class="skillbar clearfix "  data-percent="75%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>CSS3</span></div>
-    <div class="skillbar-bar4" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">75%</div>
-</div>
-
-<div class="skillbar clearfix "  data-percent="60%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>JAVASCRIPT</span></div>
-    <div class="skillbar-bar5" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">60%</div>
-</div>
-
-<div class="skillbar clearfix "  data-percent="50%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>TYPESCRIPT</span></div>
-    <div class="skillbar-bar6" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">50%</div>
-</div>
-<div class="skillbar clearfix "  data-percent="50%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>JQUERY</span></div>
-    <div class="skillbar-bar7" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">50%</div>
-</div>
-<div class="skillbar clearfix "  data-percent="55%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>BOOTSTRAP</span></div>
-    <div class="skillbar-bar8" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">55%</div>
-</div>
-<div class="skillbar clearfix "  data-percent="80%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>PHOTOSHOP</span></div>
-    <div class="skillbar-bar9" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">80%</div>
-</div>
-
-</div>
-
-<!--
-<div class="col-lg-4 col-md-6 col-xl-4 wow fadeInUp" >
-<div class="skillbar clearfix " data-percent="100%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>SEO</span></div>
-    <div class="skillbar-bar" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">100%</div>
-</div>
-<div class="skillbar clearfix " data-percent="100%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>SEO</span></div>
-    <div class="skillbar-bar" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">100%</div>
-</div>
-<div class="skillbar clearfix " data-percent="100%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>SEO</span></div>
-    <div class="skillbar-bar" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">100%</div>
-</div>
-<div class="skillbar clearfix " data-percent="100%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>SEO</span></div>
-    <div class="skillbar-bar" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">100%</div>
-</div>
-<div class="skillbar clearfix " data-percent="100%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>SEO</span></div>
-    <div class="skillbar-bar" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">100%</div>
-</div>
-<div class="skillbar clearfix " data-percent="100%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>SEO</span></div>
-    <div class="skillbar-bar" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">100%</div>
-</div>
-</div>-->
-
-</div>
-</div>
-</section>
-
-<br><br>
-<!-- END OF PROGRESS BAR -->
-
-<!--- WORK EXPERIENCE -->
-<section id="workexperience">
-<div class="container-fluid padding " id="work-experience">
-<div class="container padding">
-<div class="row text-center padding">
-    <div class="col-lg-12 col-xl-12  wow fadeInLeftBig" data-wow-duration="0.5s">
-        <h1>PROJECTS</h1>
-        <br>
-        <p>One of my previous projects is an informational website for our College of Computer Studies. I was responsible
-        for the Front end development and Back-end development as well as the UI Designs.</p>
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center wow fadeInUp" data-wow-duration="0.9s">
-       <img src="wallpaper1.png" class="wallpaper1-pic img-fluid">
-    </div>
-</div>
-</div>
-</div>
-</section>
-
-<!--- END OF WORK EXPERIENCE -->
-
-<!-- PHOTOSHOP ART SHOWCASE -->
-<section id="photoshop">
-<div class="container-fluid padding"  id="photoshop-arts">
-<div class="container padding">
-<div class="row text-center padding">
-    <div class="col-lg-12 col-xl-12 wow fadeInLeftBig">
-        <h1>PHOTOSHOP VECTOR ARTWORKS</h1>
-        <p>I am also a Graphic Artist , i've been working on Vector Artworks and Logos.<br>
-            Below are some of my works using Adobe Photoshop CC</p>
-    </div>
-    <div class="row photoshopwork">
-
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
-        <div class="container-picture">
-            <img src="vector/thanos.jpg" alt="Avatar" class="image-fluid image-picture">
-                <div class="overlay-picture">
-                    <div class="text2">
-                         Thanos<br>
-                        Made at Adobe Photoshop cc
-                    </div>
-                </div>
+  <!-- HERO -->
+  <header id="home" class="masthead d-flex align-items-center">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10">
+          <h1 class="display-4 font-weight-bold wow fadeInUp" data-wow-delay=".05s">Jhudel Test Sales</h1>
+          <p class="lead mt-3 wow fadeInUp" data-wow-delay=".15s">
+            I'm a Filipino based web designer &amp; front-end developer focused on crafting clean &amp; user-friendly experiences.
+          </p>
+          <a href="#skills" class="btn btn-brand mt-4 wow fadeInUp" data-wow-delay=".25s">
+            CHECK MY WORK
+          </a>
         </div>
+      </div>
     </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center ">
-        <div class="container1">
-            <img src="vector/spiderman.jpg" alt="Avatar" class="image-fluid image1">
-                <div class="overlay1">
-                    <div class="text1">
-                        Spiderman<br>
-                        Made at Adobe Photoshop cc
-                    </div>
-                </div>
+  </header>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title wow fadeInUp">Skills</h2>
+        <p class="text-muted wow fadeInUp" data-wow-delay=".1s">Fast, responsive, dynamic and intuitive experiences.</p>
+      </div>
+
+      <!-- Feature icons -->
+      <div class="row">
+        <div class="col-6 col-md-3 mb-4 wow flipInY" data-wow-delay=".05s">
+          <div class="feature">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x icon-bg"></i>
+              <i class="fa fa-tv fa-stack-1x"></i>
+            </span>
+            <h5 class="mt-3">Responsive</h5>
+            <p class="text-muted small">My layouts work on any device—big or small.</p>
+          </div>
         </div>
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
-        <div class="container-picture">
-            <img src="vector/hulk.png" alt="Avatar" class="image-fluid image-picture">
-                <div class="overlay-picture">
-                    <div class="text2">
-                            Hulk<br>
-                        Made at Adobe Photoshop cc
-                    </div>
-                </div>
+        <div class="col-6 col-md-3 mb-4 wow flipInY" data-wow-delay=".1s">
+          <div class="feature">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x icon-bg"></i>
+              <i class="fa fa-rocket fa-stack-1x"></i>
+            </span>
+            <h5 class="mt-3">Dynamic</h5>
+            <p class="text-muted small">Pages that feel alive and engaging.</p>
+          </div>
         </div>
-    </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
-        <div class="container1">
-            <img src="vector/thor.jpg" alt="Avatar" class="image-fluid image1">
-                <div class="overlay1">
-                    <div class="text1">Thor<br>
-                        Made at Adobe Photoshop cc
-                    </div>
-                </div>
+        <div class="col-6 col-md-3 mb-4 wow flipInY" data-wow-delay=".15s">
+          <div class="feature">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x icon-bg"></i>
+              <i class="fa fa-history fa-stack-1x"></i>
+            </span>
+            <h5 class="mt-3">Fast</h5>
+            <p class="text-muted small">Speed and snappy interactions are a priority.</p>
+          </div>
         </div>
-    </div>
-
-     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-        <div class="container1">
-            <img src="vector/avengers.png" alt="Avatar" class="image-fluid image1">
-                <div class="overlay1">
-                    <div class="text1">Avengers Endgame<br>
-                        Made at Adobe Photoshop cc
-                    </div>
-                </div>
+        <div class="col-6 col-md-3 mb-4 wow flipInY" data-wow-delay=".2s">
+          <div class="feature">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x icon-bg"></i>
+              <i class="fa fa-handshake fa-stack-1x"></i>
+            </span>
+            <h5 class="mt-3">Intuitive</h5>
+            <p class="text-muted small">Strong preference for easy, clear UX/UI.</p>
+          </div>
         </div>
-    </div>
+      </div>
 
-    </div>
-
-</div>
-</div>
-</div>
-</section>
-<br>
-<!-- END PHOTOSHOP ART SHOWCASE -->
-
-<!-- SHORT DESCRIPTION -->
-<div class="container-fluid padding intro-logo">
-<div class="container padding">
-<div class="row text-center padding">
-    <div class="col-lg-12 col-xl-12 intro-caption wow fadeInLeftBig" data-wow-offset="150">
-        <h1>RECENT ARTWORK</h1>
-        <p></p>
-    </div>
-
-   
-<div class="row">
-
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center wow fadeInUp" data-wow-offset="160"> 
-        <div class="container-picture">
-            <img src="vector/final2.png" alt="Avatar" class="image-fluid image-picture">
-                
+      <!-- Skill bars -->
+      <div class="row align-items-center mt-4">
+        <div class="col-lg-5 text-center mb-4 mb-lg-0 wow fadeInLeft" data-wow-delay=".1s">
+          <img src="jhudel2.png" class="img-fluid rounded shadow" alt="Jhudel portrait" />
+          <h3 class="h4 mt-4">Who's this guy?</h3>
+          <p class="text-muted small px-lg-3">
+            I am a Web Developer in a well-known BPO company in the Philippines with a serious passion for UI effects, animations, and intuitive, dynamic user experiences.
+          </p>
         </div>
+        <div class="col-lg-7">
+          <div class="skillbar" data-percent="80">
+            <div class="label">HTML5</div>
+            <div class="bar"><span></span></div>
+            <div class="value">80%</div>
+          </div>
+          <div class="skillbar" data-percent="70">
+            <div class="label">PHP</div>
+            <div class="bar"><span></span></div>
+            <div class="value">70%</div>
+          </div>
+          <div class="skillbar" data-percent="50">
+            <div class="label">MySQL</div>
+            <div class="bar"><span></span></div>
+            <div class="value">50%</div>
+          </div>
+          <div class="skillbar" data-percent="75">
+            <div class="label">CSS3</div>
+            <div class="bar"><span></span></div>
+            <div class="value">75%</div>
+          </div>
+          <div class="skillbar" data-percent="60">
+            <div class="label">JavaScript</div>
+            <div class="bar"><span></span></div>
+            <div class="value">60%</div>
+          </div>
+          <div class="skillbar" data-percent="50">
+            <div class="label">TypeScript</div>
+            <div class="bar"><span></span></div>
+            <div class="value">50%</div>
+          </div>
+          <div class="skillbar" data-percent="50">
+            <div class="label">jQuery</div>
+            <div class="bar"><span></span></div>
+            <div class="value">50%</div>
+          </div>
+          <div class="skillbar" data-percent="55">
+            <div class="label">Bootstrap</div>
+            <div class="bar"><span></span></div>
+            <div class="value">55%</div>
+          </div>
+          <div class="skillbar" data-percent="80">
+            <div class="label">Photoshop</div>
+            <div class="bar"><span></span></div>
+            <div class="value">80%</div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 align-self-center wow fadeInLeftBig" data-wow-duration="0.6s">
-        <br>
-        <h4>VAPE ON WHEELS</h4>
-        <p>It is a Commissioned Artwork for a Vape Shop. I used various tools on Adobe Photoshop CC to
-            make the effects on the smoke and to the wheels. I made it simple but attractive to the eye.</p>
-    </div>   
+  <!-- PROJECTS -->
+  <section id="workexperience" class="section section-alt">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title wow fadeInUp">Projects</h2>
+        <p class="text-muted wow fadeInUp" data-wow-delay=".1s">
+          One of my previous projects is an informational website for our College of Computer Studies. I was responsible
+          for the front-end and back-end development as well as the UI designs.
+        </p>
+      </div>
 
-</div>
-    
-    <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center wow fadeInUp">
-          <a href="https://www.behance.net/jhudelsaleef4b">   <button type="button" class="btn button-aboutme34">
-               <h6>Follow me on Behance</h6>
-    </button>
-    </a>
+      <div class="row justify-content-center">
+        <div class="col-lg-10 wow fadeInUp" data-wow-delay=".2s">
+          <div class="card project-card shadow-sm">
+            <img src="wallpaper1.png" class="card-img-top" alt="Project screenshot" />
+            <div class="card-body">
+              <h5 class="card-title mb-1">College of Computer Studies — Informational Website</h5>
+              <p class="card-text text-muted small mb-0">Front-end &amp; Back-end Development · UI Design</p>
+            </div>
+          </div>
         </div>
-   
-</div>    
-</div>
-</div>
-
-
-
-<!-- END OF SHORT DESCRIPTION -->
-
-<!--- WORK EXPERIENCE -->
-
-<header id="aboutme" class="aboutme">
-<div class="container">
-<div class="row text-center padding wow FadeInUp">
-    <div class="col-xl-12 " id="aboutme-caption">
-        <h1 class="wow fadeInLeft" data-wow-delay="0.5s">ABOUT ME</h1><br>
-        <p class="wow fadeInUp" data-wow-delay="0.6s">I am a web designer, Front/Back-end developer and a Graphic Artist. I am interested in all kinds of visual communication, but my major focus is on web development. I have a serious passion for Web Development and creating Vector Artworks/Logos. </p>
-
-        <p class="wow fadeInRight" data-wow-delay="0.7s">Currently, i am a Web Developer on a respective company and my roles are being a Front/Back end Developer. </p>
-    </div>
-</div>
-</div>
-</header>
-<!--- END OF WORK EXPERIENCE -->
-
-
-<!--- CONTACT -->
-<header id="contact">
-<div class="container padding">
-<div class="row text-center padding wow fadeInUp" data-wow-offset="160">
-    <div class="col-xl-12 " >
-        <h1>OK, LET’S CREATE <br>
-        SOMETHING GREAT</h1>
-        <p class="wow fadeInLeft" data-wow-delay="0.5s">If you like my work and have some cool project to work on, just send me <br> direct message or contact me through social sites listed below.</p>
-    </div>
-</div>
-
-     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center wow fadeInUp" data-wow-offset="160">
-            <h5>GET IN TOUCH WITH ME</h5>
-        </div>
-
-    <div class="row align-items-center aboutme-align">
-
-       
-
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center wow fadeInUp" data-wow-offset="160">
-            <a href="https://twitter.com/sjhudel">
-                <button type="button" class="btn button-aboutme1">
-                    <i class="fab fa-twitter"></i><h6> TWITTER</h6>
-                </button>
-            </a>
-        </div>
-
-         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center wow fadeInUp" data-wow-offset="160">
-            <a href="https://www.behance.net/jhudelsales">
-                <button type="button" class="btn button-aboutme2">
-                    <i class="fab fa-behance-square"></i><h6> BEHANCE </h6>
-                </button>
-            </a>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center wow fadeInUp" data-wow-offset="160">
-            <!-- about4 kase ginamit na sa taas sa behance ung number 3 -->
-            <a href="https://www.facebook.com/salesjhudel">
-                <button type="button" class="btn button-aboutme4">
-                    <i class="fab fa-facebook"></i><h6> FACEBOOK </h6>
-                </button>
-            </a>
-        </div>
+      </div>
 
     </div>
- 
-</div>
-</header>
-<!--- CONTACT -->
+  </section>
 
-<div class="contactform">
-<div class="container-fluid">
-<div class="container padding">
+  <!-- PHOTOSHOP ARTWORKS -->
+  <section id="photoshop" class="section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title wow fadeInUp">Photoshop Vector Artworks</h2>
+        <p class="text-muted wow fadeInUp" data-wow-delay=".1s">
+          I am also a Graphic Artist working on vector artworks and logos. Below are some of my works using Adobe Photoshop CC.
+        </p>
+      </div>
 
-    <div class="row text-center wow fadeInUp">
-        <div class="col-xl-12">
-            <br>
-            <h1>CONTACT</h1>
+      <div class="row">
+        <!-- Tile -->
+        <div class="col-md-6 mb-4">
+          <div class="art-tile wow fadeInUp">
+            <img src="vector/thanos.jpg" class="img-fluid" alt="Thanos" />
+            <div class="overlay"><div class="text">Thanos<br/><small>Made in Adobe Photoshop CC</small></div></div>
+          </div>
         </div>
-    </div>   
-
-<form name="index" method="post" action="send_form_email.php" class="contact-form wow fadeInUp" target="_blank" >
-
-  <div class="form-group ">
-     
-    <input type="text" name="first_name" class="form-control" placeholder="Name" required>
-  </div>
-
-  <div class="form-group ">
-    
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-  </div>
-
-  <div class="form-group ">
-     
-    <input type="number" name="telephone" class="form-control" placeholder="Phone Number" required>
-  </div>
-
-    <div class="form-group ">
-    
-    <textarea name="comments" class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Your Message" required></textarea>
+        <div class="col-md-6 mb-4">
+          <div class="art-tile wow fadeInUp" data-wow-delay=".05s">
+            <img src="vector/spiderman.jpg" class="img-fluid" alt="Spiderman" />
+            <div class="overlay"><div class="text">Spiderman<br/><small>Made in Adobe Photoshop CC</small></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="art-tile wow fadeInUp" data-wow-delay=".1s">
+            <img src="vector/hulk.png" class="img-fluid" alt="Hulk" />
+            <div class="overlay"><div class="text">Hulk<br/><small>Made in Adobe Photoshop CC</small></div></div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="art-tile wow fadeInUp" data-wow-delay=".15s">
+            <img src="vector/thor.jpg" class="img-fluid" alt="Thor" />
+            <div class="overlay"><div class="text">Thor<br/><small>Made in Adobe Photoshop CC</small></div></div>
+          </div>
+        </div>
+        <div class="col-12 mb-1">
+          <div class="art-tile wow fadeInUp" data-wow-delay=".2s">
+            <img src="vector/avengers.png" class="img-fluid" alt="Avengers Endgame" />
+            <div class="overlay"><div class="text">Avengers Endgame<br/><small>Made in Adobe Photoshop CC</small></div></div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <button type="submit" class="btn submit" value="Submit">SUBMIT</button>
-</form>
-</div>
-</div>
+  <!-- RECENT ARTWORK -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title wow fadeInUp">Recent Artwork</h2>
+      </div>
 
-</div>
-
-<!--- Footer -->
-<footer>
-<div class="container-fluid padding">
-<div class="row text-center">
-
-    <div class="col-12">
-        <hr class="light">
-        <p> © <span style="color:#E96977;">Jhudel Braian P. Sales. </span> MADE IN PHILIPPINES · <small id="build-stamp"></small></p>
-        <p><span style="color:#C1C1C1;">This site was built with great tools like Photoshop and Sublime. Font used in headlines is Calibri, same with the font in body.</span></p>
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0 wow fadeInUp">
+          <img src="vector/final2.png" class="img-fluid rounded shadow" alt="Vape on Wheels artwork" />
+        </div>
+        <div class="col-md-6 wow fadeInLeft" data-wow-delay=".05s">
+          <h3 class="h4">VAPE ON WHEELS</h3>
+          <p class="text-muted">
+            A commissioned artwork for a vape shop. I used various tools in Adobe Photoshop CC to create the smoke
+            effects and motion on the wheels—simple but eye-catching.
+          </p>
+          <a target="_blank" rel="noopener" href="https://www.behance.net/jhudelsaleef4b" class="btn btn-outline-brand">
+            <i class="fab fa-behance-square mr-1"></i> Follow me on Behance
+          </a>
+        </div>
+      </div>
     </div>
-</div>
-</div>
-</footer>
+  </section>
 
-<!-- ADDED: Back-to-Top button (floating) -->
-<button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+  <!-- ABOUT -->
+  <section id="aboutme" class="section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title wow fadeInUp">About Me</h2>
+      </div>
+      <div class="row justify-content-center wow fadeInUp" data-wow-delay=".05s">
+        <div class="col-lg-10">
+          <p class="lead">
+            I am a web designer, front/back-end developer, and a graphic artist. I’m interested in all kinds of visual
+            communication, but my major focus is on web development. I have a serious passion for building for the web
+            and creating vector artworks/logos.
+          </p>
+          <p>
+            Currently, I am a Web Developer in a respected company where I handle both front-end and back-end roles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- scripts for animating -->
+  <!-- CONTACT INTRO -->
+  <section id="contact" class="section section-cta">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title text-white wow fadeInUp">OK, LET’S CREATE SOMETHING GREAT</h2>
+        <p class="text-white-50 wow fadeInUp" data-wow-delay=".1s">
+          If you like my work and have a project in mind, send me a direct message or reach me through the social links below.
+        </p>
+      </div>
 
-    <!--wow js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <!--wow js-->
+      <div class="row justify-content-center text-center">
+        <div class="col-6 col-md-4 mb-3 wow fadeInUp">
+          <a class="btn btn-social btn-twitter btn-block" target="_blank" rel="noopener" href="https://twitter.com/sjhudel">
+            <i class="fab fa-twitter mr-1"></i> Twitter
+          </a>
+        </div>
+        <div class="col-6 col-md-4 mb-3 wow fadeInUp" data-wow-delay=".05s">
+          <a class="btn btn-social btn-behance btn-block" target="_blank" rel="noopener" href="https://www.behance.net/jhudelsales">
+            <i class="fab fa-behance-square mr-1"></i> Behance
+          </a>
+        </div>
+        <div class="col-12 col-md-4 mb-3 wow fadeInUp" data-wow-delay=".1s">
+          <a class="btn btn-social btn-facebook btn-block" target="_blank" rel="noopener" href="https://www.facebook.com/salesjhudel">
+            <i class="fab fa-facebook mr-1"></i> Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="Skill-Bar/js/main.js"></script>
-    <script src="Skill-Bar/js/sample.js"></script>
-    <!-- scripts for animating -->
+  <!-- CONTACT FORM -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title wow fadeInUp">Contact</h2>
+      </div>
 
-<!-- FOR PROTECTING THE PHOTOS -->
-<script>
-var message="Right-click has been disabled";
-function clickIE() {
-    if (document.all) {
-        (message);
-        return false;
-    }
-}
-function clickNS(e) {
-    if (document.layers || (document.getElementById && !document.all)) {
-        if (e.which == 2||e.which == 3) {
-            (message);
-            return false;
-        }
-    }
-}
-if (document.layers) {
-    document.captureEvents(Event.MOUSEDOWN);
-    document.onmousedown = clickNS;
-} else {
-    document.onmouseup = clickNS;
-    document.oncontextmenu = clickIE;
-}
-document.oncontextmenu = new Function("return false");
-document.getElementsByClassName('my-img').ondragstart = function() { return false; };
-</script>
-<!-- END FOR PROTECTING THE PHOTOS -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-var offsetTop = $('.skill-area').offset().top;
+      <div class="row justify-content-center">
+        <div class="col-lg-8 wow fadeInUp" data-wow-delay=".05s">
+          <!-- NOTE: Action preserved as you had it -->
+          <form name="index" method="post" action="send_form_email.php" class="contact-form card card-body shadow-sm" target="_blank">
+            <div class="form-group">
+              <label for="first_name">Name</label>
+              <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" name="email" id="email" class="form-control" placeholder="name@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="telephone">Phone Number</label>
+              <input type="number" name="telephone" id="telephone" class="form-control" placeholder="09xxxxxxxxx" required />
+            </div>
+            <div class="form-group">
+              <label for="comments">Your Message</label>
+              <textarea name="comments" id="comments" class="form-control" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-brand btn-block">Submit</button>
+            <small class="form-text text-muted mt-2">
+              *If hosted on GitHub Pages, PHP won’t run. Keep your current server or switch to a form service if needed.
+            </small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    $(window).scroll(function () {
-        var height = $(window).height();
-        if ($(window).scrollTop() + height >= offsetTop) {
-            jQuery('.skillbar').each(function () {
-                jQuery(this).find('.skillbar-bar').animate({
-                    width: jQuery(this).attr('data-percent')
-                }, 7000);
-            });
-        }
-    });
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container text-center">
+      <hr class="light"/>
+      <p>© <span class="text-accent">Jhudel Braian P. Sales</span> — MADE IN PHILIPPINES · <small id="build-stamp"></small></p>
+      <p class="text-muted small">This site was built with great tools like Photoshop and Sublime. Font used is Calibri for headlines and body.</p>
+    </div>
+  </footer>
 
-</script>
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
-<!-- ADDED: Build-stamp + Back-to-Top + Theme Toggle logic -->
-<script>
-  // Build stamp (Asia/Manila)
-  (function(){
-    var el = document.getElementById('build-stamp');
-    if (el) {
-      try {
-        el.textContent = 'Updated ' + new Date().toLocaleString('en-PH', { timeZone: 'Asia/Manila' });
-      } catch(e) {
-        el.textContent = 'Updated ' + new Date().toLocaleString();
-      }
-    }
-  })();
+  <!-- Core JS (match your original stack) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-  // Back-to-top
-  (function(){
-    var btn = document.getElementById('backToTop');
-    if (!btn) return;
-    var showAt = 400;
-    function toggle(){
-      if (window.pageYOffset > showAt) {
-        btn.style.display = 'flex';
-      } else {
-        btn.style.display = 'none';
-      }
-    }
-    window.addEventListener('scroll', toggle);
-    toggle();
-    btn.addEventListener('click', function(){
-      try {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } catch(e) {
-        document.documentElement.scrollTop = 0; document.body.scrollTop = 0;
-      }
-    });
-  })();
+  <!-- WOW.js for animate.css triggers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
-  // Theme toggle (keeps your existing CSS; only applies high-level colors)
-  (function(){
-    var root = document.documentElement;
-    var key = 'theme';
-    function setIcon(theme){
-      var icon = document.getElementById('theme-icon');
-      if (!icon) return;
-      icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-      icon.setAttribute('aria-hidden','true');
-    }
-    function apply(theme){
-      root.setAttribute('data-theme', theme);
-      setIcon(theme);
-    }
-    document.addEventListener('DOMContentLoaded', function(){
-      var saved = null;
-      try { saved = localStorage.getItem(key); } catch(e){}
-      var start = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      apply(start);
-      var btn = document.getElementById('theme-toggle');
-      if (btn){
-        btn.addEventListener('click', function(){
-          var next = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
-          apply(next);
-          try { localStorage.setItem(key, next); } catch(e){}
-        });
-      }
-      // React to OS changes if no manual choice this session
-      if (window.matchMedia) {
-        var mql = window.matchMedia('(prefers-color-scheme: dark)');
-        var onChange = function(e){
-          if (!localStorage.getItem(key)) {
-            apply(e.matches ? 'dark' : 'light');
-          }
-        };
-        mql.addEventListener ? mql.addEventListener('change', onChange) : mql.addListener(onChange);
-      }
-    });
-  })();
-</script>
+  <!-- Your new site logic -->
+  <script src="script.js"></script>
 
+  <!-- Image protection: preserved -->
+  <script>
+    var message="Right-click has been disabled";
+    function clickIE(){if(document.all){(message);return false;}}
+    function clickNS(e){if(document.layers||(document.getElementById&&!document.all)){if(e.which==2||e.which==3){(message);return false;}}}
+    if(document.layers){document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+    else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+    document.oncontextmenu=new Function("return false");
+  </script>
 </body>
 </html>
