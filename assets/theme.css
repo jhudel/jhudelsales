@@ -1,0 +1,78 @@
+/* === Theme system (drop-in) ============================================= */
+/* Light defaults */
+:root {
+  --bg: #ffffff;
+  --text: #121212;
+  --muted: #666666;
+  --card: #f6f6f7;
+  --border: #e6e6ea;
+  --link: #0a66c2;
+  --accent: #4f46e5;
+
+  --radius: 12px;
+  --shadow: 0 6px 24px rgba(0,0,0,.06);
+  --focus: 0 0 0 3px rgba(79,70,229,.35);
+}
+
+/* Auto-dark from system */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0c10;
+    --text: #e5e7eb;
+    --muted: #9aa0a6;
+    --card: #111317;
+    --border: #23262b;
+    --link: #6ea8fe;
+    --accent: #8b5cf6;
+    --shadow: 0 6px 24px rgba(0,0,0,.35);
+    --focus: 0 0 0 3px rgba(139,92,246,.35);
+  }
+}
+
+/* Manual override via attribute */
+[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #121212;
+  --muted: #666666;
+  --card: #f6f6f7;
+  --border: #e6e6ea;
+  --link: #0a66c2;
+  --accent: #4f46e5;
+  --shadow: 0 6px 24px rgba(0,0,0,.06);
+  --focus: 0 0 0 3px rgba(79,70,229,.35);
+}
+
+[data-theme="dark"] {
+  --bg: #0b0c10;
+  --text: #e5e7eb;
+  --muted: #9aa0a6;
+  --card: #111317;
+  --border: #23262b;
+  --link: #6ea8fe;
+  --accent: #8b5cf6;
+  --shadow: 0 6px 24px rgba(0,0,0,.35);
+  --focus: 0 0 0 3px rgba(139,92,246,.35);
+}
+
+/* Apply palette */
+html, body { background: var(--bg); color: var(--text); }
+a { color: var(--link); }
+hr, .divider { border-color: var(--border); }
+
+/* Cards/panels if used */
+.card, .panel, .tile {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* === Toggle button ====================================================== */
+#theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid var(--border
