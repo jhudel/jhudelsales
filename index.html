@@ -1,666 +1,753 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/waypoints-master/lib/jquery.waypoints.min.js"></script>
-    <script src="js/sample.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web Developer | UI & UX Designer</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <link href="style.css" rel="stylesheet">
-    <link href="Skill-Bar/style2.css" rel="stylesheet">
-    <link rel="stylesheet" href="animate.css">
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Developer | UI & UX Designer</title>
 
-    <style>
-      .back-to-top{
-        position:fixed; right:24px; bottom:24px;
-        width:48px; height:48px; border-radius:999px; border:0;
-        background:#1DAECC; color:#fff; font-size:20px; line-height:1;
-        display:none; align-items:center; justify-content:center;
-        box-shadow:0 10px 30px rgba(0,0,0,.2); z-index:9999; cursor:pointer;
-        transition:transform .15s ease;
-      }
-      .back-to-top:hover{ transform:translateY(-1px); }
-      .back-to-top:active{ transform:translateY(0); }
-      .back-to-top:focus{ outline:none; box-shadow:0 0 0 3px rgba(29,174,204,.35); }
-      @media (prefers-reduced-motion: reduce){
-        .back-to-top{ transition:none; }
-      }
+  <!-- Preload large hero/section image to avoid reveal lag -->
+  <link rel="preload" href="wallpaper-aboutme.jpg" as="image">
 
-      /* Dark mode styles */
-      body.dark-mode {
-        background-color: #121212;
-        color: #e0e0e0;
-      }
+  <!-- CSS libs -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Font Awesome (used across site) -->
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <!-- Devicon (tech icons for Skills/Experience) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-      body.dark-mode .masthead {
-        background: #1e1e1e;
-      }
-      
-      body.dark-mode .navbar-transparent {
-        background-color: #1e1e1e !important;
-      }
+  <!-- Site CSS -->
+  <link href="style.css" rel="stylesheet">
+  <link href="Skill-Bar/style2.css" rel="stylesheet">
+  <link rel="stylesheet" href="animate.css">
 
-      body.dark-mode .navbar-brand p {
-        color: #e0e0e0;
-      }
-
-      body.dark-mode .nav-link {
-        color: #e0e0e0 !important;
-      }
-
-      body.dark-mode h1, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
-        color: #e0e0e0;
-      }
-
-      body.dark-mode p {
-        color: #b0b0b0;
-      }
-
-      body.dark-mode .iconic i.fa-circle {
-        color: #1DAECC !important;
-      }
-
-      body.dark-mode .skillbar-title span {
-        background: #1e1e1e !important;
-        color: #e0e0e0 !important;
-      }
-
-      body.dark-mode .button-aboutme34, body.dark-mode .btn.submit, body.dark-mode .btn.button-aboutme1, body.dark-mode .btn.button-aboutme2, body.dark-mode .btn.button-aboutme4 {
-        color: #fff;
-        background-color: #1DAECC;
-      }
-
-      body.dark-mode .aboutme {
-        background: #1e1e1e;
-      }
-
-      body.dark-mode footer {
-        background: #1e1e1e;
-      }
-
-      body.dark-mode .contactform {
-        background: #1e1e1e;
-      }
-      
-      .dark-mode-toggle {
-        cursor: pointer;
-        font-size: 1.5rem;
-        color: #1DAECC;
-        padding: 0.5rem 1rem;
-      }
-      
-      .dark-mode-toggle:hover {
-        color: #52D9F5;
-      }
-    </style>
+  <!-- Back-to-Top button -->
+  <style>
+    .back-to-top{
+      position:fixed; right:24px; bottom:24px;
+      width:48px; height:48px; border-radius:10px; border:0;
+      background:#1DAECC; color:#fff; font-size:20px; line-height:1;
+      display:none; align-items:center; justify-content:center;
+      box-shadow:none; z-index:9999; cursor:pointer;
+      transition:transform .15s ease;
+    }
+    .back-to-top:hover{ transform:translateY(-1px); }
+    .back-to-top:active{ transform:translateY(0); }
+    .back-to-top:focus{ outline:none; box-shadow:none; }
+    @media (prefers-reduced-motion: reduce){ .back-to-top{ transition:none; } }
+  </style>
 </head>
 <body>
 
-
-<header id="home" class="masthead">
-<div class="container">    
-<div class="row text-center wow fadeInUp">
-    <div class="col-xl-12 " id="masthead-caption">
-        <h1>Jhudel Test Sales</h1>
-        <p class="wow fadeInLeft" data-wow-delay="0.5s">I'm a Filipino based web designer & front-end developer focused on crafting clean & user-friendly experiences.</p>
-    </div>
-    <div class="col-xl-12">
-    <a href="#skills">
-    <button type="button" class="btn button-aboutme33">
-                <h6>CHECK MY WORK</h6>
-    </button></a>
-    </div>
-</div>
-</div>
-</header>
-
+<!-- Navigation -->
 <nav class="navbar navbar-default navbar-transparent navbar-expand-lg navbar-dark fixed-top animated fadeIn fadeInDown">
-<div class="container-fluid">
+  <div class="container-fluid">
     <a class="navbar-brand scroll" href="#home">
-        <div id="logo">
-        <img src="logosales.png" class="logo"></img>
-        </div>
-        <div id="logo2">
-            <p>JHUDEL SALES</p>
-        </div>
+      <div id="logo"><img src="logosales.png" class="logo" alt="JS logo"></div>
+      <div id="logo2"><p>JHUDEL SALES</p></div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-        <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link scroll" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link scroll" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link scroll" href="#workexperience">Work Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link scroll" href="#aboutme">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link scroll" href="#contact">Contact</a>
-            </li>
-        </ul>    
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link scroll" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link scroll" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link scroll" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link scroll" href="#tools">Tools</a></li>
+        <li class="nav-item"><a class="nav-link scroll" href="#workexperience">Work Experience</a></li>
+        <li class="nav-item"><a class="nav-link scroll" href="#workexperience-projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link scroll" href="#aboutme">About</a></li>
+        <li class="nav-item"><a class="nav-link scroll" href="#contact">Contact</a></li>
+      </ul>
     </div>
-    <div class="dark-mode-toggle" id="darkModeToggle">
-        <i class="fas fa-moon"></i>
-    </div>
-    </div>
+  </div>
 </nav>
-<section id="skills">
-<div class="container rowskills padding" >
-<div class="row text-center padding">
-    <div class="col-12 wow slideInLeft">
-        <h1>SKILLS</h1>
+<!-- /Navigation -->
+
+<!-- HEADER INTRO -->
+<header id="home" class="masthead">
+  <div class="container">    
+    <div class="row text-center wow fadeInUp" data-wow-delay="0.1s">
+      <div class="col-xl-12 " id="masthead-caption">
+        <h1>Jhudel Test Sales</h1>
+        <p class="wow fadeInLeft" data-wow-delay="0.2s">
+          I'm a Filipino based web designer & front-end developer focused on crafting clean & user-friendly experiences.
+        </p>
+      </div>
+      <div class="col-xl-12">
+        <a href="#skills">
+          <button type="button" class="btn button-aboutme33"><h6>CHECK MY WORK</h6></button>
+        </a>
+      </div>
     </div>
-    <div class="iconic col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 wow flipInY" data-wow-delay="0.1s">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x icon-background1"></i>
-          <i class="fa fa-tv fa-stack-1x"></i>
-        </span>
-        <br>
-        <br>
-        <h3>Responsive</h3>
-        <p>My layouts will work on any device, big or small.</p>
+  </div>
+</header>
+<!-- /HEADER INTRO -->
+
+<!-- ================= SKILLS (refreshed) ================= -->
+<section id="skills" class="section-dark">
+  <div class="container padding">
+
+    <div class="row text-center">
+      <div class="col-12">
+        <h1 class="section-title wow fadeInUp">SKILLS</h1>
+        <p class="section-subtitle wow fadeInUp" data-wow-delay="0.08s">A quick look at what I do and how confident I am with each tool.</p>
+      </div>
     </div>
 
-    <div class="iconic col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 wow flipInY" data-wow-delay="0.2s">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x icon-background1"></i>
-          <i class="fa fa-rocket fa-stack-1x"></i>
-        </span>
-        <br>
-        <br>
-        <h3>Dynamic</h3>
-        <p>Websites don't have to be static, I love making pages come to life.</p>
+    <!-- Capability cards -->
+    <div class="row text-center mt-4">
+      <div class="col-6 col-lg-3 mb-4">
+        <div class="skill-card wow fadeInUp" data-wow-delay="0.03s">
+          <div class="skill-card__icon"><i class="fas fa-laptop-code"></i></div>
+          <h3 class="skill-card__title">Responsive</h3>
+          <p class="skill-card__text">Layouts adapt beautifully from mobile to desktop.</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 mb-4">
+        <div class="skill-card wow fadeInUp" data-wow-delay="0.06s">
+          <div class="skill-card__icon"><i class="fas fa-magic"></i></div>
+          <h3 class="skill-card__title">Dynamic</h3>
+          <p class="skill-card__text">WOW.js + Animate.css for tasteful motion.</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 mb-4">
+        <div class="skill-card wow fadeInUp" data-wow-delay="0.09s">
+          <div class="skill-card__icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h3 class="skill-card__title">Fast</h3>
+          <p class="skill-card__text">Optimized CSS/JS and images for quick loads.</p>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 mb-4">
+        <div class="skill-card wow fadeInUp" data-wow-delay="0.12s">
+          <div class="skill-card__icon"><i class="fas fa-user-friends"></i></div>
+          <h3 class="skill-card__title">Intuitive</h3>
+          <p class="skill-card__text">Clarity, hierarchy, and accessible contrast.</p>
+        </div>
+      </div>
     </div>
 
-    <div class="iconic col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 wow flipInY" data-wow-delay="0.3s">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x icon-background1"></i>
-          <i class="fa fa-history fa-stack-1x"></i>
-        </span>
-        <br>
-        <br>
-        <h3>Fast</h3>
-        <p>Fast load times and lag free interaction, my highest priority.</p>
+    <!-- Profile + Labeled bars -->
+    <div class="row align-items-start mt-2">
+      <div class="col-lg-5 mb-5 mb-lg-0">
+        <div class="about-panel wow fadeInLeft" data-wow-delay="0.02s">
+          <img src="jhudel2.png" class="about-photo" alt="Jhudel photo">
+          <h2 class="about-title">Who's this guy?</h2>
+          <p class="about-text">
+            I am a Web Developer at a well-known BPO in the Philippines. I love UI effects, clean code,
+            and creating intuitive, dynamic user experiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="skill-pill">
+          <i class="devicon-html5-plain colored"></i><span>HTML5</span>
+          <div class="skill-pill__bar" style="--val:80%"><b>80%</b></div>
+        </div>
+        <div class="skill-pill">
+          <i class="devicon-php-plain colored"></i><span>PHP</span>
+          <div class="skill-pill__bar" style="--val:70%"><b>70%</b></div>
+        </div>
+        <div class="skill-pill">
+          <i class="devicon-mysql-plain colored"></i><span>MySQL</span>
+          <div class="skill-pill__bar" style="--val:50%"><b>50%</b></div>
+        </div>
+        <div class="skill-pill">
+          <i class="devicon-css3-plain colored"></i><span>CSS3</span>
+          <div class="skill-pill__bar" style="--val:75%"><b>75%</b></div>
+        </div>
+        <div class="skill-pill">
+          <i class="devicon-javascript-plain colored"></i><span>JavaScript</span>
+          <div class="skill-pill__bar" style="--val:60%"><b>60%</b></div>
+        </div>
+        <div class="skill-pill">
+          <i class="devicon-typescript-plain colored"></i><span>TypeScript</span>
+          <div class="skill-pill__bar" style="--val:50%"><b>50%</b></div>
+        </div>
+        <div class="skill-pill">
+          <i class="devicon-jquery-plain colored"></i><span>jQuery</span>
+          <div class="skill-pill__bar" style="--val:50%"><b>50%</b></div>
+        </div>
+        <div class="skill-pill">
+          <i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span>
+          <div class="skill-pill__bar" style="--val:55%"><b>55%</b></div>
+        </div>
+        <div class="skill-pill">
+          <i class="devicon-photoshop-plain colored"></i><span>Photoshop</span>
+          <div class="skill-pill__bar" style="--val:80%"><b>80%</b></div>
+        </div>
+      </div>
     </div>
 
-    <div class="iconic col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 wow flipInY" data-wow-delay="0.4s">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x icon-background1"></i>
-          <i class="fa fa-handshake fa-stack-1x"></i>
-        </span>
-        <br>
-        <br>
-        <h3>Intuitive</h3>
-        <p>Strong preference for easy to use, intuitive UX/UI.</p>
-    </div>
-
-</div>
-</div>
+  </div>
 </section>
-<section class="skill-area section-padding" id="about">
-<div class="container">
-<div class="row text-center">
-    <div class="col-sm-12 col-xl-6 col-md-6 col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-        <img src="jhudel2.png" class="jhudel-pic img-fluid">
+<!-- ================= /SKILLS ================= -->
 
-        <br>
-        <h1>Who's this guy?</h1>
-        <p>I am a Web Developer on one of the well-known BPO company on Philippines,
-        have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
+<!-- ================== NEW: SERVICES (flat, compact card lift) ================== -->
+<section id="services" class="section-flat services-section">
+  <div class="container">
+    <h2 class="mask-wipe text-center mb-4">SERVICES</h2>
+    <p class="services-lead text-center mb-5">I help founders and teams move faster by taking care of the details.</p>
+
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="service-card reveal" data-reveal="fade-up">
+          <div class="service-icon"><i class="fas fa-inbox"></i></div>
+          <h3>Inbox & Calendar</h3>
+          <p>Email triage, follow-ups, meeting scheduling, reminders, tidy calendars.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="service-card reveal" data-reveal="fade-up" data-reveal-delay=".05s">
+          <div class="service-icon"><i class="fas fa-table"></i></div>
+          <h3>Data & Reports</h3>
+          <p>Clean spreadsheets, track KPIs, build weekly summaries, light research.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="service-card reveal" data-reveal="fade-up" data-reveal-delay=".1s">
+          <div class="service-icon"><i class="fas fa-headset"></i></div>
+          <h3>Customer Support</h3>
+          <p>Helpdesk replies, FAQs, chat support, documentation updates.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="service-card reveal" data-reveal="fade-up">
+          <div class="service-icon"><i class="fas fa-share-alt"></i></div>
+          <h3>Social Scheduling</h3>
+          <p>Plan posts, queue content, prep captions, simple graphics via Canva.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="service-card reveal" data-reveal="fade-up" data-reveal-delay=".05s">
+          <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>Docs & Slides</h3>
+          <p>Polished docs, proposals, and decks aligned with your brand.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="service-card reveal" data-reveal="fade-up" data-reveal-delay=".1s">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h3>Tech Support</h3>
+          <p>Website updates, forms, CMS edits, basic automations & QA.</p>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-12 col-lg-6 col-md-6 col-xl-6 " data-wow-delay="0.1s">
-<div class="skillbar clearfix "  data-percent="80%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>HTML5</span></div>
-    <div class="skillbar-bar1" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">80%</div>
-</div>
+  </div>
+</section>
+<!-- ================== /SERVICES ================== -->
 
-<div class="skillbar clearfix "  data-percent="70%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>PHP</span></div>
-    <div class="skillbar-bar2" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">70%</div>
-</div>
+<!-- ================== NEW: TOOLS I USE (flat badges) ================== -->
+<section id="tools" class="section-flat tools-section">
+  <div class="container">
+    <h2 class="mask-wipe text-center mb-4">TOOLS I USE</h2>
+    <p class="tools-lead text-center mb-4">Comfortable with the apps you already run.</p>
 
-<div class="skillbar clearfix "  data-percent="50%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>MYSQL</span></div>
-    <div class="skillbar-bar3" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">50%</div>
-</div>
+    <ul class="tool-grid">
+      <li class="tool-badge reveal" data-reveal="fade-up"><i class="fab fa-google"></i> Google Workspace</li>
+      <li class="tool-badge reveal" data-reveal="fade-up" data-reveal-delay=".03s"><i class="fab fa-microsoft"></i> Microsoft 365</li>
+      <li class="tool-badge reveal" data-reveal="fade-up" data-reveal-delay=".06s"><i class="fab fa-slack"></i> Slack</li>
+      <li class="tool-badge reveal" data-reveal="fade-up" data-reveal-delay=".09s"><i class="fas fa-comments"></i> Teams</li>
+      <li class="tool-badge reveal" data-reveal="fade-up" data-reveal-delay=".12s"><i class="fas fa-tasks"></i> Trello</li>
+      <li class="tool-badge reveal" data-reveal="fade-up" data-reveal-delay=".15s"><i class="fas fa-clipboard-check"></i> Asana</li>
+      <li class="tool-badge reveal" data-reveal="fade-up" data-reveal-delay=".18s"><i class="fas fa-bolt"></i> ClickUp</li>
+      <li class="tool-badge reveal" data-reveal="fade-up" data-reveal-delay=".21s"><i class="fab fa-notion"></i> Notion</li>
+      <li class="tool-badge reveal" data-reveal="fade-up" data-reveal-delay=".24s"><i class="fab fa-canva"></i> Canva</li>
+      <li class="tool-badge reveal" data-reveal="fade-up" data-reveal-delay=".27s"><i class="fas fa-video"></i> Zoom / Meet</li>
+    </ul>
+  </div>
+</section>
+<!-- ================== /TOOLS ================== -->
 
-<div class="skillbar clearfix "  data-percent="75%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>CSS3</span></div>
-    <div class="skillbar-bar4" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">75%</div>
-</div>
+<!-- ================= WORK EXPERIENCE (modern, dark) ================= -->
+<section id="workexperience" class="workxp-section">
+  <div class="container">
+    <h2 class="workxp-title text-center wow fadeInUp">Work Experience</h2>
 
-<div class="skillbar clearfix "  data-percent="60%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>JAVASCRIPT</span></div>
-    <div class="skillbar-bar5" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">60%</div>
-</div>
+    <!-- Role 1 -->
+    <article class="xp-card wow fadeInUp">
+      <div class="xp-left"><div class="xp-logo">JS</div></div>
+      <div class="xp-right">
+        <div class="xp-role-line">
+          <h3 class="xp-role">Web Developer</h3>
+          <span class="xp-meta">Well-known BPO Company · Full-time</span>
+          <span class="xp-meta">Jan 2021 – Present · Philippines · Hybrid</span>
+        </div>
+        <ul class="xp-bullets">
+          <li>Built responsive UI components and landing pages with Bootstrap 4 and jQuery.</li>
+          <li>Optimized CSS/JS delivery and images to improve page speed and Core Web Vitals.</li>
+          <li>Collaborated with designers and backend devs to ship features end-to-end.</li>
+        </ul>
+        <div class="xp-tags">
+          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span>
+          <span class="tag">JavaScript</span><span class="tag">jQuery</span><span class="tag">PHP</span>
+        </div>
+      </div>
+    </article>
 
-<div class="skillbar clearfix "  data-percent="50%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>TYPESCRIPT</span></div>
-    <div class="skillbar-bar6" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">50%</div>
-</div>
-<div class="skillbar clearfix "  data-percent="50%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>JQUERY</span></div>
-    <div class="skillbar-bar7" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">50%</div>
-</div>
-<div class="skillbar clearfix "  data-percent="55%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>BOOTSTRAP</span></div>
-    <div class="skillbar-bar8" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">55%</div>
-</div>
-<div class="skillbar clearfix "  data-percent="80%">
-    <div class="skillbar-title" style="background: #52D9F5;"><span>PHOTOSHOP</span></div>
-    <div class="skillbar-bar9" style="background: #1DAECC;"></div>
-    <div class="skill-bar-percent">80%</div>
-</div>
+    <!-- Role 2 -->
+    <article class="xp-card wow fadeInUp" data-wow-delay="0.06s">
+      <div class="xp-left"><div class="xp-logo xp-logo-alt"><i class="devicon-javascript-plain"></i></div></div>
+      <div class="xp-right">
+        <div class="xp-role-line">
+          <h3 class="xp-role">Freelance Web Designer / Front-End</h3>
+          <span class="xp-meta">Self-employed · Project-based</span>
+          <span class="xp-meta">2018 – 2020 · Remote</span>
+        </div>
+        <ul class="xp-bullets">
+          <li>Designed and developed informational websites and portfolios for local clients.</li>
+          <li>Implemented animations (WOW.js + Animate.css) and smooth scrolling UX.</li>
+          <li>Set up GitHub Pages hosting and basic SEO meta tags for visibility.</li>
+        </ul>
+        <div class="xp-tags">
+          <span class="tag">Figma</span><span class="tag">Photoshop</span><span class="tag">Animate.css</span>
+          <span class="tag">WOW.js</span><span class="tag">GitHub Pages</span>
+        </div>
+      </div>
+    </article>
 
-</div>
+    <!-- Role 3 -->
+    <article class="xp-card wow fadeInUp" data-wow-delay="0.12s">
+      <div class="xp-left"><div class="xp-logo xp-logo-alt"><i class="devicon-php-plain"></i></div></div>
+      <div class="xp-right">
+        <div class="xp-role-line">
+          <h3 class="xp-role">Junior PHP Developer (Intern)</h3>
+          <span class="xp-meta">University Project Lab · Internship</span>
+          <span class="xp-meta">2017 – 2018 · Philippines</span>
+        </div>
+        <ul class="xp-bullets">
+          <li>Built basic CRUD modules with PHP/MySQL and Bootstrap admin templates.</li>
+          <li>Wrote reusable helpers and documented setup steps for classmates.</li>
+        </ul>
+        <div class="xp-tags">
+          <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span>
+        </div>
+      </div>
+    </article>
 
-</div>
-</div>
+  </div>
+</section>
+<!-- ================= /WORK EXPERIENCE ================= -->
+
+<!-- (Projects area you already had; preserved) -->
+<section id="workexperience-projects">
+  <div class="container-fluid padding " id="work-experience">
+    <div class="container padding">
+      <div class="row text-center padding">
+        <div class="col-lg-12 col-xl-12  wow fadeInLeftBig" data-wow-duration="0.5s">
+          <h1>PROJECTS</h1>
+          <br>
+          <p>One of my previous projects is an informational website for our College of Computer Studies. I was responsible
+          for the Front end development and Back-end development as well as the UI Designs.</p>
+        </div>
+        <div class="col-12 text-center wow fadeInUp" data-wow-duration="0.9s">
+          <img src="wallpaper1.png" class="wallpaper1-pic img-fluid" alt="Project wallpaper">
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<br><br>
-<section id="workexperience">
+<!-- PHOTOSHOP ART SHOWCASE (Flat grid + Lightbox) -->
+<section id="photoshop" class="art-section section-flat">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12 col-xl-12">
+        <h2 class="mask-wipe">PHOTOSHOP VECTOR ARTWORKS</h2>
+        <p class="art-lead">I am also a Graphic Artist — I’ve been working on vector artworks and logos.<br>Below are some of my works using Adobe Photoshop CC.</p>
+      </div>
+    </div>
+
+    <div class="art-grid">
+      <a href="vector/thanos.jpg" class="art-card reveal" data-reveal="fade-up" data-title="Thanos — Vector Study" data-index="0">
+        <img src="vector/thanos.jpg" alt="Thanos artwork">
+        <div class="art-card__overlay">
+          <span class="art-card__title">Thanos — Vector Study</span>
+          <span class="art-card__cta"><i class="fas fa-search-plus"></i> View</span>
+        </div>
+      </a>
+      <a href="vector/spiderman.jpg" class="art-card reveal" data-reveal="fade-up" data-reveal-delay=".05s" data-title="Spiderman — Poster Experiment" data-index="1">
+        <img src="vector/spiderman.jpg" alt="Spiderman artwork">
+        <div class="art-card__overlay">
+          <span class="art-card__title">Spiderman — Poster Experiment</span>
+          <span class="art-card__cta"><i class="fas fa-search-plus"></i> View</span>
+        </div>
+      </a>
+      <a href="vector/hulk.png" class="art-card reveal" data-reveal="fade-up" data-reveal-delay=".1s" data-title="Hulk — Quote Series" data-index="2">
+        <img src="vector/hulk.png" alt="Hulk artwork">
+        <div class="art-card__overlay">
+          <span class="art-card__title">Hulk — Quote Series</span>
+          <span class="art-card__cta"><i class="fas fa-search-plus"></i> View</span>
+        </div>
+      </a>
+      <a href="vector/thor.jpg" class="art-card reveal" data-reveal="fade-up" data-reveal-delay=".15s" data-title="Thor — Lightning Portrait" data-index="3">
+        <img src="vector/thor.jpg" alt="Thor artwork">
+        <div class="art-card__overlay">
+          <span class="art-card__title">Thor — Lightning Portrait</span>
+          <span class="art-card__cta"><i class="fas fa-search-plus"></i> View</span>
+        </div>
+      </a>
+      <a href="vector/avengers.png" class="art-card reveal" data-reveal="fade-up" data-reveal-delay=".2s" data-title="Avengers — Team Composition" data-index="4">
+        <img src="vector/avengers.png" alt="Avengers artwork">
+        <div class="art-card__overlay">
+          <span class="art-card__title">Avengers — Team Composition</span>
+          <span class="art-card__cta"><i class="fas fa-search-plus"></i> View</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-btn lb-close" id="lbClose" aria-label="Close (Esc)"><i class="fas fa-times"></i></button>
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous (←)"><i class="fas fa-chevron-left"></i></button>
+    <figure class="lb-figure">
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" id="lbNext" aria-label="Next (→)"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+<!-- /PHOTOSHOP ART SHOWCASE -->
+
+<!-- SHORT DESCRIPTION -->
+<div class="container-fluid padding intro-logo">
   <div class="container padding">
     <div class="row text-center padding">
-      <div class="col-12 wow slideInLeft">
-        <h1>WORK EXPERIENCE</h1>
-        <p>A list of my professional experiences, roles, and accomplishments.</p>
-      </div>
-    </div>
-    <div class="row padding">
-      <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
-        <h4>Senior Front-End Developer</h4>
-        <h5>Tech Innovations Inc. | 2022 - Present</h5>
-        <ul>
-          <li>Led a team of 3 developers to redesign the company's main website, increasing user engagement by 25%.</li>
-          <li>Developed and maintained responsive web applications using React and Redux.</li>
-          <li>Implemented a comprehensive unit testing suite, reducing bugs by 40% in production.</li>
-        </ul>
-      </div>
-      <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.2s">
-        <h4>Junior Web Designer</h4>
-        <h5>Creative Solutions Co. | 2019 - 2022</h5>
-        <ul>
-          <li>Designed and built custom WordPress themes for various clients.</li>
-          <li>Collaborated with the UX/UI team to create wireframes and mockups for new projects.</li>
-          <li>Optimized website performance and SEO, resulting in a 15% increase in organic traffic.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-<div class="container-fluid padding " id="projects-section">
-<div class="container padding">
-<div class="row text-center padding">
-    <div class="col-lg-12 col-xl-12  wow fadeInLeftBig" data-wow-duration="0.5s">
-        <h1>PROJECTS</h1>
-        <br>
-        <p>One of my previous projects is an informational website for our College of Computer Studies. I was responsible
-        for the Front end development and Back-end development as well as the UI Designs.</p>
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center wow fadeInUp" data-wow-duration="0.9s">
-       <img src="wallpaper1.png" class="wallpaper1-pic img-fluid">
-    </div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="photoshop">
-<div class="container-fluid padding"  id="photoshop-arts">
-<div class="container padding">
-<div class="row text-center padding">
-    <div class="col-lg-12 col-xl-12 wow fadeInLeftBig">
-        <h1>PHOTOSHOP VECTOR ARTWORKS</h1>
-        <p>I am also a Graphic Artist , i've been working on Vector Artworks and Logos.<br>
-            Below are some of my works using Adobe Photoshop CC</p>
-    </div>
-    <div class="row photoshopwork">
-
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
-        <div class="container-picture">
-            <img src="vector/thanos.jpg" alt="Avatar" class="image-fluid image-picture">
-                <div class="overlay-picture">
-                    <div class="text2">
-                         Thanos<br>
-                        Made at Adobe Photoshop cc
-                    </div>
-                </div>
-        </div>
-    </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center ">
-        <div class="container1">
-            <img src="vector/spiderman.jpg" alt="Avatar" class="image-fluid image1">
-                <div class="overlay1">
-                    <div class="text1">
-                        Spiderman<br>
-                        Made at Adobe Photoshop cc
-                    </div>
-                </div>
-        </div>
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
-        <div class="container-picture">
-            <img src="vector/hulk.png" alt="Avatar" class="image-fluid image-picture">
-                <div class="overlay-picture">
-                    <div class="text2">
-                             Hulk<br>
-                        Made at Adobe Photoshop cc
-                    </div>
-                </div>
-        </div>
-    </div>
-    
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
-        <div class="container1">
-            <img src="vector/thor.jpg" alt="Avatar" class="image-fluid image1">
-                <div class="overlay1">
-                    <div class="text1">Thor<br>
-                        Made at Adobe Photoshop cc
-                    </div>
-                </div>
-        </div>
-    </div>
-
-       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-         <div class="container1">
-             <img src="vector/avengers.png" alt="Avatar" class="image-fluid image1">
-                 <div class="overlay1">
-                     <div class="text1">Avengers Endgame<br>
-                         Made at Adobe Photoshop cc
-                     </div>
-                 </div>
-         </div>
-     </div>
-
-    </div>
-
-</div>
-</div>
-</div>
-</section>
-<br>
-<div class="container-fluid padding intro-logo">
-<div class="container padding">
-<div class="row text-center padding">
-    <div class="col-lg-12 col-xl-12 intro-caption wow fadeInLeftBig" data-wow-offset="150">
+      <div class="col-lg-12 col-xl-12 intro-caption wow FadeInLeftBig" data-wow-offset="150">
         <h1>RECENT ARTWORK</h1>
         <p></p>
-    </div>
+      </div>
 
-    
-<div class="row">
-
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center wow fadeInUp" data-wow-offset="160"> 
-        <div class="container-picture">
-            <img src="vector/final2.png" alt="Avatar" class="image-fluid image-picture">
-                
+      <div class="row">
+        <div class="col-md-6 text-center wow fadeInUp" data-wow-offset="160"> 
+          <div class="container-picture"><img src="vector/final2.png" alt="Vape on Wheels" class="image-fluid image-picture"></div>
         </div>
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 align-self-center wow fadeInLeftBig" data-wow-duration="0.6s">
-        <br>
-        <h4>VAPE ON WHEELS</h4>
-        <p>It is a Commissioned Artwork for a Vape Shop. I used various tools on Adobe Photoshop CC to
+        <div class="col-md-6 align-self-center wow fadeInLeftBig" data-wow-duration="0.6s">
+          <br><h4>VAPE ON WHEELS</h4>
+          <p>It is a Commissioned Artwork for a Vape Shop. I used various tools on Adobe Photoshop CC to
             make the effects on the smoke and to the wheels. I made it simple but attractive to the eye.</p>
-    </div>    
-
-</div>
-    
-    <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center wow fadeInUp">
-          <a href="https://www.behance.net/jhudelsaleef4b">   <button type="button" class="btn button-aboutme34">
-                <h6>Follow me on Behance</h6>
-    </button>
-    </a>
-    </div>
-    
-</div>    
-</div>
-</div>
-
-
-
-<header id="aboutme" class="aboutme">
-<div class="container">
-<div class="row text-center padding wow fadeInUp">
-    <div class="col-xl-12 " id="aboutme-caption">
-        <h1 class="wow fadeInLeft" data-wow-delay="0.5s">ABOUT ME</h1><br>
-        <p class="wow fadeInUp" data-wow-delay="0.6s">I am a web designer, Front/Back-end developer and a Graphic Artist. I am interested in all kinds of visual communication, but my major focus is on web development. I have a serious passion for Web Development and creating Vector Artworks/Logos. </p>
-
-        <p class="wow fadeInRight" data-wow-delay="0.7s">Currently, i am a Web Developer on a respective company and my roles are being a Front/Back end Developer. </p>
-    </div>
-</div>
-</div>
-</header>
-<header id="contact">
-<div class="container padding">
-<div class="row text-center padding wow fadeInUp" data-wow-offset="160">
-    <div class="col-xl-12 " >
-        <h1>OK, LET’S CREATE <br>
-        SOMETHING GREAT</h1>
-        <p class="wow fadeInLeft" data-wow-delay="0.5s">If you like my work and have some cool project to work on, just send me <br> direct message or contact me through social sites listed below.</p>
-    </div>
-</div>
-
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center wow fadeInUp" data-wow-offset="160">
-          <h5>GET IN TOUCH WITH ME</h5>
         </div>
+      </div>
+
+      <div class="col-12 text-center wow fadeInUp">
+        <a href="https://www.behance.net/jhudelsaleef4b" target="_blank" rel="noopener">
+          <button type="button" class="btn button-aboutme34"><h6>Follow me on Behance</h6></button>
+        </a>
+      </div>
+
+    </div>    
+  </div>
+</div>
+<!-- /SHORT DESCRIPTION -->
+
+<!-- ABOUT -->
+<header id="aboutme" class="aboutme">
+  <div class="container">
+    <div class="row text-center padding wow fadeInUp" data-wow-delay="0s" data-wow-duration="0.45s">
+      <div class="col-xl-12 " id="aboutme-caption">
+        <h1 class="wow fadeInLeft" data-wow-delay="0.05s" data-wow-duration="0.45s">ABOUT ME</h1><br>
+        <p class="wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="0.45s">
+          I am a web designer, Front/Back-end developer and a Graphic Artist. I am interested in all kinds of visual communication,
+          but my major focus is on web development. I have a serious passion for Web Development and creating Vector Artworks/Logos.
+        </p>
+        <p class="wow fadeInRight" data-wow-delay="0.15s" data-wow-duration="0.45s">
+          Currently, i am a Web Developer on a respective company and my roles are being a Front/Back end Developer.
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- /ABOUT -->
+
+<!-- =============== NEW: HIRE ME (CTA) =============== -->
+<section id="hireme" class="cta-hire">
+  <div class="container">
+    <div class="cta-box reveal" data-reveal="fade-up">
+      <h2 class="mask-wipe">LET’S WORK TOGETHER</h2>
+      <p>I’m organized, reliable, and tech-savvy. If you need a Virtual Assistant who can keep your day running smoothly, I’m ready.</p>
+      <div class="cta-actions">
+        <a class="cta-btn" href="resume.pdf" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download CV</a>
+        <a class="cta-btn" href="mailto:jhudel@example.com"><i class="fas fa-envelope"></i> Email Me</a>
+        <a class="cta-btn" href="https://calendly.com/" target="_blank" rel="noopener"><i class="far fa-calendar-check"></i> Book a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =============== /HIRE ME (CTA) =============== -->
+
+<!-- CONTACT -->
+<header id="contact">
+  <div class="container padding">
+    <div class="row text-center padding wow fadeInUp" data-wow-offset="160">
+      <div class="col-xl-12">
+        <h1>OK, LET’S CREATE <br>SOMETHING GREAT</h1>
+        <p class="wow fadeInLeft" data-wow-delay="0.2s">
+          If you like my work and have some cool project to work on, just send me <br>
+          direct message or contact me through social sites listed below.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-12 text-center wow fadeInUp" data-wow-offset="160">
+      <h5>GET IN TOUCH WITH ME</h5>
+    </div>
 
     <div class="row align-items-center aboutme-align">
-
-        
-
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center wow fadeInUp" data-wow-offset="160">
-            <a href="https://twitter.com/sjhudel">
-                <button type="button" class="btn button-aboutme1">
-                    <i class="fab fa-twitter"></i><h6> TWITTER</h6>
-                </button>
-            </a>
-        </div>
-
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center wow fadeInUp" data-wow-offset="160">
-            <a href="https://www.behance.net/jhudelsales">
-                <button type="button" class="btn button-aboutme2">
-                    <i class="fab fa-behance-square"></i><h6> BEHANCE </h6>
-                </button>
-            </a>
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center wow fadeInUp" data-wow-offset="160">
-            <a href="https://www.facebook.com/salesjhudel">
-                <button type="button" class="btn button-aboutme4">
-                    <i class="fab fa-facebook"></i><h6> FACEBOOK </h6>
-                </button>
-            </a>
-</div>
-
+      <div class="col-md-4 text-center wow fadeInUp" data-wow-offset="160">
+        <a href="https://twitter.com/sjhudel" target="_blank" rel="noopener">
+          <button type="button" class="btn button-aboutme1"><i class="fab fa-twitter"></i><h6> TWITTER</h6></button>
+        </a>
+      </div>
+      <div class="col-md-4 text-center wow fadeInUp" data-wow-offset="160">
+        <a href="https://www.behance.net/jhudelsales" target="_blank" rel="noopener">
+          <button type="button" class="btn button-aboutme2"><i class="fab fa-behance-square"></i><h6> BEHANCE </h6></button>
+        </a>
+      </div>
+      <div class="col-md-4 text-center wow fadeInUp" data-wow-offset="160">
+        <a href="https://www.facebook.com/salesjhudel" target="_blank" rel="noopener">
+          <button type="button" class="btn button-aboutme4"><i class="fab fa-facebook"></i><h6> FACEBOOK </h6></button>
+        </a>
+      </div>
     </div>
- 
-</div>
+  </div>
 </header>
+<!-- /CONTACT -->
+
 <div class="contactform">
-<div class="container-fluid">
-<div class="container padding">
-
-    <div class="row text-center wow fadeInUp">
+  <div class="container-fluid">
+    <div class="container padding">
+      <div class="row text-center wow fadeInUp">
         <div class="col-xl-12">
-            <br>
-            <h1>CONTACT</h1>
-</div>
-    </div>   
+          <br><h1>CONTACT</h1>
+        </div>
+      </div>   
 
-<form name="index" method="post" action="send_form_email.php" class="contact-form wow fadeInUp" target="_blank" >
-
-  <div class="form-group ">
-      
-    <input type="text" name="first_name" class="form-control" placeholder="Name" required>
-  </div>
-
-  <div class="form-group ">
-      
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-</div>
-
-  <div class="form-group ">
-      
-    <input type="number" name="telephone" class="form-control" placeholder="Phone Number" required>
-  </div>
-
-    <div class="form-group ">
-      
-    <textarea name="comments" class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Your Message" required></textarea>
+      <form name="index" method="post" action="send_form_email.php" class="contact-form wow fadeInUp" target="_blank">
+        <div class="form-group"><input type="text" name="first_name" class="form-control" placeholder="Name" required></div>
+        <div class="form-group"><input type="email" name="email" class="form-control" placeholder="Enter email" required></div>
+        <div class="form-group"><input type="number" name="telephone" class="form-control" placeholder="Phone Number" required></div>
+        <div class="form-group"><textarea name="comments" class="form-control" rows="5" placeholder="Your Message" required></textarea></div>
+        <button type="submit" class="btn submit" value="Submit">SUBMIT</button>
+      </form>
     </div>
-
-    <button type="submit" class="btn submit" value="Submit">SUBMIT</button>
-</form>
-</div>
+  </div>
 </div>
 
-</div>
-
+<!-- Footer -->
 <footer>
-<div class="container-fluid padding">
-<div class="row text-center">
-
-    <div class="col-12">
+  <div class="container-fluid padding">
+    <div class="row text-center">
+      <div class="col-12">
         <hr class="light">
         <p> © <span style="color:#E96977;">Jhudel Braian P. Sales. </span> MADE IN PHILIPPINES · <small id="build-stamp"></small></p>
         <p><span style="color:#C1C1C1;">This site was built with great tools like Photoshop and Sublime. Font used in headlines is Calibri, same with the font in body.</span></p>
+      </div>
     </div>
-</div>
-</div>
+  </div>
 </footer>
 
+<!-- Back-to-Top button -->
 <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script src="Skill-Bar/js/main.js"></script>
-     <script src="Skill-Bar/js/sample.js"></script>
-     <script>
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- We no longer need wow.js; our custom reveal handles it -->
+<script src="Skill-Bar/js/main.js"></script>
+<script src="Skill-Bar/js/sample.js"></script>
+
+<!-- Right-click disable -->
+<script>
 var message="Right-click has been disabled";
-function clickIE() {
-     if (document.all) {
-         (message);
-         return false;
-     }
+function clickIE(){ if (document.all){ (message); return false; } }
+function clickNS(e){
+  if (document.layers || (document.getElementById && !document.all)){
+    if (e.which==2||e.which==3){ (message); return false; }
+  }
 }
-function clickNS(e) {
-     if (document.layers || (document.getElementById && !document.all)) {
-         if (e.which == 2||e.which == 3) {
-              (message);
-              return false;
-         }
-     }
-}
-if (document.layers) {
-     document.captureEvents(Event.MOUSEDOWN);
-     document.onmousedown = clickNS;
-} else {
-     document.onmouseup = clickNS;
-     document.oncontextmenu = clickIE;
-}
+if (document.layers){ document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS; }
+else{ document.onmouseup=clickNS; document.oncontextmenu=clickIE; }
 document.oncontextmenu = new Function("return false");
-document.getElementsByClassName('my-img').ondragstart = function() { return false; };
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-var offsetTop = $('.skill-area').offset().top;
-
-     $(window).scroll(function () {
-         var height = $(window).height();
-         if ($(window).scrollTop() + height >= offsetTop) {
-             jQuery('.skillbar').each(function () {
-                 jQuery(this).find('.skillbar-bar').animate({
-                     width: jQuery(this).attr('data-percent')
-                 }, 7000);
-             });
-         }
-     });
-
 </script>
 
+<!-- Build-stamp + Back-to-Top + Skill bars + REVEAL + Lightbox -->
 <script>
-  // Build stamp (Asia/Manila)
+  // Build stamp
   (function(){
     var el = document.getElementById('build-stamp');
     if (el) {
-      try {
-        el.textContent = 'Updated ' + new Date().toLocaleString('en-PH', { timeZone: 'Asia/Manila' });
-      } catch(e) {
-        el.textContent = 'Updated ' + new Date().toLocaleString();
-      }
+      try { el.textContent = 'Updated ' + new Date().toLocaleString('en-PH', { timeZone: 'Asia/Manila' }); }
+      catch(e){ el.textContent = 'Updated ' + new Date().toLocaleString(); }
     }
   })();
 
-  // Back-to-top
+  // Back to top
   (function(){
     var btn = document.getElementById('backToTop');
     if (!btn) return;
     var showAt = 400;
-    function toggle(){
-      if (window.pageYOffset > showAt) {
-        btn.style.display = 'flex';
-      } else {
-        btn.style.display = 'none';
-      }
-}
-    window.addEventListener('scroll', toggle);
-    toggle();
+    function toggle(){ btn.style.display = (window.pageYOffset > showAt) ? 'flex' : 'none'; }
+    window.addEventListener('scroll', toggle); toggle();
     btn.addEventListener('click', function(){
-      try {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } catch(e) {
-        // fallback for old browsers
-        document.documentElement.scrollTop = 0; document.body.scrollTop = 0;
-      }
+      document.querySelectorAll('.skill-pill__bar').forEach(function(b){ b.classList.remove('is-fill'); });
+      try { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+      catch(e){ document.documentElement.scrollTop = 0; document.body.scrollTop = 0; }
     });
   })();
 
-  // Dark mode toggle
+  // Animated fill bars
   (function(){
-    const toggleBtn = document.getElementById('darkModeToggle');
-    if (!toggleBtn) return;
-    
-    toggleBtn.addEventListener('click', function() {
-      document.body.classList.toggle('dark-mode');
-      const isDarkMode = document.body.classList.contains('dark-mode');
-      localStorage.setItem('darkMode', isDarkMode);
-      this.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    var prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var bars = document.querySelectorAll('.skill-pill__bar');
+    if (prefersReduce){
+      bars.forEach(function(b){ b.classList.add('is-fill'); });
+      return;
+    }
+    if (!('IntersectionObserver' in window)){
+      window.addEventListener('scroll', function(){
+        var skills = document.getElementById('skills');
+        var rect = skills ? skills.getBoundingClientRect() : null;
+        if (rect && rect.top < window.innerHeight*0.75) {
+          bars.forEach(function(b){ b.classList.add('is-fill'); });
+        } else if (window.pageYOffset < 150) {
+          bars.forEach(function(b){ b.classList.remove('is-fill'); });
+        }
+      }, { passive:true });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('is-fill');
+        } else {
+          entry.target.classList.remove('is-fill');
+        }
+      });
+    }, { threshold: 0.3, rootMargin: "0px 0px -10% 0px" });
+    bars.forEach(function(b){ io.observe(b); });
+    window.addEventListener('scroll', function(){
+      if (window.pageYOffset < 120){
+        bars.forEach(function(b){ b.classList.remove('is-fill'); });
+      }
+    }, { passive:true });
+  })();
+
+  /* Reveal on scroll */
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var map = {
+      'fadeInUp':'fade-up','fadeInLeft':'fade-left','fadeInRight':'fade-right',
+      'fadeInDown':'fade-down','fadeIn':'fade','zoomIn':'zoom-in',
+      'fadeInLeftBig':'fade-left','fadeInRightBig':'fade-right',
+      'fadeInUpBig':'fade-up','fadeInDownBig':'fade-down'
+    };
+    document.querySelectorAll('.wow').forEach(function(el){
+      if (!el.dataset.reveal){
+        var cls = Array.prototype.slice.call(el.classList).find(function(c){ return map[c]; });
+        el.dataset.reveal = map[cls] || 'fade-up';
+      }
+      if (el.dataset.wowDelay && !el.dataset.revealDelay) el.dataset.revealDelay = el.dataset.wowDelay;
+      if (el.dataset.wowDuration && !el.dataset.revealDuration) el.dataset.revealDuration = el.dataset.wowDuration;
+      el.classList.add('reveal');
+    });
+    if (reduce){
+      document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-in'); });
+      return;
+    }
+    if (!('IntersectionObserver' in window)){
+      var onscroll = function(){
+        document.querySelectorAll('.reveal').forEach(function(el){
+          var r = el.getBoundingClientRect();
+          var inview = r.top < window.innerHeight * 0.85 && r.bottom > 0;
+          el.classList.toggle('is-in', inview);
+        });
+      };
+      window.addEventListener('scroll', onscroll, {passive:true});
+      onscroll();
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var el = entry.target;
+        if (entry.isIntersecting){
+          var d = el.dataset.revealDelay || '';
+          var dur = el.dataset.revealDuration || '0.45s';
+          el.style.transitionDelay = d;
+          el.style.transitionDuration = dur;
+          el.classList.add('is-in');
+        } else {
+          el.classList.remove('is-in');
+          el.style.transitionDelay = '';
+          el.style.transitionDuration = '';
+        }
+      });
+    }, { threshold: 0.18, rootMargin: "0px 0px -12% 0px" });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  })();
+
+  /* Lightbox */
+  (function(){
+    var items = Array.from(document.querySelectorAll('.art-card'));
+    if (!items.length) return;
+
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lbImg');
+    var lbCap = document.getElementById('lbCap');
+    var btnPrev = document.getElementById('lbPrev');
+    var btnNext = document.getElementById('lbNext');
+    var btnClose = document.getElementById('lbClose');
+    var current = 0;
+
+    function open(i){
+      current = i;
+      var el = items[current];
+      lbImg.src = el.getAttribute('href');
+      lbImg.alt = el.dataset.title || '';
+      lbCap.textContent = el.dataset.title || '';
+      lb.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    }
+    function close(){
+      lb.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+    function next(){ open((current+1) % items.length); }
+    function prev(){ open((current-1+items.length) % items.length); }
+
+    items.forEach(function(el, idx){
+      el.addEventListener('click', function(e){
+        e.preventDefault();
+        open(idx);
+      });
     });
 
-    // Check for saved dark mode preference
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode === 'true') {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    }
+    btnClose.addEventListener('click', close);
+    btnNext.addEventListener('click', next);
+    btnPrev.addEventListener('click', prev);
+    lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
+
+    // Keyboard
+    window.addEventListener('keydown', function(e){
+      if (lb.getAttribute('aria-hidden') === 'true') return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowRight') next();
+      if (e.key === 'ArrowLeft') prev();
+    }, {passive:true});
+
+    // Touch swipe
+    var sx = 0;
+    lb.addEventListener('touchstart', function(e){ sx = e.changedTouches[0].clientX; }, {passive:true});
+    lb.addEventListener('touchend', function(e){
+      var dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 40) (dx < 0 ? next() : prev());
+    }, {passive:true});
   })();
 </script>
 
