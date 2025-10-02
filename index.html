@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
   <link href="style.css" rel="stylesheet">
   
@@ -22,12 +23,10 @@
       transform: translateY(20px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
-
     .faded-in {
       opacity: 1;
       transform: translateY(0);
     }
-    
   </style>
 </head>
 <body>
@@ -103,7 +102,7 @@
               <span class="chip"><i class="fas fa-shield-alt"></i> NDA-friendly & security-minded</span>
             </div>
             <div class="hero-actions">
-              <a href="https://calendly.com/" target="_blank" rel="noopener" class="hero-btn hero-btn--primary">
+              <a href="https://calendly.com/jhudelps/30min" target="_blank" rel="noopener" class="hero-btn hero-btn--primary">
                 <i class="far fa-calendar-check"></i> Book a 15-min call
               </a>
               <a href="resume.pdf" target="_blank" rel="noopener" class="hero-btn hero-btn--outline">
@@ -124,21 +123,25 @@
       <p class="section-subheading fade-in">Two hats: Virtual Assistant and Developer — with specific, hands-on skills.</p>
     </div>
 
-    <!-- ===== VIRTUAL ASSISTANT SKILLS ===== -->
-    <div class="skills-block mt-4">
-      <h3 class="skills-block__title fade-in"><i class="fas fa-briefcase"></i> Virtual Assistant Skills</h3>
+    <!-- ===== VIRTUAL ASSISTANT SKILLS (roomier, two rows) ===== -->
+    <div class="skills-block vaskills mt-4">
+      <h3 class="skills-block__title fade-in">
+        <i class="fa-solid fa-briefcase"></i> Virtual Assistant Skills
+      </h3>
+      <p class="vaskills-sub fade-in">Admin, communication, reporting, research, documentation, and light CMS/support.</p>
 
       <div class="row mt-3">
         <!-- Inbox & Communication -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="skill-mini fade-in">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="skill-mini skill-mini--va fade-in">
             <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fas fa-inbox"></i></span>
+              <span class="skill-mini__icon"><i class="fa-solid fa-inbox"></i></span>
               <h4>Inbox & Communication</h4>
             </div>
             <div class="skill-mini__skills">
-              <span class="pill">Inbox triage</span><span class="pill">Follow-up sequences</span><span class="pill">Canned responses</span>
-              <span class="pill">Labels & filters</span><span class="pill">Meeting notes</span><span class="pill">Exec summaries</span>
+              <span class="pill">Inbox triage</span><span class="pill">Follow-up sequences</span>
+              <span class="pill">Canned responses</span><span class="pill">Labels & filters</span>
+              <span class="pill">Meeting notes</span><span class="pill">Exec summaries</span>
             </div>
             <p class="skill-mini__line">Inbox-zero daily; ≤24h responses.</p>
             <div class="skill-mini__tools">
@@ -148,15 +151,16 @@
         </div>
 
         <!-- Scheduling & Calendar -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="skill-mini fade-in">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="skill-mini skill-mini--va fade-in">
             <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fas fa-calendar-check"></i></span>
+              <span class="skill-mini__icon"><i class="fa-regular fa-calendar-check"></i></span>
               <h4>Scheduling & Calendar</h4>
             </div>
             <div class="skill-mini__skills">
-              <span class="pill">Multi-timezone booking</span><span class="pill">Buffer rules</span><span class="pill">Reschedules & confirms</span>
-              <span class="pill">Calendar hygiene</span><span class="pill">Agenda prep</span><span class="pill">Clear handoffs</span>
+              <span class="pill">Multi-timezone booking</span><span class="pill">Buffer rules</span>
+              <span class="pill">Reschedules & confirms</span><span class="pill">Calendar hygiene</span>
+              <span class="pill">Agenda prep</span><span class="pill">Clear handoffs</span>
             </div>
             <p class="skill-mini__line">Smooth, error-free scheduling.</p>
             <div class="skill-mini__tools">
@@ -166,15 +170,16 @@
         </div>
 
         <!-- Reporting & Analytics -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="skill-mini fade-in">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="skill-mini skill-mini--va fade-in">
             <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fas fa-chart-line"></i></span>
+              <span class="skill-mini__icon"><i class="fa-solid fa-chart-line"></i></span>
               <h4>Reporting & Analytics</h4>
             </div>
             <div class="skill-mini__skills">
-              <span class="pill">Pivot tables</span><span class="pill">VLOOKUP/XMATCH</span><span class="pill">Conditional formatting</span>
-              <span class="pill">Charts & dashboards</span><span class="pill">Weekly rollups</span><span class="pill">Data cleaning</span>
+              <span class="pill">Pivot tables</span><span class="pill">VLOOKUP/XMATCH</span>
+              <span class="pill">Conditional formatting</span><span class="pill">Charts & dashboards</span>
+              <span class="pill">Weekly rollups</span><span class="pill">Data cleaning</span>
             </div>
             <p class="skill-mini__line">One-glance KPIs; faster decisions.</p>
             <div class="skill-mini__tools">
@@ -184,15 +189,16 @@
         </div>
 
         <!-- Research & Lead Gen -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="skill-mini fade-in">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="skill-mini skill-mini--va fade-in">
             <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fas fa-search"></i></span>
+              <span class="skill-mini__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
               <h4>Research & Lead Gen</h4>
             </div>
             <div class="skill-mini__skills">
-              <span class="pill">ICP criteria</span><span class="pill">Boolean searches</span><span class="pill">Enrichment</span>
-              <span class="pill">Email verification</span><span class="pill">De-duplication</span><span class="pill">Source-citing</span>
+              <span class="pill">ICP criteria</span><span class="pill">Boolean searches</span>
+              <span class="pill">Enrichment</span><span class="pill">Email verification</span>
+              <span class="pill">De-duplication</span><span class="pill">Source-citing</span>
             </div>
             <p class="skill-mini__line">100–300 qualified leads/week; &lt;5% bounces.</p>
             <div class="skill-mini__tools">
@@ -202,15 +208,16 @@
         </div>
 
         <!-- Documentation & SOPs -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="skill-mini fade-in">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="skill-mini skill-mini--va fade-in">
             <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fas fa-file-alt"></i></span>
+              <span class="skill-mini__icon"><i class="fa-solid fa-file-lines"></i></span>
               <h4>Documentation & SOPs</h4>
             </div>
             <div class="skill-mini__skills">
-              <span class="pill">SOP writing</span><span class="pill">Macro libraries</span><span class="pill">Templates</span>
-              <span class="pill">Version control</span><span class="pill">KB updates</span><span class="pill">Brand/tone match</span>
+              <span class="pill">SOP writing</span><span class="pill">Macro libraries</span>
+              <span class="pill">Templates</span><span class="pill">Version control</span>
+              <span class="pill">KB updates</span><span class="pill">Brand/tone match</span>
             </div>
             <p class="skill-mini__line">Consistent quality; faster onboarding.</p>
             <div class="skill-mini__tools">
@@ -220,40 +227,47 @@
         </div>
 
         <!-- Support / CMS / Admin -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="skill-mini fade-in">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="skill-mini skill-mini--va fade-in">
             <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fas fa-headset"></i></span>
+              <span class="skill-mini__icon"><i class="fa-solid fa-headset"></i></span>
               <h4>Support / CMS / Admin</h4>
             </div>
             <div class="skill-mini__skills">
-              <span class="pill">Helpdesk macros</span><span class="pill">SLA triage</span><span class="pill">CSAT tracking</span>
-              <span class="pill">WP edits</span><span class="pill">Shopify updates</span><span class="pill">QA checklists</span><span class="pill">Expense categorizing</span>
+              <span class="pill">Helpdesk macros</span><span class="pill">SLA triage</span>
+              <span class="pill">CSAT tracking</span><span class="pill">WP edits</span>
+              <span class="pill">Shopify updates</span><span class="pill">QA checklists</span>
+              <span class="pill">Expense categorizing</span>
             </div>
             <p class="skill-mini__line">Fewer pings; cleaner releases.</p>
             <div class="skill-mini__tools">
-              <span class="tool">Zendesk</span><span class="tool">Intercom</span><span class="tool">WP</span><span class="tool">Shopify</span><span class="tool">QB/Xero</span>
+              <span class="tool">Zendesk</span><span class="tool">Intercom</span>
+              <span class="tool">WP</span><span class="tool">Shopify</span><span class="tool">QB/Xero</span>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ===== DEVELOPER SKILLS ===== -->
-    <div class="skills-block mt-5">
-      <h3 class="skills-block__title fade-in"><i class="fas fa-code"></i> Developer Skills</h3>
+    <!-- ===== DEVELOPER SKILLS (roomier, two rows) ===== -->
+    <div class="skills-block devskills mt-5">
+      <h3 class="skills-block__title fade-in">
+        <i class="fa-solid fa-code"></i> Developer Skills
+      </h3>
+      <p class="devskills-sub fade-in">Front-end, light back-end & workflow — clean UI, reliable data, smoother releases.</p>
 
       <div class="row mt-3">
         <!-- Front-End -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="skill-mini fade-in">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="skill-mini skill-mini--dev fade-in">
             <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fas fa-laptop-code"></i></span>
+              <span class="skill-mini__icon"><i class="fa-solid fa-laptop-code"></i></span>
               <h4>Front-End (HTML/CSS)</h4>
             </div>
             <div class="skill-mini__skills">
-              <span class="pill">Semantic HTML5</span><span class="pill">Flexbox/Grid</span><span class="pill">Responsive patterns</span>
-              <span class="pill">Accessibility basics</span><span class="pill">Cross-browser tests</span><span class="pill">Bootstrap comps</span>
+              <span class="pill">Semantic HTML5</span><span class="pill">Flexbox/Grid</span>
+              <span class="pill">Responsive patterns</span><span class="pill">Accessibility basics</span>
+              <span class="pill">Cross-browser tests</span><span class="pill">Bootstrap comps</span>
             </div>
             <p class="skill-mini__line">Clean UI that works on any device.</p>
             <div class="skill-mini__tools">
@@ -263,15 +277,16 @@
         </div>
 
         <!-- JavaScript -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="skill-mini fade-in">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="skill-mini skill-mini--dev fade-in">
             <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fab fa-js"></i></span>
+              <span class="skill-mini__icon"><i class="fa-brands fa-js"></i></span>
               <h4>JavaScript</h4>
             </div>
             <div class="skill-mini__skills">
-              <span class="pill">ES6 syntax</span><span class="pill">DOM manipulation</span><span class="pill">Event handling</span>
-              <span class="pill">Fetch/AJAX</span><span class="pill">jQuery plugins</span>
+              <span class="pill">ES6 syntax</span><span class="pill">DOM manipulation</span>
+              <span class="pill">Event handling</span><span class="pill">Fetch/AJAX</span>
+              <span class="pill">jQuery plugins</span>
             </div>
             <p class="skill-mini__line">Snappy UI and small integrations.</p>
             <div class="skill-mini__tools">
@@ -281,15 +296,16 @@
         </div>
 
         <!-- Back-End & Data -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="skill-mini fade-in">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="skill-mini skill-mini--dev fade-in">
             <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fas fa-database"></i></span>
+              <span class="skill-mini__icon"><i class="fa-solid fa-database"></i></span>
               <h4>Back-End & Data</h4>
             </div>
             <div class="skill-mini__skills">
-              <span class="pill">PHP templating</span><span class="pill">Form handling</span><span class="pill">MySQL CRUD</span>
-              <span class="pill">Joins</span><span class="pill">Prepared stmts (basic)</span><span class="pill">REST/JSON</span>
+              <span class="pill">PHP templating</span><span class="pill">Form handling</span>
+              <span class="pill">MySQL CRUD</span><span class="pill">Joins</span>
+              <span class="pill">Prepared stmts (basic)</span><span class="pill">REST/JSON</span>
             </div>
             <p class="skill-mini__line">Reliable forms & data flows.</p>
             <div class="skill-mini__tools">
@@ -299,15 +315,16 @@
         </div>
 
         <!-- Design & Assets -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="skill-mini fade-in">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="skill-mini skill-mini--dev fade-in">
             <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fas fa-paint-brush"></i></span>
+              <span class="skill-mini__icon"><i class="fa-solid fa-paintbrush"></i></span>
               <h4>Design & Assets</h4>
             </div>
             <div class="skill-mini__skills">
-              <span class="pill">Image optimization</span><span class="pill">SVG/icons</span><span class="pill">Micro-animations</span>
-              <span class="pill">Canva edits</span><span class="pill">Photoshop comps</span>
+              <span class="pill">Image optimization</span><span class="pill">SVG/icons</span>
+              <span class="pill">Micro-animations</span><span class="pill">Canva edits</span>
+              <span class="pill">Photoshop comps</span>
             </div>
             <p class="skill-mini__line">Lightweight, branded visuals.</p>
             <div class="skill-mini__tools">
@@ -317,15 +334,16 @@
         </div>
 
         <!-- Workflow & Ops -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="skill-mini fade-in">
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="skill-mini skill-mini--dev fade-in">
             <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fas fa-project-diagram"></i></span>
+              <span class="skill-mini__icon"><i class="fa-solid fa-diagram-project"></i></span>
               <h4>Workflow & Ops</h4>
             </div>
             <div class="skill-mini__skills">
-              <span class="pill">Git branching</span><span class="pill">PR reviews</span><span class="pill">Static deploys</span>
-              <span class="pill">Perf audits</span><span class="pill">SEO basics</span>
+              <span class="pill">Git branching</span><span class="pill">PR reviews</span>
+              <span class="pill">Static deploys</span><span class="pill">Perf audits</span>
+              <span class="pill">SEO basics</span>
             </div>
             <p class="skill-mini__line">Smoother releases & maintainability.</p>
             <div class="skill-mini__tools">
@@ -333,11 +351,14 @@
             </div>
           </div>
         </div>
+
+        <!-- Spacer (keeps two rows, balanced look on XL) -->
+        <div class="col-sm-6 col-lg-4 mb-4 d-none d-lg-block"></div>
       </div>
     </div>
-
   </div>
 </section>
+
 
 
 <section id="workexperience" class="section-light with-grid-pattern">
@@ -422,7 +443,7 @@
       <!-- Inbox & Calendar -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fas fa-inbox"></i></div>
+          <div class="offering-card__icon"><i class="fa-solid fa-inbox"></i></div>
           <h3 class="offering-card__title">Inbox & Calendar</h3>
           <p class="offering-card__text">
             I’ll triage, follow up, and book meetings so you never miss a thread.
@@ -440,7 +461,7 @@
       <!-- Data & Reports -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fas fa-chart-line"></i></div>
+          <div class="offering-card__icon"><i class="fa-solid fa-chart-line"></i></div>
           <h3 class="offering-card__title">Data & Reports</h3>
           <p class="offering-card__text">
             I turn messy data into weekly KPI dashboards.
@@ -458,7 +479,7 @@
       <!-- Customer Support -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fas fa-user-headset"></i></div>
+          <div class="offering-card__icon"><i class="fa-solid fa-headset"></i></div>
           <h3 class="offering-card__title">Customer Support</h3>
           <p class="offering-card__text">
             I’ll clear queues, write macros, and keep CSAT up.
@@ -476,7 +497,7 @@
       <!-- Social Scheduling -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fas fa-share-alt"></i></div>
+          <div class="offering-card__icon"><i class="fa-solid fa-share-nodes"></i></div>
           <h3 class="offering-card__title">Social Scheduling</h3>
           <p class="offering-card__text">
             Plan, queue, and report on posts with simple Canva creatives.
@@ -494,7 +515,7 @@
       <!-- Docs & Slides -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fas fa-file-alt"></i></div>
+          <div class="offering-card__icon"><i class="fa-solid fa-file-lines"></i></div>
           <h3 class="offering-card__title">Docs & Slides</h3>
           <p class="offering-card__text">
             Brand-aligned docs, proposals, and decks.
@@ -512,7 +533,7 @@
       <!-- Tech Support -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fas fa-exclamation-triangle"></i></div>
+          <div class="offering-card__icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
           <h3 class="offering-card__title">Tech Support</h3>
           <p class="offering-card__text">
             Light CMS edits, form fixes, and QA so pages ship without bugs.
@@ -530,7 +551,7 @@
       <!-- Research & Lead Generation -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fas fa-search"></i></div>
+          <div class="offering-card__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
           <h3 class="offering-card__title">Research & Lead Generation</h3>
           <p class="offering-card__text">
             I build clean, de-duplicated lead lists with decision-makers and verified emails.
@@ -548,7 +569,7 @@
       <!-- Bookkeeping & Admin -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fas fa-receipt"></i></div>
+          <div class="offering-card__icon"><i class="fa-solid fa-receipt"></i></div>
           <h3 class="offering-card__title">Bookkeeping & Admin</h3>
           <p class="offering-card__text">
             Invoices, expenses, and receipts organized and reconciled.
@@ -565,6 +586,7 @@
     </div>
   </div>
 </section>
+
 
 
 <section id="testimonials" class="section-light with-grid-pattern">
@@ -695,52 +717,184 @@
   </div>
 </section>
 
-<section id="aboutme" class="section-dark aboutme-section">
+<!-- ===================== ABOUT (single column, structured) ===================== -->
+<!-- ===================== ABOUT (2-column with media + stats) ===================== -->
+<section id="aboutme" class="section-dark about-hero">
   <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-xl-8">
-        <h2 class="section-heading fade-in section-heading-with-line">About Me</h2>
+    <div class="text-center">
+      <h2 class="section-heading fade-in section-heading-with-line-dark">About Me</h2>
+    </div>
+
+    <div class="about-grid">
+      <!-- LEFT: Text blocks -->
+      <div class="about-col about-col--text">
+        <!-- Lede -->
+        <p class="about-lede fade-in">
+          I help founders and small teams stay organized, ship cleaner websites, and win back time by combining disciplined Virtual Assistant operations with dependable front-end & full-stack development.
+        </p>
+
+        <!-- What I do -->
+        <div class="about-block fade-in">
+          <span class="overline">What I do</span>
+          <p class="about-text">
+            Over the past <strong>6 years as a full-stack developer/programmer</strong>, I’ve handled <strong>many projects</strong> end-to-end—planning, building, and maintaining marketing sites, e-commerce storefronts, internal tools, knowledge bases, and reporting dashboards. I move comfortably from <strong>clean HTML/CSS/JavaScript</strong> and component-level polish to <strong>PHP/MySQL</strong> data work and light integrations, and I routinely support teams with <strong>WordPress/Shopify</strong> theme tweaks, form fixes, QA passes, and performance clean-ups that keep releases smooth and support queues quiet.
+          </p>
+        </div>
+
+        <!-- Breadth -->
+        <div class="about-block fade-in">
+          <span class="overline">Breadth</span>
+          <p class="about-text">
+            Alongside code, I bring operator habits: <strong>inbox triage & follow-ups</strong>, reliable <strong>scheduling across time zones</strong>, <strong>KPI dashboards</strong> in Google Sheets/Excel, and <strong>SOPs, macros, and templates</strong> that make delivery faster and more consistent for everyone involved.
+          </p>
+        </div>
+
+        <!-- Pull quote -->
+        <blockquote class="about-quote fade-in">
+          “Give me the messy inbox, the half-built page, or the unclear request—I’ll turn it into a checklist, ship it, and keep you in the loop.”
+        </blockquote>
+
+        <!-- How I work -->
+        <div class="about-block fade-in">
+          <span class="overline">How I work</span>
+          <p class="about-text">
+            Short discovery, a small trial to align expectations, then a weekly rhythm with progress notes, metrics, and tidy handoffs. I document as I go, keep access organized, and communicate proactively so decisions are easy and work keeps moving. If you need someone who can switch between ops and code, turn ambiguity into action, and deliver quietly without drama—I’m your person.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: Photo + Stats (stats sit below photo) -->
+      <aside class="about-col about-col--media">
+        <figure class="about-photo-card fade-in">
+          <!-- Replace profile.jpg with your real headshot -->
+          <img src="jhudel.jpg" alt="Jhudel Sales" class="about-photo-img">
+          <figcaption class="about-photo-meta">
+            Jhudel Braian P. Sales
+            <span>Virtual Assistant • Full-Stack Developer</span>
+          </figcaption>
+        </figure>
+
+<div class="about-stats-grid stat-grid--feature">
+  <div class="stat-card stat--experience">
+    <div class="stat__top">
+      <span class="stat__icon"><i class="fas fa-user-tie"></i></span>
+      <span class="stat__label">Experience</span>
+    </div>
+    <div class="stat__value">6+ years full-stack</div>
+    <div class="stat__detail">Front-end, back-end, and operations support.</div>
+  </div>
+
+  <div class="stat-card stat--record">
+    <div class="stat__top">
+      <span class="stat__icon"><i class="fas fa-rocket"></i></span>
+      <span class="stat__label">Track record</span>
+    </div>
+    <div class="stat__value">Many projects shipped</div>
+    <div class="stat__detail">Marketing sites, e-com, dashboards, internal tools.</div>
+  </div>
+
+  <div class="stat-card stat--ops">
+    <div class="stat__top">
+      <span class="stat__icon"><i class="fas fa-tools"></i></span>
+      <span class="stat__label">Ops & tools</span>
+    </div>
+    <div class="stat__value">Workspace • Notion • Sheets/Excel</div>
+    <div class="stat__detail">Clean handoffs, tidy access, repeatable workflows.</div>
+  </div>
+
+  <div class="stat-card stat--style">
+    <div class="stat__top">
+      <span class="stat__icon"><i class="fas fa-shield-alt"></i></span>
+      <span class="stat__label">Work style</span>
+    </div>
+    <div class="stat__value">NDA-friendly • 2FA • access hygiene</div>
+    <div class="stat__detail">Quiet delivery, proactive comms, no drama.</div>
+  </div>
+</div>
+
+      </aside>
+    </div>
+  </div>
+</section>
+<!-- =================== /ABOUT (2-column) ===================== -->
+
+<!-- =================== /ABOUT (single column, structured) ===================== -->
+
+
+
+<section id="contact" class="section-dark">
+  <div class="container">
+
+    <!-- This header is hidden while success is showing -->
+    <div class="row text-center contact-header" id="contactHeader">
+      <div class="col-12">
+        <h2 class="section-heading fade-in section-heading-with-line-dark">Let's Create Something Great</h2>
         <p class="section-subheading fade-in">
-          I am a web designer, Front/Back-end developer and a Graphic Artist. I am interested in all kinds of visual communication, but my major focus is on web development. I have a serious passion for Web Development and creating Vector Artworks/Logos. Currently, I am a Web Developer on a respective company and my roles are being a Front/Back end Developer.
+          If you like my work and have a cool project to work on, send me a message.
         </p>
       </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8">
+
+        <!-- CONTACT FORM (Formspree) -->
+        <form id="contactForm" class="contact-form fade-in"
+              action="https://formspree.io/f/xeorgnkl" method="POST" novalidate>
+          <!-- honeypot -->
+          <input type="text" name="_gotcha" id="hp" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="New portfolio message">
+          <input type="hidden" name="_redirect" value="#contact">
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
+            </div>
+            <div class="form-group col-md-6">
+              <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea name="message" id="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
+          </div>
+
+          <div class="d-flex gap-2 justify-content-center" style="gap: 20px;">
+            <button id="sendBtn" type="submit" class="btn btn-primary btn-lg submit">Send Message</button>
+
+            <!-- Calendly opens in a NEW TAB -->
+            <a href="https://calendly.com/jhudelps/30min"
+               target="_blank" rel="noopener"
+               class="hero-btn hero-btn--outline"
+               style="display:inline-flex;align-items:center;gap:8px;">
+              <i class="far fa-calendar-check"></i> Book a 15-min call
+            </a>
+          </div>
+
+          <!-- inline error/status -->
+          <p id="formStatus" class="mt-2 text-center" style="min-height:1.5em;"></p>
+        </form>
+
+        <!-- SUCCESS PANEL -->
+        <div id="formSuccess" class="thanks-card" role="status" aria-live="polite" hidden>
+          <div class="thanks-card__badge">
+            <i class="fas fa-check"></i>
+          </div>
+          <h3 class="thanks-card__title">Thank you! Your message was sent.</h3>
+          <p class="thanks-card__desc">Please wait — I’ll reach out to you via the email you provided.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="social-links text-center mt-5 fade-in">
+      <a href="https://twitter.com/sjhudel" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.behance.net/jhudelsales" target="_blank" rel="noopener" aria-label="Behance"><i class="fab fa-behance"></i></a>
+      <a href="https://www.facebook.com/salesjhudel" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section-dark">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-12">
-                <h2 class="section-heading fade-in section-heading-with-line">Let's Create Something Great</h2>
-                <p class="section-subheading fade-in">
-                  If you like my work and have a cool project to work on, send me a message.
-                </p>
-            </div>
-        </div>
-        
-        <div class="row justify-content-center mt-5">
-            <div class="col-lg-8">
-                <form name="contact-form" method="post" action="send_form_email.php" class="contact-form fade-in" target="_blank">
-                    <div class="form-row">
-                        <div class="form-group col-md-6"><input type="text" name="first_name" class="form-control" placeholder="Name" required></div>
-                        <div class="form-group col-md-6"><input type="email" name="email" class="form-control" placeholder="Email" required></div>
-                    </div>
-                    <div class="form-group"><textarea name="comments" class="form-control" rows="5" placeholder="Your Message" required></textarea></div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-primary btn-lg submit" value="Submit">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="social-links text-center mt-5 fade-in">
-            <a href="https://twitter.com/sjhudel" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.behance.net/jhudelsales" target="_blank" rel="noopener" aria-label="Behance"><i class="fab fa-behance"></i></a>
-            <a href="https://www.facebook.com/salesjhudel" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        </div>
-    </div>
-</section>
 
 <footer>
   <div class="container text-center">
@@ -757,8 +911,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+<!-- Calendly assets (kept; button opens in new tab, not popup) -->
+<link rel="preconnect" href="https://assets.calendly.com">
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"/>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
 <script>
-// Disable Right Click
+/* Disable Right Click */
 var message="Right-click has been disabled";
 function clickIE(){ if (document.all){ (message); return false; } }
 function clickNS(e){
@@ -771,7 +930,7 @@ else{ document.onmouseup=clickNS; document.oncontextmenu=clickIE; }
 document.oncontextmenu=new Function("return false")
 </script>
 <script>
-// Navbar solid on scroll
+/* Navbar solid on scroll */
 $(window).on('scroll', function() {
   if ($(window).scrollTop() > 50) {
     $('.navbar').addClass('navbar--solid');
@@ -780,7 +939,7 @@ $(window).on('scroll', function() {
   }
 });
 
-// Smooth scrolling for navigation links
+/* Smooth scrolling for navigation links */
 $('.scroll').on('click', function(event) {
   var targetId = this.hash;
   if (targetId) {
@@ -794,7 +953,7 @@ $('.scroll').on('click', function(event) {
   }
 });
 
-// Mobile Nav Toggle
+/* Mobile Nav Toggle */
 const navToggle = document.querySelector('.nav-toggle');
 const mobileNav = document.getElementById('mobileNav');
 const sidebarClose = document.querySelector('.sidebar__close');
@@ -822,13 +981,8 @@ mobileNavLinks.forEach(link => {
   link.addEventListener('click', closeSidebar);
 });
 
-// Intersection Observer for all fade-in animations
-const fadeObserverOptions = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.1
-};
-
+/* Intersection Observer for all fade-in animations */
+const fadeObserverOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -844,54 +998,37 @@ const fadeObserver = new IntersectionObserver((entries) => {
     }
   });
 }, fadeObserverOptions);
-
-const elementsToAnimate = document.querySelectorAll('.fade-in, .skill-pill');
-elementsToAnimate.forEach(el => {
-  fadeObserver.observe(el);
-});
-
+document.querySelectorAll('.fade-in, .skill-pill').forEach(el => fadeObserver.observe(el));
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Build timestamp
+  /* Build timestamp */
   const buildStamp = document.getElementById('build-stamp');
   if (buildStamp) {
     const now = new Date();
     buildStamp.textContent = `Last updated: ${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
   }
 
-  // Navbar Active State Logic
+  /* Navbar Active State Logic */
   const sectionsAndHeader = document.querySelectorAll('header[id], section[id]');
   const navItems = document.querySelectorAll('.navbar-nav .nav-item');
   const navLinksMap = {};
-
   navItems.forEach(item => {
       const link = item.querySelector('a');
-      if (link && link.hash) {
-          navLinksMap[link.hash] = item;
-      }
+      if (link && link.hash) navLinksMap[link.hash] = item;
   });
-  
-  const navObserverOptions = {
-      rootMargin: '-40% 0px -60% 0px',
-      threshold: 0
-  };
-
+  const navObserverOptions = { rootMargin: '-40% 0px -60% 0px', threshold: 0 };
   const navObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
               const currentHash = `#${entry.target.id}`;
               navItems.forEach(item => item.classList.remove('active'));
-              if (navLinksMap[currentHash]) {
-                  navLinksMap[currentHash].classList.add('active');
-              }
+              if (navLinksMap[currentHash]) navLinksMap[currentHash].classList.add('active');
           }
       });
   }, navObserverOptions);
-  
   sectionsAndHeader.forEach(section => navObserver.observe(section));
 
-
-  // Lightbox for Photoshop Arts
+  /* Lightbox for Photoshop Arts */
   const artCards = document.querySelectorAll('.art-card');
   const lightbox = document.getElementById('lightbox');
   if (!lightbox) return;
@@ -905,10 +1042,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let artItems = []; 
 
   artCards.forEach((card, index) => {
-    artItems.push({
-      src: card.href,
-      title: card.dataset.title || ''
-    });
+    artItems.push({ src: card.href, title: card.dataset.title || '' });
     card.addEventListener('click', function(e) {
       e.preventDefault();
       currentIndex = index;
@@ -922,21 +1056,12 @@ document.addEventListener('DOMContentLoaded', function() {
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
-
   function closeLightbox() {
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
-
-  function showNext() {
-    currentIndex = (currentIndex + 1) % artItems.length;
-    openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);
-  }
-
-  function showPrev() {
-    currentIndex = (currentIndex - 1 + artItems.length) % artItems.length;
-    openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);
-  }
+  function showNext() { currentIndex = (currentIndex + 1) % artItems.length; openLightbox(artItems[currentIndex].src, artItems[currentIndex].title); }
+  function showPrev() { currentIndex = (currentIndex - 1 + artItems.length) % artItems.length; openLightbox(artItems[currentIndex].src, artItems[currentIndex].title); }
 
   lbClose.addEventListener('click', closeLightbox);
   lbNext.addEventListener('click', showNext);
@@ -950,112 +1075,236 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+</script>
 
-
-// Back to top button
+<script>
+/* Back to top button */
 const backToTopButton = document.getElementById('backToTop');
 if (backToTopButton) {
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTopButton.classList.add('show');
-        } else {
-            backToTopButton.classList.remove('show');
-        }
-    });
-
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) backToTopButton.classList.add('show');
+    else backToTopButton.classList.remove('show');
+  });
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
-
-// FINAL Carousel Logic
+/* FINAL Carousel Logic */
 document.addEventListener('DOMContentLoaded', function() {
-    const wrapper = document.querySelector('.carousel-wrapper');
-    if (!wrapper) return;
+  const wrapper = document.querySelector('.carousel-wrapper');
+  if (!wrapper) return;
 
-    const track = wrapper.querySelector('.carousel-track');
-    let cards = Array.from(track.children);
-    const nextButton = wrapper.querySelector('.carousel-btn--next');
-    const prevButton = wrapper.querySelector('.carousel-btn--prev');
+  const track = wrapper.querySelector('.carousel-track');
+  let cards = Array.from(track.children);
+  const nextButton = wrapper.querySelector('.carousel-btn--next');
+  const prevButton = wrapper.querySelector('.carousel-btn--prev');
 
-    if (cards.length <= 1) return; 
+  if (cards.length <= 1) return; 
 
-    const cloneCount = Math.max(2, Math.floor(cards.length / 2)); 
-    for (let i = 0; i < cloneCount; i++) {
-        const cloneFirst = cards[i % cards.length].cloneNode(true);
-        const cloneLast = cards[cards.length - 1 - (i % cards.length)].cloneNode(true);
-        track.appendChild(cloneFirst);
-        track.insertBefore(cloneLast, cards[0]);
+  const cloneCount = Math.max(2, Math.floor(cards.length / 2)); 
+  for (let i = 0; i < cloneCount; i++) {
+    const cloneFirst = cards[i % cards.length].cloneNode(true);
+    const cloneLast = cards[cards.length - 1 - (i % cards.length)].cloneNode(true);
+    track.appendChild(cloneFirst);
+    track.insertBefore(cloneLast, cards[0]);
+  }
+
+  cards = Array.from(track.children);
+
+  let currentIndex = cloneCount;
+  let isTransitioning = false;
+
+  const updateCarousel = (instant = false) => {
+    isTransitioning = !instant;
+    track.style.transition = instant ? 'none' : 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    const containerWidth = track.parentElement.clientWidth;
+    const cardCenterPoint = cards[currentIndex].offsetLeft + cardWidth / 2;
+    const containerCenterPoint = containerWidth / 2;
+    const offset = containerCenterPoint - cardCenterPoint - 25; 
+    track.style.transform = `translateX(${offset}px)`;
+
+    cards.forEach((card, index) => card.classList.toggle('is-active', index === currentIndex));
+
+    if (!instant) setTimeout(() => { isTransitioning = false; }, 500);
+  };
+
+  const handleNext = () => {
+    if (isTransitioning) return;
+    currentIndex++;
+    updateCarousel();
+    if (currentIndex >= cards.length - cloneCount) {
+      setTimeout(() => {
+        currentIndex = currentIndex - (cards.length - 2 * cloneCount);
+        updateCarousel(true);
+      }, 500);
     }
+  };
 
-    cards = Array.from(track.children);
+  const handlePrev = () => {
+    if (isTransitioning) return;
+    currentIndex--;
+    updateCarousel();
+    if (currentIndex < cloneCount) {
+      setTimeout(() => {
+        currentIndex = currentIndex + (cards.length - 2 * cloneCount);
+        updateCarousel(true);
+      }, 500);
+    }
+  };
+  
+  nextButton.addEventListener('click', handleNext);
+  prevButton.addEventListener('click', handlePrev);
 
-    let currentIndex = cloneCount;
-    let isTransitioning = false;
-
-    const updateCarousel = (instant = false) => {
-        isTransitioning = !instant;
-        track.style.transition = instant ? 'none' : 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
-
-        const cardWidth = cards[0].getBoundingClientRect().width;
-        const containerWidth = track.parentElement.clientWidth;
-        
-        const cardCenterPoint = cards[currentIndex].offsetLeft + cardWidth / 2;
-        const containerCenterPoint = containerWidth / 2;
-        // Nudge the final position slightly to the left for better visual centering
-        const offset = containerCenterPoint - cardCenterPoint - 25; 
-        
-        track.style.transform = `translateX(${offset}px)`;
-
-        cards.forEach((card, index) => {
-            card.classList.toggle('is-active', index === currentIndex);
-        });
-
-        if (!instant) {
-            setTimeout(() => {
-                isTransitioning = false;
-            }, 500);
-        }
-    };
-
-    const handleNext = () => {
-        if (isTransitioning) return;
-        currentIndex++;
-        updateCarousel();
-
-        if (currentIndex >= cards.length - cloneCount) {
-            setTimeout(() => {
-                currentIndex = currentIndex - (cards.length - 2 * cloneCount);
-                updateCarousel(true);
-            }, 500);
-        }
-    };
-
-    const handlePrev = () => {
-        if (isTransitioning) return;
-        currentIndex--;
-        updateCarousel();
-
-        if (currentIndex < cloneCount) {
-            setTimeout(() => {
-                currentIndex = currentIndex + (cards.length - 2 * cloneCount);
-                updateCarousel(true);
-            }, 500);
-        }
-    };
-    
-    nextButton.addEventListener('click', handleNext);
-    prevButton.addEventListener('click', handlePrev);
-
-    updateCarousel(true); 
-    window.addEventListener('resize', () => updateCarousel(true));
+  updateCarousel(true); 
+  window.addEventListener('resize', () => updateCarousel(true));
 });
-
 </script>
+
+<!-- CONTACT FORM — Formspree version (works on GitHub Pages) -->
+<script>
+(function () {
+  const form     = document.getElementById('contactForm');
+  const sendBtn  = document.getElementById('sendBtn');
+  const statusEl = document.getElementById('formStatus');
+  if (!form) return;
+
+  const setStatus = (msg, type) => {
+    statusEl.innerHTML = msg || '';
+    statusEl.style.color = type === 'error' ? '#ffb3b3' : '#a7f3d0';
+  };
+  const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Honeypot
+    const hp = document.getElementById('hp');
+    if (hp && hp.value) return;
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) { setStatus('Please fill out all fields.', 'error'); return; }
+    if (!validEmail(email)) { setStatus('Please enter a valid email address.', 'error'); return; }
+
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Sending…';
+    setStatus('');
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+
+      if (res.ok) {
+        form.reset();
+        setStatus('Thanks! Your message was sent.', 'ok');
+      } else {
+        const data = await res.json().catch(() => ({}));
+        const msg = (data && data.errors && data.errors[0] && data.errors[0].message)
+                    || 'Server error. Please try again later.';
+        setStatus(msg, 'error');
+      }
+    } catch (err) {
+      setStatus('Network error. Please check your connection and try again.', 'error');
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = 'Send Message';
+    }
+  });
+})();
+</script>
+<script>
+(function () {
+  const section    = document.getElementById('contact');
+  const form       = document.getElementById('contactForm');
+  const sendBtn    = document.getElementById('sendBtn');
+  const statusEl   = document.getElementById('formStatus');
+  const successBox = document.getElementById('formSuccess');
+
+  if (!form) return;
+
+  const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  const setStatus  = (msg, type) => {
+    statusEl.textContent = msg || '';
+    statusEl.style.color = type === 'error' ? '#ffb3b3' : '#a7f3d0';
+  };
+
+  function enterSuccessMode() {
+    section.classList.add('success-mode');
+    form.hidden = true;
+    successBox.hidden = false;
+    successBox.classList.remove('is-leaving');
+    successBox.classList.add('is-entering');
+    // Ensure users see it even if the form was low on the page
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function exitSuccessMode() {
+    successBox.classList.remove('is-entering');
+    successBox.classList.add('is-leaving');
+    successBox.addEventListener('animationend', function onEnd() {
+      successBox.removeEventListener('animationend', onEnd);
+      successBox.hidden = true;
+      section.classList.remove('success-mode');
+      form.hidden = false;
+      sendBtn.disabled = false;
+      sendBtn.textContent = 'Send Message';
+      setStatus('');
+    }, { once: true });
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // honeypot
+    const hp = document.getElementById('hp');
+    if (hp && hp.value) return;
+
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if (!name || !email || !message) { setStatus('Please fill out all fields.', 'error'); return; }
+    if (!validEmail(email))          { setStatus('Please enter a valid email address.', 'error'); return; }
+
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Sending…';
+    setStatus('');
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && !data.error) {
+        form.reset();
+        enterSuccessMode();
+        // Keep the success state for ~5s, then restore
+        setTimeout(exitSuccessMode, 5000);
+      } else {
+        const msg = (data && data.error) ? data.error : 'Something went wrong. Please try again.';
+        setStatus(msg, 'error');
+        sendBtn.disabled = false;
+        sendBtn.textContent = 'Send Message';
+      }
+    } catch (err) {
+      setStatus('Network error. Please try again.', 'error');
+      sendBtn.disabled = false;
+      sendBtn.textContent = 'Send Message';
+    }
+  });
+})();
+</script>
+
+
 </body>
 </html>
-
