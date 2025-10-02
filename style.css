@@ -109,7 +109,7 @@ h1,h2,h3,h4,h5,h6{
     bottom: -0.2em;
     left: 50%;
     transform: translateX(-50%);
-    width: 161%;
+    width: 10em;
     max-width: 429px;
     height: 1px;
     background: linear-gradient(to right, transparent 0%, #000000 30%, #000000 70%, transparent 100%);
@@ -125,7 +125,7 @@ h1,h2,h3,h4,h5,h6{
     bottom: -0.3em;
     left: 50%;
     transform: translateX(-50%);
-    width: 161%;
+    width: 10em;
     max-width: 429px;
     height: 1px;
     background: linear-gradient(to right, transparent 0%, var(--color-accent) 30%, var(--color-accent) 70%, transparent 100%);
