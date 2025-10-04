@@ -22,6 +22,7 @@
   --section-padding: 6rem;
   /* Sharper, less “soft” corners site-wide */
   --card-border-radius: 12px;
+  --grid-size: 72px; /* try 64px/80px if you want bigger/smaller */
 }
 
 html { scroll-behavior: smooth; }
@@ -52,8 +53,9 @@ h1,h2,h3,h4,h5,h6{
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
     linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
-  background-size: 35px 35px;
+  background-size: var(--grid-size) var(--grid-size);
 }
+
 
 .with-grid-pattern .section-heading {
   display: inline-block;
@@ -398,7 +400,11 @@ h1,h2,h3,h4,h5,h6{
 }
 
 /* Photoshop / Art */
-.art-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; }
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(376px, 1fr));
+    gap: 0.3rem;
+}
 .art-card{
   position:relative; display:block; border:1px solid var(--color-light-border);
   border-radius: var(--card-border-radius); overflow:hidden; background: var(--color-light-card);
@@ -424,6 +430,82 @@ h1,h2,h3,h4,h5,h6{
 .art-item:hover .text-muted.small {
   opacity: 1;
 }
+/* ==== Art tile: attach caption to image and style as one card ==== */
+.art-item {
+  position: relative;
+}
+
+/* Make the image container look like the top of a card */
+.art-item .art-card {
+  display: block;
+  border: 1px solid var(--color-light-border);
+  border-bottom: 0;                     /* so the caption can attach flush */
+  border-radius: 14px 14px 0 0;         /* rounded top corners */
+  overflow: hidden;                     /* keeps image corners clean */
+  background: var(--color-light-card);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.02);
+}
+
+/* Image should fill nicely */
+.art-item .art-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Caption panel attached to the image */
+.art-item .art-meta {
+    border: 1px solid var(--color-light-border);
+    border-top: 0;
+    background: #040404;
+    border-radius: 0 0 14px 14px;
+    padding: 14px 16px 12px;
+    margin-top: -5px;
+}
+
+/* Title + tags inside the meta */
+.art-item .art-meta .art-title {
+    margin: 0 0 6px 0;
+    font-weight: 700;
+    line-height: 1.25;
+    color: white;
+}
+.art-item .art-meta .art-tags {
+  margin: 0;
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Hover: lift the whole tile slightly */
+.art-item:hover .art-card,
+.art-item:hover .art-meta {
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
+  border-color: var(--color-accent);
+}
+
+/* Optional: subtle scale on the image only on hover */
+.art-item:hover .art-card img {
+  transform: scale(1.01);
+  transition: transform .25s ease;
+}
+
+/* ===== Dark-section variant (if your artworks live on a dark section) ===== */
+.section-dark .art-item .art-card {
+  background: var(--color-dark-card);
+  border-color: var(--color-dark-border);
+}
+.section-dark .art-item .art-meta {
+  background: var(--color-dark-card);
+  border-color: var(--color-dark-border);
+  color: var(--color-text-light);
+}
+.section-dark .art-item .art-meta .art-tags {
+  color: var(--color-text-muted-dark);
+}
+
 
 /* Lightbox */
 .lightbox{ position:fixed; inset:0; background:rgba(10,16,22,.92); display:none; align-items:center; justify-content:center; z-index:12000; padding:32px 88px; }
@@ -1428,4 +1510,161 @@ footer hr.light{ border-top:1px solid var(--color-dark-border); }
 }
 .thanks-card.is-entering{ animation: successIn 460ms cubic-bezier(.2,.8,.2,1) both; }
 .thanks-card.is-leaving { animation: successOut 380ms ease-in both; }
+
+/* ===== Featured Projects: FULL-BLEED split rows (no cards) ===== */
+.projects-bleed { 
+  padding-top: var(--section-padding);
+  padding-bottom: calc(var(--section-padding) - 1rem);
+}
+
+/* Edge-to-edge rows with generous gutters that scale by viewport */
+.project-row{
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.9fr); /* BIGGER image */
+  gap: clamp(18px, 3.5vw, 56px);
+  align-items: center;
+  /* remove “card” feeling */
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  /* full-bleed padding */
+  padding-left: clamp(16px, 5vw, 72px);
+  padding-right: clamp(16px, 5vw, 72px);
+  padding-top: clamp(10px, 2vw, 24px);
+  padding-bottom: clamp(18px, 3vw, 32px);
+}
+
+/* alternate sides */
+.project-row--reverse{
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr);
+}
+.project-row--reverse .project-media { order: 2; }
+.project-row--reverse .project-copy  { order: 1; }
+
+/* Media: BIG and clean, no borders */
+.project-media{
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;                  /* optional subtle rounding */
+}
+.project-media img{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform .5s ease;
+}
+.project-row:hover .project-media img{ transform: scale(1.06); }
+
+/* Copy block (re-use your color tokens) */
+.project-copy{ color: var(--color-text-light); }
+.project-tag{
+  display:inline-block;
+  font-size:.75rem; letter-spacing:.08em; text-transform:uppercase;
+  color: var(--color-accent-light);
+  background: rgba(111,225,246,.12);
+  border: 1px solid rgba(111,225,246,.35);
+  border-radius: 999px;
+  padding: .35rem .7rem;
+  margin-bottom: .6rem;
+}
+.project-title{
+  margin: .1rem 0 .5rem;
+  font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem);
+  color: #fff;
+}
+.project-text{
+  color: var(--color-text-muted-dark);
+  line-height: 1.7;
+  max-width: 58ch;
+}
+
+/* Buttons (reuse your existing button look) */
+.project-actions{ display:flex; gap:.8rem; margin-top: 1rem; }
+.btn-primary, .btn-ghost{
+  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+  padding:.65rem 1rem; border-radius:10px; text-decoration:none; font-weight:700;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease, color .15s ease;
+  border:2px solid transparent;
+}
+.btn-primary{ background: var(--color-accent); color: var(--color-dark-bg); border-color: var(--color-accent); }
+.btn-primary:hover{ background: var(--color-accent-light); border-color: var(--color-accent-light); transform: translateY(-2px); }
+.btn-ghost{ background: transparent; color:#fff; border-color: rgba(255,255,255,.6); }
+.btn-ghost:hover{ background:#fff; color: var(--color-dark-bg); transform: translateY(-2px); }
+
+/* Responsive: stack, but keep image dominant */
+@media (max-width: 992px){
+  .project-row,
+  .project-row--reverse{
+    grid-template-columns: 1fr;
+  }
+  .project-row--reverse .project-media { order: 1; }
+  .project-row--reverse .project-copy  { order: 2; }
+  .project-text{ max-width: none; }
+  .project-media{ border-radius: 12px; }
+}
+
+/* Ultra-wide screens: let image breathe even more */
+@media (min-width: 1400px){
+  .project-row{ grid-template-columns: 1.5fr 1fr; }
+  .project-row--reverse{ grid-template-columns: 1fr 1.5fr; }
+}
+/* ===== Featured Projects: combined row separation (bands + hairline + accent) ===== */
+
+/* 1) Alternating full-width bands per row (subtle, not cards) */
+.projects-bleed .project-row { position: relative; background: transparent; }
+.projects-bleed .project-row:nth-of-type(odd){
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.032), rgba(255,255,255,.016));
+}
+.projects-bleed .project-row:nth-of-type(even){
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.22), rgba(0,0,0,.12));
+}
+
+/* Give rows a touch more vertical breathing room so bands feel intentional */
+.projects-bleed .project-row{
+  padding-top: clamp(16px, 2.4vw, 30px);
+  padding-bottom: clamp(24px, 3.2vw, 40px);
+}
+
+/* 2) Hairline gradient separator between consecutive rows */
+.projects-bleed .project-row + .project-row::before{
+  content:"";
+  position:absolute; top:-1px; left:0; right:0; height:1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+  opacity:.7; pointer-events:none;
+}
+
+/* 3) Cyan accent rule beside the text column (flips on reverse rows) */
+.projects-bleed .project-copy{ position:relative; }
+.projects-bleed .project-copy::before{
+  content:"";
+  position:absolute; left:-18px; top:0; bottom:0; width:3px;
+  background: linear-gradient(180deg, var(--color-accent), var(--color-accent-light));
+  opacity:.45; border-radius:3px;
+}
+.projects-bleed .project-row--reverse .project-copy::before{
+  left:auto; right:-18px;           /* flip to the outer side on reversed rows */
+}
+
+/* Mobile: tuck the accent in slightly and keep order fixes from your split layout */
+@media (max-width: 992px){
+  .projects-bleed .project-copy::before{ left:-12px; right:auto; }
+  .projects-bleed .project-row--reverse .project-copy::before{ right:-12px; left:auto; }
+}
+
+/* Optional polish: soften band edges on huge screens */
+@media (min-width: 1400px){
+  .projects-bleed .project-row:nth-of-type(odd){
+    background:
+      radial-gradient(1200px 240px at 50% 0%, rgba(255,255,255,.05), transparent 70%),
+      linear-gradient(180deg, rgba(255,255,255,.028), rgba(255,255,255,.014));
+  }
+}
+
+/* put in style.css */
+section[id], header[id] { scroll-margin-top: 88px; } /* match your navbar height */
 
