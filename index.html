@@ -18,15 +18,11 @@
   
   <style>
     /* CSS for Fade In and Fade Out Animations */
-    .fade-in {
-      opacity: 0;
+    .fade-in {opacity: 0;
       transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .faded-in {
-      opacity: 1;
-      transform: translateY(0);
-    }
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;}
+    .faded-in {opacity: 1;
+      transform: translateY(0);}
   </style>
 </head>
 <body>
@@ -144,7 +140,7 @@
               <span class="pill">Canned responses</span><span class="pill">Labels & filters</span>
               <span class="pill">Meeting notes</span><span class="pill">Exec summaries</span>
             </div>
-            <p class="skill-mini__line">Inbox-zero daily; ≤24h responses.</p>
+            <p class="skill-mini__line">Inbox-zero daily; â‰¤24h responses.</p>
             <div class="skill-mini__tools">
               <span class="tool">Gmail</span><span class="tool">Outlook</span><span class="tool">Slack</span><span class="tool">Zoom</span>
             </div>
@@ -362,74 +358,245 @@
 
 
 
-<section id="workexperience" class="section-light with-grid-pattern">
+<!-- ========= WORK EXPERIENCE ========= -->
+<!-- ========= WORK EXPERIENCE (3-column timeline) ========= -->
+<!-- ========= WORK EXPERIENCE (timeline + animated blank-side panels) ========= -->
+<!-- ========= WORK EXPERIENCE (timeline + multiline blank-side panels) ========= -->
+<section id="workexperience" class="section">
   <div class="container">
     <div class="text-center">
-        <h2 class="section-heading fade-in section-heading-with-line">Work Experience</h2>
-        <p class="section-subheading fade-in">My professional journey so far.</p>
+      <h2 class="section-heading fade-in section-heading-with-line">Work Experience</h2>
+      <p class="section-subheading fade-in">My professional journey so far.</p>
     </div>
 
-    <div class="experience-timeline mt-5">
-      <article class="xp-card fade-in">
-        <div class="xp-left"><div class="xp-logo">JS</div></div>
-        <div class="xp-right">
-          <div class="xp-role-line">
-            <h3 class="xp-role">Web Developer</h3>
-            <span class="xp-meta">Well-known BPO Company · Full-time</span>
-            <span class="xp-meta">Jan 2021 – Present · Philippines · Hybrid</span>
-          </div>
-          <ul class="xp-bullets">
-            <li>Built responsive UI components and landing pages with Bootstrap 4 and jQuery.</li>
-            <li>Optimized CSS/JS delivery and images to improve page speed and Core Web Vitals.</li>
-            <li>Collaborated with designers and backend devs to ship features end-to-end.</li>
-          </ul>
-          <div class="xp-tags">
-            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span>
-            <span class="tag">JavaScript</span><span class="tag">jQuery</span><span class="tag">PHP</span>
-          </div>
-        </div>
-      </article>
+    <div class="timeline-3col mt-5">
 
-      <article class="xp-card fade-in">
-        <div class="xp-left"><div class="xp-logo xp-logo-alt"><i class="devicon-javascript-plain"></i></div></div>
-        <div class="xp-right">
-          <div class="xp-role-line">
-            <h3 class="xp-role">Freelance Web Designer / Front-End</h3>
-            <span class="xp-meta">Self-employed · Project-based</span>
-            <span class="xp-meta">2018 – 2020 · Remote</span>
-          </div>
-          <ul class="xp-bullets">
-            <li>Designed and developed informational websites and portfolios for local clients.</li>
-            <li>Implemented animations (WOW.js + Animate.css) and smooth scrolling UX.</li>
-            <li>Set up GitHub Pages hosting and basic SEO meta tags for visibility.</li>
-          </ul>
-          <div class="xp-tags">
-            <span class="tag">Figma</span><span class="tag">Photoshop</span><span class="tag">Animate.css</span>
-            <span class="tag">WOW.js</span><span class="tag">GitHub Pages</span>
+      <!-- ROW 1 (Right card | LEFT = multiline panel) -->
+      <div class="t-row">
+        <!-- BLANK-SIDE MULTILINE PANEL (LEFT) -->
+        <div class="t-col t-left">
+          <div class="ghost-panel">
+            <div class="ghost-lines">
+              <span class="ghost-line">Automation</span>
+              <span class="ghost-line">Inbox Triage</span>
+              <span class="ghost-line">Google Sheets</span>
+              <span class="ghost-line">Zapier</span>
+            </div>
           </div>
         </div>
-      </article>
 
-      <article class="xp-card fade-in">
-        <div class="xp-left"><div class="xp-logo xp-logo-alt"><i class="devicon-php-plain"></i></div></div>
-        <div class="xp-right">
-          <div class="xp-role-line">
-            <h3 class="xp-role">Junior PHP Developer (Intern)</h3>
-            <span class="xp-meta">University Project Lab · Internship</span>
-            <span class="xp-meta">2017 – 2018 · Philippines</span>
-          </div>
-          <ul class="xp-bullets">
-            <li>Built basic CRUD modules with PHP/MySQL and Bootstrap admin templates.</li>
-            <li>Wrote reusable helpers and documented setup steps for classmates.</li>
-          </ul>
-          <div class="xp-tags">
-            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span>
+        <!-- CENTER RAIL -->
+        <div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
+
+        <!-- CARD (RIGHT) -->
+        <div class="t-col t-right">
+          <article class="xp-card fade-in">
+            <div class="xp-left"><div class="xp-logo">VA</div></div>
+            <div class="xp-right">
+              <div class="xp-role-line">
+                <h3 class="xp-role">Virtual Administration &amp; Workflow Automation</h3>
+                <span class="xp-meta">May 2021 – Present · Remote</span>
+              </div>
+              <ul class="xp-bullets">
+                <li>Managed inboxes with triage/filters; ensured zero missed follow-ups.</li>
+                <li>Organized work via Google Sheets, Trello, and Notion.</li>
+                <li>Built light automations with Zapier / Power Automate.</li>
+                <li>Scheduled meetings across time zones; kept Drive/OneDrive tidy.</li>
+              </ul>
+              <div class="xp-readmore" data-readmore>
+                <div class="xp-readmore__content" id="xp-va-more">
+                  <ul class="xp-bullets">
+                    <li>Weekly summaries; accurate data entry &amp; cleanup.</li>
+                    <li>Quick graphics in Canva; UI mockups in Figma / Adobe XD.</li>
+                    <li>Designed T-shirt artworks for Daisansedai &amp; Btch Co.</li>
+                    <li>Clear client comms via email/chat/calls; on-time delivery.</li>
+                    <li><strong>Tools:</strong> Gmail, Workspace, Trello, Notion, Sheets, Canva, XD, Figma, Power Automate, Zapier.</li>
+                  </ul>
+                </div>
+                <button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-va-more">Read more</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ROW 2 (Left card | RIGHT = multiline panel) -->
+      <div class="t-row">
+        <!-- CARD (LEFT) -->
+        <div class="t-col t-left">
+          <article class="xp-card fade-in">
+            <div class="xp-left"><div class="xp-logo">SE</div></div>
+            <div class="xp-right">
+              <div class="xp-role-line">
+                <h3 class="xp-role">Senior Software Engineer – Accenture</h3>
+                <span class="xp-meta">Jun 2022 – Present · Mandaluyong City</span>
+              </div>
+              <ul class="xp-bullets">
+                <li>Delivered complex user stories on time; partnered tightly with QA &amp; PO.</li>
+                <li>Shipped “Manage Access” with zero high/critical bugs (prod &amp; stage).</li>
+                <li>Redesigned access flow to support &gt;3 roles (web + API, auth, approvals).</li>
+                <li>Built custom fields (UI + APIs + flowdown) and portfolio attributes.</li>
+              </ul>
+              <div class="xp-readmore" data-readmore>
+                <div class="xp-readmore__content" id="xp-senior-more">
+                  <ul class="xp-bullets">
+                    <li>Guided teammates through code issues; unblocked releases.</li>
+                    <li>Researched tech for VR (i2o); owned 4 stories for R23.3 release.</li>
+                    <li>Views for active/deleted custom fields for better insights.</li>
+                    <li>Took over unfinished story; completed flowdown + persistence + FE tools.</li>
+                  </ul>
+                </div>
+                <button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-senior-more">Read more</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CENTER RAIL -->
+        <div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
+
+        <!-- BLANK-SIDE MULTILINE PANEL (RIGHT) -->
+        <div class="t-col t-right">
+          <div class="ghost-panel">
+            <div class="ghost-lines">
+              <span class="ghost-line">Manage Access</span>
+              <span class="ghost-line">Flowdown</span>
+              <span class="ghost-line">Zero Bugs</span>
+              <span class="ghost-line">Ownership</span>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
+
+      <!-- ROW 3 (Right card | LEFT = multiline panel) -->
+      <div class="t-row">
+        <!-- BLANK-SIDE MULTILINE PANEL (LEFT) -->
+        <div class="t-col t-left">
+          <div class="ghost-panel">
+            <div class="ghost-lines">
+              <span class="ghost-line">CALM Chatbot</span>
+              <span class="ghost-line">MS Teams</span>
+              <span class="ghost-line">Angular 11 → 13</span>
+              <span class="ghost-line">MSAL · GCP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CENTER RAIL -->
+        <div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
+
+        <!-- CARD (RIGHT) -->
+        <div class="t-col t-right">
+          <article class="xp-card fade-in">
+            <div class="xp-left"><div class="xp-logo">SA</div></div>
+            <div class="xp-right">
+              <div class="xp-role-line">
+                <h3 class="xp-role">Software Engineer Analyst – Accenture</h3>
+                <span class="xp-meta">Jan 2021 – Jun 2022 · Mandaluyong City</span>
+              </div>
+              <ul class="xp-bullets">
+                <li>Revamped CALM Chatbot (UI + DB) to meet evolving user stories.</li>
+                <li>MS Teams bot features with Adaptive Cards &amp; sandbox apps.</li>
+                <li>Ported apps across Angular 11 → 13; improved WebApi performance.</li>
+                <li>Implemented AAD auth (MSAL v1→v2); deployed via GCP.</li>
+              </ul>
+              <div class="xp-readmore" data-readmore>
+                <div class="xp-readmore__content" id="xp-analyst-more">
+                  <ul class="xp-bullets">
+                    <li>Custom Twitter API hooks; User Metrics tracking &amp; device capture.</li>
+                    <li>ECF card redesign; mobile-specific UI (iOS/Android) adjustments.</li>
+                    <li>Upgraded console app .NET 7 → .NET 8; supported Legal Repository using AWS.</li>
+                  </ul>
+                </div>
+                <button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-analyst-more">Read more</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ROW 4 (Left card | RIGHT = multiline panel) -->
+      <div class="t-row">
+        <!-- CARD (LEFT) -->
+        <div class="t-col t-left">
+          <article class="xp-card fade-in">
+            <div class="xp-left"><div class="xp-logo">AE</div></div>
+            <div class="xp-right">
+              <div class="xp-role-line">
+                <h3 class="xp-role">Associate Software Engineer – Accenture</h3>
+                <span class="xp-meta">Jun 2019 – Dec 2020 · Mandaluyong City</span>
+              </div>
+              <ul class="xp-bullets">
+                <li>Led UI/UX for multiple chatbots (MSAL auth, global rollout support).</li>
+                <li>Built Feedback/Rating module (SQL/CMAP); Angular UI work.</li>
+                <li>Prototyped AR app flows (design thinking, XD/PS/Figma, 3D assets).</li>
+                <li>Rebranded “Tedo” chatbot; motion graphics &amp; usability testing.</li>
+              </ul>
+              <div class="xp-readmore" data-readmore>
+                <div class="xp-readmore__content" id="xp-assoc-more">
+                  <ul class="xp-bullets">
+                    <li>UX niceties: typing indicator, mailbox, emojis, autocorrect.</li>
+                  </ul>
+                </div>
+                <button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-assoc-more">Read more</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CENTER RAIL -->
+        <div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
+
+        <!-- BLANK-SIDE MULTILINE PANEL (RIGHT) -->
+        <div class="t-col t-right">
+          <div class="ghost-panel">
+            <div class="ghost-lines">
+              <span class="ghost-line">Angular</span>
+              <span class="ghost-line">MSAL</span>
+              <span class="ghost-line">SQL</span>
+              <span class="ghost-line">UI/UX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 5 (Right card | LEFT = multiline panel) -->
+      <div class="t-row">
+        <!-- BLANK-SIDE MULTILINE PANEL (LEFT) -->
+        <div class="t-col t-left">
+          <div class="ghost-panel">
+            <div class="ghost-lines">
+              <span class="ghost-line">Dean’s List</span>
+              <span class="ghost-line">Our Lady of Fatima University</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CENTER RAIL -->
+        <div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
+
+        <!-- CARD (RIGHT) -->
+        <div class="t-col t-right">
+          <article class="xp-card fade-in">
+            <div class="xp-left"><div class="xp-logo xp-logo-alt">ED</div></div>
+            <div class="xp-right">
+              <div class="xp-role-line">
+                <h3 class="xp-role">Bachelor of Science in Information Technology</h3>
+                <span class="xp-meta">Our Lady of Fatima University</span>
+                <span class="xp-meta">Jun 2015 – Mar 2019 · Dean’s List</span>
+              </div>
+              <ul class="xp-bullets"><li>Dean’s List</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+
+
 
 <section id="services" class="section-dark">
   <div class="container">
@@ -448,7 +615,7 @@
           <h3 class="offering-card__title">Inbox & Calendar</h3>
           <p class="offering-card__text">
             I’ll triage, follow up, and book meetings so you never miss a thread.
-            <b>Outcome:</b> inbox-to-zero daily; ≤ 24h response.
+            <b>Outcome:</b> inbox-to-zero daily; â‰¤ 24h response.
             <b>Tools:</b> Gmail/Outlook, GCal, Calendly, Zoom.
           </p>
           <div class="offering-card__badges">
@@ -484,7 +651,7 @@
           <h3 class="offering-card__title">Customer Support</h3>
           <p class="offering-card__text">
             I’ll clear queues, write macros, and keep CSAT up.
-            <b>Outcome:</b> first-response &lt; 4h; CSAT ≥ 95%.
+            <b>Outcome:</b> first-response &lt; 4h; CSAT â‰¥ 95%.
             <b>Tools:</b> Zendesk, Intercom, Gorgias, Help Docs/Notion.
           </p>
           <div class="offering-card__badges">
@@ -672,7 +839,7 @@
   <!-- Keep heading in a normal container for nice centering -->
   <div class="container text-center">
     <h2 class="section-heading fade-in section-heading-with-line-dark">Featured Projects</h2>
-    <p class="section-subheading fade-in">Three real builds — clean UI, responsive layouts, and smooth UX.</p>
+    <p class="section-subheading fade-in">A selection of featured work I’ve created over the years.</p>
   </div>
 
   <!-- Make the rows full-bleed (edge-to-edge) -->
@@ -684,9 +851,9 @@
         <img src="BOOKV1.png" alt="Project 1 preview">
       </div>
       <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">University Portal</span>
-        <h3 class="project-title">College of Computer Studies Website</h3>
-        <p class="project-text">Informational site with news, events, and department pages. Focus on accessibility and speed.</p>
+        <span class="project-tag">Mobile Application</span>
+        <h3 class="project-title">Bookify Mobile Application</h3>
+        <p class="project-text">A mobile app designed for service bookings (e.g., salons and barbershops), built during the pandemic to reduce in-person queues and confusion. I focused on a clean, intuitive UI and a smooth UX so users could book quickly and confidently.</p>
         <div class="project-actions">
           <a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
           <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>
@@ -700,9 +867,9 @@
         <img src="TEDOV1.png" alt="Project 2 preview">
       </div>
       <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">Landing Page</span>
-        <h3 class="project-title">FinTech Product Launch</h3>
-        <p class="project-text">Responsive landing with pricing matrix, testimonials carousel, and analytics events.</p>
+        <span class="project-tag">Webpage Application</span>
+        <h3 class="project-title">TEDO Chatbot(Accenture, internal project)</h3>
+        <p class="project-text">An internal chatbot redesign initiative. I contributed animated and static graphics (Adobe After Effects) and helped modernize the overall look and feel to match current design trends and improve user engagement.</p>
         <div class="project-actions">
           <a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
           <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>
@@ -716,9 +883,9 @@
         <img src="AR_DECK.png" alt="Project 3 preview">
       </div>
       <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">E-commerce</span>
-        <h3 class="project-title">Minimal Shopify Theme</h3>
-        <p class="project-text">Theme tweaks, clean product views, and streamlined checkout helpers for higher CTR.</p>
+        <span class="project-tag">Mobile Application</span>
+        <h3 class="project-title">AR Places (Accenture, internal project)</h3>
+        <p class="project-text">I designed the UI/UX for a mobile app that lets employees reserve meeting rooms more efficiently. The goal was to streamline the booking process and make availability clearer at a glance.</p>
         <div class="project-actions">
           <a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
           <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>
@@ -731,9 +898,9 @@
         <img src="DAISANSEDAI.png" alt="Project 2 preview">
       </div>
       <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">Landing Page</span>
-        <h3 class="project-title">FinTech Product Launch</h3>
-        <p class="project-text">Responsive landing with pricing matrix, testimonials carousel, and analytics events.</p>
+        <span class="project-tag">Graphic T-Shirt Design</span>
+        <h3 class="project-title">Daisansedai – Rick & Morty-inspired T-shirt</h3>
+        <p class="project-text">Created front-and-back print graphics inspired by the show’s style. The client approved the concept and moved it into production.</p>
         <div class="project-actions">
           <a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
           <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>
@@ -746,9 +913,9 @@
         <img src="DAISANSEDAI_V2.png" alt="Project 1 preview">
       </div>
       <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">University Portal</span>
-        <h3 class="project-title">College of Computer Studies Website</h3>
-        <p class="project-text">Informational site with news, events, and department pages. Focus on accessibility and speed.</p>
+        <span class="project-tag">Graphic T-Shirt Design</span>
+        <h3 class="project-title">Daisansedai – Minimalist Flower T-shirt</h3>
+        <p class="project-text">Proposed and designed a simple, minimalist floral concept. The client liked the direction and produced the design.</p>
         <div class="project-actions">
           <a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
           <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>
@@ -761,9 +928,9 @@
         <img src="DAISANSEDAI_V3.png" alt="Project 2 preview">
       </div>
       <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">Landing Page</span>
-        <h3 class="project-title">FinTech Product Launch</h3>
-        <p class="project-text">Responsive landing with pricing matrix, testimonials carousel, and analytics events.</p>
+        <span class="project-tag">Graphic T-Shirt Design</span>
+        <h3 class="project-title">Daisansedai – Logo & Minimalist Japanese Wave Design</h3>
+        <p class="project-text">Developed the brand’s official graphic logo (“palatandaan”—a recognizable mark) and a minimalist Japanese wave T-shirt pattern. Both were approved and printed for production.</p>
         <div class="project-actions">
           <a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
           <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>
@@ -773,6 +940,149 @@
 
   </div>
 </section>
+<section id="automation" class="section-dark">
+  <div class="container">
+    <div class="automation-wrap">
+      <!-- LEFT: Title + description -->
+      <div class="automation-copy">
+        <h2 class="section-heading section-heading-with-line-dark">Workflow Automation</h2>
+        <p class="section-subheading">
+          I help make day-to-day operations more efficient by automating repetitive tasks. With my development background, I’m comfortable building low-code automations and integrating common tools—such as Gmail, Google Docs/Sheets, and Facebook—so information moves automatically and teams spend less time on manual updates.
+        </p>
+
+        <ul class="automation-bullets">
+          <li><b>Trigger:</b> new email in “Support”.</li>
+          <li><b>Understand:</b> extract intent + IDs from subject/body.</li>
+          <li><b>Route:</b> branch to AI reply when intent = support.</li>
+          <li><b>Draft:</b> LLM writes a polite, on-brand response.</li>
+          <li><b>Merge:</b> pull name/order/billing → clean the draft.</li>
+          <li><b>Send:</b> reply out + log thread URL.</li>
+        </ul>
+
+        <div class="automation-cta">
+          <a class="btn-primary" href="#contact">Automate this for me</a>
+          <button class="btn-ghost ap-replay">Replay demo</button>
+        </div>
+      </div>
+
+      <!-- RIGHT: Workflow (unchanged logic, compact lane) -->
+<!-- RIGHT: Workflow -->
+<div class="automation-flow">
+  <div class="apflow apflow--with-rails">
+    <!-- Main vertical rail (left) -->
+    <span class="ap-lane ap-lane--main" aria-hidden="true"></span>
+
+    <!-- TOP STEPS -->
+    <ol class="ap-main" role="list">
+      <li class="ap-step" data-key="gmail">
+        <div class="ap-card">
+          <div class="ap-left"><i class="fa-brands fa-google"></i></div>
+          <div class="ap-mid">
+            <div class="ap-title">New Email (Gmail)</div>
+            <div class="ap-sub">Trigger: new message arrives in the inbox label.</div>
+            <div class="ap-result">Waiting…</div>
+          </div>
+          <div class="ap-right"><i class="fa-solid fa-check"></i></div>
+        </div>
+      </li>
+      <li class="ap-arrow" data-key="a1"><span class="ap-arrow__fill"></span></li>
+
+      <li class="ap-step" data-key="find1">
+        <div class="ap-card">
+          <div class="ap-left"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div class="ap-mid">
+            <div class="ap-title">Find (Text Helper)</div>
+            <div class="ap-sub">Extracts keywords &amp; reference IDs from subject/body.</div>
+            <div class="ap-result">Waiting…</div>
+          </div>
+          <div class="ap-right"><i class="fa-solid fa-check"></i></div>
+        </div>
+      </li>
+      <li class="ap-arrow" data-key="a2"><span class="ap-arrow__fill"></span></li>
+
+      <!-- Router with curved split -->
+      <li class="ap-step ap-step--router" data-key="router">
+        <div class="ap-card">
+          <div class="ap-left"><i class="fa-solid fa-diagram-project"></i></div>
+          <div class="ap-mid">
+            <div class="ap-title">Router</div>
+            <div class="ap-sub">Routes to “AI Reply” branch when intent = support.</div>
+            <div class="ap-result">Waiting…</div>
+          </div>
+          <div class="ap-right"><i class="fa-solid fa-check"></i></div>
+        </div>
+        <!-- curved join that splits into branch/otherwise -->
+        <!-- <span class="ap-branch-join" aria-hidden="true"></span> -->
+      </li>
+    </ol>
+
+    <!-- Branch area (left) + Otherwise rail (right) -->
+    <div class="ap-branches ap-rails-zone">
+      <!-- LEFT BRANCH (active path) -->
+      <div class="ap-branch ap-branch--left">
+        <div class="ap-branch__tag">Branch 1</div>
+        <ol class="ap-branchlist" role="list">
+          <li class="ap-arrow ap-arrow--small" data-key="b0"><span class="ap-arrow__fill"></span></li>
+
+          <li class="ap-step" data-key="askllm">
+            <div class="ap-card">
+              <div class="ap-left"><i class="fa-solid fa-message"></i></div>
+              <div class="ap-mid">
+                <div class="ap-title">Ask LLM (OpenRouter)</div>
+                <div class="ap-sub">Generates a polite, on-brand response draft.</div>
+                <div class="ap-result">Waiting…</div>
+              </div>
+              <div class="ap-right"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </li>
+          <li class="ap-arrow" data-key="b1"><span class="ap-arrow__fill"></span></li>
+
+          <li class="ap-step" data-key="find2">
+            <div class="ap-card">
+              <div class="ap-left"><i class="fa-regular fa-file-lines"></i></div>
+              <div class="ap-mid">
+                <div class="ap-title">Find (Text Helper)</div>
+                <div class="ap-sub">Pulls name, order #, and billing info for merge.</div>
+                <div class="ap-result">Waiting…</div>
+              </div>
+              <div class="ap-right"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </li>
+          <li class="ap-arrow" data-key="b2"><span class="ap-arrow__fill"></span></li>
+
+          <li class="ap-step" data-key="send">
+            <div class="ap-card">
+              <div class="ap-left"><i class="fa-brands fa-google"></i></div>
+              <div class="ap-mid">
+                <div class="ap-title">Send Email (Gmail)</div>
+                <div class="ap-sub">Sends the final reply + logs thread URL.</div>
+                <div class="ap-result">Waiting…</div>
+              </div>
+              <div class="ap-right"><i class="fa-solid fa-check"></i></div>
+            </div>
+          </li>
+        </ol>
+
+        <!-- End pill centered under branch -->
+        <div class="ap-end" aria-hidden="true">End</div>
+      </div>
+
+      <!-- RIGHT OTHERWISE rail (dotted) -->
+<!-- RIGHT: OTHERWISE (failed path visual) -->
+<div class="ap-branch ap-branch--right" aria-hidden="true">
+  <div class="ap-branch__tag ap-branch__tag--muted">OTHERWISE</div>
+  <div class="ap-otherwise-lane"></div>
+  <!--<div class="ap-end--right">End</div>-->
+</div>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
 
 <section id="photoshop" class="section-light with-grid-pattern">
   <div class="container">
@@ -1010,39 +1320,21 @@
 <script>
 /* Disable Right Click */
 var message="Right-click has been disabled";
-function clickIE(){ if (document.all){ (message); return false; } }
-function clickNS(e){
-  if (document.layers || (document.getElementById && !document.all)){
-    if (e.which==2||e.which==3){ (message); return false; }
-  }
-}
-if (document.layers){ document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS; }
-else{ document.onmouseup=clickNS; document.oncontextmenu=clickIE; }
+function clickIE(){if (document.all){(message); return false;}}
+function clickNS(e){if (document.layers || (document.getElementById && !document.all)){if (e.which==2||e.which==3){(message); return false;}}}
+if (document.layers){document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS; document.oncontextmenu=clickIE;}
 document.oncontextmenu=new Function("return false")
 </script>
 <script>
 /* Navbar solid on scroll */
-$(window).on('scroll', function() {
-  if ($(window).scrollTop() > 50) {
-    $('.navbar').addClass('navbar--solid');
-  } else {
-    $('.navbar').removeClass('navbar--solid');
-  }
-});
+$(window).on('scroll', function() {if ($(window).scrollTop() > 50) {$('.navbar').addClass('navbar--solid');} else {$('.navbar').removeClass('navbar--solid');}});
 
 /* Smooth scrolling for navigation links */
-$('.scroll').on('click', function(event) {
-  var targetId = this.hash;
-  if (targetId) {
-    event.preventDefault();
+$('.scroll').on('click', function(event) {var targetId = this.hash;
+  if (targetId) {event.preventDefault();
     var targetElement = $(targetId);
-    if (targetElement.length) {
-      $('html, body').animate({
-        scrollTop: targetElement.offset().top - $('.navbar').outerHeight()
-      }, 800);
-    }
-  }
-});
+    if (targetElement.length) {$('html, body').animate({scrollTop: targetElement.offset().top - $('.navbar').outerHeight()}, 800);}}});
 
 /* Mobile Nav Toggle */
 const navToggle = document.querySelector('.nav-toggle');
@@ -1051,72 +1343,43 @@ const sidebarClose = document.querySelector('.sidebar__close');
 const backdrop = document.querySelector('.backdrop');
 const mobileNavLinks = document.querySelectorAll('.sidebar__nav a');
 
-function openSidebar() {
-  mobileNav.classList.add('is-open');
+function openSidebar() {mobileNav.classList.add('is-open');
   backdrop.classList.add('is-on');
   mobileNav.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-}
+  document.body.style.overflow = 'hidden';}
 
-function closeSidebar() {
-  mobileNav.classList.remove('is-open');
+function closeSidebar() {mobileNav.classList.remove('is-open');
   backdrop.classList.remove('is-on');
   mobileNav.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-}
+  document.body.style.overflow = '';}
 
 navToggle.addEventListener('click', openSidebar);
 sidebarClose.addEventListener('click', closeSidebar);
 backdrop.addEventListener('click', closeSidebar);
-mobileNavLinks.forEach(link => {
-  link.addEventListener('click', closeSidebar);
-});
+mobileNavLinks.forEach(link => {link.addEventListener('click', closeSidebar);});
 
 /* Intersection Observer for all fade-in animations */
-const fadeObserverOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('faded-in');
-      if (entry.target.classList.contains('skill-pill')) {
-        entry.target.classList.add('is-in-view');
-      }
-    } else {
-      entry.target.classList.remove('faded-in');
-      if (entry.target.classList.contains('skill-pill')) {
-        entry.target.classList.remove('is-in-view');
-      }
-    }
-  });
-}, fadeObserverOptions);
+const fadeObserverOptions = {root: null, rootMargin: '0px', threshold: 0.1};
+const fadeObserver = new IntersectionObserver((entries) => {entries.forEach(entry => {if (entry.isIntersecting) {entry.target.classList.add('faded-in');
+      if (entry.target.classList.contains('skill-pill')) {entry.target.classList.add('is-in-view');}} else {entry.target.classList.remove('faded-in');
+      if (entry.target.classList.contains('skill-pill')) {entry.target.classList.remove('is-in-view');}}});}, fadeObserverOptions);
 document.querySelectorAll('.fade-in, .skill-pill').forEach(el => fadeObserver.observe(el));
 
-document.addEventListener('DOMContentLoaded', function() {
-  /* Build timestamp */
+document.addEventListener('DOMContentLoaded', function() {/* Build timestamp */
   const buildStamp = document.getElementById('build-stamp');
-  if (buildStamp) {
-    const now = new Date();
-    buildStamp.textContent = `Last updated: ${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
-  }
+  if (buildStamp) {const now = new Date();
+    buildStamp.textContent = `Last updated: ${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;}
 
   /* Navbar Active State Logic */
   const sectionsAndHeader = document.querySelectorAll('header[id], section[id]');
   const navItems = document.querySelectorAll('.navbar-nav .nav-item');
   const navLinksMap = {};
-  navItems.forEach(item => {
-      const link = item.querySelector('a');
-      if (link && link.hash) navLinksMap[link.hash] = item;
-  });
-  const navObserverOptions = { rootMargin: '-40% 0px -60% 0px', threshold: 0 };
-  const navObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              const currentHash = `#${entry.target.id}`;
+  navItems.forEach(item => {const link = item.querySelector('a');
+      if (link && link.hash) navLinksMap[link.hash] = item;});
+  const navObserverOptions = {rootMargin: '-40% 0px -60% 0px', threshold: 0};
+  const navObserver = new IntersectionObserver(entries => {entries.forEach(entry => {if (entry.isIntersecting) {const currentHash = `#${entry.target.id}`;
               navItems.forEach(item => item.classList.remove('active'));
-              if (navLinksMap[currentHash]) navLinksMap[currentHash].classList.add('active');
-          }
-      });
-  }, navObserverOptions);
+              if (navLinksMap[currentHash]) navLinksMap[currentHash].classList.add('active');}});}, navObserverOptions);
   sectionsAndHeader.forEach(section => navObserver.observe(section));
 
   /* Lightbox for Photoshop Arts */
@@ -1132,58 +1395,38 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentIndex = 0;
   let artItems = []; 
 
-  artCards.forEach((card, index) => {
-    artItems.push({ src: card.href, title: card.dataset.title || '' });
-    card.addEventListener('click', function(e) {
-      e.preventDefault();
+  artCards.forEach((card, index) => {artItems.push({src: card.href, title: card.dataset.title || ''});
+    card.addEventListener('click', function(e) {e.preventDefault();
       currentIndex = index;
-      openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);
-    });
-  });
+      openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);});});
 
-  function openLightbox(src, title) {
-    lbImg.src = src;
+  function openLightbox(src, title) {lbImg.src = src;
     lbCap.textContent = title;
     lightbox.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox() {
-    lightbox.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-  function showNext() { currentIndex = (currentIndex + 1) % artItems.length; openLightbox(artItems[currentIndex].src, artItems[currentIndex].title); }
-  function showPrev() { currentIndex = (currentIndex - 1 + artItems.length) % artItems.length; openLightbox(artItems[currentIndex].src, artItems[currentIndex].title); }
+    document.body.style.overflow = 'hidden';}
+  function closeLightbox() {lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';}
+  function showNext() {currentIndex = (currentIndex + 1) % artItems.length; openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);}
+  function showPrev() {currentIndex = (currentIndex - 1 + artItems.length) % artItems.length; openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);}
 
   lbClose.addEventListener('click', closeLightbox);
   lbNext.addEventListener('click', showNext);
   lbPrev.addEventListener('click', showPrev);
 
-  document.addEventListener('keydown', function(e) {
-    if (lightbox.getAttribute('aria-hidden') === 'false') {
-      if (e.key === 'Escape') closeLightbox();
+  document.addEventListener('keydown', function(e) {if (lightbox.getAttribute('aria-hidden') === 'false') {if (e.key === 'Escape') closeLightbox();
       if (e.key === 'ArrowRight') showNext();
-      if (e.key === 'ArrowLeft') showPrev();
-    }
-  });
-});
+      if (e.key === 'ArrowLeft') showPrev();}});});
 </script>
 
 <script>
 /* Back to top button */
 const backToTopButton = document.getElementById('backToTop');
-if (backToTopButton) {
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) backToTopButton.classList.add('show');
-    else backToTopButton.classList.remove('show');
-  });
-  backToTopButton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
+if (backToTopButton) {window.addEventListener('scroll', () => {if (window.pageYOffset > 300) backToTopButton.classList.add('show');
+    else backToTopButton.classList.remove('show');});
+  backToTopButton.addEventListener('click', () => {window.scrollTo({top: 0, behavior: 'smooth'});});}
 
 /* FINAL Carousel Logic */
-document.addEventListener('DOMContentLoaded', function() {
-  const wrapper = document.querySelector('.carousel-wrapper');
+document.addEventListener('DOMContentLoaded', function() {const wrapper = document.querySelector('.carousel-wrapper');
   if (!wrapper) return;
 
   const track = wrapper.querySelector('.carousel-track');
@@ -1194,21 +1437,18 @@ document.addEventListener('DOMContentLoaded', function() {
   if (cards.length <= 1) return; 
 
   const cloneCount = Math.max(2, Math.floor(cards.length / 2)); 
-  for (let i = 0; i < cloneCount; i++) {
-    const cloneFirst = cards[i % cards.length].cloneNode(true);
+  for (let i = 0; i < cloneCount; i++) {const cloneFirst = cards[i % cards.length].cloneNode(true);
     const cloneLast = cards[cards.length - 1 - (i % cards.length)].cloneNode(true);
     track.appendChild(cloneFirst);
-    track.insertBefore(cloneLast, cards[0]);
-  }
+    track.insertBefore(cloneLast, cards[0]);}
 
   cards = Array.from(track.children);
 
   let currentIndex = cloneCount;
   let isTransitioning = false;
 
-  const updateCarousel = (instant = false) => {
-    isTransitioning = !instant;
-    track.style.transition = instant ? 'none' : 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+  const updateCarousel = (instant = false) => {isTransitioning = !instant;
+    track.style.transition = instant ? 'none': 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
 
     const cardWidth = cards[0].getBoundingClientRect().width;
     const containerWidth = track.parentElement.clientWidth;
@@ -1219,57 +1459,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cards.forEach((card, index) => card.classList.toggle('is-active', index === currentIndex));
 
-    if (!instant) setTimeout(() => { isTransitioning = false; }, 500);
-  };
+    if (!instant) setTimeout(() => {isTransitioning = false;}, 500);};
 
-  const handleNext = () => {
-    if (isTransitioning) return;
+  const handleNext = () => {if (isTransitioning) return;
     currentIndex++;
     updateCarousel();
-    if (currentIndex >= cards.length - cloneCount) {
-      setTimeout(() => {
-        currentIndex = currentIndex - (cards.length - 2 * cloneCount);
-        updateCarousel(true);
-      }, 500);
-    }
-  };
+    if (currentIndex >= cards.length - cloneCount) {setTimeout(() => {currentIndex = currentIndex - (cards.length - 2 * cloneCount);
+        updateCarousel(true);}, 500);}};
 
-  const handlePrev = () => {
-    if (isTransitioning) return;
+  const handlePrev = () => {if (isTransitioning) return;
     currentIndex--;
     updateCarousel();
-    if (currentIndex < cloneCount) {
-      setTimeout(() => {
-        currentIndex = currentIndex + (cards.length - 2 * cloneCount);
-        updateCarousel(true);
-      }, 500);
-    }
-  };
+    if (currentIndex < cloneCount) {setTimeout(() => {currentIndex = currentIndex + (cards.length - 2 * cloneCount);
+        updateCarousel(true);}, 500);}};
   
   nextButton.addEventListener('click', handleNext);
   prevButton.addEventListener('click', handlePrev);
 
   updateCarousel(true); 
-  window.addEventListener('resize', () => updateCarousel(true));
-});
+  window.addEventListener('resize', () => updateCarousel(true));});
 </script>
 
 <!-- CONTACT FORM — Formspree version (works on GitHub Pages) -->
 <script>
-(function () {
-  const form     = document.getElementById('contactForm');
+(function () {const form     = document.getElementById('contactForm');
   const sendBtn  = document.getElementById('sendBtn');
   const statusEl = document.getElementById('formStatus');
   if (!form) return;
 
-  const setStatus = (msg, type) => {
-    statusEl.innerHTML = msg || '';
-    statusEl.style.color = type === 'error' ? '#ffb3b3' : '#a7f3d0';
-  };
+  const setStatus = (msg, type) => {statusEl.innerHTML = msg || '';
+    statusEl.style.color = type === 'error' ? '#ffb3b3': '#a7f3d0';};
   const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  form.addEventListener('submit', async (e) => {e.preventDefault();
 
     // Honeypot
     const hp = document.getElementById('hp');
@@ -1279,41 +1501,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
 
-    if (!name || !email || !message) { setStatus('Please fill out all fields.', 'error'); return; }
-    if (!validEmail(email)) { setStatus('Please enter a valid email address.', 'error'); return; }
+    if (!name || !email || !message) {setStatus('Please fill out all fields.', 'error'); return;}
+    if (!validEmail(email)) {setStatus('Please enter a valid email address.', 'error'); return;}
 
     sendBtn.disabled = true;
     sendBtn.textContent = 'Sending…';
     setStatus('');
 
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
-      });
+    try {const res = await fetch(form.action, {method: 'POST',
+        headers: {'Accept': 'application/json'},
+        body: new FormData(form)});
 
-      if (res.ok) {
-        form.reset();
-        setStatus('Thanks! Your message was sent.', 'ok');
-      } else {
-        const data = await res.json().catch(() => ({}));
+      if (res.ok) {form.reset();
+        setStatus('Thanks! Your message was sent.', 'ok');} else {const data = await res.json().catch(() => ({}));
         const msg = (data && data.errors && data.errors[0] && data.errors[0].message)
                     || 'Server error. Please try again later.';
-        setStatus(msg, 'error');
-      }
-    } catch (err) {
-      setStatus('Network error. Please check your connection and try again.', 'error');
-    } finally {
-      sendBtn.disabled = false;
-      sendBtn.textContent = 'Send Message';
-    }
-  });
-})();
+        setStatus(msg, 'error');}} catch (err) {setStatus('Network error. Please check your connection and try again.', 'error');} finally {sendBtn.disabled = false;
+      sendBtn.textContent = 'Send Message';}});})();
 </script>
 <script>
-(function () {
-  const section    = document.getElementById('contact');
+(function () {const section    = document.getElementById('contact');
   const form       = document.getElementById('contactForm');
   const sendBtn    = document.getElementById('sendBtn');
   const statusEl   = document.getElementById('formStatus');
@@ -1322,37 +1529,28 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!form) return;
 
   const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-  const setStatus  = (msg, type) => {
-    statusEl.textContent = msg || '';
-    statusEl.style.color = type === 'error' ? '#ffb3b3' : '#a7f3d0';
-  };
+  const setStatus  = (msg, type) => {statusEl.textContent = msg || '';
+    statusEl.style.color = type === 'error' ? '#ffb3b3': '#a7f3d0';};
 
-  function enterSuccessMode() {
-    section.classList.add('success-mode');
+  function enterSuccessMode() {section.classList.add('success-mode');
     form.hidden = true;
     successBox.hidden = false;
     successBox.classList.remove('is-leaving');
     successBox.classList.add('is-entering');
     // Ensure users see it even if the form was low on the page
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+    section.scrollIntoView({behavior: 'smooth', block: 'start'});}
 
-  function exitSuccessMode() {
-    successBox.classList.remove('is-entering');
+  function exitSuccessMode() {successBox.classList.remove('is-entering');
     successBox.classList.add('is-leaving');
-    successBox.addEventListener('animationend', function onEnd() {
-      successBox.removeEventListener('animationend', onEnd);
+    successBox.addEventListener('animationend', function onEnd() {successBox.removeEventListener('animationend', onEnd);
       successBox.hidden = true;
       section.classList.remove('success-mode');
       form.hidden = false;
       sendBtn.disabled = false;
       sendBtn.textContent = 'Send Message';
-      setStatus('');
-    }, { once: true });
-  }
+      setStatus('');}, {once: true});}
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  form.addEventListener('submit', async (e) => {e.preventDefault();
 
     // honeypot
     const hp = document.getElementById('hp');
@@ -1361,40 +1559,198 @@ document.addEventListener('DOMContentLoaded', function() {
     const name    = document.getElementById('name').value.trim();
     const email   = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
-    if (!name || !email || !message) { setStatus('Please fill out all fields.', 'error'); return; }
-    if (!validEmail(email))          { setStatus('Please enter a valid email address.', 'error'); return; }
+    if (!name || !email || !message) {setStatus('Please fill out all fields.', 'error'); return;}
+    if (!validEmail(email))          {setStatus('Please enter a valid email address.', 'error'); return;}
 
     sendBtn.disabled = true;
     sendBtn.textContent = 'Sending…';
     setStatus('');
 
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
-      });
+    try {const res = await fetch(form.action, {method: 'POST',
+        headers: {'Accept': 'application/json'},
+        body: new FormData(form)});
 
       const data = await res.json().catch(() => ({}));
-      if (res.ok && !data.error) {
-        form.reset();
+      if (res.ok && !data.error) {form.reset();
         enterSuccessMode();
         // Keep the success state for ~5s, then restore
-        setTimeout(exitSuccessMode, 5000);
-      } else {
-        const msg = (data && data.error) ? data.error : 'Something went wrong. Please try again.';
+        setTimeout(exitSuccessMode, 5000);} else {const msg = (data && data.error) ? data.error: 'Something went wrong. Please try again.';
         setStatus(msg, 'error');
         sendBtn.disabled = false;
-        sendBtn.textContent = 'Send Message';
-      }
-    } catch (err) {
-      setStatus('Network error. Please try again.', 'error');
+        sendBtn.textContent = 'Send Message';}} catch (err) {setStatus('Network error. Please try again.', 'error');
       sendBtn.disabled = false;
-      sendBtn.textContent = 'Send Message';
+      sendBtn.textContent = 'Send Message';}});})();
+</script>
+
+<script>
+/* ===== Activepieces workflow player =====
+   - Animates steps + green arrows in order
+   - AFTER the green path completes:
+       1) OTHERWISE rail runs a dashed red "fill" (class: .is-failed)
+       2) When done, base rail locks red (class: .is-failed-done)
+   - Replay button fully resets and replays
+*/
+(function () {const section    = document.querySelector('#automation');
+  if (!section) return;
+
+  const flowRoot   = section.querySelector('.apflow');               // right column flow root
+  const replayBtn  = section.querySelector('.ap-replay');            // left column replay button
+  const rightRail  = section.querySelector('.ap-branch--right');     // OTHERWISE (desktop/tablet)
+  const rightRailM = section.querySelector('.ap-otherwise-mobile');  // OPTIONAL: OTHERWISE (mobile inline)
+
+  // === Order of elements to animate (MATCH your markup) ===
+  // Remove/adjust items if your HTML differs.
+  const orderSelectors = ['[data-key="gmail"]','[data-key="a1"]',
+    '[data-key="find1"]','[data-key="a2"]',
+    '[data-key="router"]','[data-key="b0"]',
+    '[data-key="askllm"]','[data-key="b1"]',
+    '[data-key="find2"]','[data-key="b2"]',
+    '[data-key="send"]'];
+
+  const nodes  = orderSelectors.map(sel => flowRoot.querySelector(sel)).filter(Boolean);
+  const arrows = Array.from(flowRoot.querySelectorAll('.ap-arrow'));
+
+  // Messages (optional; edit/remove if not needed)
+  const msgs = {gmail:  'Triggered by new email in “Support” label.',
+    find1:  'Found order # A1298 and the billing name.',
+    router: 'Routed to Branch 1 (intent: billing).',
+    askllm: 'LLM drafted a polite, on-brand reply.',
+    find2:  'Extracted customer name + address.',
+    send:   'Email sent. Thread URL logged to Sheet.'};
+
+  let running = false;
+  let t1 = null, t2 = null, tFailStart = null, tFailDone = null;
+
+  function clearTimers(){[t1, t2, tFailStart, tFailDone].forEach(id => id && clearTimeout(id));
+    t1 = t2 = tFailStart = tFailDone = null;}
+
+  function resetRailStates(){if (rightRail)  rightRail.classList.remove('is-failing','is-failed','is-failed-done');
+    if (rightRailM) rightRailM.classList.remove('is-failing','is-failed','is-failed-done');}
+
+  function resetUI(){clearTimers();
+    resetRailStates();
+
+    // reset steps/cards
+    flowRoot.querySelectorAll('.ap-step').forEach(step=>{step.classList.remove('is-active','is-done','show-result');
+      const res = step.querySelector('.ap-result');
+      if (res) res.textContent = 'Waiting…';});
+
+    // reset arrows (green connectors)
+    arrows.forEach(a=>{a.classList.remove('done');
+      const fill = a.querySelector('.ap-arrow__fill');
+      if (fill) fill.style.height = '0%';});}
+
+  async function play(){if (running) return;
+    running = true;
+    resetUI();
+
+    // play the flow
+    for (const el of nodes){if (!el) continue;
+
+      const isArrow = el.classList.contains('ap-arrow');
+      const isStep  = el.classList.contains('ap-step');
+
+      if (isArrow){const f = el.querySelector('.ap-arrow__fill');
+        requestAnimationFrame(()=>{if (f) f.style.height = '100%';});
+        await new Promise(r => {t1 = setTimeout(r, 300);});
+        el.classList.add('done');} else if (isStep){el.classList.add('is-active');
+        await new Promise(r => {t2 = setTimeout(r, 300);});
+
+        const key = el.getAttribute('data-key');
+        const res = el.querySelector('.ap-result');
+        if (res && msgs[key]) res.textContent = msgs[key];
+        el.classList.add('show-result');
+
+        await new Promise(r => {t2 = setTimeout(r, 340);});
+        el.classList.remove('is-active');
+        el.classList.add('is-done');}}
+
+    // AFTER the green path: run OTHERWISE dashed red "fill" gradually
+    // Phase 1: overlay grows (keep base gray)
+    tFailStart = setTimeout(()=>{if (rightRail)  rightRail.classList.add('is-failed','is-failing');
+      if (rightRailM) rightRailM.classList.add('is-failed','is-failing');}, 200);
+
+    // Phase 2 (after CSS 1.2s): lock base to red dashed; remove overlay state
+    tFailDone = setTimeout(()=>{if (rightRail){rightRail.classList.remove('is-failing');
+        rightRail.classList.add('is-failed-done');}
+      if (rightRailM){rightRailM.classList.remove('is-failing');
+        rightRailM.classList.add('is-failed-done');}}, 200 + 1250); // 200ms delay + ~1.25s fill duration
+
+    running = false;}
+
+  function stop(){running = false; clearTimers();}
+
+  // Replay button
+  if (replayBtn){replayBtn.addEventListener('click', (e)=>{e.preventDefault();
+      stop();
+      play();});}
+
+  // Autoplay when section comes into view; reset on exit so it replays later
+  const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{if (e.isIntersecting){stop(); play();}
+      else {stop(); resetUI();}});}, {root: null, rootMargin: '-20% 0px -20% 0px', threshold: 0});
+
+  io.observe(flowRoot);})();
+</script>
+<script>
+(function () {
+  // Toggle "Read more" and mark the row .is-open (so multiline panel shows)
+  // ALSO: briefly add .is-active to trigger dot/rail animations
+  var wrappers = document.querySelectorAll('#workexperience [data-readmore]');
+  function setHeight(el){ el.style.maxHeight = el.scrollHeight + 'px'; }
+
+  wrappers.forEach(function (wrap) {
+    var btn = wrap.querySelector('.xp-readmore__btn');
+    var content = wrap.querySelector('.xp-readmore__content');
+    var row = wrap.closest('.t-row');
+    if (!btn || !content || !row) return;
+
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+
+      if (expanded) {
+        // Closing
+        content.style.maxHeight = '0px';
+        btn.textContent = 'Read more';
+        row.classList.remove('is-open');
+        row.classList.remove('is-active');
+      } else {
+        // Opening
+        setHeight(content);
+        btn.textContent = 'Read less';
+        row.classList.add('is-open');
+
+        // --- trigger the dot/rail pulse (short-lived .is-active) ---
+        // remove then re-add to retrigger if opened repeatedly
+        row.classList.remove('is-active');
+        // next tick so CSS animations restart
+        requestAnimationFrame(function(){
+          row.classList.add('is-active');
+          // auto-remove after animation duration (adjust if your CSS changes)
+          setTimeout(function(){ row.classList.remove('is-active'); }, 1200);
+        });
+      }
+    });
+
+    // pre-opened state
+    if (btn.getAttribute('aria-expanded') === 'true'){
+      setHeight(content);
+      row.classList.add('is-open');
     }
+
+    // keep height correct on resize
+    window.addEventListener('resize', function(){
+      if (btn.getAttribute('aria-expanded') === 'true') setHeight(content);
+    });
   });
 })();
 </script>
+
+
+
+
+
+
 
 
 </body>

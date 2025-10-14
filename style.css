@@ -1668,3 +1668,1608 @@ footer hr.light{ border-top:1px solid var(--color-dark-border); }
 /* put in style.css */
 section[id], header[id] { scroll-margin-top: 88px; } /* match your navbar height */
 
+/* ===== Activepieces-style workflow (boxes + short arrows) ===== */
+.ap-bleed { padding-top: var(--section-padding); padding-bottom: var(--section-padding); }
+.apflow { max-width: 980px; margin: 0 auto; padding: clamp(12px,3vw,28px) clamp(16px,5vw,56px); }
+
+.ap-main, .ap-branchlist { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+.ap-branches { display:grid; grid-template-columns: 1fr 280px; gap: 28px; margin-top: 6px; }
+
+.ap-branch { position:relative; }
+.ap-branch__tag{
+  display:inline-block; font-size:.75rem; letter-spacing:.08em; text-transform:uppercase;
+  border-radius:999px; padding:.25rem .6rem; margin:6px 0 4px;
+  color: var(--color-accent-light);
+  background: rgba(111,225,246,.12); border:1px solid rgba(111,225,246,.35);
+}
+.ap-branch__tag--muted {
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, .06);
+    border-color: rgba(255, 255, 255, .16);
+    margin: 0 0 0 58px;
+}
+.ap-otherwise-line{
+  position:relative; width:2px; height: 420px; margin: 10px auto 0;
+  background: repeating-linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.14) 6px, transparent 6px, transparent 12px);
+  border-radius:2px; opacity:.5;
+}
+
+/* Step card */
+.ap-step { position: relative; }
+.ap-card{
+  display:grid; grid-template-columns: 56px 1fr 28px; gap:12px; align-items:center;
+  padding:12px 12px; border-radius:14px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--color-dark-border);
+  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+.ap-left{
+  height:56px; width:56px; display:flex; align-items:center; justify-content:center;
+  border-radius:12px; background: rgba(255,255,255,.04);
+  border:1px solid var(--color-dark-border); color:#fff; font-size:1.2rem;
+  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+.ap-title{ color:#fff; font-weight:800; }
+.ap-sub{ color: var(--color-text-muted-dark); }
+.ap-result{
+  margin-top:8px; display:inline-block; max-width:100%;
+  padding: 7px 10px; border-radius:999px; font-weight:700; font-size:.9rem;
+  color:#cfe7f4; border:1px dashed rgba(255,255,255,.18); background: rgba(255,255,255,.05);
+  max-height:0; opacity:0; overflow:hidden; transition:max-height .45s ease, opacity .35s ease;
+}
+.ap-right{ color: #86efac; opacity:0; transform: scale(.6); transition: opacity .25s ease, transform .25s ease; }
+
+/* Arrow connector (short, with arrow head) */
+.ap-arrow{
+  position:relative; height:28px; width:2px; margin: 0 0 0 28px; /* aligns under icon */
+  background: rgba(255,255,255,.18); border-radius:2px;
+}
+.ap-arrow::after{
+  content:""; position:absolute; bottom:-5px; left:50%; transform:translateX(-50%);
+  border-left:6px solid transparent; border-right:6px solid transparent; border-top:6px solid rgba(255,255,255,.25);
+}
+.ap-arrow__fill{
+  position:absolute; left:0; top:0; width:100%; height:0%;
+  background: linear-gradient(180deg, var(--color-accent), var(--color-accent-light));
+  border-radius:2px;
+  transition: height .45s cubic-bezier(.25,1,.5,1);
+}
+
+/* Smaller arrow (first item in branch) */
+.ap-arrow--small{ height:20px; }
+.ap-arrow--small::after{ bottom:-4px; }
+
+/* States */
+.ap-step.is-active .ap-card{
+  border-color: var(--color-accent-light);
+  box-shadow: 0 0 0 6px rgba(111,225,246,.12);
+  transform: translateY(-1px);
+}
+.ap-step.is-active .ap-left{ border-color: var(--color-accent-light); box-shadow: 0 0 0 4px rgba(111,225,246,.12); }
+.ap-step.is-done .ap-right{ opacity:1; transform: scale(1); }
+.ap-step.show-result .ap-result{ max-height: 60px; opacity:1; }
+
+/* Layout: main column and branches */
+.ap-main { margin-bottom: 6px; }
+.ap-branch--left .ap-branchlist { padding-right: 12px; }
+
+/* Mobile */
+@media (max-width: 991.98px){
+  .apflow{ padding-left: 24px; padding-right: 24px; }
+  .ap-branches{ grid-template-columns: 1fr; }
+  .ap-otherwise-line{ height: 220px; }
+}
+/* === Workflow compact look + green completed state === */
+
+/* compact sizing */
+.apflow{
+  --node: 44px;            /* icon box size (was 56) */
+  --gap: 12px;             /* grid gap (was 12) */
+  --ap-green: #22c55e;     /* completed color (green-500) */
+  --ap-green-soft: rgba(34,197,94,.14);
+}
+
+.ap-main, .ap-branchlist{ gap: 10px; }
+
+/* card/node */
+.ap-card{
+  grid-template-columns: var(--node) 1fr 20px;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.ap-left{
+  height: var(--node); width: var(--node);
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.ap-title{ font-size: .95rem; }
+.ap-sub{   font-size: .85rem; }
+.ap-result{
+  margin-top: 6px;
+  padding: 5px 8px;
+  font-size: .78rem;
+  max-height: 0; opacity: 0;
+}
+
+/* short arrows tighter */
+.ap-arrow{ height: 18px; margin-left: 22px; } /* align under smaller icon */
+.ap-arrow--small{ height: 14px; }
+
+/* active highlight stays cyan */
+.ap-step.is-active .ap-card{
+  border-color: var(--color-accent-light);
+  box-shadow: 0 0 0 4px rgba(111,225,246,.12);
+  transform: translateY(-1px);
+}
+.ap-step.is-active .ap-left{
+  border-color: var(--color-accent-light);
+  box-shadow: 0 0 0 3px rgba(111,225,246,.12);
+}
+
+/* ✅ completed = green ring + green border + subtle glow */
+.ap-step.is-done .ap-card{
+  border-color: var(--ap-green);
+  box-shadow: 0 0 0 4px var(--ap-green-soft);
+}
+.ap-step.is-done .ap-left{
+  border-color: var(--ap-green);
+  box-shadow: 0 0 0 3px var(--ap-green-soft);
+}
+.ap-step.is-done .ap-right{
+  color: var(--ap-green);
+  opacity: 1; transform: scale(1);
+}
+.ap-step.show-result .ap-result{
+  max-height: 48px; opacity: 1;
+  border-color: rgba(34,197,94,.25);               /* hint of green */
+  background: rgba(34,197,94,.06);
+  color: #dff7e7;
+}
+
+/* arrows: when done, keep a calm green fill */
+.ap-arrow.done .ap-arrow__fill{
+  background: linear-gradient(180deg, var(--ap-green), #16a34a);
+}
+
+/* desktop polish: keep right branch muted */
+.ap-otherwise-line{ opacity: .4; }
+
+/* mobile adjustments */
+@media (max-width: 991.98px){
+  .apflow{ padding-left: 20px; padding-right: 20px; }
+  .ap-arrow{ margin-left: 18px; }
+}
+/* === MICRO WORKFLOW DENSITY OVERRIDES (compact nodes & arrows) === */
+.apflow{
+  /* smaller node, tighter grid, narrower column */
+  --node: 36px;                 /* icon square size (was 44–56px) */
+  --gap: 8px;                   /* gap between columns */
+  --ap-green: #22c55e;
+  --ap-green-soft: rgba(34,197,94,.14);
+  max-width: 820px;             /* slimmer lane so it feels like a flow */
+  padding-left: clamp(12px,4vw,40px);
+  padding-right: clamp(12px,4vw,40px);
+}
+
+/* lists closer together */
+.ap-main, .ap-branchlist{ gap: 8px; }
+
+/* cards/nodes */
+.ap-card{
+  grid-template-columns: var(--node) 1fr 16px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.025);
+}
+.ap-left{
+  width: var(--node); height: var(--node);
+  border-radius: 8px;
+  font-size: .85rem;
+}
+.ap-title{ font-size: .88rem; line-height: 1.2; }
+.ap-sub  { font-size: .78rem; }
+.ap-right{ transform: scale(.55); }        /* tiny check */
+
+/* result chip — smaller */
+.ap-result{
+  margin-top: 4px;
+  padding: 4px 6px;
+  font-size: .70rem;
+  max-height: 0; opacity: 0;
+}
+.ap-step.show-result .ap-result{ max-height: 36px; }
+
+/* arrows — short and tight */
+.ap-arrow{ height: 12px; margin-left: 16px; }
+.ap-arrow--small{ height: 10px; }
+.ap-arrow::after{ border-left:5px solid transparent; border-right:5px solid transparent; border-top-width:5px; }
+
+/* active cyan highlight (smaller glow) */
+.ap-step.is-active .ap-card{ border-color: var(--color-accent-light); box-shadow: 0 0 0 3px rgba(111,225,246,.12); }
+.ap-step.is-active .ap-left{ border-color: var(--color-accent-light); box-shadow: 0 0 0 2px rgba(111,225,246,.12); }
+
+/* ✅ completed = green border + subtle glow (smaller) */
+.ap-step.is-done .ap-card{ border-color: var(--ap-green); box-shadow: 0 0 0 3px var(--ap-green-soft); }
+.ap-step.is-done .ap-left{ border-color: var(--ap-green); box-shadow: 0 0 0 2px var(--ap-green-soft); }
+.ap-step.is-done .ap-right{ color: var(--ap-green); opacity: 1; transform: scale(.75); }
+.ap-step.show-result .ap-result{
+  border-color: rgba(34,197,94,.25);
+  background: rgba(34,197,94,.06);
+  color: #dff7e7;
+}
+
+/* calm green fill for passed arrows */
+.ap-arrow.done .ap-arrow__fill{
+  background: linear-gradient(180deg, var(--ap-green), #16a34a);
+}
+
+/* branches spacing + muted otherwise line */
+.ap-branches{ gap: 20px; }
+.ap-otherwise-line{ height: 320px; opacity: .35; }
+
+/* mobile tweaks */
+@media (max-width: 991.98px){
+  .apflow{ max-width: 100%; padding-left: 18px; padding-right: 18px; }
+  .ap-arrow{ margin-left: 14px; }
+}
+/* --- Fix right-edge white gutter from vw-based heading glows --- */
+.section-heading-with-line::before,
+.section-heading-with-line-dark::before {
+  /* stay centered but never exceed the layout width */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(100%, 100vw);   /* safe width (no scrollbar overshoot) */
+  max-width: 100%;
+}
+
+/* Safety net: block any stray horizontal painting */
+html, body { overflow-x: clip; } /* better than hidden in modern browsers */
+
+/* If any full-bleed rows exist, make sure they don't paint past the edge */
+.container-fluid.px-0 { overflow-x: clip; }
+/* === ULTRA-NARROW WORKFLOW LANE (small cards) === */
+.apflow{
+  /* lane width */
+  max-width: 560px !important;   /* <- make this smaller/bigger to taste */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* tiny nodes */
+  --node: 28px;
+  --gap: 6px;
+  --cardH: 54px;
+}
+
+/* cards */
+.ap-card{
+  grid-template-columns: var(--node) 1fr 14px;
+  min-height: var(--cardH);
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.02);
+}
+.ap-left{
+  width: var(--node); height: var(--node);
+  border-radius: 6px;
+  font-size: .72rem;
+  align-self: center;
+}
+.ap-right{ transform: scale(.5); }
+
+/* text */
+.ap-title{ font-size: .80rem; line-height: 1.15; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ap-sub  { font-size: .70rem; line-height: 1.25; }
+.ap-result{
+  margin-top: 3px; padding: 3px 6px;
+  font-size: .62rem; max-height: 0; opacity: 0;
+}
+.ap-step.show-result .ap-result{ max-height: 28px; }
+
+/* arrows (short & tight) */
+.ap-arrow{ height: 8px; margin-left: 12px; }
+.ap-arrow--small{ height: 6px; }
+.ap-arrow::after{
+  border-left:4px solid transparent; border-right:4px solid transparent; border-top-width:4px;
+}
+
+/* active/done glows – scaled down */
+.ap-step.is-active .ap-card{ border-color: var(--color-accent-light); box-shadow: 0 0 0 2px rgba(111,225,246,.12); }
+.ap-step.is-active .ap-left{ border-color: var(--color-accent-light); box-shadow: 0 0 0 2px rgba(111,225,246,.12); }
+.ap-step.is-done  .ap-card{ border-color: #22c55e; box-shadow: 0 0 0 2px rgba(34,197,94,.14); }
+.ap-step.is-done  .ap-left{ border-color: #22c55e; box-shadow: 0 0 0 2px rgba(34,197,94,.14); }
+.ap-step.is-done  .ap-right{ color: #22c55e; opacity: 1; transform: scale(.62); }
+
+/* keep “Otherwise” rail from forcing width; hide on very tight lanes */
+.ap-branch--right{ right: -8px; width: 180px; }
+@media (max-width: 1280px){
+  .ap-branch--right{ display: none; }
+}
+
+/* mobile keeps proportionate */
+@media (max-width: 991.98px){
+  .apflow{ max-width: 100% !important; padding-inline: 16px; }
+}
+/* ===== Automation split: left copy / right workflow ===== */
+.automation-wrap{
+  display: grid;
+  grid-template-columns: minmax(280px, 1.1fr) minmax(420px, 560px);
+  gap: clamp(18px, 4vw, 48px);
+  align-items: start;
+}
+
+.automation-copy .section-heading{ margin-bottom: .35rem; }
+.automation-bullets{
+  margin: 1rem 0 1.25rem; padding-left: 1.1rem;
+  color: var(--color-text-muted-dark);
+}
+.automation-bullets li{ margin: .25rem 0; }
+
+.automation-cta{ display:flex; gap:.6rem; flex-wrap:wrap; }
+.automation-cta .btn-primary,
+.automation-cta .btn-ghost{ border-radius:10px; }
+
+/* Right column: let apflow fill the grid cell and keep it narrow */
+.automation-flow .apflow{
+  max-width: 100% !important; /* override earlier clamps */
+  width: 100%;
+  --node: 28px;
+  --gap: 6px;
+  --cardH: 54px;
+}
+
+/* Ensure branch rail doesn’t steal width on the right column */
+.ap-branches{ position: relative; display: block; }
+.ap-branch--left{ width: 100%; }
+.ap-branch--right {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    bottom: 0;
+    width: 106px;
+    pointer-events: none;
+}
+
+/* Responsive: stack columns on mobile */
+@media (max-width: 991.98px){
+  .automation-wrap{ grid-template-columns: 1fr; }
+  .automation-flow .apflow{ max-width: 640px !important; margin-inline: auto; }
+  .ap-branch--right{ display: none; }
+}
+/* ===== Rails & Curved Split (Activepieces-style) ===== */
+.apflow.apflow--with-rails{
+  position: relative;
+  --lane-x: 14px;                 /* distance from left edge to rail center */
+  --rail-color: rgba(255,255,255,.16);
+  --rail-dash: rgba(255,255,255,.18);
+}
+
+/* MAIN VERTICAL RAIL */
+.ap-lane--main{
+  position: absolute; top: 0; bottom: 0;
+  left: calc(var(--lane-x));
+  width: 2px; border-radius: 2px;
+  background: linear-gradient(180deg, var(--rail-color), rgba(255,255,255,.06));
+  pointer-events: none;
+}
+
+/* Align all arrows exactly on the rail (short connectors) */
+.ap-arrow{ margin-left: calc(var(--lane-x) - 1px); }
+.ap-arrow--small{ margin-left: calc(var(--lane-x) - 1px); }
+
+/* CURVED SPLIT at Router (like Activepieces Y-join) */
+.ap-step--router{ position: relative; }
+.ap-step--router .ap-branch-join{
+  position: absolute; left: calc(var(--lane-x) - 10px);
+  width: 56px; height: 36px; bottom: -18px;
+  border-bottom: 2px solid var(--rail-color);
+  border-left: 2px solid var(--rail-color);
+  border-right: 2px solid var(--rail-color);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  background: transparent;
+  pointer-events: none;
+  opacity: .85;
+}
+
+/* BRANCH ZONE positioning context */
+.ap-rails-zone{ position: relative; }
+
+/* RIGHT OTHERWISE rail (dotted) that starts near the Router */
+.ap-otherwise-lane{
+  position: absolute; right: 6px; top: 18px; bottom: 52px; width: 2px;
+  background: repeating-linear-gradient(
+    180deg,
+    var(--rail-dash),
+    var(--rail-dash) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  border-radius: 2px; opacity: .55; pointer-events: none;
+}
+
+/* END pills */
+.ap-end{
+  display:inline-flex; align-items:center; justify-content:center;
+  height: 22px; padding: 0 10px; border-radius: 999px;
+  font-size: .72rem; color: #cbd5e1;
+  border: 1px solid var(--color-dark-border);
+  background: rgba(255,255,255,.04);
+  margin: 14px auto 0; /* centered under the left branch */
+}
+.ap-end--right{ position: absolute; right: -14px; bottom: 18px; margin: 0; }
+
+/* Keep cards compact (respect your micro sizing) and centered rail */
+.apflow{
+  --node: 28px; --gap: 6px; --cardH: 54px;
+}
+.ap-card{ min-height: var(--cardH); padding: 4px 8px; border-radius: 8px; }
+.ap-left{ width: var(--node); height: var(--node); border-radius: 6px; font-size: .72rem; }
+.ap-title{ font-size: .80rem; line-height: 1.15; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ap-sub{ font-size: .70rem; line-height: 1.25; }
+.ap-result{ margin-top: 3px; padding: 3px 6px; font-size: .62rem; }
+
+/* Responsive: stack section; keep rails sensible */
+@media (max-width: 991.98px){
+  .automation-wrap{ grid-template-columns: 1fr; }
+  .ap-otherwise-lane{ display:none; }
+  .ap-end--right{ display:none; }
+}
+/* === ACTIVEPIECES RAILS — FIX PACK === */
+
+/* Reserve space for the right rail and make the zone a positioning context */
+.ap-branches.ap-rails-zone{
+  position: relative;
+  padding-right: 180px;          /* keeps cards from hitting the right rail */
+}
+
+/* Main lane should always span the whole workflow column */
+.apflow.apflow--with-rails{ position: relative; }
+.apflow.apflow--with-rails .ap-lane--main{
+  position: absolute; top: 0; bottom: 0; left: 14px; width: 2px;
+}
+
+/* Keep the router's curved split under the card but above the rail */
+.ap-step--router{ position: relative; z-index: 2; }
+.ap-step--router .ap-branch-join{
+  z-index: 1;
+  left: 4px;                     /* aligns with the main rail */
+  width: 48px; height: 32px; bottom: -16px;
+  border-color: rgba(255,255,255,.16);
+}
+
+/* Arrows sit exactly on the main rail */
+.ap-arrow, .ap-arrow--small{ margin-left: 13px; }
+
+/* RIGHT "Otherwise" column stretches from just below Router to the bottom */
+.ap-branch--right{
+  position: absolute;
+  right: 0;
+  top: 34px;                     /* start just below the Router card */
+  bottom: 0;                     /* stretch to bottom of the branch zone */
+  width: 160px;
+  pointer-events: none;
+}
+
+/* Dotted vertical lane inside the right column */
+.ap-branch--right .ap-otherwise-lane {
+    position: absolute;
+    right: 52px;
+    top: 52px;
+    bottom: 56px;
+    width: 2px;
+    background: repeating-linear-gradient(180deg, rgba(255, 255, 255, .18), rgba(255, 255, 255, .18) 6px, transparent 6px, transparent 12px);
+    border-radius: 2px;
+    opacity: .55;
+}
+
+/* End pills pinned to the bottom on both sides */
+.ap-end{ margin: 16px auto 0; }
+.ap-end--right{
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+    margin: 0 30px 0 0;
+}
+
+/* Compact card lane (keeps your “micro” sizing) */
+.automation-flow .apflow{
+  --node: 28px; --gap: 6px; --cardH: 54px;
+  max-width: 100%;
+}
+
+/* Mobile: stack and hide the right rail (cards remain) */
+@media (max-width: 991.98px){
+  .ap-branches.ap-rails-zone{ padding-right: 0; }
+  .ap-branch--right{ display: none; }
+}
+/* === Activepieces workflow: make connector arrows MUCH longer === */
+/* Tunable lengths (desktop defaults) */
+:root{
+  --ap-arrow-lg: 32px;   /* between top cards */
+  --ap-arrow-sm: 26px;   /* inside Branch 1 */
+}
+
+/* Lengthen the connectors */
+.ap-arrow{
+  height: var(--ap-arrow-lg) !important;
+  width: 3px !important;                    /* keep the thicker look */
+  margin-left: 12px;                        /* stays aligned to main rail */
+  background: rgba(111,225,246,.35) !important;
+  border-radius: 2px;
+}
+.ap-arrow--small{
+  height: var(--ap-arrow-sm) !important;
+}
+
+/* Make the arrow head scale with the longer body */
+.ap-arrow::after{
+  border-left: 7px solid transparent !important;
+  border-right: 7px solid transparent !important;
+  border-top: 8px solid rgba(111,225,246,.70) !important;
+  bottom: -6px;                             /* nudge for bigger head */
+}
+
+/* Keep the animated fill visible the full length */
+.ap-arrow__fill{
+  background: linear-gradient(180deg, #6fe1f6, #22c55e) !important;
+  box-shadow: 0 0 6px rgba(111,225,246,.35);
+  height: 0%;                               /* animation starts here */
+  transition: height .45s cubic-bezier(.25,1,.5,1);
+}
+
+/* Optional: give the lists a tiny bit more spacing to breathe */
+.ap-main, .ap-branchlist{ gap: 14px; }
+
+/* Mobile: slightly shorter so it doesn’t get too tall on small screens */
+@media (max-width: 991.98px){
+  :root{
+    --ap-arrow-lg: 26px;
+    --ap-arrow-sm: 22px;
+  }
+}
+/* === OTHERWISE: keep layout, only change color when failed === */
+/* Desktop/tablet rail */
+
+
+/* Downward red "fill" animation overlay (no layout changes) */
+.ap-branch--right.is-failed .ap-otherwise-lane::after{
+  content:"";
+  position:absolute;
+  left: 0;                /* align with the base rail */
+  top: 0;
+  width: 2px;            /* same as your rail width so it won't look thicker */
+  height: 0%;
+  border-radius: 0;      /* avoid blur that makes it look wider */
+  /* dashed: 6px on, 6px off */
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(239,68,68,.95) 0 6px,
+    rgba(239,68,68,0)   6px 12px
+  );
+  animation: ap-fail-fill 700ms cubic-bezier(.25,1,.5,1) forwards;
+}
+
+@keyframes ap-fail-fill { to { height: 100%; } }
+
+
+@keyframes ap-fail-fill { to { height: 100%; } }
+
+/* If you show an OTHERWISE chip/tag and End pill on the right, just recolor (no spacing changes) */
+.ap-branch--right.is-failed .ap-branch__tag,
+.ap-branch--right.is-failed .ap-branch__tag--muted{
+  color:#fff;
+  background: rgba(239,68,68,.12);
+  border:1px solid #ef4444;
+}
+.ap-branch--right.is-failed .ap-end--right{
+  color:#fecaca;
+  border:1px solid #ef4444;
+  background: rgba(239,68,68,.06);
+}
+/* OTHERWISE "End" pill look-alike (no layout changes) */
+.ap-end--right,
+.ap-end-chip{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;                      /* compact like your screenshot */
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 0.80rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #d7e2ea;                     /* light text */
+  background: rgba(12, 20, 26, 0.75); /* dark chip */
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.05),
+    0 3px 8px rgba(0,0,0,0.25);       /* subtle depth */
+  backdrop-filter: saturate(110%);    /* optional, gives “polish” */
+}
+
+/* When OTHERWISE is flagged failed (red theme), keep same shape but tint */
+.ap-branch--right.is-failed .ap-end--right,
+.ap-branch--right.is-failed .ap-end-chip{
+  color: #ffe3e3;
+  background: rgba(239,68,68,0.10);
+  border-color: #ef4444;
+  box-shadow:
+    inset 0 1px 0 rgba(239,68,68,0.15),
+    0 3px 8px rgba(239,68,68,0.18);
+}
+/* ==== XP Readmore (scoped; won't affect other components) ==== */
+.xp-readmore { margin-top: .25rem; }
+.xp-readmore__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+.xp-readmore__btn {
+  display: inline-block;
+  margin-top: .25rem;
+  padding: .4rem .75rem;
+  border: 1px solid var(--color-light-border, #EAECEF);
+  background: var(--color-light-card, #FFFFFF);
+  color: var(--color-text-dark, #212529);
+  border-radius: 999px;
+  font-size: .85rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.section-dark .xp-readmore__btn {
+  border-color: var(--color-dark-border, #232E3A);
+  background: var(--color-dark-card, #15212B);
+  color: var(--color-text-light, #EAECEF);
+}
+.xp-readmore__btn[aria-expanded="true"] { font-weight: 700; }
+
+/* optional: small alt style for ED logo if you want a different tint */
+.xp-logo.xp-logo-alt { background: var(--color-accent, #2563EB); color: #fff; }
+#workexperience {
+  margin-top: 80px; /* Adjust 60–100px if needed */
+}
+/* ========= 3-Column Timeline (scoped to #workexperience) ========= */
+#workexperience .timeline-3col{
+  position: relative;
+  display: grid;
+  row-gap: 2.25rem; /* space between rows */
+}
+
+/* center vertical line across the whole timeline */
+#workexperience .timeline-3col::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0; bottom:0;
+  transform:translateX(-50%);
+  width:2px;
+  background: var(--color-light-border, #EAECEF);
+  opacity:.9;
+}
+
+/* each row = 3 columns: left | center | right */
+#workexperience .t-row{
+  display:grid;
+  grid-template-columns: 1fr 52px 1fr; /* center lane fixed */
+  align-items: stretch;
+  gap: 0;
+}
+
+/* columns */
+#workexperience .t-col{ min-height: 100%; }
+#workexperience .t-center{
+  position: relative;
+  display: flex;
+  align-items: center;   /* vertically center dot to the row content */
+  justify-content: center;
+}
+
+/* the dot on the center branch */
+#workexperience .t-dot{
+  width: 16px; height:16px;
+  border-radius: 50%;
+  background: var(--color-accent, #2563EB);
+  box-shadow: 0 0 0 4px rgba(37,99,235,.15); /* soft ring */
+  z-index: 1; /* above the center line */
+}
+
+/* nudge the xp cards slightly away from the center for balance */
+#workexperience .t-left .xp-card{ margin-right: 24px; }
+#workexperience .t-right .xp-card{ margin-left: 24px; }
+
+/* keep your existing xp-card look; just add a subtle connector */
+#workexperience .t-left .xp-card::after,
+#workexperience .t-right .xp-card::after{
+  content:"";
+  position:absolute;
+  top: 18px;  /* aligns near card header */
+  width: 24px; height: 2px;
+  background: var(--color-light-border, #EAECEF);
+}
+#workexperience .t-left .xp-card{ position: relative; }
+#workexperience .t-left .xp-card::after{ right: -24px; }
+#workexperience .t-right .xp-card{ position: relative; }
+#workexperience .t-right .xp-card::after{ left: -24px; }
+
+/* Readmore (already used before; keep it scoped) */
+#workexperience .xp-readmore{ margin-top:.25rem; }
+#workexperience .xp-readmore__content{
+  max-height:0; overflow:hidden; transition:max-height .35s ease;
+}
+#workexperience .xp-readmore__btn{
+  display:inline-block; margin-top:.25rem; padding:.4rem .75rem;
+  border:1px solid var(--color-light-border, #EAECEF);
+  background: var(--color-light-card, #fff);
+  color: var(--color-text-dark, #212529);
+  border-radius:999px; font-size:.85rem; line-height:1; cursor:pointer;
+}
+.section-dark #workexperience .xp-readmore__btn{
+  border-color: var(--color-dark-border, #232E3A);
+  background: var(--color-dark-card, #15212B);
+  color: var(--color-text-light, #EAECEF);
+}
+#workexperience .xp-readmore__btn[aria-expanded="true"]{ font-weight:700; }
+
+/* RESPONSIVE: on tablets/phones, stack cards; keep the center branch visible */
+@media (max-width: 991.98px){
+  #workexperience .t-row{
+    grid-template-columns: 1fr;      /* single column */
+  }
+  #workexperience .timeline-3col::before{
+    display:none;                     /* hide global line on small screens */
+  }
+  #workexperience .t-center{ display:none; } /* hide dot column */
+  #workexperience .t-left .xp-card,
+  #workexperience .t-right .xp-card{
+    margin: 0 0 0 0;
+  }
+  #workexperience .t-left .xp-card::after,
+  #workexperience .t-right .xp-card::after{
+    display:none;                     /* remove connectors on mobile for cleanliness */
+  }
+}
+
+/* small polish so the section header isn’t too tight at the top */
+#workexperience .text-center{ padding-top: 40px; } /* adjust 32–56px to taste */
+/* ============= DENSE TIMELINE TWEAKS (no HTML changes) ============= */
+
+/* 1) Give this section a wider stage so cards don't look cramped */
+#workexperience .container{
+  max-width: 1200px;                 /* was narrower; try 1140–1280 if you like */
+}
+
+/* 2) Slimmer center rail + smaller row gaps */
+#workexperience .timeline-3col{ 
+  row-gap: 1.25rem;                  /* was ~2.25rem */
+}
+#workexperience .t-row{
+  grid-template-columns: 1fr 32px 1fr;  /* center lane from 52px -> 32px */
+}
+
+/* 3) Slight overlap between rows to reclaim vertical space */
+#workexperience .t-row + .t-row{
+  margin-top: -28px;                 /* pull rows closer; use -20 to -36px as taste */
+}
+
+/* 4) Nudge cards closer to the center line */
+#workexperience .t-left  .xp-card{ margin-right: 12px; }   /* was 24px */
+#workexperience .t-right .xp-card{ margin-left:  12px; }
+
+/* 5) Compact card internals (breathes better in timeline) */
+#workexperience .xp-card{ padding: 16px 18px; }            /* was chunkier */
+#workexperience .xp-bullets li{ margin: .20rem 0; }        /* tighter list spacing */
+
+/* 6) Subtle, smaller center dots + shorter connectors = cleaner */
+#workexperience .t-dot{
+  width: 12px; height: 12px;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.15);               /* thinner ring */
+}
+#workexperience .t-left .xp-card::after,
+#workexperience .t-right .xp-card::after{
+  top: 14px;                                               /* align with tighter padding */
+  width: 16px;                                             /* was 24px */
+}
+
+/* 7) Optional: slightly stronger center line so it reads even when dense */
+#workexperience .timeline-3col::before{
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.08),
+    rgba(0,0,0,.12) 40%,
+    rgba(0,0,0,.08)
+  );
+}
+/* ===== Timeline reactions on Read more ===== */
+#workexperience .t-row.is-active .t-dot{
+  animation: xp-dot-pulse .8s ease-out;
+  background: var(--color-accent, #2563EB);
+  box-shadow: 0 0 0 6px rgba(37,99,235,.18);
+}
+
+/* a short vertical glow in the center lane */
+#workexperience .t-center::after{
+  content:"";
+  position:absolute;
+  left:50%; transform:translateX(-50%) scaleY(0);
+  width:6px; height:90px;             /* length of the glow segment */
+  border-radius:3px;
+  background: linear-gradient(
+    to bottom,
+    rgba(37,99,235,.00),
+    rgba(37,99,235,.30) 30%,
+    rgba(37,99,235,.30) 70%,
+    rgba(37,99,235,.00)
+  );
+  filter: blur(0.3px);
+  opacity:0; transition: opacity .25s ease, transform .25s ease;
+  pointer-events:none;
+}
+#workexperience .t-row.is-active .t-center::after{
+  opacity:1; transform:translateX(-50%) scaleY(1);
+}
+
+/* subtly “thicken” the connector to the card when active */
+#workexperience .t-left  .xp-card::after,
+#workexperience .t-right .xp-card::after{
+  transition: transform .25s ease, background-color .25s ease;
+}
+#workexperience .t-row.is-active .t-left  .xp-card::after{
+  transform: scaleX(1.25);
+  background-color: var(--color-accent, #2563EB);
+}
+#workexperience .t-row.is-active .t-right .xp-card::after{
+  transform: scaleX(1.25);
+  background-color: var(--color-accent, #2563EB);
+}
+
+/* dot pulse keyframes */
+@keyframes xp-dot-pulse{
+  0%   { transform: scale(1);   box-shadow: 0 0 0 0 rgba(37,99,235,.20); }
+  60%  { transform: scale(1.2); box-shadow: 0 0 0 10px rgba(37,99,235,.00); }
+  100% { transform: scale(1);   box-shadow: 0 0 0 6px rgba(37,99,235,.18); }
+}
+/* ========= Timeline base (already added before, kept short here) ========= */
+#workexperience .timeline-3col{ position:relative; display:grid; row-gap:1.25rem; }
+#workexperience .timeline-3col::before{
+  content:""; position:absolute; left:50%; top:0; bottom:0; transform:translateX(-50%);
+  width:2px; background: var(--color-light-border, #EAECEF);
+}
+#workexperience .t-row{ display:grid; grid-template-columns:1fr 36px 1fr; align-items:stretch; }
+#workexperience .t-row + .t-row{ margin-top:-22px; }
+#workexperience .t-col{ min-height:100%; }
+#workexperience .t-center{ position:relative; display:flex; align-items:center; justify-content:center; }
+#workexperience .t-dot{ width:12px; height:12px; border-radius:50%; background:var(--color-accent,#2563EB); box-shadow:0 0 0 3px rgba(37,99,235,.15); z-index:1; }
+
+#workexperience .t-left .xp-card,
+#workexperience .t-right .xp-card{ position:relative; }
+#workexperience .t-left .xp-card::after,
+#workexperience .t-right .xp-card::after{
+  content:""; position:absolute; top:16px; width:16px; height:2px; background:var(--color-light-border,#EAECEF);
+}
+#workexperience .t-left .xp-card{ margin-right:12px; }
+#workexperience .t-right .xp-card{ margin-left:12px; }
+#workexperience .t-left .xp-card::after{ right:-16px; }
+#workexperience .t-right .xp-card::after{ left:-16px; }
+
+/* ========= Read more controls (scoped) ========= */
+#workexperience .xp-readmore{ margin-top:.25rem; }
+#workexperience .xp-readmore__content{ max-height:0; overflow:hidden; transition:max-height .35s ease; }
+#workexperience .xp-readmore__btn{
+  display:inline-block; margin-top:.25rem; padding:.4rem .75rem;
+  border:1px solid var(--color-light-border,#EAECEF); background:#fff;
+  color:var(--color-text-dark,#212529); border-radius:999px; font-size:.85rem; line-height:1; cursor:pointer;
+}
+.section-dark #workexperience .xp-readmore__btn{
+  border-color:var(--color-dark-border,#232E3A); background:var(--color-dark-card,#15212B); color:var(--color-text-light,#EAECEF);
+}
+#workexperience .xp-readmore__btn[aria-expanded="true"]{ font-weight:700; }
+
+/* ========= BLANK-SIDE ANIMATED PANEL ========= */
+#workexperience .ghost-panel{
+  display:flex; align-items:center; justify-content:center;
+  min-height:220px; padding:12px 16px; margin:0 8%;
+  opacity:0; transform:translateY(8px);
+  transition:opacity .28s ease, transform .28s ease;
+  pointer-events:none; /* decorative */
+  position:relative;
+}
+#workexperience .ghost-panel::before{
+  /* faint spotlight behind the text */
+  content:""; position:absolute; inset:-20px -10px;
+  background: radial-gradient(ellipse at center, rgba(37,99,235,.10), rgba(37,99,235,0) 65%);
+  filter: blur(2px); z-index:0;
+}
+#workexperience .t-row.is-open .ghost-panel{ opacity:1; transform:translateY(0); }
+
+/* Big typewriter text */
+#workexperience .ghost-type{
+  position:relative; z-index:1; 
+  font-weight:800; line-height:1.15;
+  font-size: clamp(1.1rem, 2.2vw + .6rem, 2.25rem);
+  color: var(--color-text-dark, #0f172a);
+  white-space:nowrap; overflow:hidden;
+  border-right: 2px solid rgba(0,0,0,.35); /* caret */
+  width: 0;                                  /* animated width */
+}
+
+/* Typewriter animation (duration scales with --chars you set inline) */
+#workexperience .t-row.is-open .ghost-type{
+  animation: xp-type steps(var(--chars)) 2.4s forwards, xp-caret .9s step-end infinite;
+}
+
+@keyframes xp-type { from { width: 0; } to { width: 100%; } }
+@keyframes xp-caret { 50% { border-color: transparent; } }
+
+/* Mobile: stack and hide the ghost panels (too wide for phones) */
+@media (max-width: 991.98px){
+  #workexperience .t-row{ grid-template-columns:1fr; }
+  #workexperience .timeline-3col::before{ display:none; }
+  #workexperience .t-center{ display:none; }
+  #workexperience .t-left .xp-card, #workexperience .t-right .xp-card{ margin:0; }
+  #workexperience .t-left .xp-card::after, #workexperience .t-right .xp-card::after{ display:none; }
+  #workexperience .ghost-panel{ display:none; }
+}
+
+/* Small breathing room above title without breaking your glow */
+#workexperience .text-center{ padding-top: 40px; }
+/* ===== Keep animated text away from the center rail ===== */
+#workexperience{
+  /* tune these two to taste */
+  --rail: 36px;          /* width of the center column (your rail) */
+  --gutter: 72px;        /* distance from rail to the text panel */
+  --panel-max: 640px;    /* maximum width for the big text */
+}
+
+/* Make the column definition use the same rail var (for consistency) */
+#workexperience .t-row{
+  grid-template-columns: 1fr var(--rail) 1fr;
+}
+
+/* The animated panel itself */
+#workexperience .ghost-panel{
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;                     /* prevent the caret/text from bleeding out */
+  padding-inline: clamp(16px, 2vw, 24px);
+}
+
+/* LEFT side panel: push away from the rail and clamp width */
+#workexperience .t-left .ghost-panel{
+  margin-left: auto;                    /* hug the outside edge */
+  padding-right: var(--gutter);
+  text-align: right;
+  max-width: min(
+    var(--panel-max),
+    calc(50vw - (var(--rail) / 2) - var(--gutter))
+  );
+}
+
+/* RIGHT side panel: push away from the rail and clamp width */
+#workexperience .t-right .ghost-panel{
+  margin-right: auto;
+  padding-left: var(--gutter);
+  text-align: left;
+  max-width: min(
+    var(--panel-max),
+    calc(50vw - (var(--rail) / 2) - var(--gutter))
+  );
+}
+
+/*VERTICAL LINE DITO*/
+/* Ensure the typewriter element respects the container */
+#workexperience .ghost-type{
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;     /* keep the blinking caret inside */
+}
+/* ========= Timeline (already present in your file; kept concise) ========= */
+#workexperience .timeline-3col{ position:relative; display:grid; row-gap:1.25rem; }
+#workexperience .timeline-3col::before{
+  content:""; position:absolute; left:50%; top:0; bottom:0; transform:translateX(-50%);
+  width:2px; background:#ababab;
+}
+#workexperience .t-row{ display:grid; grid-template-columns:1fr 36px 1fr; align-items:stretch; }
+#workexperience .t-row + .t-row{ margin-top:-22px; }
+#workexperience .t-col{ min-height:100%; }
+#workexperience .t-center{ position:relative; display:flex; align-items:center; justify-content:center; }
+#workexperience .t-dot{ width:12px; height:12px; border-radius:50%; background:var(--color-accent,#2563EB); box-shadow:0 0 0 3px rgba(37,99,235,.15); z-index:1; }
+#workexperience .t-left .xp-card, #workexperience .t-right .xp-card{ position:relative; }
+#workexperience .t-left .xp-card::after, #workexperience .t-right .xp-card::after{
+  content:""; position:absolute; top:16px; width:16px; height:2px; background:var(--color-light-border,#EAECEF);
+}
+#workexperience .t-left .xp-card{ margin-right:12px; }  #workexperience .t-left .xp-card::after{ right:-16px; }
+#workexperience .t-right .xp-card{ margin-left:12px; }  #workexperience .t-right .xp-card::after{ left:-16px; }
+
+/* ========= Multiline blank-side panels ========= */
+#workexperience{
+  --rail: 36px;          /* must match the center column width above */
+  --gutter: 72px;        /* distance from rail to text panel */
+  --panel-max: 640px;    /* max width of the panel */
+}
+#workexperience .ghost-panel{
+  width:100%; box-sizing:border-box;
+  min-height:220px; padding:12px 16px; margin:0 6%;
+  opacity:0; transform:translateY(8px);
+  transition:opacity .28s ease, transform .28s ease;
+  pointer-events:none; position:relative;
+}
+#workexperience .ghost-panel::before{
+  content:""; position:absolute; inset:-20px -10px;
+  background: radial-gradient(ellipse at center, rgba(37,99,235,.10), rgba(37,99,235,0) 65%);
+  filter: blur(2px); z-index:0;
+}
+/* show when the row is open (Read more) */
+#workexperience .t-row.is-open .ghost-panel{ opacity:1; transform:translateY(0); }
+
+/* keep panel away from the rail + clamp width */
+#workexperience .t-left .ghost-panel{
+  margin-left:auto; padding-right:var(--gutter); text-align:right;
+  max-width: min(var(--panel-max), calc(50vw - (var(--rail)/2) - var(--gutter)));
+}
+#workexperience .t-right .ghost-panel{
+  margin-right:auto; padding-left:var(--gutter); text-align:left;
+  max-width: min(var(--panel-max), calc(50vw - (var(--rail)/2) - var(--gutter)));
+}
+
+/* lines container */
+#workexperience .ghost-lines{
+  position:relative; z-index:1;
+  display:flex; flex-direction:column; gap:.35rem;
+  line-height:1.15;
+  font-weight:800;
+  font-size: clamp(1.15rem, 2.2vw + .5rem, 2.4rem);
+  color: var(--color-text-dark, #0f172a);
+}
+/* each line animates in (staggered) */
+#workexperience .ghost-line{ 
+  opacity:0; transform:translateY(8px);
+}
+#workexperience .t-row.is-open .ghost-line{
+  animation: xp-line-in .35s ease forwards;
+}
+#workexperience .t-row.is-open .ghost-line:nth-child(1){ animation-delay: .02s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(2){ animation-delay: .12s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(3){ animation-delay: .22s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(4){ animation-delay: .32s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(5){ animation-delay: .42s; }
+
+@keyframes xp-line-in{
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* ===== Readmore (scoped) ===== */
+#workexperience .xp-readmore{ margin-top:.25rem; }
+#workexperience .xp-readmore__content{ max-height:0; overflow:hidden; transition:max-height .35s ease; }
+#workexperience .xp-readmore__btn{
+display: inline-block;
+    margin-top: .25rem;
+    padding: .4rem .75rem;
+    border: 2px solid #484d51;
+    background: #ffffff;
+    color: #0b1218;
+    border-radius: 999px;
+    font-size: .85rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.section-dark #workexperience .xp-readmore__btn{
+  border-color:var(--color-dark-border,#232E3A); background:var(--color-dark-card,#15212B); color:var(--color-text-light,#EAECEF);
+}
+#workexperience .xp-readmore__btn[aria-expanded="true"]{ font-weight:700; }
+
+/* ===== Responsive (stack; hide panels on mobile) ===== */
+@media (max-width: 991.98px){
+  #workexperience .t-row{ grid-template-columns:1fr; }
+  #workexperience .timeline-3col::before{ display:none; }
+  #workexperience .t-center{ display:none; }
+  #workexperience .t-left .xp-card, #workexperience .t-right .xp-card{ margin:10px; }
+  #workexperience .t-left .xp-card::after, #workexperience .t-right .xp-card::after{ display:none; }
+  #workexperience .ghost-panel{ display:none; }
+}
+
+/* small breathing room above the heading (keeps your glow) */
+#workexperience .text-center{ padding-top: 40px; }
+/* ===== Animated glowing background + text shimmer for ghost panel ===== */
+
+/* tuneables */
+#workexperience{
+  --rail: 36px;            /* your center column width (keep as-is if you already set it) */
+  --gutter: 72px;          /* distance from rail to the panel */
+  --panel-max: 640px;      /* max width of the panel */
+  --glow-color: 37,99,235; /* rgb of your accent (Tailwind indigo-600) */
+}
+
+/* keep the panel away from the center rail (if not already present) */
+#workexperience .t-left .ghost-panel{
+  margin-left:auto; padding-right:var(--gutter); text-align:right;
+  max-width:min(var(--panel-max), calc(50vw - (var(--rail)/2) - var(--gutter)));
+}
+#workexperience .t-right .ghost-panel{
+  margin-right:auto; padding-left:var(--gutter); text-align:left;
+  max-width:min(var(--panel-max), calc(50vw - (var(--rail)/2) - var(--gutter)));
+}
+
+/* base: panel appears when the row is open (from your Read More JS) */
+#workexperience .ghost-panel{
+  position:relative; overflow:hidden;
+}
+#workexperience .t-row.is-open .ghost-panel{ opacity:1; transform:translateY(0); }
+
+/* ----- MOVING GLOW BACKGROUND ----- */
+/* big floating blur blob */
+#workexperience .ghost-panel::before{
+  content:"";
+  position:absolute;
+  width: 42vmin; height: 42vmin;           /* responsive blob size */
+  min-width: 280px; min-height: 280px;
+  border-radius:50%;
+  background: radial-gradient(circle,
+              rgba(var(--glow-color), .28) 0%,
+              rgba(var(--glow-color), .18) 40%,
+              rgba(var(--glow-color), 0) 70%);
+  filter: blur(30px);
+  opacity: .75;
+  transform: translate(-35%, -25%) scale(.9);
+  left: 12%; top: 10%;
+  pointer-events:none;
+  display:none;                             /* hidden until open */
+}
+#workexperience .t-row.is-open .ghost-panel::before{
+  display:block;
+  animation: xp-float 8s ease-in-out infinite alternate;
+}
+
+/* sweeping aurora streak */
+#workexperience .ghost-panel::after{
+  content:"";
+  position:absolute;
+  inset: -20% -10%;
+  background: linear-gradient(90deg,
+              rgba(var(--glow-color),0) 0%,
+              rgba(var(--glow-color),.12) 50%,
+              rgba(var(--glow-color),0) 100%);
+  filter: blur(12px);
+  transform: translateX(-35%);
+  opacity: 0;
+  pointer-events:none;
+}
+#workexperience .t-row.is-open .ghost-panel::after{
+  opacity: 1;
+  animation: xp-sweep 3.8s linear infinite;
+}
+
+/* float the blob lightly */
+@keyframes xp-float{
+  0%   { transform: translate(-35%, -25%) scale(.9) rotate(0deg); }
+  50%  { transform: translate(-20%, -5%)  scale(1.0) rotate(3deg); }
+  100% { transform: translate(-30%, -15%) scale(.95) rotate(-2deg); }
+}
+/* sweep the aurora left -> right -> left */
+@keyframes xp-sweep{
+  0%   { transform: translateX(-50%); }
+  50%  { transform: translateX(40%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ----- MULTI-LINE TEXT + SHIMMER ----- */
+#workexperience .ghost-lines{
+  position:relative; z-index:1;
+  display:flex; flex-direction:column; gap:.35rem;
+  line-height:1.15; font-weight:800;
+  font-size: clamp(1.15rem, 2.2vw + .5rem, 2.4rem);
+  color: var(--color-text-dark, #0f172a);
+}
+#workexperience .ghost-line{
+  opacity:0; transform:translateY(8px);
+}
+/* fade/slide in (you already had this), plus a gentle glow loop */
+#workexperience .t-row.is-open .ghost-line{
+  animation:
+    xp-line-in .35s ease forwards,
+    xp-textglow 3.2s ease-in-out .6s infinite alternate;
+}
+#workexperience .t-row.is-open .ghost-line:nth-child(1){ animation-delay: .02s, .62s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(2){ animation-delay: .12s, .72s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(3){ animation-delay: .22s, .82s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(4){ animation-delay: .32s, .92s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(5){ animation-delay: .42s, 1.02s; }
+
+@keyframes xp-line-in { to { opacity:1; transform:translateY(0); } }
+/* soft text glow (not obnoxious) */
+@keyframes xp-textglow{
+  0%   { text-shadow: 0 0 0 rgba(var(--glow-color),0); }
+  100% { text-shadow: 0 6px 24px rgba(var(--glow-color), .35),
+                     0 2px 8px  rgba(var(--glow-color), .25); }
+}
+
+/* (keeps things tidy on mobile; panels are hidden there in your CSS) */
+/* ===================== INTENSE GLOW MODE ===================== */
+/* Stronger colors, larger blobs, extra aurora streak, harder text glow */
+#workexperience{
+  --rail: 36px;                 /* keep as your current rail width */
+  --gutter: 72px;               /* distance from rail to the panel */
+  --panel-max: 640px;
+
+  /* colors for the intense blend */
+  --glow1: 59,130,246;          /* blue-500  (primary) */
+  --glow2: 99,102,241;          /* indigo-500 (secondary) */
+  --glow3: 14,165,233;          /* cyan-500 (accent) */
+}
+
+/* make sure panels stay away from the center rail (same constraints) */
+#workexperience .t-left .ghost-panel{
+  margin-left:auto; padding-right:var(--gutter); text-align:right;
+  max-width:min(var(--panel-max), calc(50vw - (var(--rail)/2) - var(--gutter)));
+}
+#workexperience .t-right .ghost-panel{
+  margin-right:auto; padding-left:var(--gutter); text-align:left;
+  max-width:min(var(--panel-max), calc(50vw - (var(--rail)/2) - var(--gutter)));
+}
+
+#workexperience .ghost-panel{
+  position:relative; overflow:hidden;
+  opacity:0; transform:translateY(10px) scale(.98);
+  transition:opacity .35s ease, transform .35s ease;
+  isolation:isolate; /* so blend modes don't leak */
+}
+#workexperience .t-row.is-open .ghost-panel{
+  opacity:1; transform:translateY(0) scale(1);
+}
+
+/* --- BIG FLOATING BLOB (stronger, blended, hue-shifting) --- */
+#workexperience .ghost-panel::before{
+  content:"";
+  position:absolute;
+  width: 58vmin; height: 58vmin;          /* bigger */
+  min-width: 360px; min-height: 360px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 40% 40%,
+      rgba(var(--glow1), .55) 0%,
+      rgba(var(--glow1), .35) 35%,
+      rgba(var(--glow1), .00) 70%);
+  filter: blur(42px) saturate(1.2) hue-rotate(0deg);
+  opacity:.95;
+  left: -8%; top: -18%;
+  pointer-events:none;
+  mix-blend-mode: screen;
+  display:none;
+}
+#workexperience .t-row.is-open .ghost-panel::before{
+  display:block;
+  animation:
+    xp-float-intense 9s ease-in-out infinite alternate,
+    xp-hue 6s linear infinite;
+}
+
+/* --- AURORA STREAK (brighter, two-way sweep) --- */
+#workexperience .ghost-panel::after{
+  content:"";
+  position:absolute;
+  inset:-25% -12%;
+  background:
+    linear-gradient(90deg,
+      rgba(var(--glow2),0) 0%,
+      rgba(var(--glow2),.28) 45%,
+      rgba(var(--glow3),.35) 55%,
+      rgba(var(--glow2),0) 100%);
+  filter: blur(18px) saturate(1.1);
+  opacity:0;
+  transform: translateX(-55%);
+  mix-blend-mode: screen;
+  pointer-events:none;
+}
+#workexperience .t-row.is-open .ghost-panel::after{
+  opacity:1;
+  animation: xp-sweep-intense 3.2s linear infinite;
+}
+
+/* --- EXTRA LIGHT VEIL behind lines (adds sparkle) --- */
+#workexperience .ghost-lines::before{
+  content:"";
+  position:absolute;
+  inset:-10% -8%;
+  background:
+    conic-gradient(from 210deg,
+      rgba(var(--glow1), .00) 0deg,
+      rgba(var(--glow1), .25) 50deg,
+      rgba(var(--glow3), .30) 90deg,
+      rgba(var(--glow2), .00) 140deg);
+  filter: blur(22px);
+  opacity:.55;
+  mix-blend-mode: screen;
+  transform: rotate(0deg);
+  pointer-events:none;
+  z-index:0;
+}
+#workexperience .t-row.is-open .ghost-lines::before{
+  animation: xp-veil 7.5s ease-in-out infinite alternate;
+}
+
+/* --- MULTILINE TEXT: stronger glow + subtle scale pulse --- */
+#workexperience .ghost-lines{
+  position:relative; z-index:1;
+  display:flex; flex-direction:column; gap:.45rem;
+  line-height:1.12; font-weight:900;
+  font-size: clamp(1.25rem, 2.4vw + .6rem, 2.6rem);
+  color: #0d1220;                       /* deep base so glow pops */
+}
+#workexperience .ghost-line{
+  opacity:0; transform:translateY(10px);
+}
+#workexperience .t-row.is-open .ghost-line{
+  animation:
+    xp-line-in .36s cubic-bezier(.2,.8,.2,1) forwards,
+    xp-textglow-intense 2.4s ease-in-out .5s infinite alternate,
+    xp-scale 3.4s ease-in-out .6s infinite;
+}
+#workexperience .t-row.is-open .ghost-line:nth-child(1){ animation-delay:.02s,.62s,.70s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(2){ animation-delay:.12s,.72s,.80s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(3){ animation-delay:.22s,.82s,.90s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(4){ animation-delay:.32s,.92s,1.00s; }
+#workexperience .t-row.is-open .ghost-line:nth-child(5){ animation-delay:.42s,1.02s,1.10s; }
+
+/* --- Keyframes --- */
+@keyframes xp-line-in { to { opacity:1; transform:translateY(0); } }
+
+@keyframes xp-float-intense{
+  0%   { transform: translate(-18%, -24%) scale(0.92) rotate(-4deg); }
+  50%  { transform: translate(-2%,  -6%)  scale(1.06) rotate(2deg);  }
+  100% { transform: translate(-10%, -14%) scale(0.98) rotate(-2deg); }
+}
+@keyframes xp-sweep-intense{
+  0%   { transform: translateX(-60%) skewX(-2deg); }
+  50%  { transform: translateX(50%)  skewX(2deg);  }
+  100% { transform: translateX(-60%) skewX(-2deg); }
+}
+@keyframes xp-hue{
+  0%   { filter: blur(42px) saturate(1.2) hue-rotate(0deg);   }
+  50%  { filter: blur(42px) saturate(1.25) hue-rotate(40deg); }
+  100% { filter: blur(42px) saturate(1.2) hue-rotate(0deg);   }
+}
+@keyframes xp-veil{
+  0%   { transform: rotate(0deg);   opacity:.45; }
+  100% { transform: rotate(25deg);  opacity:.70; }
+}
+@keyframes xp-textglow-intense{
+  0% {
+    text-shadow:
+      0 0 0 rgba(var(--glow1),0),
+      0 0 0 rgba(var(--glow2),0);
+  }
+  100%{
+    text-shadow:
+      0 10px 40px rgba(var(--glow1), .55),
+      0 4px 18px  rgba(var(--glow2), .45),
+      0 0 22px    rgba(var(--glow3), .35);
+  }
+}
+@keyframes xp-scale{
+  0%   { transform: translateY(0) scale(1);     }
+  100% { transform: translateY(-1px) scale(1.02); }
+}
+
+/* keep phones clean */
+@media (max-width: 991.98px){
+  #workexperience .ghost-panel{ display:none; }
+}
+/* ================= Card focus when its row is open ================= */
+/* Accent color picks up from your Accenture theme; fallback provided */
+#workexperience{
+  --focus-accent: rgba(var(--acc-purple, 161,0,255), 1);
+  --focus-accent-soft: rgba(var(--acc-purple, 161,0,255), .18);
+  --focus-accent-strong: rgba(var(--acc-magenta, 255,77,210), .35);
+}
+
+/* 1) Elevate + breathe the card a bit */
+#workexperience .t-row.is-open .xp-card{
+  transform: translateY(-2px) scale(1.01);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.12),
+    0 6px 18px rgba(0,0,0,.08),
+    0 0 0 1px rgba(0,0,0,.06) inset;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  border-color: rgba(var(--acc-purple,161,0,255), .25); /* if your card has a border */
+}
+
+/* 2) Animated accent bar on the card's inner edge (near the rail) */
+#workexperience .t-row.is-open .xp-card::before{
+  content:"";
+  position:absolute;
+  top:14px; bottom:14px; width:4px;
+  left: -8px;  /* for right-side cards, this is outside the card */
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--acc-magenta,255,77,210),.00),
+    rgba(var(--acc-magenta,255,77,210),.55) 40%,
+}
+/* ================= Card focus when its row is open ================= */
+/* Accent color picks up from your Accenture theme; fallback provided */
+#workexperience{
+  --focus-accent: rgba(var(--acc-purple, 161,0,255), 1);
+  --focus-accent-soft: rgba(var(--acc-purple, 161,0,255), .18);
+  --focus-accent-strong: rgba(var(--acc-magenta, 255,77,210), .35);
+}
+
+/* 1) Elevate + breathe the card a bit */
+#workexperience .t-row.is-open .xp-card{
+  transform: translateY(-2px) scale(1.01);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.12),
+    0 6px 18px rgba(0,0,0,.08),
+    0 0 0 1px rgba(0,0,0,.06) inset;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  border-color: rgba(var(--acc-purple,161,0,255), .25); /* if your card has a border */
+}
+
+/* 2) Animated accent bar on the card's inner edge (near the rail) */
+#workexperience .t-row.is-open .xp-card::before{
+  content:"";
+  position:absolute;
+  top:14px; bottom:14px; width:4px;
+  left: -8px;  /* for right-side cards, this is outside the card */
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--acc-magenta,255,77,210),.00),
+    rgba(var(--acc-magenta,255,77,210),.55) 40%,
+    rgba(var(--acc-purple,161,0,255),.65) 60%,
+    rgba(var(--acc-indigo,127,0,255),.00)
+  );
+  border-radius: 4px;
+  filter: blur(.2px);
+  animation: xp-bar-pulse 1.8s ease-in-out infinite;
+  pointer-events:none;
+}
+#workexperience .t-row.is-open .t-left .xp-card::before{ /* flip to inside edge for left cards */
+  left: auto; right: -8px;
+}
+
+@keyframes xp-bar-pulse{
+  0%,100% { opacity:.7; box-shadow: 0 0 18px var(--focus-accent-soft); }
+  50%     { opacity:1;  box-shadow: 0 0 26px var(--focus-accent-strong); }
+}
+
+/* 3) Logo chip gets a soft ring pulse */
+#workexperience .t-row.is-open .xp-logo{
+  box-shadow:
+    0 0 0 0 rgba(var(--acc-purple,161,0,255), .35),
+    0 2px 8px rgba(0,0,0,.15);
+  animation: xp-logo-ring 2s ease-out infinite;
+}
+@keyframes xp-logo-ring{
+  0%   { box-shadow: 0 0 0 0 rgba(var(--acc-purple,161,0,255), .35), 0 2px 8px rgba(0,0,0,.15); }
+  70%  { box-shadow: 0 0 0 14px rgba(var(--acc-purple,161,0,255), 0), 0 2px 8px rgba(0,0,0,.15); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--acc-purple,161,0,255), .35), 0 2px 8px rgba(0,0,0,.15); }
+}
+
+/* 4) Title underline + slight glow */
+#workexperience .t-row.is-open .xp-role{
+  position: relative;
+  text-shadow: 0 6px 26px rgba(var(--acc-purple,161,0,255), .18);
+}
+#workexperience .t-row.is-open .xp-role::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-6px; height:3px;
+  background: linear-gradient(90deg,
+    rgba(var(--acc-magenta,255,77,210),.55),
+    rgba(var(--acc-purple,161,0,255),.65)
+  );
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(var(--acc-purple,161,0,255), .25);
+}
+
+/* 5) Make bullets and key lines read faster while open */
+#workexperience .t-row.is-open .xp-bullets{
+  list-style: none; padding-left: 0; margin-left: 0;
+}
+#workexperience .t-row.is-open .xp-bullets li{
+  position: relative; padding-left: 1.25rem; margin:.35rem 0;
+}
+#workexperience .t-row.is-open .xp-bullets li::before{
+  content:""; position:absolute; left:.15rem; top:.65rem;
+  width:8px; height:8px; border-radius:50%;
+  background: rgba(var(--acc-magenta,255,77,210), .95);
+  box-shadow:
+    0 0 0 4px rgba(var(--acc-magenta,255,77,210), .18),
+    0 2px 10px rgba(var(--acc-purple,161,0,255), .35);
+}
+
+/* Optional: emphasize any <strong> inside bullets while open */
+#workexperience .t-row.is-open .xp-bullets li strong{
+  background: linear-gradient(90deg,
+    rgba(var(--acc-magenta,255,77,210), .18),
+    rgba(var(--acc-purple,161,0,255), .12)
+  );
+  padding: 0 .25rem; border-radius: .35rem;
+}
+
+/* 6) CTA (Read less / Read more) looks active */
+#workexperience .t-row.is-open .xp-readmore__btn{
+  border-color: rgba(var(--acc-purple,161,0,255), .55);
+  color: var(--color-text-dark, #111827);
+  box-shadow: 0 6px 18px rgba(var(--acc-purple,161,0,255), .20);
+}
+#workexperience .t-row.is-open .xp-readmore__btn:hover{
+  transform: translateY(-1px);
+}
+/* === Timeline dot pulse animation (on Read more) === */
+@keyframes dot-pulse {
+  0%   { transform: scale(1);   box-shadow: 0 0 0 0 rgba(29,174,204,.45); }
+  50%  { transform: scale(1.25); box-shadow: 0 0 18px 6px rgba(111,225,246,.35); }
+  100% { transform: scale(1);   box-shadow: 0 0 0 0 rgba(29,174,204,0); }
+}
+
+.t-dot {
+  transition: transform .2s ease, box-shadow .2s ease;
+  will-change: transform, box-shadow;
+}
+
+.t-dot.is-pulsing {
+  animation: dot-pulse 900ms ease-out forwards;
+}
+
+/* optional halo ring */
+.t-dot.is-pulsing::after{
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 3px solid rgba(111,225,246,.35);
+  animation: halo-fade 900ms ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes halo-fade {
+  0%   { opacity: 0; transform: scale(.85); }
+  25%  { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.35); }
+}
+/* ===== Timeline reactions on Read more (pulse + glow) ===== */
+#workexperience .t-row.is-active .t-dot{
+  animation: xp-dot-pulse .8s ease-out;
+  background: var(--color-accent, #2563EB);
+  box-shadow: 0 0 0 6px rgba(37,99,235,.18);
+}
+
+/* short vertical glow segment on the center lane (only when active) */
+#workexperience .t-center::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%) scaleY(0);
+  width:6px; height:90px;
+  border-radius:3px;
+  background: linear-gradient(
+    to bottom,
+    rgba(37,99,235,0),
+    rgba(37,99,235,.30) 30%,
+    rgba(37,99,235,.30) 70%,
+    rgba(37,99,235,0)
+  );
+  filter: blur(.3px);
+  opacity:0;
+  transition: opacity .25s ease, transform .25s ease;
+  pointer-events:none;
+}
+#workexperience .t-row.is-active .t-center::after{
+  opacity:1; transform:translateX(-50%) scaleY(1);
+}
+
+/* subtly thicken the little connector into the card while active */
+#workexperience .t-left  .xp-card::after,
+#workexperience .t-right .xp-card::after{
+  transition: transform .25s ease, background-color .25s ease;
+}
+#workexperience .t-row.is-active .t-left  .xp-card::after,
+#workexperience .t-row.is-active .t-right .xp-card::after{
+  transform: scaleX(1.25);
+  background-color: var(--color-accent, #2563EB);
+}
+
+/* pulse keyframes for the dot */
+@keyframes xp-dot-pulse{
+  0%   { transform: scale(1);   box-shadow: 0 0 0 0 rgba(37,99,235,.20); }
+  60%  { transform: scale(1.2); box-shadow: 0 0 0 10px rgba(37,99,235,0); }
+  100% { transform: scale(1);   box-shadow: 0 0 0 6px rgba(37,99,235,.18); }
+}
