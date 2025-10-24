@@ -214,18 +214,31 @@ h1,h2,h3,h4,h5,h6{
 .masthead .container{ position:relative; z-index:1; }
 
 .masthead--split .masthead-grid{
-  display:grid; grid-template-columns:1.05fr .95fr; gap: clamp(22px, 3vw, 44px); align-items:center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(22px, 3vw, 44px);
+  align-items: center;
+  text-align: center;
 }
-.name-block{ margin-left: clamp(-160px, -6vw, -40px); line-height:.9; user-select:none; }
+.name-block{ margin-left: 0; line-height:.9; user-select:none; }
 .name-line{
   display:block; color:#fff; font-weight:900; text-transform:uppercase; letter-spacing:-.02em;
-  font-size: clamp(64px, 10vw, 168px);
+  /* mas maliit ang max at vw para hindi sumagasa sa kanan sa desktop */
+  font-size: clamp(36px, 8vw, 140px);
 }
-.masthead-right{ max-width: 620px; margin-left:auto; }
+.masthead-right{ max-width: 620px; margin-left: 0; }
+
 .hero-title{ margin:0 0 10px; font-weight:800; line-height:1.22; font-size: clamp(1.3rem, 1.05rem + 1.1vw, 2.1rem); color:#fff; }
-.hero-status{ width:max-content; margin:0 0 12px 0; padding:10px 14px; border-radius:999px; background:rgba(0,0,0,.35); color:#fff; font-weight:700; font-size:.95rem; }
+.hero-status{ width:auto; max-width:83%; white-space:normal; margin:0 0 12px 0; padding:10px 14px; border-radius:999px; background:rgba(0,0,0,.35); color:#fff; font-weight:700; font-size:.95rem; }
 .hero-status .dot{ display:inline-block; width:9px; height:9px; border-radius:50%; background:#2ed573; margin-right:8px; vertical-align:middle; }
-.hero-badges{ display:flex; flex-wrap:wrap; gap:12px; justify-content:flex-start; margin:14px 0 10px; }
+.hero-badges {
+    display: flex
+;
+    flex-wrap: wrap;
+    gap: 9px;
+    justify-content: left;
+    margin: 14px 0 10px;
+}
 .chip{ display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:999px; background:rgba(255,255,255,.1); border:1.5px solid rgba(255,255,255,.35); color:#fff; font-weight:700; font-size:.9rem; }
 .hero-btn{ display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; text-decoration:none; font-weight:700; transition: all .15s ease; border:2px solid rgba(255,255,255,.95); color:#fff; background:transparent; }
 .hero-btn:hover{ transform: translateY(-2px); }
@@ -3446,4 +3459,66 @@ img, video { max-width: 100%; height: auto; }
 /* 9) Heading halo: shrink the radial background on very small screens */
 @media (max-width: 575.98px){
   .section-heading-with-line::before { width: 140vw; height: 120px; }
+}
+
+
+@media (min-width: 992px){
+  .masthead--split .masthead-grid{
+    grid-template-columns: 1.05fr .95fr;
+    text-align: left;
+  }
+}
+
+
+
+@media (min-width: 992px){
+  .name-block{ margin-left: clamp(-160px, -6vw, -40px); }
+}
+
+
+.hero-actions{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+
+
+@media (min-width: 992px){
+  .hero-badges, .hero-actions{ justify-content:flex-start; }
+}
+
+/* ===========================
+   HERO DESKTOP SPLIT (≥992px)
+   =========================== */
+
+@media (min-width: 992px){
+  /* turn the hero back into 2 columns */
+  .masthead--split .masthead-grid{
+    display: grid !important;
+    grid-template-columns: 1.05fr .95fr !important;  /* left = name, right = info */
+    align-items: center !important;
+    gap: clamp(22px, 3vw, 44px) !important;
+    text-align: left !important;
+  }
+
+  /* ensure blocks live in their own columns (in case order got altered) */
+  .masthead--split .masthead-grid .name-block{ grid-column: 1 !important; }
+  .masthead--split .masthead-grid .masthead-right{ grid-column: 2 !important; }
+
+  /* left column slight stylistic shift is OK, but keep it modest */
+  .name-block{
+    margin-left: clamp(-80px, -3vw, -20px) !important;  /* reduce the big negative offset */
+  }
+
+  /* on desktop, badges & buttons should be left-aligned (not centered) */
+  .hero-badges,
+  .hero-actions{
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* status pill sits naturally; no forced full-width on desktop */
+  .hero-status{
+    max-width: none !important;
+    width: auto !important;
+    white-space: nowrap !important; /* keep it on one line if it fits */
+    text-align: left !important;
+  }
 }

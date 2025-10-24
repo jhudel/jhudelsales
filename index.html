@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
-  <link href="style.css" rel="stylesheet">
+  <link href="style.css?v=resp1" rel="stylesheet">
   
   <style>
     /* CSS for Fade In and Fade Out Animations */
@@ -70,47 +70,68 @@
 </aside>
 <div class="backdrop" hidden></div>
 
+<!-- =========================
+     HOME / HERO (Bootstrap)
+     ========================= -->
 <header id="home" class="masthead masthead--split">
   <div class="container">
-    <div class="masthead-grid">
-      <div class="masthead-left">
+    <!-- Desktop: 2 cols | Mobile: 1 col -->
+    <div class="row align-items-center text-center text-lg-left">
+
+      <!-- LEFT: Big Name -->
+      <div class="col-lg-6 mb-4 mb-lg-0 masthead-left">
         <div class="name-block" aria-hidden="false">
           <span class="name-line">JHUDEL</span>
           <span class="name-line">SALES</span>
         </div>
       </div>
 
-      <div class="masthead-right">
+      <!-- RIGHT: Status + Title + Badges + CTAs -->
+      <div class="col-lg-6 masthead-right">
         <div class="hero-seq">
+          <!-- status pill -->
           <div class="hero-status fade-in">
             <span class="dot"></span>
             Currently accepting new clients · Up to 35 hrs/week
           </div>
-          <div class="hero text-center text-lg-left fade-in">
+
+          <!-- headline + details -->
+          <div class="hero fade-in">
             <h1 class="hero-title">
               I keep your inbox, calendar, and <br class="d-none d-md-inline">
               projects moving—so you can <br class="d-none d-md-inline">
               focus on growth.
             </h1>
+
+            <!-- badges -->
             <div class="hero-badges">
               <span class="chip"><i class="far fa-clock"></i> GMT+8 (PH) · Daily overlap</span>
               <span class="chip"><i class="fas fa-check-circle"></i> 4+ yrs supporting founders</span>
               <span class="chip"><i class="fas fa-shield-alt"></i> NDA-friendly & security-minded</span>
             </div>
+
+            <!-- actions -->
             <div class="hero-actions">
-              <a href="https://calendly.com/jhudelps/30min" target="_blank" rel="noopener" class="hero-btn hero-btn--primary">
+              <a href="https://calendly.com/jhudelps/30min"
+                 target="_blank" rel="noopener"
+                 class="hero-btn hero-btn--primary">
                 <i class="far fa-calendar-check"></i> Book a 15-min call
               </a>
-              <a href="resume.pdf" target="_blank" rel="noopener" class="hero-btn hero-btn--outline">
+
+              <a href="resume.pdf"
+                 target="_blank" rel="noopener"
+                 class="hero-btn hero-btn--outline">
                 <i class="fas fa-download"></i> Download CV
               </a>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+          </div><!-- /.hero -->
+        </div><!-- /.hero-seq -->
+      </div><!-- /.col-lg-6 -->
+
+    </div><!-- /.row -->
+  </div><!-- /.container -->
 </header>
+
 
 <!-- SKILLS -->
 <section id="skills" class="section-dark">
@@ -979,7 +1000,7 @@
         </ul>
 
         <div class="automation-cta">
-          <!--<a class="btn-primary" href="#contact">Automate this for me</a>-->
+          <a class="btn-primary" href="#contact">Automate this for me</a>
           <button class="btn-ghost ap-replay">Replay demo</button>
         </div>
       </div>
