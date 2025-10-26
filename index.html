@@ -1,359 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Web Developer | UI & UX Designer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Developer | UI & UX Designer</title>
 
-  <link rel="preload" href="wallpaper-aboutme.jpg" as="image">
+<link rel="preload" href="wallpaper-aboutme.jpg" as="image">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
-  <link href="style.css" rel="stylesheet">
-  
-  <style>
-    /* CSS for Fade In and Fade Out Animations */
-    .fade-in {opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;}
-    .faded-in {opacity: 1;
-      transform: translateY(0);}
-  </style>
+  <link href="style.css?v=resp1" rel="stylesheet">
+
+<style>
+/* CSS for Fade In and Fade Out Animations */
+.fade-in {opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;}
+.faded-in {opacity: 1;
+transform: translateY(0);}
+</style>
 </head>
 <body>
 
 <nav class="navbar navbar-default navbar-transparent navbar-expand-lg navbar-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand scroll d-flex align-items-center" href="#home">
-      <div id="logo"><img src="logosales.png" class="logo" alt="JS logo"></div>
-      <div id="logo2"><p class="mb-0 ml-2">JHUDEL SALES</p></div>
-    </a>
+<div class="container-fluid">
+<a class="navbar-brand scroll d-flex align-items-center" href="#home">
+<div id="logo"><img src="logosales.png" class="logo" alt="JS logo"></div>
+<div id="logo2"><p class="mb-0 ml-2">JHUDEL SALES</p></div>
+</a>
 
-    <button class="nav-toggle d-inline-flex d-lg-none ml-auto"
-            aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
-      <span class="nav-toggle__bar"></span>
-      <span class="nav-toggle__bar"></span>
-      <span class="nav-toggle__bar"></span>
-    </button>
+<button class="nav-toggle d-inline-flex d-lg-none ml-auto"
+aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+<span class="nav-toggle__bar"></span>
+</button>
 
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link scroll" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link scroll" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link scroll" href="#workexperience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link scroll" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link scroll" href="#testimonials">Testimonials</a></li>
-        <li class="nav-item"><a class="nav-link scroll" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link scroll" href="#aboutme">About</a></li>
-        <li class="nav-item"><a class="nav-link scroll" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item"><a class="nav-link scroll" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link scroll" href="#skills">Skills</a></li>
+<li class="nav-item"><a class="nav-link scroll" href="#workexperience">Experience</a></li>
+<li class="nav-item"><a class="nav-link scroll" href="#services">Services</a></li>
+<li class="nav-item"><a class="nav-link scroll" href="#testimonials">Testimonials</a></li>
+<li class="nav-item"><a class="nav-link scroll" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link scroll" href="#aboutme">About</a></li>
+<li class="nav-item"><a class="nav-link scroll" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
 </nav>
 <aside id="mobileNav" class="sidebar" aria-hidden="true">
-  <button class="sidebar__close" aria-label="Close menu">✕</button>
-  <nav class="sidebar__nav">
-    <a class="scroll" href="#home">Home</a>
-    <a class="scroll" href="#skills">Skills</a>
-    <a class="scroll" href="#workexperience">Work Experience</a>
-    <a class="scroll" href="#services">Services</a>
-    <a class="scroll" href="#testimonials">Testimonials</a>
-    <a class="scroll" href="#projects">Projects</a>
-    <a class="scroll" href="#aboutme">About</a>
-    <a class="scroll" href="#contact">Contact</a>
-  </nav>
+<button class="sidebar__close" aria-label="Close menu">✕</button>
+<nav class="sidebar__nav">
+<a class="scroll" href="#home">Home</a>
+<a class="scroll" href="#skills">Skills</a>
+<a class="scroll" href="#workexperience">Work Experience</a>
+<a class="scroll" href="#services">Services</a>
+<a class="scroll" href="#testimonials">Testimonials</a>
+<a class="scroll" href="#projects">Projects</a>
+<a class="scroll" href="#aboutme">About</a>
+<a class="scroll" href="#contact">Contact</a>
+</nav>
 </aside>
 <div class="backdrop" hidden></div>
 
+<!-- =========================
+     HOME / HERO (Bootstrap)
+     ========================= -->
 <header id="home" class="masthead masthead--split">
-  <div class="container">
-    <div class="masthead-grid">
-      <div class="masthead-left">
-        <div class="name-block" aria-hidden="false">
-          <span class="name-line">JHUDEL</span>
-          <span class="name-line">SALES</span>
-        </div>
-      </div>
+<div class="container">
+    <!-- Desktop: 2 cols | Mobile: 1 col -->
+    <div class="row align-items-center text-center text-lg-left">
 
-      <div class="masthead-right">
-        <div class="hero-seq">
-          <div class="hero-status fade-in">
-            <span class="dot"></span>
-            Currently accepting new clients · Up to 35 hrs/week
-          </div>
-          <div class="hero text-center text-lg-left fade-in">
-            <h1 class="hero-title">
-              I keep your inbox, calendar, and <br class="d-none d-md-inline">
-              projects moving—so you can <br class="d-none d-md-inline">
-              focus on growth.
-            </h1>
-            <div class="hero-badges">
-              <span class="chip"><i class="far fa-clock"></i> GMT+8 (PH) · Daily overlap</span>
-              <span class="chip"><i class="fas fa-check-circle"></i> 4+ yrs supporting founders</span>
-              <span class="chip"><i class="fas fa-shield-alt"></i> NDA-friendly & security-minded</span>
-            </div>
-            <div class="hero-actions">
-              <a href="https://calendly.com/jhudelps/30min" target="_blank" rel="noopener" class="hero-btn hero-btn--primary">
-                <i class="far fa-calendar-check"></i> Book a 15-min call
-              </a>
-              <a href="Jhudel Braian P Sales.pdf" target="_blank" rel="noopener" class="hero-btn hero-btn--outline">
-                <i class="fas fa-download"></i> Download CV
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      <!-- LEFT: Big Name -->
+      <div class="col-lg-6 mb-4 mb-lg-0 masthead-left">
+<div class="name-block" aria-hidden="false">
+<span class="name-line">JHUDEL</span>
+<span class="name-line">SALES</span>
+</div>
+</div>
+
+      <!-- RIGHT: Status + Title + Badges + CTAs -->
+      <div class="col-lg-6 masthead-right">
+<div class="hero-seq">
+          <!-- status pill -->
+<div class="hero-status fade-in">
+<span class="dot"></span>
+Currently accepting new clients · Up to 35 hrs/week
+</div>
+
+          <!-- headline + details -->
+          <div class="hero fade-in">
+<h1 class="hero-title">
+I keep your inbox, calendar, and <br class="d-none d-md-inline">
+projects moving—so you can <br class="d-none d-md-inline">
+focus on growth.
+</h1>
+
+            <!-- badges -->
+<div class="hero-badges">
+<span class="chip"><i class="far fa-clock"></i> GMT+8 (PH) · Daily overlap</span>
+<span class="chip"><i class="fas fa-check-circle"></i> 4+ yrs supporting founders</span>
+<span class="chip"><i class="fas fa-shield-alt"></i> NDA-friendly & security-minded</span>
+</div>
+
+            <!-- actions -->
+<div class="hero-actions">
+              <a href="https://calendly.com/jhudelps/30min"
+                 target="_blank" rel="noopener"
+                 class="hero-btn hero-btn--primary">
+<i class="far fa-calendar-check"></i> Book a 15-min call
+</a>
+
+              <a href="Jhudel Braian P Sales.pdf"
+                 target="_blank" rel="noopener"
+                 class="hero-btn hero-btn--outline">
+<i class="fas fa-download"></i> Download CV
+</a>
+</div>
+          </div><!-- /.hero -->
+        </div><!-- /.hero-seq -->
+      </div><!-- /.col-lg-6 -->
+
+    </div><!-- /.row -->
+  </div><!-- /.container -->
 </header>
+
 
 <!-- SKILLS -->
 <section id="skills" class="section-dark">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading fade-in section-heading-with-line-dark">My Skillset</h2>
-      <p class="section-subheading fade-in">Two hats: Virtual Assistant and Developer — with specific, hands-on skills.</p>
-    </div>
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading fade-in section-heading-with-line-dark">My Skillset</h2>
+<p class="section-subheading fade-in">Two hats: Virtual Assistant and Developer — with specific, hands-on skills.</p>
+</div>
 
-    <!-- ===== VIRTUAL ASSISTANT SKILLS (roomier, two rows) ===== -->
-    <div class="skills-block vaskills mt-4">
-      <h3 class="skills-block__title fade-in">
-        <i class="fa-solid fa-briefcase"></i> Virtual Assistant Skills
-      </h3>
-      <p class="vaskills-sub fade-in">Admin, communication, reporting, research, documentation, and light CMS/support.</p>
+<!-- ===== VIRTUAL ASSISTANT SKILLS (roomier, two rows) ===== -->
+<div class="skills-block vaskills mt-4">
+<h3 class="skills-block__title fade-in">
+<i class="fa-solid fa-briefcase"></i> Virtual Assistant Skills
+</h3>
+<p class="vaskills-sub fade-in">Admin, communication, reporting, research, documentation, and light CMS/support.</p>
 
-      <div class="row mt-3">
-        <!-- Inbox & Communication -->
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="skill-mini skill-mini--va fade-in">
-            <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fa-solid fa-inbox"></i></span>
-              <h4>Inbox & Communication</h4>
-            </div>
-            <div class="skill-mini__skills">
-              <span class="pill">Inbox triage</span><span class="pill">Follow-up sequences</span>
-              <span class="pill">Canned responses</span><span class="pill">Labels & filters</span>
-              <span class="pill">Meeting notes</span><span class="pill">Exec summaries</span>
-            </div>
-            <p class="skill-mini__line">Inbox-zero daily; â‰¤24h responses.</p>
-            <div class="skill-mini__tools">
-              <span class="tool">Gmail</span><span class="tool">Outlook</span><span class="tool">Slack</span><span class="tool">Zoom</span>
-            </div>
-          </div>
-        </div>
+<div class="row mt-3">
+<!-- Inbox & Communication -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<div class="skill-mini skill-mini--va fade-in">
+<div class="skill-mini__head">
+<span class="skill-mini__icon"><i class="fa-solid fa-inbox"></i></span>
+<h4>Inbox & Communication</h4>
+</div>
+<div class="skill-mini__skills">
+<span class="pill">Inbox triage</span><span class="pill">Follow-up sequences</span>
+<span class="pill">Canned responses</span><span class="pill">Labels & filters</span>
+<span class="pill">Meeting notes</span><span class="pill">Exec summaries</span>
+</div>
+<p class="skill-mini__line">Inbox-zero daily; â‰¤24h responses.</p>
+<div class="skill-mini__tools">
+<span class="tool">Gmail</span><span class="tool">Outlook</span><span class="tool">Slack</span><span class="tool">Zoom</span>
+</div>
+</div>
+</div>
 
-        <!-- Scheduling & Calendar -->
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="skill-mini skill-mini--va fade-in">
-            <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fa-regular fa-calendar-check"></i></span>
-              <h4>Scheduling & Calendar</h4>
-            </div>
-            <div class="skill-mini__skills">
-              <span class="pill">Multi-timezone booking</span><span class="pill">Buffer rules</span>
-              <span class="pill">Reschedules & confirms</span><span class="pill">Calendar hygiene</span>
-              <span class="pill">Agenda prep</span><span class="pill">Clear handoffs</span>
-            </div>
-            <p class="skill-mini__line">Smooth, error-free scheduling.</p>
-            <div class="skill-mini__tools">
-              <span class="tool">Google Cal</span><span class="tool">Calendly</span>
-            </div>
-          </div>
-        </div>
+<!-- Scheduling & Calendar -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<div class="skill-mini skill-mini--va fade-in">
+<div class="skill-mini__head">
+<span class="skill-mini__icon"><i class="fa-regular fa-calendar-check"></i></span>
+<h4>Scheduling & Calendar</h4>
+</div>
+<div class="skill-mini__skills">
+<span class="pill">Multi-timezone booking</span><span class="pill">Buffer rules</span>
+<span class="pill">Reschedules & confirms</span><span class="pill">Calendar hygiene</span>
+<span class="pill">Agenda prep</span><span class="pill">Clear handoffs</span>
+</div>
+<p class="skill-mini__line">Smooth, error-free scheduling.</p>
+<div class="skill-mini__tools">
+<span class="tool">Google Cal</span><span class="tool">Calendly</span>
+</div>
+</div>
+</div>
 
-        <!-- Reporting & Analytics -->
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="skill-mini skill-mini--va fade-in">
-            <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fa-solid fa-chart-line"></i></span>
-              <h4>Reporting & Analytics</h4>
-            </div>
-            <div class="skill-mini__skills">
-              <span class="pill">Pivot tables</span><span class="pill">VLOOKUP/XMATCH</span>
-              <span class="pill">Conditional formatting</span><span class="pill">Charts & dashboards</span>
-              <span class="pill">Weekly rollups</span><span class="pill">Data cleaning</span>
-            </div>
-            <p class="skill-mini__line">One-glance KPIs; faster decisions.</p>
-            <div class="skill-mini__tools">
-              <span class="tool">Sheets</span><span class="tool">Excel</span>
-            </div>
-          </div>
-        </div>
+<!-- Reporting & Analytics -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<div class="skill-mini skill-mini--va fade-in">
+<div class="skill-mini__head">
+<span class="skill-mini__icon"><i class="fa-solid fa-chart-line"></i></span>
+<h4>Reporting & Analytics</h4>
+</div>
+<div class="skill-mini__skills">
+<span class="pill">Pivot tables</span><span class="pill">VLOOKUP/XMATCH</span>
+<span class="pill">Conditional formatting</span><span class="pill">Charts & dashboards</span>
+<span class="pill">Weekly rollups</span><span class="pill">Data cleaning</span>
+</div>
+<p class="skill-mini__line">One-glance KPIs; faster decisions.</p>
+<div class="skill-mini__tools">
+<span class="tool">Sheets</span><span class="tool">Excel</span>
+</div>
+</div>
+</div>
 
-        <!-- Research & Lead Gen -->
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="skill-mini skill-mini--va fade-in">
-            <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-              <h4>Research & Lead Gen</h4>
-            </div>
-            <div class="skill-mini__skills">
-              <span class="pill">ICP criteria</span><span class="pill">Boolean searches</span>
-              <span class="pill">Enrichment</span><span class="pill">Email verification</span>
-              <span class="pill">De-duplication</span><span class="pill">Source-citing</span>
-            </div>
-            <p class="skill-mini__line">100–300 qualified leads/week; &lt;5% bounces.</p>
-            <div class="skill-mini__tools">
-              <span class="tool">LinkedIn</span><span class="tool">Sheets</span>
-            </div>
-          </div>
-        </div>
+<!-- Research & Lead Gen -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<div class="skill-mini skill-mini--va fade-in">
+<div class="skill-mini__head">
+<span class="skill-mini__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+<h4>Research & Lead Gen</h4>
+</div>
+<div class="skill-mini__skills">
+<span class="pill">ICP criteria</span><span class="pill">Boolean searches</span>
+<span class="pill">Enrichment</span><span class="pill">Email verification</span>
+<span class="pill">De-duplication</span><span class="pill">Source-citing</span>
+</div>
+<p class="skill-mini__line">100–300 qualified leads/week; &lt;5% bounces.</p>
+<div class="skill-mini__tools">
+<span class="tool">LinkedIn</span><span class="tool">Sheets</span>
+</div>
+</div>
+</div>
 
-        <!-- Documentation & SOPs -->
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="skill-mini skill-mini--va fade-in">
-            <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fa-solid fa-file-lines"></i></span>
-              <h4>Documentation & SOPs</h4>
-            </div>
-            <div class="skill-mini__skills">
-              <span class="pill">SOP writing</span><span class="pill">Macro libraries</span>
-              <span class="pill">Templates</span><span class="pill">Version control</span>
-              <span class="pill">KB updates</span><span class="pill">Brand/tone match</span>
-            </div>
-            <p class="skill-mini__line">Consistent quality; faster onboarding.</p>
-            <div class="skill-mini__tools">
-              <span class="tool">Docs</span><span class="tool">Notion</span>
-            </div>
-          </div>
-        </div>
+<!-- Documentation & SOPs -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<div class="skill-mini skill-mini--va fade-in">
+<div class="skill-mini__head">
+<span class="skill-mini__icon"><i class="fa-solid fa-file-lines"></i></span>
+<h4>Documentation & SOPs</h4>
+</div>
+<div class="skill-mini__skills">
+<span class="pill">SOP writing</span><span class="pill">Macro libraries</span>
+<span class="pill">Templates</span><span class="pill">Version control</span>
+<span class="pill">KB updates</span><span class="pill">Brand/tone match</span>
+</div>
+<p class="skill-mini__line">Consistent quality; faster onboarding.</p>
+<div class="skill-mini__tools">
+<span class="tool">Docs</span><span class="tool">Notion</span>
+</div>
+</div>
+</div>
 
-        <!-- Support / CMS / Admin -->
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="skill-mini skill-mini--va fade-in">
-            <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fa-solid fa-headset"></i></span>
-              <h4>Support / CMS / Admin</h4>
-            </div>
-            <div class="skill-mini__skills">
-              <span class="pill">Helpdesk macros</span><span class="pill">SLA triage</span>
-              <span class="pill">CSAT tracking</span><span class="pill">WP edits</span>
-              <span class="pill">Shopify updates</span><span class="pill">QA checklists</span>
-              <span class="pill">Expense categorizing</span>
-            </div>
-            <p class="skill-mini__line">Fewer pings; cleaner releases.</p>
-            <div class="skill-mini__tools">
-              <span class="tool">Zendesk</span><span class="tool">Intercom</span>
-              <span class="tool">WP</span><span class="tool">Shopify</span><span class="tool">QB/Xero</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- Support / CMS / Admin -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<div class="skill-mini skill-mini--va fade-in">
+<div class="skill-mini__head">
+<span class="skill-mini__icon"><i class="fa-solid fa-headset"></i></span>
+<h4>Support / CMS / Admin</h4>
+</div>
+<div class="skill-mini__skills">
+<span class="pill">Helpdesk macros</span><span class="pill">SLA triage</span>
+<span class="pill">CSAT tracking</span><span class="pill">WP edits</span>
+<span class="pill">Shopify updates</span><span class="pill">QA checklists</span>
+<span class="pill">Expense categorizing</span>
+</div>
+<p class="skill-mini__line">Fewer pings; cleaner releases.</p>
+<div class="skill-mini__tools">
+<span class="tool">Zendesk</span><span class="tool">Intercom</span>
+<span class="tool">WP</span><span class="tool">Shopify</span><span class="tool">QB/Xero</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-    <!-- ===== DEVELOPER SKILLS (roomier, two rows) ===== -->
-    <div class="skills-block devskills mt-5">
-      <h3 class="skills-block__title fade-in">
-        <i class="fa-solid fa-code"></i> Developer Skills
-      </h3>
-      <p class="devskills-sub fade-in">Front-end, light back-end & workflow — clean UI, reliable data, smoother releases.</p>
+<!-- ===== DEVELOPER SKILLS (roomier, two rows) ===== -->
+<div class="skills-block devskills mt-5">
+<h3 class="skills-block__title fade-in">
+<i class="fa-solid fa-code"></i> Developer Skills
+</h3>
+<p class="devskills-sub fade-in">Front-end, light back-end & workflow — clean UI, reliable data, smoother releases.</p>
 
-      <div class="row mt-3">
-        <!-- Front-End -->
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="skill-mini skill-mini--dev fade-in">
-            <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fa-solid fa-laptop-code"></i></span>
-              <h4>Front-End (HTML/CSS)</h4>
-            </div>
-            <div class="skill-mini__skills">
-              <span class="pill">Semantic HTML5</span><span class="pill">Flexbox/Grid</span>
-              <span class="pill">Responsive patterns</span><span class="pill">Accessibility basics</span>
-              <span class="pill">Cross-browser tests</span><span class="pill">Bootstrap comps</span>
-            </div>
-            <p class="skill-mini__line">Clean UI that works on any device.</p>
-            <div class="skill-mini__tools">
-              <span class="tool">HTML5</span><span class="tool">CSS3</span><span class="tool">Bootstrap</span>
-            </div>
-          </div>
-        </div>
+<div class="row mt-3">
+<!-- Front-End -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<div class="skill-mini skill-mini--dev fade-in">
+<div class="skill-mini__head">
+<span class="skill-mini__icon"><i class="fa-solid fa-laptop-code"></i></span>
+<h4>Front-End (HTML/CSS)</h4>
+</div>
+<div class="skill-mini__skills">
+<span class="pill">Semantic HTML5</span><span class="pill">Flexbox/Grid</span>
+<span class="pill">Responsive patterns</span><span class="pill">Accessibility basics</span>
+<span class="pill">Cross-browser tests</span><span class="pill">Bootstrap comps</span>
+</div>
+<p class="skill-mini__line">Clean UI that works on any device.</p>
+<div class="skill-mini__tools">
+<span class="tool">HTML5</span><span class="tool">CSS3</span><span class="tool">Bootstrap</span>
+</div>
+</div>
+</div>
 
-        <!-- JavaScript -->
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="skill-mini skill-mini--dev fade-in">
-            <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fa-brands fa-js"></i></span>
-              <h4>JavaScript</h4>
-            </div>
-            <div class="skill-mini__skills">
-              <span class="pill">ES6 syntax</span><span class="pill">DOM manipulation</span>
-              <span class="pill">Event handling</span><span class="pill">Fetch/AJAX</span>
-              <span class="pill">jQuery plugins</span>
-            </div>
-            <p class="skill-mini__line">Snappy UI and small integrations.</p>
-            <div class="skill-mini__tools">
-              <span class="tool">JS</span><span class="tool">jQuery</span>
-            </div>
-          </div>
-        </div>
+<!-- JavaScript -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<div class="skill-mini skill-mini--dev fade-in">
+<div class="skill-mini__head">
+<span class="skill-mini__icon"><i class="fa-brands fa-js"></i></span>
+<h4>JavaScript</h4>
+</div>
+<div class="skill-mini__skills">
+<span class="pill">ES6 syntax</span><span class="pill">DOM manipulation</span>
+<span class="pill">Event handling</span><span class="pill">Fetch/AJAX</span>
+<span class="pill">jQuery plugins</span>
+</div>
+<p class="skill-mini__line">Snappy UI and small integrations.</p>
+<div class="skill-mini__tools">
+<span class="tool">JS</span><span class="tool">jQuery</span>
+</div>
+</div>
+</div>
 
-        <!-- Back-End & Data -->
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="skill-mini skill-mini--dev fade-in">
-            <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fa-solid fa-database"></i></span>
-              <h4>Back-End & Data</h4>
-            </div>
-            <div class="skill-mini__skills">
-              <span class="pill">PHP templating</span><span class="pill">Form handling</span>
-              <span class="pill">MySQL CRUD</span><span class="pill">Joins</span>
-              <span class="pill">Prepared stmts (basic)</span><span class="pill">REST/JSON</span>
-            </div>
-            <p class="skill-mini__line">Reliable forms & data flows.</p>
-            <div class="skill-mini__tools">
-              <span class="tool">PHP</span><span class="tool">MySQL</span><span class="tool">REST</span>
-            </div>
-          </div>
-        </div>
+<!-- Back-End & Data -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<div class="skill-mini skill-mini--dev fade-in">
+<div class="skill-mini__head">
+<span class="skill-mini__icon"><i class="fa-solid fa-database"></i></span>
+<h4>Back-End & Data</h4>
+</div>
+<div class="skill-mini__skills">
+<span class="pill">PHP templating</span><span class="pill">Form handling</span>
+<span class="pill">MySQL CRUD</span><span class="pill">Joins</span>
+<span class="pill">Prepared stmts (basic)</span><span class="pill">REST/JSON</span>
+</div>
+<p class="skill-mini__line">Reliable forms & data flows.</p>
+<div class="skill-mini__tools">
+<span class="tool">PHP</span><span class="tool">MySQL</span><span class="tool">REST</span>
+</div>
+</div>
+</div>
 
-        <!-- Design & Assets -->
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="skill-mini skill-mini--dev fade-in">
-            <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fa-solid fa-paintbrush"></i></span>
-              <h4>Design & Assets</h4>
-            </div>
-            <div class="skill-mini__skills">
-              <span class="pill">Image optimization</span><span class="pill">SVG/icons</span>
-              <span class="pill">Micro-animations</span><span class="pill">Canva edits</span>
-              <span class="pill">Photoshop comps</span>
-            </div>
-            <p class="skill-mini__line">Lightweight, branded visuals.</p>
-            <div class="skill-mini__tools">
-              <span class="tool">Photoshop</span><span class="tool">Figma (basic)</span>
-            </div>
-          </div>
-        </div>
+<!-- Design & Assets -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<div class="skill-mini skill-mini--dev fade-in">
+<div class="skill-mini__head">
+<span class="skill-mini__icon"><i class="fa-solid fa-paintbrush"></i></span>
+<h4>Design & Assets</h4>
+</div>
+<div class="skill-mini__skills">
+<span class="pill">Image optimization</span><span class="pill">SVG/icons</span>
+<span class="pill">Micro-animations</span><span class="pill">Canva edits</span>
+<span class="pill">Photoshop comps</span>
+</div>
+<p class="skill-mini__line">Lightweight, branded visuals.</p>
+<div class="skill-mini__tools">
+<span class="tool">Photoshop</span><span class="tool">Figma (basic)</span>
+</div>
+</div>
+</div>
 
-        <!-- Workflow & Ops -->
-        <div class="col-sm-6 col-lg-4 mb-4">
-          <div class="skill-mini skill-mini--dev fade-in">
-            <div class="skill-mini__head">
-              <span class="skill-mini__icon"><i class="fa-solid fa-diagram-project"></i></span>
-              <h4>Workflow & Ops</h4>
-            </div>
-            <div class="skill-mini__skills">
-              <span class="pill">Git branching</span><span class="pill">PR reviews</span>
-              <span class="pill">Static deploys</span><span class="pill">Perf audits</span>
-              <span class="pill">SEO basics</span>
-            </div>
-            <p class="skill-mini__line">Smoother releases & maintainability.</p>
-            <div class="skill-mini__tools">
-              <span class="tool">Git</span><span class="tool">VS Code</span><span class="tool">DevTools</span>
-            </div>
-          </div>
-        </div>
+<!-- Workflow & Ops -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<div class="skill-mini skill-mini--dev fade-in">
+<div class="skill-mini__head">
+<span class="skill-mini__icon"><i class="fa-solid fa-diagram-project"></i></span>
+<h4>Workflow & Ops</h4>
+</div>
+<div class="skill-mini__skills">
+<span class="pill">Git branching</span><span class="pill">PR reviews</span>
+<span class="pill">Static deploys</span><span class="pill">Perf audits</span>
+<span class="pill">SEO basics</span>
+</div>
+<p class="skill-mini__line">Smoother releases & maintainability.</p>
+<div class="skill-mini__tools">
+<span class="tool">Git</span><span class="tool">VS Code</span><span class="tool">DevTools</span>
+</div>
+</div>
+</div>
 
-        <!-- Spacer (keeps two rows, balanced look on XL) -->
-        <div class="col-sm-6 col-lg-4 mb-4 d-none d-lg-block"></div>
-      </div>
-    </div>
-  </div>
+<!-- Spacer (keeps two rows, balanced look on XL) -->
+<div class="col-sm-6 col-lg-4 mb-4 d-none d-lg-block"></div>
+</div>
+</div>
+</div>
 </section>
 
 
@@ -365,876 +386,876 @@
 <!-- ========= WORK EXPERIENCE (timeline + animated blank-side panels) ========= -->
 <!-- ========= WORK EXPERIENCE (timeline + multiline blank-side panels) ========= -->
 <section id="workexperience" class="section">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading fade-in section-heading-with-line">Work Experience</h2>
-      <p class="section-subheading fade-in">My professional journey so far.</p>
-    </div>
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading fade-in section-heading-with-line">Work Experience</h2>
+<p class="section-subheading fade-in">My professional journey so far.</p>
+</div>
 
-    <div class="timeline-3col mt-5">
+<div class="timeline-3col mt-5">
 
-      <!-- ROW 1 (Right card | LEFT = multiline panel) -->
-      <div class="t-row">
-        <!-- BLANK-SIDE MULTILINE PANEL (LEFT) -->
-        <div class="t-col t-left">
-          <div class="ghost-panel">
-            <div class="ghost-lines">
-              <span class="ghost-line">Automation</span>
-              <span class="ghost-line">Inbox Triage</span>
-              <span class="ghost-line">Google Sheets</span>
-              <span class="ghost-line">Zapier</span>
-            </div>
-          </div>
-        </div>
+<!-- ROW 1 (Right card | LEFT = multiline panel) -->
+<div class="t-row">
+<!-- BLANK-SIDE MULTILINE PANEL (LEFT) -->
+<div class="t-col t-left">
+<div class="ghost-panel">
+<div class="ghost-lines">
+<span class="ghost-line">Automation</span>
+<span class="ghost-line">Inbox Triage</span>
+<span class="ghost-line">Google Sheets</span>
+<span class="ghost-line">Zapier</span>
+</div>
+</div>
+</div>
 
-        <!-- CENTER RAIL -->
-        <div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
+<!-- CENTER RAIL -->
+<div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
 
-        <!-- CARD (RIGHT) -->
-        <div class="t-col t-right">
-          <article class="xp-card fade-in">
-            <div class="xp-left"><div class="xp-logo">VA</div></div>
-            <div class="xp-right">
-              <div class="xp-role-line">
-                <h3 class="xp-role">Virtual Administration &amp; Workflow Automation</h3>
-                <span class="xp-meta">May 2021 – Present · Remote</span>
-              </div>
-              <ul class="xp-bullets">
-                <li>Managed inboxes with triage/filters; ensured zero missed follow-ups.</li>
-                <li>Organized work via Google Sheets, Trello, and Notion.</li>
-                <li>Built light automations with Zapier / Power Automate.</li>
-                <li>Scheduled meetings across time zones; kept Drive/OneDrive tidy.</li>
-              </ul>
-              <div class="xp-readmore" data-readmore>
-                <div class="xp-readmore__content" id="xp-va-more">
-                  <ul class="xp-bullets">
-                    <li>Weekly summaries; accurate data entry &amp; cleanup.</li>
-                    <li>Quick graphics in Canva; UI mockups in Figma / Adobe XD.</li>
-                    <li>Designed T-shirt artworks for Daisansedai &amp; Btch Co.</li>
-                    <li>Clear client comms via email/chat/calls; on-time delivery.</li>
-                    <li><strong>Tools:</strong> Gmail, Workspace, Trello, Notion, Sheets, Canva, XD, Figma, Power Automate, Zapier.</li>
-                  </ul>
-                </div>
-                <button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-va-more">Read more</button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
+<!-- CARD (RIGHT) -->
+<div class="t-col t-right">
+<article class="xp-card fade-in">
+<div class="xp-left"><div class="xp-logo">VA</div></div>
+<div class="xp-right">
+<div class="xp-role-line">
+<h3 class="xp-role">Virtual Administration &amp; Workflow Automation</h3>
+<span class="xp-meta">May 2021 – Present · Remote</span>
+</div>
+<ul class="xp-bullets">
+<li>Managed inboxes with triage/filters; ensured zero missed follow-ups.</li>
+<li>Organized work via Google Sheets, Trello, and Notion.</li>
+<li>Built light automations with Zapier / Power Automate.</li>
+<li>Scheduled meetings across time zones; kept Drive/OneDrive tidy.</li>
+</ul>
+<div class="xp-readmore" data-readmore>
+<div class="xp-readmore__content" id="xp-va-more">
+<ul class="xp-bullets">
+<li>Weekly summaries; accurate data entry &amp; cleanup.</li>
+<li>Quick graphics in Canva; UI mockups in Figma / Adobe XD.</li>
+<li>Designed T-shirt artworks for Daisansedai &amp; Btch Co.</li>
+<li>Clear client comms via email/chat/calls; on-time delivery.</li>
+<li><strong>Tools:</strong> Gmail, Workspace, Trello, Notion, Sheets, Canva, XD, Figma, Power Automate, Zapier.</li>
+</ul>
+</div>
+<button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-va-more">Read more</button>
+</div>
+</div>
+</article>
+</div>
+</div>
 
-      <!-- ROW 2 (Left card | RIGHT = multiline panel) -->
-      <div class="t-row">
-        <!-- CARD (LEFT) -->
-        <div class="t-col t-left">
-          <article class="xp-card fade-in">
-            <div class="xp-left"><div class="xp-logo">SE</div></div>
-            <div class="xp-right">
-              <div class="xp-role-line">
-                <h3 class="xp-role">Senior Software Engineer – Accenture</h3>
-                <span class="xp-meta">Jun 2022 – Present · Mandaluyong City</span>
-              </div>
-              <ul class="xp-bullets">
-                <li>Delivered complex user stories on time; partnered tightly with QA &amp; PO.</li>
-                <li>Shipped “Manage Access” with zero high/critical bugs (prod &amp; stage).</li>
-                <li>Redesigned access flow to support &gt;3 roles (web + API, auth, approvals).</li>
-                <li>Built custom fields (UI + APIs + flowdown) and portfolio attributes.</li>
-              </ul>
-              <div class="xp-readmore" data-readmore>
-                <div class="xp-readmore__content" id="xp-senior-more">
-                  <ul class="xp-bullets">
-                    <li>Guided teammates through code issues; unblocked releases.</li>
-                    <li>Researched tech for VR (i2o); owned 4 stories for R23.3 release.</li>
-                    <li>Views for active/deleted custom fields for better insights.</li>
-                    <li>Took over unfinished story; completed flowdown + persistence + FE tools.</li>
-                  </ul>
-                </div>
-                <button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-senior-more">Read more</button>
-              </div>
-            </div>
-          </article>
-        </div>
+<!-- ROW 2 (Left card | RIGHT = multiline panel) -->
+<div class="t-row">
+<!-- CARD (LEFT) -->
+<div class="t-col t-left">
+<article class="xp-card fade-in">
+<div class="xp-left"><div class="xp-logo">SE</div></div>
+<div class="xp-right">
+<div class="xp-role-line">
+<h3 class="xp-role">Senior Software Engineer – Accenture</h3>
+<span class="xp-meta">Jun 2022 – Present · Mandaluyong City</span>
+</div>
+<ul class="xp-bullets">
+<li>Delivered complex user stories on time; partnered tightly with QA &amp; PO.</li>
+<li>Shipped “Manage Access” with zero high/critical bugs (prod &amp; stage).</li>
+<li>Redesigned access flow to support &gt;3 roles (web + API, auth, approvals).</li>
+<li>Built custom fields (UI + APIs + flowdown) and portfolio attributes.</li>
+</ul>
+<div class="xp-readmore" data-readmore>
+<div class="xp-readmore__content" id="xp-senior-more">
+<ul class="xp-bullets">
+<li>Guided teammates through code issues; unblocked releases.</li>
+<li>Researched tech for VR (i2o); owned 4 stories for R23.3 release.</li>
+<li>Views for active/deleted custom fields for better insights.</li>
+<li>Took over unfinished story; completed flowdown + persistence + FE tools.</li>
+</ul>
+</div>
+<button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-senior-more">Read more</button>
+</div>
+</div>
+</article>
+</div>
 
-        <!-- CENTER RAIL -->
-        <div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
+<!-- CENTER RAIL -->
+<div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
 
-        <!-- BLANK-SIDE MULTILINE PANEL (RIGHT) -->
-        <div class="t-col t-right">
-          <div class="ghost-panel">
-            <div class="ghost-lines">
-              <span class="ghost-line">Manage Access</span>
-              <span class="ghost-line">Flowdown</span>
-              <span class="ghost-line">Zero Bugs</span>
-              <span class="ghost-line">Ownership</span>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- BLANK-SIDE MULTILINE PANEL (RIGHT) -->
+<div class="t-col t-right">
+<div class="ghost-panel">
+<div class="ghost-lines">
+<span class="ghost-line">Manage Access</span>
+<span class="ghost-line">Flowdown</span>
+<span class="ghost-line">Zero Bugs</span>
+<span class="ghost-line">Ownership</span>
+</div>
+</div>
+</div>
+</div>
 
-      <!-- ROW 3 (Right card | LEFT = multiline panel) -->
-      <div class="t-row">
-        <!-- BLANK-SIDE MULTILINE PANEL (LEFT) -->
-        <div class="t-col t-left">
-          <div class="ghost-panel">
-            <div class="ghost-lines">
-              <span class="ghost-line">CALM Chatbot</span>
-              <span class="ghost-line">MS Teams</span>
-              <span class="ghost-line">Angular 11 → 13</span>
-              <span class="ghost-line">MSAL · GCP</span>
-            </div>
-          </div>
-        </div>
+<!-- ROW 3 (Right card | LEFT = multiline panel) -->
+<div class="t-row">
+<!-- BLANK-SIDE MULTILINE PANEL (LEFT) -->
+<div class="t-col t-left">
+<div class="ghost-panel">
+<div class="ghost-lines">
+<span class="ghost-line">CALM Chatbot</span>
+<span class="ghost-line">MS Teams</span>
+<span class="ghost-line">Angular 11 → 13</span>
+<span class="ghost-line">MSAL · GCP</span>
+</div>
+</div>
+</div>
 
-        <!-- CENTER RAIL -->
-        <div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
+<!-- CENTER RAIL -->
+<div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
 
-        <!-- CARD (RIGHT) -->
-        <div class="t-col t-right">
-          <article class="xp-card fade-in">
-            <div class="xp-left"><div class="xp-logo">SA</div></div>
-            <div class="xp-right">
-              <div class="xp-role-line">
-                <h3 class="xp-role">Software Engineer Analyst – Accenture</h3>
-                <span class="xp-meta">Jan 2021 – Jun 2022 · Mandaluyong City</span>
-              </div>
-              <ul class="xp-bullets">
-                <li>Revamped CALM Chatbot (UI + DB) to meet evolving user stories.</li>
-                <li>MS Teams bot features with Adaptive Cards &amp; sandbox apps.</li>
-                <li>Ported apps across Angular 11 → 13; improved WebApi performance.</li>
-                <li>Implemented AAD auth (MSAL v1→v2); deployed via GCP.</li>
-              </ul>
-              <div class="xp-readmore" data-readmore>
-                <div class="xp-readmore__content" id="xp-analyst-more">
-                  <ul class="xp-bullets">
-                    <li>Custom Twitter API hooks; User Metrics tracking &amp; device capture.</li>
-                    <li>ECF card redesign; mobile-specific UI (iOS/Android) adjustments.</li>
-                    <li>Upgraded console app .NET 7 → .NET 8; supported Legal Repository using AWS.</li>
-                  </ul>
-                </div>
-                <button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-analyst-more">Read more</button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
+<!-- CARD (RIGHT) -->
+<div class="t-col t-right">
+<article class="xp-card fade-in">
+<div class="xp-left"><div class="xp-logo">SA</div></div>
+<div class="xp-right">
+<div class="xp-role-line">
+<h3 class="xp-role">Software Engineer Analyst – Accenture</h3>
+<span class="xp-meta">Jan 2021 – Jun 2022 · Mandaluyong City</span>
+</div>
+<ul class="xp-bullets">
+<li>Revamped CALM Chatbot (UI + DB) to meet evolving user stories.</li>
+<li>MS Teams bot features with Adaptive Cards &amp; sandbox apps.</li>
+<li>Ported apps across Angular 11 → 13; improved WebApi performance.</li>
+<li>Implemented AAD auth (MSAL v1→v2); deployed via GCP.</li>
+</ul>
+<div class="xp-readmore" data-readmore>
+<div class="xp-readmore__content" id="xp-analyst-more">
+<ul class="xp-bullets">
+<li>Custom Twitter API hooks; User Metrics tracking &amp; device capture.</li>
+<li>ECF card redesign; mobile-specific UI (iOS/Android) adjustments.</li>
+<li>Upgraded console app .NET 7 → .NET 8; supported Legal Repository using AWS.</li>
+</ul>
+</div>
+<button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-analyst-more">Read more</button>
+</div>
+</div>
+</article>
+</div>
+</div>
 
-      <!-- ROW 4 (Left card | RIGHT = multiline panel) -->
-      <div class="t-row">
-        <!-- CARD (LEFT) -->
-        <div class="t-col t-left">
-          <article class="xp-card fade-in">
-            <div class="xp-left"><div class="xp-logo">AE</div></div>
-            <div class="xp-right">
-              <div class="xp-role-line">
-                <h3 class="xp-role">Associate Software Engineer – Accenture</h3>
-                <span class="xp-meta">Jun 2019 – Dec 2020 · Mandaluyong City</span>
-              </div>
-              <ul class="xp-bullets">
-                <li>Led UI/UX for multiple chatbots (MSAL auth, global rollout support).</li>
-                <li>Built Feedback/Rating module (SQL/CMAP); Angular UI work.</li>
-                <li>Prototyped AR app flows (design thinking, XD/PS/Figma, 3D assets).</li>
-                <li>Rebranded “Tedo” chatbot; motion graphics &amp; usability testing.</li>
-              </ul>
-              <div class="xp-readmore" data-readmore>
-                <div class="xp-readmore__content" id="xp-assoc-more">
-                  <ul class="xp-bullets">
-                    <li>UX niceties: typing indicator, mailbox, emojis, autocorrect.</li>
-                  </ul>
-                </div>
-                <button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-assoc-more">Read more</button>
-              </div>
-            </div>
-          </article>
-        </div>
+<!-- ROW 4 (Left card | RIGHT = multiline panel) -->
+<div class="t-row">
+<!-- CARD (LEFT) -->
+<div class="t-col t-left">
+<article class="xp-card fade-in">
+<div class="xp-left"><div class="xp-logo">AE</div></div>
+<div class="xp-right">
+<div class="xp-role-line">
+<h3 class="xp-role">Associate Software Engineer – Accenture</h3>
+<span class="xp-meta">Jun 2019 – Dec 2020 · Mandaluyong City</span>
+</div>
+<ul class="xp-bullets">
+<li>Led UI/UX for multiple chatbots (MSAL auth, global rollout support).</li>
+<li>Built Feedback/Rating module (SQL/CMAP); Angular UI work.</li>
+<li>Prototyped AR app flows (design thinking, XD/PS/Figma, 3D assets).</li>
+<li>Rebranded “Tedo” chatbot; motion graphics &amp; usability testing.</li>
+</ul>
+<div class="xp-readmore" data-readmore>
+<div class="xp-readmore__content" id="xp-assoc-more">
+<ul class="xp-bullets">
+<li>UX niceties: typing indicator, mailbox, emojis, autocorrect.</li>
+</ul>
+</div>
+<button class="xp-readmore__btn" aria-expanded="false" aria-controls="xp-assoc-more">Read more</button>
+</div>
+</div>
+</article>
+</div>
 
-        <!-- CENTER RAIL -->
-        <div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
+<!-- CENTER RAIL -->
+<div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
 
-        <!-- BLANK-SIDE MULTILINE PANEL (RIGHT) -->
-        <div class="t-col t-right">
-          <div class="ghost-panel">
-            <div class="ghost-lines">
-              <span class="ghost-line">Angular</span>
-              <span class="ghost-line">MSAL</span>
-              <span class="ghost-line">SQL</span>
-              <span class="ghost-line">UI/UX</span>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- BLANK-SIDE MULTILINE PANEL (RIGHT) -->
+<div class="t-col t-right">
+<div class="ghost-panel">
+<div class="ghost-lines">
+<span class="ghost-line">Angular</span>
+<span class="ghost-line">MSAL</span>
+<span class="ghost-line">SQL</span>
+<span class="ghost-line">UI/UX</span>
+</div>
+</div>
+</div>
+</div>
 
-      <!-- ROW 5 (Right card | LEFT = multiline panel) -->
-      <div class="t-row">
-        <!-- BLANK-SIDE MULTILINE PANEL (LEFT) -->
-        <div class="t-col t-left">
-          <div class="ghost-panel">
-            <div class="ghost-lines">
-              <span class="ghost-line">Dean’s List</span>
-              <span class="ghost-line">Our Lady of Fatima University</span>
-            </div>
-          </div>
-        </div>
+<!-- ROW 5 (Right card | LEFT = multiline panel) -->
+<div class="t-row">
+<!-- BLANK-SIDE MULTILINE PANEL (LEFT) -->
+<div class="t-col t-left">
+<div class="ghost-panel">
+<div class="ghost-lines">
+<span class="ghost-line">Dean’s List</span>
+<span class="ghost-line">Our Lady of Fatima University</span>
+</div>
+</div>
+</div>
 
-        <!-- CENTER RAIL -->
-        <div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
+<!-- CENTER RAIL -->
+<div class="t-col t-center"><span class="t-dot" aria-hidden="true"></span></div>
 
-        <!-- CARD (RIGHT) -->
-        <div class="t-col t-right">
-          <article class="xp-card fade-in">
-            <div class="xp-left"><div class="xp-logo xp-logo-alt">ED</div></div>
-            <div class="xp-right">
-              <div class="xp-role-line">
-                <h3 class="xp-role">Bachelor of Science in Information Technology</h3>
-                <span class="xp-meta">Our Lady of Fatima University</span>
-                <span class="xp-meta">Jun 2015 – Mar 2019 · Dean’s List</span>
-              </div>
-              <ul class="xp-bullets"><li>Dean’s List</li></ul>
-            </div>
-          </article>
-        </div>
-      </div>
+<!-- CARD (RIGHT) -->
+<div class="t-col t-right">
+<article class="xp-card fade-in">
+<div class="xp-left"><div class="xp-logo xp-logo-alt">ED</div></div>
+<div class="xp-right">
+<div class="xp-role-line">
+<h3 class="xp-role">Bachelor of Science in Information Technology</h3>
+<span class="xp-meta">Our Lady of Fatima University</span>
+<span class="xp-meta">Jun 2015 – Mar 2019 · Dean’s List</span>
+</div>
+<ul class="xp-bullets"><li>Dean’s List</li></ul>
+</div>
+</article>
+</div>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
 
 <!-- GOOGLE DRIVE LINK -->
 <section id="resources" class="section-light with-grid-pattern resources-showcase">
-  <div class="container text-center fade-in">
-    <h2 class="section-heading section-heading-with-line">Resources & Case Studies</h2>
-    <p class="section-subheading">
-      Want to see how I actually work behind the scenes?  
-      Browse my Google Drive to view sample deliverables, SOPs, automation workflows, and client presentation files.
-      Each document reflects how I manage systems, structure communication, and create value for clients.
-    </p>
-    <a href="https://drive.google.com/drive/folders/1VWvn-ZlGMXJBMkdg-Kjgh5k_NM3ccdAa?usp=drive_link" 
-       target="_blank" 
-       rel="noopener" 
-       class="hero-btn hero-btn--primary mt-3 resources-cta">
-       <i class="fa-brands fa-google-drive"></i> View My Google Drive
-    </a>
-  </div>
+<div class="container text-center fade-in">
+<h2 class="section-heading section-heading-with-line">Resources & Case Studies</h2>
+<p class="section-subheading">
+Want to see how I actually work behind the scenes?  
+Browse my Google Drive to view sample deliverables, SOPs, automation workflows, and client presentation files.
+Each document reflects how I manage systems, structure communication, and create value for clients.
+</p>
+<a href="https://drive.google.com/drive/folders/1VWvn-ZlGMXJBMkdg-Kjgh5k_NM3ccdAa?usp=drive_link" 
+target="_blank" 
+rel="noopener" 
+class="hero-btn hero-btn--primary mt-3 resources-cta">
+<i class="fa-brands fa-google-drive"></i> View My Google Drive
+</a>
+</div>
 </section>
 
 
 <section id="services" class="section-dark">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading fade-in section-heading-with-line-dark">What I Offer</h2>
-      <p class="section-subheading fade-in">
-        I help founders save time with proactive admin, clean reports, and reliable communication.
-      </p>
-    </div>
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading fade-in section-heading-with-line-dark">What I Offer</h2>
+<p class="section-subheading fade-in">
+I help founders save time with proactive admin, clean reports, and reliable communication.
+</p>
+</div>
 
-    <div class="row mt-5">
-      <!-- Inbox & Calendar -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fa-solid fa-inbox"></i></div>
-          <h3 class="offering-card__title">Inbox & Calendar</h3>
-          <p class="offering-card__text">
-            I’ll triage, follow up, and book meetings so you never miss a thread.
-            <b>Outcome:</b> inbox-to-zero daily; â‰¤ 24h response.
-            <b>Tools:</b> Gmail/Outlook, GCal, Calendly, Zoom.
-          </p>
-          <div class="offering-card__badges">
-            <span class="chip">Inbox zero</span>
-            <span class="chip">Follow-ups</span>
-            <span class="chip">Meeting notes</span>
-          </div>
-        </div>
-      </div>
+<div class="row mt-5">
+<!-- Inbox & Calendar -->
+<div class="col-lg-4 col-md-6 mb-4">
+<div class="offering-card offering-card--dark fade-in">
+<div class="offering-card__icon"><i class="fa-solid fa-inbox"></i></div>
+<h3 class="offering-card__title">Inbox & Calendar</h3>
+<p class="offering-card__text">
+I’ll triage, follow up, and book meetings so you never miss a thread.
+<b>Outcome:</b> inbox-to-zero daily; â‰¤ 24h response.
+<b>Tools:</b> Gmail/Outlook, GCal, Calendly, Zoom.
+</p>
+<div class="offering-card__badges">
+<span class="chip">Inbox zero</span>
+<span class="chip">Follow-ups</span>
+<span class="chip">Meeting notes</span>
+</div>
+</div>
+</div>
 
-      <!-- Data & Reports -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fa-solid fa-chart-line"></i></div>
-          <h3 class="offering-card__title">Data & Reports</h3>
-          <p class="offering-card__text">
-            I turn messy data into weekly KPI dashboards.
-            <b>Outcome:</b> faster decisions; one-glance visibility.
-            <b>Tools:</b> Google Sheets/Excel (pivots, LOOKUP/XMATCH, charts).
-          </p>
-          <div class="offering-card__badges">
-            <span class="chip">Auto-refresh</span>
-            <span class="chip">Executive summary</span>
-            <span class="chip">Audit-ready</span>
-          </div>
-        </div>
-      </div>
+<!-- Data & Reports -->
+<div class="col-lg-4 col-md-6 mb-4">
+<div class="offering-card offering-card--dark fade-in">
+<div class="offering-card__icon"><i class="fa-solid fa-chart-line"></i></div>
+<h3 class="offering-card__title">Data & Reports</h3>
+<p class="offering-card__text">
+I turn messy data into weekly KPI dashboards.
+<b>Outcome:</b> faster decisions; one-glance visibility.
+<b>Tools:</b> Google Sheets/Excel (pivots, LOOKUP/XMATCH, charts).
+</p>
+<div class="offering-card__badges">
+<span class="chip">Auto-refresh</span>
+<span class="chip">Executive summary</span>
+<span class="chip">Audit-ready</span>
+</div>
+</div>
+</div>
 
-      <!-- Customer Support -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fa-solid fa-headset"></i></div>
-          <h3 class="offering-card__title">Customer Support</h3>
-          <p class="offering-card__text">
-            I’ll clear queues, write macros, and keep CSAT up.
-            <b>Outcome:</b> first-response &lt; 4h; CSAT â‰¥ 95%.
-            <b>Tools:</b> Zendesk, Intercom, Gorgias, Help Docs/Notion.
-          </p>
-          <div class="offering-card__badges">
-            <span class="chip">Macros</span>
-            <span class="chip">Tone-matched</span>
-            <span class="chip">SLA-aware</span>
-          </div>
-        </div>
-      </div>
+<!-- Customer Support -->
+<div class="col-lg-4 col-md-6 mb-4">
+<div class="offering-card offering-card--dark fade-in">
+<div class="offering-card__icon"><i class="fa-solid fa-headset"></i></div>
+<h3 class="offering-card__title">Customer Support</h3>
+<p class="offering-card__text">
+I’ll clear queues, write macros, and keep CSAT up.
+<b>Outcome:</b> first-response &lt; 4h; CSAT â‰¥ 95%.
+<b>Tools:</b> Zendesk, Intercom, Gorgias, Help Docs/Notion.
+</p>
+<div class="offering-card__badges">
+<span class="chip">Macros</span>
+<span class="chip">Tone-matched</span>
+<span class="chip">SLA-aware</span>
+</div>
+</div>
+</div>
 
-      <!-- Social Scheduling -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fa-solid fa-share-nodes"></i></div>
-          <h3 class="offering-card__title">Social Scheduling</h3>
-          <p class="offering-card__text">
-            Plan, queue, and report on posts with simple Canva creatives.
-            <b>Outcome:</b> consistent weekly cadence + basic performance report.
-            <b>Tools:</b> Buffer/Hootsuite/Later, Meta Suite, Canva.
-          </p>
-          <div class="offering-card__badges">
-            <span class="chip">Content calendar</span>
-            <span class="chip">Asset-ready</span>
-            <span class="chip">UTM tracking</span>
-          </div>
-        </div>
-      </div>
+<!-- Social Scheduling -->
+<div class="col-lg-4 col-md-6 mb-4">
+<div class="offering-card offering-card--dark fade-in">
+<div class="offering-card__icon"><i class="fa-solid fa-share-nodes"></i></div>
+<h3 class="offering-card__title">Social Scheduling</h3>
+<p class="offering-card__text">
+Plan, queue, and report on posts with simple Canva creatives.
+<b>Outcome:</b> consistent weekly cadence + basic performance report.
+<b>Tools:</b> Buffer/Hootsuite/Later, Meta Suite, Canva.
+</p>
+<div class="offering-card__badges">
+<span class="chip">Content calendar</span>
+<span class="chip">Asset-ready</span>
+<span class="chip">UTM tracking</span>
+</div>
+</div>
+</div>
 
-      <!-- Docs & Slides -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fa-solid fa-file-lines"></i></div>
-          <h3 class="offering-card__title">Docs & Slides</h3>
-          <p class="offering-card__text">
-            Brand-aligned docs, proposals, and decks.
-            <b>Outcome:</b> faster approvals; consistent voice.
-            <b>Tools:</b> Google Docs/Slides, MS Office, Notion.
-          </p>
-          <div class="offering-card__badges">
-            <span class="chip">Brand templates</span>
-            <span class="chip">Clean layouts</span>
-            <span class="chip">Share-ready</span>
-          </div>
-        </div>
-      </div>
+<!-- Docs & Slides -->
+<div class="col-lg-4 col-md-6 mb-4">
+<div class="offering-card offering-card--dark fade-in">
+<div class="offering-card__icon"><i class="fa-solid fa-file-lines"></i></div>
+<h3 class="offering-card__title">Docs & Slides</h3>
+<p class="offering-card__text">
+Brand-aligned docs, proposals, and decks.
+<b>Outcome:</b> faster approvals; consistent voice.
+<b>Tools:</b> Google Docs/Slides, MS Office, Notion.
+</p>
+<div class="offering-card__badges">
+<span class="chip">Brand templates</span>
+<span class="chip">Clean layouts</span>
+<span class="chip">Share-ready</span>
+</div>
+</div>
+</div>
 
-      <!-- Tech Support -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
-          <h3 class="offering-card__title">Tech Support</h3>
-          <p class="offering-card__text">
-            Light CMS edits, form fixes, and QA so pages ship without bugs.
-            <b>Outcome:</b> fewer support pings; cleaner releases.
-            <b>Tools:</b> WordPress, Shopify, Squarespace, HTML/CSS basics.
-          </p>
-          <div class="offering-card__badges">
-            <span class="chip">Form fixes</span>
-            <span class="chip">CMS updates</span>
-            <span class="chip">Tested</span>
-          </div>
-        </div>
-      </div>
+<!-- Tech Support -->
+<div class="col-lg-4 col-md-6 mb-4">
+<div class="offering-card offering-card--dark fade-in">
+<div class="offering-card__icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+<h3 class="offering-card__title">Tech Support</h3>
+<p class="offering-card__text">
+Light CMS edits, form fixes, and QA so pages ship without bugs.
+<b>Outcome:</b> fewer support pings; cleaner releases.
+<b>Tools:</b> WordPress, Shopify, Squarespace, HTML/CSS basics.
+</p>
+<div class="offering-card__badges">
+<span class="chip">Form fixes</span>
+<span class="chip">CMS updates</span>
+<span class="chip">Tested</span>
+</div>
+</div>
+</div>
 
-      <!-- Research & Lead Generation -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <h3 class="offering-card__title">Research & Lead Generation</h3>
-          <p class="offering-card__text">
-            I build clean, de-duplicated lead lists with decision-makers and verified emails.
-            <b>Outcome:</b> 100–300 qualified leads/week; bounce rate &lt; 5%.
-            <b>Tools:</b> LinkedIn, scrapers, Google, Sheets.
-          </p>
-          <div class="offering-card__badges">
-            <span class="chip">Verified emails</span>
-            <span class="chip">Source links</span>
-            <span class="chip">ICP-matched</span>
-          </div>
-        </div>
-      </div>
+<!-- Research & Lead Generation -->
+<div class="col-lg-4 col-md-6 mb-4">
+<div class="offering-card offering-card--dark fade-in">
+<div class="offering-card__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+<h3 class="offering-card__title">Research & Lead Generation</h3>
+<p class="offering-card__text">
+I build clean, de-duplicated lead lists with decision-makers and verified emails.
+<b>Outcome:</b> 100–300 qualified leads/week; bounce rate &lt; 5%.
+<b>Tools:</b> LinkedIn, scrapers, Google, Sheets.
+</p>
+<div class="offering-card__badges">
+<span class="chip">Verified emails</span>
+<span class="chip">Source links</span>
+<span class="chip">ICP-matched</span>
+</div>
+</div>
+</div>
 
-      <!-- Bookkeeping & Admin -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="offering-card offering-card--dark fade-in">
-          <div class="offering-card__icon"><i class="fa-solid fa-receipt"></i></div>
-          <h3 class="offering-card__title">Bookkeeping & Admin</h3>
-          <p class="offering-card__text">
-            Invoices, expenses, and receipts organized and reconciled.
-            <b>Outcome:</b> on-time billing; export-ready files for your accountant.
-            <b>Tools:</b> QuickBooks/Xero, Sheets, receipt apps.
-          </p>
-          <div class="offering-card__badges">
-            <span class="chip">Invoice-ready</span>
-            <span class="chip">Expense tracking</span>
-            <span class="chip">Monthly close</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- Bookkeeping & Admin -->
+<div class="col-lg-4 col-md-6 mb-4">
+<div class="offering-card offering-card--dark fade-in">
+<div class="offering-card__icon"><i class="fa-solid fa-receipt"></i></div>
+<h3 class="offering-card__title">Bookkeeping & Admin</h3>
+<p class="offering-card__text">
+Invoices, expenses, and receipts organized and reconciled.
+<b>Outcome:</b> on-time billing; export-ready files for your accountant.
+<b>Tools:</b> QuickBooks/Xero, Sheets, receipt apps.
+</p>
+<div class="offering-card__badges">
+<span class="chip">Invoice-ready</span>
+<span class="chip">Expense tracking</span>
+<span class="chip">Monthly close</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 
 
 <section id="testimonials" class="section-light with-grid-pattern">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading fade-in section-heading-with-line">What Clients Say</h2>
-      <p class="section-subheading fade-in">Feedback from people I've worked with.</p>
-    </div>
-    <div class="carousel-wrapper fade-in">
-      <div class="carousel-track-container">
-        <div class="carousel-track">
-          <!-- Card 1 -->
-          <div class="carousel-card">
-            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"Jhudel is a fantastic developer. The attention to detail and clean code are top-notch. Highly recommended for any web project!"</p>
-            <!--<div class="testimonial-author">
-              <img src="https://placehold.co/60x60/EAECEF/212529?text=JD" alt="Author Avatar">
-              <div>
-                <h4 class="author-name">Jane Doe</h4>
-                <p class="author-title">CEO, Tech Innovators</p>
-              </div>
-            </div>-->
-          </div>
-          <!-- Card 2 -->
-          <div class="carousel-card">
-             <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-             <p class="testimonial-text">"Working with him was a breeze. He delivered ahead of schedule and the final product exceeded our expectations. A true professional."</p>
-            <!--<div class="testimonial-author">
-              <img src="https://placehold.co/60x60/EAECEF/212529?text=JD" alt="Author Avatar">
-              <div>
-                <h4 class="author-name">Jane Doe</h4>
-                <p class="author-title">CEO, Tech Innovators</p>
-              </div>
-            </div>-->
-          </div>
-          <!-- Card 3 -->
-          <div class="carousel-card">
-            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"The design sense is impeccable. He transformed our vision into a beautiful, functional, and responsive website. Will definitely hire again."</p>
-            <!--<div class="testimonial-author">
-              <img src="https://placehold.co/60x60/EAECEF/212529?text=JD" alt="Author Avatar">
-              <div>
-                <h4 class="author-name">Jane Doe</h4>
-                <p class="author-title">CEO, Tech Innovators</p>
-              </div>
-            </div>-->
-          </div>
-          <!-- Card 4 -->
-          <div class="carousel-card">
-            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"An excellent problem-solver. He tackled complex issues with a positive attitude and delivered robust solutions. Great communication skills."</p>
-            <!--<div class="testimonial-author">
-              <img src="https://placehold.co/60x60/EAECEF/212529?text=JD" alt="Author Avatar">
-              <div>
-                <h4 class="author-name">Jane Doe</h4>
-                <p class="author-title">CEO, Tech Innovators</p>
-              </div>
-            </div>-->
-          </div>
-          <!-- Card 5 -->
-          <div class="carousel-card">
-            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"From UI/UX mockups to the final build, the entire process was seamless. The result is a pixel-perfect site that our users love."</p>
-            <!--<div class="testimonial-author">
-              <img src="https://placehold.co/60x60/EAECEF/212529?text=JD" alt="Author Avatar">
-              <div>
-                <h4 class="author-name">Jane Doe</h4>
-                <p class="author-title">CEO, Tech Innovators</p>
-              </div>
-            </div>-->
-          </div>
-        </div>
-      </div>
-      <button class="carousel-btn carousel-btn--prev" aria-label="Previous Testimonial"><i class="fas fa-chevron-left"></i></button>
-      <button class="carousel-btn carousel-btn--next" aria-label="Next Testimonial"><i class="fas fa-chevron-right"></i></button>
-    </div>
-  </div>
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading fade-in section-heading-with-line">What Clients Say</h2>
+<p class="section-subheading fade-in">Feedback from people I've worked with.</p>
+</div>
+<div class="carousel-wrapper fade-in">
+<div class="carousel-track-container">
+<div class="carousel-track">
+<!-- Card 1 -->
+<div class="carousel-card">
+<div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+<p class="testimonial-text">"Jhudel is a fantastic developer. The attention to detail and clean code are top-notch. Highly recommended for any web project!"</p>
+<!--<div class="testimonial-author">
+             <img src="https://placehold.co/60x60/EAECEF/212529?text=JD" alt="Author Avatar">
+             <div>
+               <h4 class="author-name">Jane Doe</h4>
+               <p class="author-title">CEO, Tech Innovators</p>
+             </div>
+           </div>-->
+</div>
+<!-- Card 2 -->
+<div class="carousel-card">
+<div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+<p class="testimonial-text">"Working with him was a breeze. He delivered ahead of schedule and the final product exceeded our expectations. A true professional."</p>
+<!--<div class="testimonial-author">
+             <img src="https://placehold.co/60x60/EAECEF/212529?text=JD" alt="Author Avatar">
+             <div>
+               <h4 class="author-name">Jane Doe</h4>
+               <p class="author-title">CEO, Tech Innovators</p>
+             </div>
+           </div>-->
+</div>
+<!-- Card 3 -->
+<div class="carousel-card">
+<div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+<p class="testimonial-text">"The design sense is impeccable. He transformed our vision into a beautiful, functional, and responsive website. Will definitely hire again."</p>
+<!--<div class="testimonial-author">
+             <img src="https://placehold.co/60x60/EAECEF/212529?text=JD" alt="Author Avatar">
+             <div>
+               <h4 class="author-name">Jane Doe</h4>
+               <p class="author-title">CEO, Tech Innovators</p>
+             </div>
+           </div>-->
+</div>
+<!-- Card 4 -->
+<div class="carousel-card">
+<div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+<p class="testimonial-text">"An excellent problem-solver. He tackled complex issues with a positive attitude and delivered robust solutions. Great communication skills."</p>
+<!--<div class="testimonial-author">
+             <img src="https://placehold.co/60x60/EAECEF/212529?text=JD" alt="Author Avatar">
+             <div>
+               <h4 class="author-name">Jane Doe</h4>
+               <p class="author-title">CEO, Tech Innovators</p>
+             </div>
+           </div>-->
+</div>
+<!-- Card 5 -->
+<div class="carousel-card">
+<div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+<p class="testimonial-text">"From UI/UX mockups to the final build, the entire process was seamless. The result is a pixel-perfect site that our users love."</p>
+<!--<div class="testimonial-author">
+             <img src="https://placehold.co/60x60/EAECEF/212529?text=JD" alt="Author Avatar">
+             <div>
+               <h4 class="author-name">Jane Doe</h4>
+               <p class="author-title">CEO, Tech Innovators</p>
+             </div>
+           </div>-->
+</div>
+</div>
+</div>
+<button class="carousel-btn carousel-btn--prev" aria-label="Previous Testimonial"><i class="fas fa-chevron-left"></i></button>
+<button class="carousel-btn carousel-btn--next" aria-label="Next Testimonial"><i class="fas fa-chevron-right"></i></button>
+</div>
+</div>
 </section>
 
 
 <section id="projects" class="section-dark projects-bleed">
-  <!-- Keep heading in a normal container for nice centering -->
-  <div class="container text-center">
-    <h2 class="section-heading fade-in section-heading-with-line-dark">Featured Projects</h2>
-    <p class="section-subheading fade-in">A selection of featured work I’ve created over the years.</p>
-  </div>
+<!-- Keep heading in a normal container for nice centering -->
+<div class="container text-center">
+<h2 class="section-heading fade-in section-heading-with-line-dark">Featured Projects</h2>
+<p class="section-subheading fade-in">A selection of featured work I’ve created over the years.</p>
+</div>
 
-  <!-- Make the rows full-bleed (edge-to-edge) -->
-  <div class="container-fluid px-0">
+<!-- Make the rows full-bleed (edge-to-edge) -->
+<div class="container-fluid px-0">
 
-    <!-- Row 1 (image left, text right) -->
-    <article class="project-row" >
-      <div class="project-media" data-aos="zoom-out">
-        <img src="BOOKV1.png" alt="Project 1 preview">
-      </div>
-      <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">Mobile Application</span>
-        <h3 class="project-title">Bookify Mobile Application</h3>
-        <p class="project-text">A mobile app designed for service bookings (e.g., salons and barbershops), built during the pandemic to reduce in-person queues and confusion. I focused on a clean, intuitive UI and a smooth UX so users could book quickly and confidently.</p>
-        <div class="project-actions">
-          <!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
-          <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
-        </div>
-      </div>
-    </article>
+<!-- Row 1 (image left, text right) -->
+<article class="project-row" >
+<div class="project-media" data-aos="zoom-out">
+<img src="BOOKV1.png" alt="Project 1 preview">
+</div>
+<div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
+<span class="project-tag">Mobile Application</span>
+<h3 class="project-title">Bookify Mobile Application</h3>
+<p class="project-text">A mobile app designed for service bookings (e.g., salons and barbershops), built during the pandemic to reduce in-person queues and confusion. I focused on a clean, intuitive UI and a smooth UX so users could book quickly and confidently.</p>
+<div class="project-actions">
+<!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
+         <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
+</div>
+</div>
+</article>
 
-    <!-- Row 2 (text left, image right) -->
-    <article class="project-row project-row--reverse">
-      <div class="project-media" data-aos="zoom-out">
-        <img src="TEDOV1.png" alt="Project 2 preview">
-      </div>
-      <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">Webpage Application</span>
-        <h3 class="project-title">TEDO Chatbot(Accenture, internal project)</h3>
-        <p class="project-text">An internal chatbot redesign initiative. I contributed animated and static graphics (Adobe After Effects) and helped modernize the overall look and feel to match current design trends and improve user engagement.</p>
-        <div class="project-actions">
-          <!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
-          <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
-        </div>
-      </div>
-    </article>
+<!-- Row 2 (text left, image right) -->
+<article class="project-row project-row--reverse">
+<div class="project-media" data-aos="zoom-out">
+<img src="TEDOV1.png" alt="Project 2 preview">
+</div>
+<div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
+<span class="project-tag">Webpage Application</span>
+<h3 class="project-title">TEDO Chatbot(Accenture, internal project)</h3>
+<p class="project-text">An internal chatbot redesign initiative. I contributed animated and static graphics (Adobe After Effects) and helped modernize the overall look and feel to match current design trends and improve user engagement.</p>
+<div class="project-actions">
+<!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
+         <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
+</div>
+</div>
+</article>
 
-    <!-- Row 3 (image left, text right) -->
-    <article class="project-row">
-      <div class="project-media" data-aos="zoom-out">
-        <img src="AR_DECK.png" alt="Project 3 preview">
-      </div>
-      <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">Mobile Application</span>
-        <h3 class="project-title">AR Places (Accenture, internal project)</h3>
-        <p class="project-text">I designed the UI/UX for a mobile app that lets employees reserve meeting rooms more efficiently. The goal was to streamline the booking process and make availability clearer at a glance.</p>
-        <div class="project-actions">
-          <!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
-          <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
-        </div>
-      </div>
-    </article>
-	
-    <article class="project-row project-row--reverse">
-      <div class="project-media" data-aos="zoom-out">
-        <img src="DAISANSEDAI.png" alt="Project 2 preview">
-      </div>
-      <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">Graphic T-Shirt Design</span>
-        <h3 class="project-title">Daisansedai – Rick & Morty-inspired T-shirt</h3>
-        <p class="project-text">Created front-and-back print graphics inspired by the show’s style. The client approved the concept and moved it into production.</p>
-        <div class="project-actions">
-          <!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
-          <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
-        </div>
-      </div>
-    </article>
-	
-	<article class="project-row" >
-      <div class="project-media" data-aos="zoom-out">
-        <img src="DAISANSEDAI_V2.png" alt="Project 1 preview">
-      </div>
-      <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">Graphic T-Shirt Design</span>
-        <h3 class="project-title">Daisansedai – Minimalist Flower T-shirt</h3>
-        <p class="project-text">Proposed and designed a simple, minimalist floral concept. The client liked the direction and produced the design.</p>
-        <div class="project-actions">
-          <!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
-          <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
-        </div>
-      </div>
-    </article>
-	
-    <article class="project-row project-row--reverse">
-      <div class="project-media" data-aos="zoom-out">
-        <img src="DAISANSEDAI_V3.png" alt="Project 2 preview">
-      </div>
-      <div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
-        <span class="project-tag">Graphic T-Shirt Design</span>
-        <h3 class="project-title">Daisansedai – Logo & Minimalist Japanese Wave Design</h3>
-        <p class="project-text">Developed the brand’s official graphic logo (“palatandaan”—a recognizable mark) and a minimalist Japanese wave T-shirt pattern. Both were approved and printed for production.</p>
-        <div class="project-actions">
-          <!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
-          <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
-        </div>
-      </div>
-    </article>
+<!-- Row 3 (image left, text right) -->
+<article class="project-row">
+<div class="project-media" data-aos="zoom-out">
+<img src="AR_DECK.png" alt="Project 3 preview">
+</div>
+<div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
+<span class="project-tag">Mobile Application</span>
+<h3 class="project-title">AR Places (Accenture, internal project)</h3>
+<p class="project-text">I designed the UI/UX for a mobile app that lets employees reserve meeting rooms more efficiently. The goal was to streamline the booking process and make availability clearer at a glance.</p>
+<div class="project-actions">
+<!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
+         <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
+</div>
+</div>
+</article>
 
-  </div>
+<article class="project-row project-row--reverse">
+<div class="project-media" data-aos="zoom-out">
+<img src="DAISANSEDAI.png" alt="Project 2 preview">
+</div>
+<div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
+<span class="project-tag">Graphic T-Shirt Design</span>
+<h3 class="project-title">Daisansedai – Rick & Morty-inspired T-shirt</h3>
+<p class="project-text">Created front-and-back print graphics inspired by the show’s style. The client approved the concept and moved it into production.</p>
+<div class="project-actions">
+<!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
+         <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
+</div>
+</div>
+</article>
+
+<article class="project-row" >
+<div class="project-media" data-aos="zoom-out">
+<img src="DAISANSEDAI_V2.png" alt="Project 1 preview">
+</div>
+<div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
+<span class="project-tag">Graphic T-Shirt Design</span>
+<h3 class="project-title">Daisansedai – Minimalist Flower T-shirt</h3>
+<p class="project-text">Proposed and designed a simple, minimalist floral concept. The client liked the direction and produced the design.</p>
+<div class="project-actions">
+<!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
+         <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
+</div>
+</div>
+</article>
+
+<article class="project-row project-row--reverse">
+<div class="project-media" data-aos="zoom-out">
+<img src="DAISANSEDAI_V3.png" alt="Project 2 preview">
+</div>
+<div class="project-copy" data-aos="zoom-out" data-aos-delay="120">
+<span class="project-tag">Graphic T-Shirt Design</span>
+<h3 class="project-title">Daisansedai – Logo & Minimalist Japanese Wave Design</h3>
+<p class="project-text">Developed the brand’s official graphic logo (“palatandaan”—a recognizable mark) and a minimalist Japanese wave T-shirt pattern. Both were approved and printed for production.</p>
+<div class="project-actions">
+<!--<a href="#" class="btn-primary" target="_blank" rel="noopener">View Live</a>
+         <a href="#" class="btn-ghost" target="_blank" rel="noopener">Case Study</a>-->
+</div>
+</div>
+</article>
+
+</div>
 </section>
 <section id="automation" class="section-dark">
-  <div class="container">
-    <div class="automation-wrap">
-      <!-- LEFT: Title + description -->
-      <div class="automation-copy">
-        <h2 class="section-heading">Workflow Automation</h2>
-        <p class="section-subheading">
-          I help make day-to-day operations more efficient by automating repetitive tasks. With my development background, I’m comfortable building low-code automations and integrating common tools—such as Gmail, Google Docs/Sheets, and Facebook—so information moves automatically and teams spend less time on manual updates.
-        </p>
+<div class="container">
+<div class="automation-wrap">
+<!-- LEFT: Title + description -->
+<div class="automation-copy">
+<h2 class="section-heading">Workflow Automation</h2>
+<p class="section-subheading">
+I help make day-to-day operations more efficient by automating repetitive tasks. With my development background, I’m comfortable building low-code automations and integrating common tools—such as Gmail, Google Docs/Sheets, and Facebook—so information moves automatically and teams spend less time on manual updates.
+</p>
 
-        <ul class="automation-bullets">
-          <li><b>Trigger:</b> new email in “Support”.</li>
-          <li><b>Understand:</b> extract intent + IDs from subject/body.</li>
-          <li><b>Route:</b> branch to AI reply when intent = support.</li>
-          <li><b>Draft:</b> LLM writes a polite, on-brand response.</li>
-          <li><b>Merge:</b> pull name/order/billing → clean the draft.</li>
-          <li><b>Send:</b> reply out + log thread URL.</li>
-        </ul>
+<ul class="automation-bullets">
+<li><b>Trigger:</b> new email in “Support”.</li>
+<li><b>Understand:</b> extract intent + IDs from subject/body.</li>
+<li><b>Route:</b> branch to AI reply when intent = support.</li>
+<li><b>Draft:</b> LLM writes a polite, on-brand response.</li>
+<li><b>Merge:</b> pull name/order/billing → clean the draft.</li>
+<li><b>Send:</b> reply out + log thread URL.</li>
+</ul>
 
-        <div class="automation-cta">
-          <!--<a class="btn-primary" href="#contact">Automate this for me</a>-->
-          <button class="btn-ghost ap-replay">Replay demo</button>
-        </div>
-      </div>
+<div class="automation-cta">
+          <a class="btn-primary" href="#contact">Automate this for me</a>
+<button class="btn-ghost ap-replay">Replay demo</button>
+</div>
+</div>
 
-      <!-- RIGHT: Workflow (unchanged logic, compact lane) -->
+<!-- RIGHT: Workflow (unchanged logic, compact lane) -->
 <!-- RIGHT: Workflow -->
 <div class="automation-flow">
-  <div class="apflow apflow--with-rails">
-    <!-- Main vertical rail (left) -->
-    <span class="ap-lane ap-lane--main" aria-hidden="true"></span>
+<div class="apflow apflow--with-rails">
+<!-- Main vertical rail (left) -->
+<span class="ap-lane ap-lane--main" aria-hidden="true"></span>
 
-    <!-- TOP STEPS -->
-    <ol class="ap-main" role="list">
-      <li class="ap-step" data-key="gmail">
-        <div class="ap-card">
-          <div class="ap-left"><i class="fa-brands fa-google"></i></div>
-          <div class="ap-mid">
-            <div class="ap-title">New Email (Gmail)</div>
-            <div class="ap-sub">Trigger: new message arrives in the inbox label.</div>
-            <div class="ap-result">Waiting…</div>
-          </div>
-          <div class="ap-right"><i class="fa-solid fa-check"></i></div>
-        </div>
-      </li>
-      <li class="ap-arrow" data-key="a1"><span class="ap-arrow__fill"></span></li>
+<!-- TOP STEPS -->
+<ol class="ap-main" role="list">
+<li class="ap-step" data-key="gmail">
+<div class="ap-card">
+<div class="ap-left"><i class="fa-brands fa-google"></i></div>
+<div class="ap-mid">
+<div class="ap-title">New Email (Gmail)</div>
+<div class="ap-sub">Trigger: new message arrives in the inbox label.</div>
+<div class="ap-result">Waiting…</div>
+</div>
+<div class="ap-right"><i class="fa-solid fa-check"></i></div>
+</div>
+</li>
+<li class="ap-arrow" data-key="a1"><span class="ap-arrow__fill"></span></li>
 
-      <li class="ap-step" data-key="find1">
-        <div class="ap-card">
-          <div class="ap-left"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <div class="ap-mid">
-            <div class="ap-title">Find (Text Helper)</div>
-            <div class="ap-sub">Extracts keywords &amp; reference IDs from subject/body.</div>
-            <div class="ap-result">Waiting…</div>
-          </div>
-          <div class="ap-right"><i class="fa-solid fa-check"></i></div>
-        </div>
-      </li>
-      <li class="ap-arrow" data-key="a2"><span class="ap-arrow__fill"></span></li>
+<li class="ap-step" data-key="find1">
+<div class="ap-card">
+<div class="ap-left"><i class="fa-solid fa-magnifying-glass"></i></div>
+<div class="ap-mid">
+<div class="ap-title">Find (Text Helper)</div>
+<div class="ap-sub">Extracts keywords &amp; reference IDs from subject/body.</div>
+<div class="ap-result">Waiting…</div>
+</div>
+<div class="ap-right"><i class="fa-solid fa-check"></i></div>
+</div>
+</li>
+<li class="ap-arrow" data-key="a2"><span class="ap-arrow__fill"></span></li>
 
-      <!-- Router with curved split -->
-      <li class="ap-step ap-step--router" data-key="router">
-        <div class="ap-card">
-          <div class="ap-left"><i class="fa-solid fa-diagram-project"></i></div>
-          <div class="ap-mid">
-            <div class="ap-title">Router</div>
-            <div class="ap-sub">Routes to “AI Reply” branch when intent = support.</div>
-            <div class="ap-result">Waiting…</div>
-          </div>
-          <div class="ap-right"><i class="fa-solid fa-check"></i></div>
-        </div>
-        <!-- curved join that splits into branch/otherwise -->
-        <!-- <span class="ap-branch-join" aria-hidden="true"></span> -->
-      </li>
-    </ol>
+<!-- Router with curved split -->
+<li class="ap-step ap-step--router" data-key="router">
+<div class="ap-card">
+<div class="ap-left"><i class="fa-solid fa-diagram-project"></i></div>
+<div class="ap-mid">
+<div class="ap-title">Router</div>
+<div class="ap-sub">Routes to “AI Reply” branch when intent = support.</div>
+<div class="ap-result">Waiting…</div>
+</div>
+<div class="ap-right"><i class="fa-solid fa-check"></i></div>
+</div>
+<!-- curved join that splits into branch/otherwise -->
+<!-- <span class="ap-branch-join" aria-hidden="true"></span> -->
+</li>
+</ol>
 
-    <!-- Branch area (left) + Otherwise rail (right) -->
-    <div class="ap-branches ap-rails-zone">
-      <!-- LEFT BRANCH (active path) -->
-      <div class="ap-branch ap-branch--left">
-        <div class="ap-branch__tag">Branch 1</div>
-        <ol class="ap-branchlist" role="list">
-          <li class="ap-arrow ap-arrow--small" data-key="b0"><span class="ap-arrow__fill"></span></li>
+<!-- Branch area (left) + Otherwise rail (right) -->
+<div class="ap-branches ap-rails-zone">
+<!-- LEFT BRANCH (active path) -->
+<div class="ap-branch ap-branch--left">
+<div class="ap-branch__tag">Branch 1</div>
+<ol class="ap-branchlist" role="list">
+<li class="ap-arrow ap-arrow--small" data-key="b0"><span class="ap-arrow__fill"></span></li>
 
-          <li class="ap-step" data-key="askllm">
-            <div class="ap-card">
-              <div class="ap-left"><i class="fa-solid fa-message"></i></div>
-              <div class="ap-mid">
-                <div class="ap-title">Ask LLM (OpenRouter)</div>
-                <div class="ap-sub">Generates a polite, on-brand response draft.</div>
-                <div class="ap-result">Waiting…</div>
-              </div>
-              <div class="ap-right"><i class="fa-solid fa-check"></i></div>
-            </div>
-          </li>
-          <li class="ap-arrow" data-key="b1"><span class="ap-arrow__fill"></span></li>
+<li class="ap-step" data-key="askllm">
+<div class="ap-card">
+<div class="ap-left"><i class="fa-solid fa-message"></i></div>
+<div class="ap-mid">
+<div class="ap-title">Ask LLM (OpenRouter)</div>
+<div class="ap-sub">Generates a polite, on-brand response draft.</div>
+<div class="ap-result">Waiting…</div>
+</div>
+<div class="ap-right"><i class="fa-solid fa-check"></i></div>
+</div>
+</li>
+<li class="ap-arrow" data-key="b1"><span class="ap-arrow__fill"></span></li>
 
-          <li class="ap-step" data-key="find2">
-            <div class="ap-card">
-              <div class="ap-left"><i class="fa-regular fa-file-lines"></i></div>
-              <div class="ap-mid">
-                <div class="ap-title">Find (Text Helper)</div>
-                <div class="ap-sub">Pulls name, order #, and billing info for merge.</div>
-                <div class="ap-result">Waiting…</div>
-              </div>
-              <div class="ap-right"><i class="fa-solid fa-check"></i></div>
-            </div>
-          </li>
-          <li class="ap-arrow" data-key="b2"><span class="ap-arrow__fill"></span></li>
+<li class="ap-step" data-key="find2">
+<div class="ap-card">
+<div class="ap-left"><i class="fa-regular fa-file-lines"></i></div>
+<div class="ap-mid">
+<div class="ap-title">Find (Text Helper)</div>
+<div class="ap-sub">Pulls name, order #, and billing info for merge.</div>
+<div class="ap-result">Waiting…</div>
+</div>
+<div class="ap-right"><i class="fa-solid fa-check"></i></div>
+</div>
+</li>
+<li class="ap-arrow" data-key="b2"><span class="ap-arrow__fill"></span></li>
 
-          <li class="ap-step" data-key="send">
-            <div class="ap-card">
-              <div class="ap-left"><i class="fa-brands fa-google"></i></div>
-              <div class="ap-mid">
-                <div class="ap-title">Send Email (Gmail)</div>
-                <div class="ap-sub">Sends the final reply + logs thread URL.</div>
-                <div class="ap-result">Waiting…</div>
-              </div>
-              <div class="ap-right"><i class="fa-solid fa-check"></i></div>
-            </div>
-          </li>
-        </ol>
+<li class="ap-step" data-key="send">
+<div class="ap-card">
+<div class="ap-left"><i class="fa-brands fa-google"></i></div>
+<div class="ap-mid">
+<div class="ap-title">Send Email (Gmail)</div>
+<div class="ap-sub">Sends the final reply + logs thread URL.</div>
+<div class="ap-result">Waiting…</div>
+</div>
+<div class="ap-right"><i class="fa-solid fa-check"></i></div>
+</div>
+</li>
+</ol>
 
-        <!-- End pill centered under branch -->
-        <div class="ap-end" aria-hidden="true">End</div>
-      </div>
+<!-- End pill centered under branch -->
+<div class="ap-end" aria-hidden="true">End</div>
+</div>
 
-      <!-- RIGHT OTHERWISE rail (dotted) -->
+<!-- RIGHT OTHERWISE rail (dotted) -->
 <!-- RIGHT: OTHERWISE (failed path visual) -->
 <div class="ap-branch ap-branch--right" aria-hidden="true">
-  <div class="ap-branch__tag ap-branch__tag--muted">OTHERWISE</div>
-  <div class="ap-otherwise-lane"></div>
-  <!--<div class="ap-end--right">End</div>-->
+<div class="ap-branch__tag ap-branch__tag--muted">OTHERWISE</div>
+<div class="ap-otherwise-lane"></div>
+<!--<div class="ap-end--right">End</div>-->
 </div>
 
-    </div>
-  </div>
+</div>
+</div>
 </div>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
 
 <section id="projects" class="section-light with-grid-pattern">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading fade-in section-heading-with-line">Photoshop Artworks</h2>
-      <p class="section-subheading fade-in">Beyond code, I also enjoy creating digital art and vector illustrations.</p>
-    </div>
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading fade-in section-heading-with-line">Photoshop Artworks</h2>
+<p class="section-subheading fade-in">Beyond code, I also enjoy creating digital art and vector illustrations.</p>
+</div>
 
-    <div class="art-grid mt-5">
-        <div class="art-item fade-in"><a href="vector/thanos.jpg" class="art-card" data-title="Thanos — Vector Study" data-index="0"><img src="vector/thanos.jpg" alt="Thanos artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Thanos — Vector Study</h3><p class="art-tags">VECTOR · POSTER</p></div></div>
-        <div class="art-item fade-in"><a href="vector/spiderman.jpg" class="art-card" data-title="Spiderman — Poster Experiment" data-index="1"><img src="vector/spiderman.jpg" alt="Spiderman artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Spiderman — Poster Experiment</h3><p class="art-tags">POSTER · FAN ART</p></div></div>
-        <div class="art-item fade-in"><a href="vector/hulk.png" class="art-card" data-title="Hulk — Quote Series" data-index="2"><img src="vector/hulk.png" alt="Hulk artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Hulk — Quote Series</h3><p class="art-tags">TYPOGRAPHY · VECTOR</p></div></div>
-        <div class="art-item fade-in"><a href="vector/thor.jpg" class="art-card" data-title="Thor — Lightning Portrait" data-index="3"><img src="vector/thor.jpg" alt="Thor artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Thor — Lightning Portrait</h3><p class="art-tags">PORTRAIT · EFFECTS</p></div></div>
-        <div class="art-item fade-in"><a href="vector/avengers.png" class="art-card" data-title="Avengers — Team Composition" data-index="4"><img src="vector/avengers.png" alt="Avengers artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Avengers — Team Composition</h3><p class="art-tags">COMPOSITION · VECTOR</p></div></div>
-        <div class="art-item fade-in"><a href="PIC1.png" class="art-card" data-title="Avengers — Team Composition" data-index="5"><img src="PIC1.png" alt="Avengers artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Avengers — Team Composition</h3><p class="art-tags">COMPOSITION · VECTOR</p></div></div>
-        <div class="art-item fade-in"><a href="PIC2.png" class="art-card" data-title="Avengers — Team Composition" data-index="6"><img src="PIC2.png" alt="Avengers artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Avengers — Team Composition</h3><p class="art-tags">COMPOSITION · VECTOR</p></div></div>
-        <div class="art-item fade-in"><a href="PIC3.png" class="art-card" data-title="Avengers — Team Composition" data-index="7"><img src="PIC3.png" alt="Avengers artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Avengers — Team Composition</h3><p class="art-tags">COMPOSITION · VECTOR</p></div></div>
-        <div class="art-item fade-in"><a href="VAPE.png" class="art-card" data-title="Avengers — Team Composition" data-index="8"><img src="VAPE.png" alt="Avengers artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Avengers — Team Composition</h3><p class="art-tags">COMPOSITION · VECTOR</p></div></div>
-    </div>
-    <div class="text-center mt-5">
-      <a href="https://www.behance.net/jhudelsaleef4b" target="_blank" rel="noopener" class="btn btn-outline-dark">Follow me on Behance</a>
-    </div>
-  </div>
+<div class="art-grid mt-5">
+<div class="art-item fade-in"><a href="vector/thanos.jpg" class="art-card" data-title="Thanos — Vector Study" data-index="0"><img src="vector/thanos.jpg" alt="Thanos artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Thanos — Vector Study</h3><p class="art-tags">VECTOR · POSTER</p></div></div>
+<div class="art-item fade-in"><a href="vector/spiderman.jpg" class="art-card" data-title="Spiderman — Poster Experiment" data-index="1"><img src="vector/spiderman.jpg" alt="Spiderman artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Spiderman — Poster Experiment</h3><p class="art-tags">POSTER · FAN ART</p></div></div>
+<div class="art-item fade-in"><a href="vector/hulk.png" class="art-card" data-title="Hulk — Quote Series" data-index="2"><img src="vector/hulk.png" alt="Hulk artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Hulk — Quote Series</h3><p class="art-tags">TYPOGRAPHY · VECTOR</p></div></div>
+<div class="art-item fade-in"><a href="vector/thor.jpg" class="art-card" data-title="Thor — Lightning Portrait" data-index="3"><img src="vector/thor.jpg" alt="Thor artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Thor — Lightning Portrait</h3><p class="art-tags">PORTRAIT · EFFECTS</p></div></div>
+<div class="art-item fade-in"><a href="vector/avengers.png" class="art-card" data-title="Avengers — Team Composition" data-index="4"><img src="vector/avengers.png" alt="Avengers artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Avengers — Team Composition</h3><p class="art-tags">COMPOSITION · VECTOR</p></div></div>
+<div class="art-item fade-in"><a href="PIC1.png" class="art-card" data-title="Avengers — Team Composition" data-index="5"><img src="PIC1.png" alt="Avengers artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Avengers — Team Composition</h3><p class="art-tags">COMPOSITION · VECTOR</p></div></div>
+<div class="art-item fade-in"><a href="PIC2.png" class="art-card" data-title="Avengers — Team Composition" data-index="6"><img src="PIC2.png" alt="Avengers artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Avengers — Team Composition</h3><p class="art-tags">COMPOSITION · VECTOR</p></div></div>
+<div class="art-item fade-in"><a href="PIC3.png" class="art-card" data-title="Avengers — Team Composition" data-index="7"><img src="PIC3.png" alt="Avengers artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Avengers — Team Composition</h3><p class="art-tags">COMPOSITION · VECTOR</p></div></div>
+<div class="art-item fade-in"><a href="VAPE.png" class="art-card" data-title="Avengers — Team Composition" data-index="8"><img src="VAPE.png" alt="Avengers artwork"><div class="art-card__overlay"><span class="art-card__cta"><i class="fas fa-search-plus"></i></span></div></a><div class="art-meta"><h3 class="art-title">Avengers — Team Composition</h3><p class="art-tags">COMPOSITION · VECTOR</p></div></div>
+</div>
+<div class="text-center mt-5">
+<a href="https://www.behance.net/jhudelsaleef4b" target="_blank" rel="noopener" class="btn btn-outline-dark">Follow me on Behance</a>
+</div>
+</div>
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
-    <button class="lb-btn lb-close" id="lbClose" aria-label="Close (Esc)"><i class="fas fa-times"></i></button>
-    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous (←)"><i class="fas fa-chevron-left"></i></button>
-    <figure class="lb-figure">
-      <img id="lbImg" alt="">
-      <figcaption id="lbCap"></figcaption>
-    </figure>
-    <button class="lb-btn lb-next" id="lbNext" aria-label="Next (→)"><i class="fas fa-chevron-right"></i></button>
-  </div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+<button class="lb-btn lb-close" id="lbClose" aria-label="Close (Esc)"><i class="fas fa-times"></i></button>
+<button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous (←)"><i class="fas fa-chevron-left"></i></button>
+<figure class="lb-figure">
+<img id="lbImg" alt="">
+<figcaption id="lbCap"></figcaption>
+</figure>
+<button class="lb-btn lb-next" id="lbNext" aria-label="Next (→)"><i class="fas fa-chevron-right"></i></button>
+</div>
 </section>
 
 <!-- ===================== ABOUT (single column, structured) ===================== -->
 <!-- ===================== ABOUT (2-column with media + stats) ===================== -->
 <section id="aboutme" class="section-dark about-hero">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading fade-in section-heading-with-line-dark">About Me</h2>
-    </div>
-
-    <div class="about-grid">
-      <!-- LEFT: Text blocks -->
-      <div class="about-col about-col--text">
-        <!-- Lede -->
-        <p class="about-lede fade-in">
-          I help founders and small teams stay organized, ship cleaner websites, and win back time by combining disciplined Virtual Assistant operations with dependable front-end & full-stack development.
-        </p>
-
-        <!-- What I do -->
-        <div class="about-block fade-in">
-          <span class="overline">What I do</span>
-          <p class="about-text">
-            Over the past <strong>6 years as a full-stack developer/programmer</strong>, I’ve handled <strong>many projects</strong> end-to-end—planning, building, and maintaining marketing sites, e-commerce storefronts, internal tools, knowledge bases, and reporting dashboards. I move comfortably from <strong>clean HTML/CSS/JavaScript</strong> and component-level polish to <strong>PHP/MySQL</strong> data work and light integrations, and I routinely support teams with <strong>WordPress/Shopify</strong> theme tweaks, form fixes, QA passes, and performance clean-ups that keep releases smooth and support queues quiet.
-          </p>
-        </div>
-
-        <!-- Breadth -->
-        <div class="about-block fade-in">
-          <span class="overline">Breadth</span>
-          <p class="about-text">
-            Alongside code, I bring operator habits: <strong>inbox triage & follow-ups</strong>, reliable <strong>scheduling across time zones</strong>, <strong>KPI dashboards</strong> in Google Sheets/Excel, and <strong>SOPs, macros, and templates</strong> that make delivery faster and more consistent for everyone involved.
-          </p>
-        </div>
-
-        <!-- Pull quote -->
-        <blockquote class="about-quote fade-in">
-          “Give me the messy inbox, the half-built page, or the unclear request—I’ll turn it into a checklist, ship it, and keep you in the loop.”
-        </blockquote>
-
-        <!-- How I work -->
-        <div class="about-block fade-in">
-          <span class="overline">How I work</span>
-          <p class="about-text">
-            Short discovery, a small trial to align expectations, then a weekly rhythm with progress notes, metrics, and tidy handoffs. I document as I go, keep access organized, and communicate proactively so decisions are easy and work keeps moving. If you need someone who can switch between ops and code, turn ambiguity into action, and deliver quietly without drama—I’m your person.
-          </p>
-        </div>
-      </div>
-
-      <!-- RIGHT: Photo + Stats (stats sit below photo) -->
-      <aside class="about-col about-col--media">
-        <figure class="about-photo-card fade-in">
-          <!-- Replace profile.jpg with your real headshot -->
-          <img src="jhudel.jpg" alt="Jhudel Sales" class="about-photo-img">
-          <figcaption class="about-photo-meta">
-            Jhudel Braian P. Sales
-            <span>Virtual Assistant • Full-Stack Developer</span>
-          </figcaption>
-        </figure>
-
-<div class="about-stats-grid stat-grid--feature">
-  <div class="stat-card stat--experience">
-    <div class="stat__top">
-      <span class="stat__icon"><i class="fas fa-user-tie"></i></span>
-      <span class="stat__label">Experience</span>
-    </div>
-    <div class="stat__value">6+ years full-stack</div>
-    <div class="stat__detail">Front-end, back-end, and operations support.</div>
-  </div>
-
-  <div class="stat-card stat--record">
-    <div class="stat__top">
-      <span class="stat__icon"><i class="fas fa-rocket"></i></span>
-      <span class="stat__label">Track record</span>
-    </div>
-    <div class="stat__value">Many projects shipped</div>
-    <div class="stat__detail">Marketing sites, e-com, dashboards, internal tools.</div>
-  </div>
-
-  <div class="stat-card stat--ops">
-    <div class="stat__top">
-      <span class="stat__icon"><i class="fas fa-tools"></i></span>
-      <span class="stat__label">Ops & tools</span>
-    </div>
-    <div class="stat__value">Workspace • Notion • Sheets/Excel</div>
-    <div class="stat__detail">Clean handoffs, tidy access, repeatable workflows.</div>
-  </div>
-
-  <div class="stat-card stat--style">
-    <div class="stat__top">
-      <span class="stat__icon"><i class="fas fa-shield-alt"></i></span>
-      <span class="stat__label">Work style</span>
-    </div>
-    <div class="stat__value">NDA-friendly • 2FA • access hygiene</div>
-    <div class="stat__detail">Quiet delivery, proactive comms, no drama.</div>
-  </div>
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading fade-in section-heading-with-line-dark">About Me</h2>
 </div>
 
-      </aside>
-    </div>
-  </div>
+<div class="about-grid">
+<!-- LEFT: Text blocks -->
+<div class="about-col about-col--text">
+<!-- Lede -->
+<p class="about-lede fade-in">
+I help founders and small teams stay organized, ship cleaner websites, and win back time by combining disciplined Virtual Assistant operations with dependable front-end & full-stack development.
+</p>
+
+<!-- What I do -->
+<div class="about-block fade-in">
+<span class="overline">What I do</span>
+<p class="about-text">
+Over the past <strong>6 years as a full-stack developer/programmer</strong>, I’ve handled <strong>many projects</strong> end-to-end—planning, building, and maintaining marketing sites, e-commerce storefronts, internal tools, knowledge bases, and reporting dashboards. I move comfortably from <strong>clean HTML/CSS/JavaScript</strong> and component-level polish to <strong>PHP/MySQL</strong> data work and light integrations, and I routinely support teams with <strong>WordPress/Shopify</strong> theme tweaks, form fixes, QA passes, and performance clean-ups that keep releases smooth and support queues quiet.
+</p>
+</div>
+
+<!-- Breadth -->
+<div class="about-block fade-in">
+<span class="overline">Breadth</span>
+<p class="about-text">
+Alongside code, I bring operator habits: <strong>inbox triage & follow-ups</strong>, reliable <strong>scheduling across time zones</strong>, <strong>KPI dashboards</strong> in Google Sheets/Excel, and <strong>SOPs, macros, and templates</strong> that make delivery faster and more consistent for everyone involved.
+</p>
+</div>
+
+<!-- Pull quote -->
+<blockquote class="about-quote fade-in">
+“Give me the messy inbox, the half-built page, or the unclear request—I’ll turn it into a checklist, ship it, and keep you in the loop.”
+</blockquote>
+
+<!-- How I work -->
+<div class="about-block fade-in">
+<span class="overline">How I work</span>
+<p class="about-text">
+Short discovery, a small trial to align expectations, then a weekly rhythm with progress notes, metrics, and tidy handoffs. I document as I go, keep access organized, and communicate proactively so decisions are easy and work keeps moving. If you need someone who can switch between ops and code, turn ambiguity into action, and deliver quietly without drama—I’m your person.
+</p>
+</div>
+</div>
+
+<!-- RIGHT: Photo + Stats (stats sit below photo) -->
+<aside class="about-col about-col--media">
+<figure class="about-photo-card fade-in">
+<!-- Replace profile.jpg with your real headshot -->
+<img src="jhudel.jpg" alt="Jhudel Sales" class="about-photo-img">
+<figcaption class="about-photo-meta">
+Jhudel Braian P. Sales
+<span>Virtual Assistant • Full-Stack Developer</span>
+</figcaption>
+</figure>
+
+<div class="about-stats-grid stat-grid--feature">
+<div class="stat-card stat--experience">
+<div class="stat__top">
+<span class="stat__icon"><i class="fas fa-user-tie"></i></span>
+<span class="stat__label">Experience</span>
+</div>
+<div class="stat__value">6+ years full-stack</div>
+<div class="stat__detail">Front-end, back-end, and operations support.</div>
+</div>
+
+<div class="stat-card stat--record">
+<div class="stat__top">
+<span class="stat__icon"><i class="fas fa-rocket"></i></span>
+<span class="stat__label">Track record</span>
+</div>
+<div class="stat__value">Many projects shipped</div>
+<div class="stat__detail">Marketing sites, e-com, dashboards, internal tools.</div>
+</div>
+
+<div class="stat-card stat--ops">
+<div class="stat__top">
+<span class="stat__icon"><i class="fas fa-tools"></i></span>
+<span class="stat__label">Ops & tools</span>
+</div>
+<div class="stat__value">Workspace • Notion • Sheets/Excel</div>
+<div class="stat__detail">Clean handoffs, tidy access, repeatable workflows.</div>
+</div>
+
+<div class="stat-card stat--style">
+<div class="stat__top">
+<span class="stat__icon"><i class="fas fa-shield-alt"></i></span>
+<span class="stat__label">Work style</span>
+</div>
+<div class="stat__value">NDA-friendly • 2FA • access hygiene</div>
+<div class="stat__detail">Quiet delivery, proactive comms, no drama.</div>
+</div>
+</div>
+
+</aside>
+</div>
+</div>
 </section>
 <!-- =================== /ABOUT (2-column) ===================== -->
 
@@ -1243,88 +1264,88 @@
 
 
 <section id="contact" class="section-dark">
-  <div class="container">
+<div class="container">
 
-    <!-- This header is hidden while success is showing -->
-    <div class="row text-center contact-header" id="contactHeader">
-      <div class="col-12">
-        <h2 class="section-heading fade-in section-heading-with-line-dark">Let's Create Something Great</h2>
-        <p class="section-subheading fade-in">
-          If you like my work and have a cool project to work on, send me a message.
-        </p>
-      </div>
-    </div>
+<!-- This header is hidden while success is showing -->
+<div class="row text-center contact-header" id="contactHeader">
+<div class="col-12">
+<h2 class="section-heading fade-in section-heading-with-line-dark">Let's Create Something Great</h2>
+<p class="section-subheading fade-in">
+If you like my work and have a cool project to work on, send me a message.
+</p>
+</div>
+</div>
 
-    <div class="row justify-content-center mt-5">
-      <div class="col-lg-8">
+<div class="row justify-content-center mt-5">
+<div class="col-lg-8">
 
-        <!-- CONTACT FORM (Formspree) -->
-        <form id="contactForm" class="contact-form fade-in"
-              action="https://formspree.io/f/xeorgnkl" method="POST" novalidate>
-          <!-- honeypot -->
-          <input type="text" name="_gotcha" id="hp" style="display:none" tabindex="-1" autocomplete="off">
-          <input type="hidden" name="_subject" value="New portfolio message">
-          <input type="hidden" name="_redirect" value="#contact">
+<!-- CONTACT FORM (Formspree) -->
+<form id="contactForm" class="contact-form fade-in"
+action="https://formspree.io/f/xeorgnkl" method="POST" novalidate>
+<!-- honeypot -->
+<input type="text" name="_gotcha" id="hp" style="display:none" tabindex="-1" autocomplete="off">
+<input type="hidden" name="_subject" value="New portfolio message">
+<input type="hidden" name="_redirect" value="#contact">
 
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
-            </div>
-            <div class="form-group col-md-6">
-              <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
-            </div>
-          </div>
+<div class="form-row">
+<div class="form-group col-md-6">
+<input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
+</div>
+<div class="form-group col-md-6">
+<input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+</div>
+</div>
 
-          <div class="form-group">
-            <textarea name="message" id="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
-          </div>
+<div class="form-group">
+<textarea name="message" id="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
+</div>
 
-          <div class="d-flex gap-2 justify-content-center" style="gap: 20px;">
-            <button id="sendBtn" type="submit" class="btn btn-primary btn-lg submit">Send Message</button>
+<div class="d-flex gap-2 justify-content-center" style="gap: 20px;">
+<button id="sendBtn" type="submit" class="btn btn-primary btn-lg submit">Send Message</button>
 
-            <!-- Calendly opens in a NEW TAB -->
-            <a href="https://calendly.com/jhudelps/30min"
-               target="_blank" rel="noopener"
-               class="hero-btn hero-btn--outline"
-               style="display:inline-flex;align-items:center;gap:8px;">
-              <i class="far fa-calendar-check"></i> Book a 15-min call
-            </a>
-          </div>
+<!-- Calendly opens in a NEW TAB -->
+<a href="https://calendly.com/jhudelps/30min"
+target="_blank" rel="noopener"
+class="hero-btn hero-btn--outline"
+style="display:inline-flex;align-items:center;gap:8px;">
+<i class="far fa-calendar-check"></i> Book a 15-min call
+</a>
+</div>
 
-          <!-- inline error/status -->
-          <p id="formStatus" class="mt-2 text-center" style="min-height:1.5em;"></p>
-        </form>
+<!-- inline error/status -->
+<p id="formStatus" class="mt-2 text-center" style="min-height:1.5em;"></p>
+</form>
 
-        <!-- SUCCESS PANEL -->
-        <div id="formSuccess" class="thanks-card" role="status" aria-live="polite" hidden>
-          <div class="thanks-card__badge">
-            <i class="fas fa-check"></i>
-          </div>
-          <h3 class="thanks-card__title">Thank you! Your message was sent.</h3>
-          <p class="thanks-card__desc">Please wait — I’ll reach out to you via the email you provided.</p>
-        </div>
+<!-- SUCCESS PANEL -->
+<div id="formSuccess" class="thanks-card" role="status" aria-live="polite" hidden>
+<div class="thanks-card__badge">
+<i class="fas fa-check"></i>
+</div>
+<h3 class="thanks-card__title">Thank you! Your message was sent.</h3>
+<p class="thanks-card__desc">Please wait — I’ll reach out to you via the email you provided.</p>
+</div>
 
-      </div>
-    </div>
+</div>
+</div>
 
-    <div class="social-links text-center mt-5 fade-in">
-      <a href="https://twitter.com/sjhudel" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.behance.net/jhudelsales" target="_blank" rel="noopener" aria-label="Behance"><i class="fab fa-behance"></i></a>
-      <a href="https://www.facebook.com/salesjhudel" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-    </div>
-  </div>
+<div class="social-links text-center mt-5 fade-in">
+<a href="https://twitter.com/sjhudel" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.behance.net/jhudelsales" target="_blank" rel="noopener" aria-label="Behance"><i class="fab fa-behance"></i></a>
+<a href="https://www.facebook.com/salesjhudel" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+</div>
+</div>
 </section>
 
 
 <footer>
-  <div class="container text-center">
-    <hr class="light">
-    <p>© Jhudel Braian P. Sales. MADE IN PHILIPPINES · <small id="build-stamp"></small></p>
-    <p class="footer-meta">This site was built with great tools like Photoshop and VS Code. Fonts by Google Fonts.</p>
-  </div>
+<div class="container text-center">
+<hr class="light">
+<p>© Jhudel Braian P. Sales. MADE IN PHILIPPINES · <small id="build-stamp"></small></p>
+<p class="footer-meta">This site was built with great tools like Photoshop and VS Code. Fonts by Google Fonts.</p>
+</div>
 </footer>
 <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
-  <i class="fas fa-chevron-up"></i>
+<i class="fas fa-chevron-up"></i>
 </button>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -1351,9 +1372,9 @@ $(window).on('scroll', function() {if ($(window).scrollTop() > 50) {$('.navbar')
 
 /* Smooth scrolling for navigation links */
 $('.scroll').on('click', function(event) {var targetId = this.hash;
-  if (targetId) {event.preventDefault();
-    var targetElement = $(targetId);
-    if (targetElement.length) {$('html, body').animate({scrollTop: targetElement.offset().top - $('.navbar').outerHeight()}, 800);}}});
+if (targetId) {event.preventDefault();
+var targetElement = $(targetId);
+if (targetElement.length) {$('html, body').animate({scrollTop: targetElement.offset().top - $('.navbar').outerHeight()}, 800);}}});
 
 /* Mobile Nav Toggle */
 const navToggle = document.querySelector('.nav-toggle');
@@ -1363,14 +1384,14 @@ const backdrop = document.querySelector('.backdrop');
 const mobileNavLinks = document.querySelectorAll('.sidebar__nav a');
 
 function openSidebar() {mobileNav.classList.add('is-open');
-  backdrop.classList.add('is-on');
-  mobileNav.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';}
+backdrop.classList.add('is-on');
+mobileNav.setAttribute('aria-hidden', 'false');
+document.body.style.overflow = 'hidden';}
 
 function closeSidebar() {mobileNav.classList.remove('is-open');
-  backdrop.classList.remove('is-on');
-  mobileNav.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';}
+backdrop.classList.remove('is-on');
+mobileNav.setAttribute('aria-hidden', 'true');
+document.body.style.overflow = '';}
 
 navToggle.addEventListener('click', openSidebar);
 sidebarClose.addEventListener('click', closeSidebar);
@@ -1380,388 +1401,388 @@ mobileNavLinks.forEach(link => {link.addEventListener('click', closeSidebar);});
 /* Intersection Observer for all fade-in animations */
 const fadeObserverOptions = {root: null, rootMargin: '0px', threshold: 0.1};
 const fadeObserver = new IntersectionObserver((entries) => {entries.forEach(entry => {if (entry.isIntersecting) {entry.target.classList.add('faded-in');
-      if (entry.target.classList.contains('skill-pill')) {entry.target.classList.add('is-in-view');}} else {entry.target.classList.remove('faded-in');
-      if (entry.target.classList.contains('skill-pill')) {entry.target.classList.remove('is-in-view');}}});}, fadeObserverOptions);
+if (entry.target.classList.contains('skill-pill')) {entry.target.classList.add('is-in-view');}} else {entry.target.classList.remove('faded-in');
+if (entry.target.classList.contains('skill-pill')) {entry.target.classList.remove('is-in-view');}}});}, fadeObserverOptions);
 document.querySelectorAll('.fade-in, .skill-pill').forEach(el => fadeObserver.observe(el));
 
 document.addEventListener('DOMContentLoaded', function() {/* Build timestamp */
-  const buildStamp = document.getElementById('build-stamp');
-  if (buildStamp) {const now = new Date();
-    buildStamp.textContent = `Last updated: ${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;}
+const buildStamp = document.getElementById('build-stamp');
+if (buildStamp) {const now = new Date();
+buildStamp.textContent = `Last updated: ${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;}
 
-  /* Navbar Active State Logic */
-  const sectionsAndHeader = document.querySelectorAll('header[id], section[id]');
-  const navItems = document.querySelectorAll('.navbar-nav .nav-item');
-  const navLinksMap = {};
-  navItems.forEach(item => {const link = item.querySelector('a');
-      if (link && link.hash) navLinksMap[link.hash] = item;});
-  const navObserverOptions = {rootMargin: '-40% 0px -60% 0px', threshold: 0};
-  const navObserver = new IntersectionObserver(entries => {entries.forEach(entry => {if (entry.isIntersecting) {const currentHash = `#${entry.target.id}`;
-              navItems.forEach(item => item.classList.remove('active'));
-              if (navLinksMap[currentHash]) navLinksMap[currentHash].classList.add('active');}});}, navObserverOptions);
-  sectionsAndHeader.forEach(section => navObserver.observe(section));
+/* Navbar Active State Logic */
+const sectionsAndHeader = document.querySelectorAll('header[id], section[id]');
+const navItems = document.querySelectorAll('.navbar-nav .nav-item');
+const navLinksMap = {};
+navItems.forEach(item => {const link = item.querySelector('a');
+if (link && link.hash) navLinksMap[link.hash] = item;});
+const navObserverOptions = {rootMargin: '-40% 0px -60% 0px', threshold: 0};
+const navObserver = new IntersectionObserver(entries => {entries.forEach(entry => {if (entry.isIntersecting) {const currentHash = `#${entry.target.id}`;
+navItems.forEach(item => item.classList.remove('active'));
+if (navLinksMap[currentHash]) navLinksMap[currentHash].classList.add('active');}});}, navObserverOptions);
+sectionsAndHeader.forEach(section => navObserver.observe(section));
 
-  /* Lightbox for Photoshop Arts */
-  const artCards = document.querySelectorAll('.art-card');
-  const lightbox = document.getElementById('lightbox');
-  if (!lightbox) return;
+/* Lightbox for Photoshop Arts */
+const artCards = document.querySelectorAll('.art-card');
+const lightbox = document.getElementById('lightbox');
+if (!lightbox) return;
 
-  const lbImg = document.getElementById('lbImg');
-  const lbCap = document.getElementById('lbCap');
-  const lbClose = document.getElementById('lbClose');
-  const lbPrev = document.getElementById('lbPrev');
-  const lbNext = document.getElementById('lbNext');
-  let currentIndex = 0;
-  let artItems = []; 
+const lbImg = document.getElementById('lbImg');
+const lbCap = document.getElementById('lbCap');
+const lbClose = document.getElementById('lbClose');
+const lbPrev = document.getElementById('lbPrev');
+const lbNext = document.getElementById('lbNext');
+let currentIndex = 0;
+let artItems = []; 
 
-  artCards.forEach((card, index) => {artItems.push({src: card.href, title: card.dataset.title || ''});
-    card.addEventListener('click', function(e) {e.preventDefault();
-      currentIndex = index;
-      openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);});});
+artCards.forEach((card, index) => {artItems.push({src: card.href, title: card.dataset.title || ''});
+card.addEventListener('click', function(e) {e.preventDefault();
+currentIndex = index;
+openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);});});
 
-  function openLightbox(src, title) {lbImg.src = src;
-    lbCap.textContent = title;
-    lightbox.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';}
-  function closeLightbox() {lightbox.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';}
-  function showNext() {currentIndex = (currentIndex + 1) % artItems.length; openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);}
-  function showPrev() {currentIndex = (currentIndex - 1 + artItems.length) % artItems.length; openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);}
+function openLightbox(src, title) {lbImg.src = src;
+lbCap.textContent = title;
+lightbox.setAttribute('aria-hidden', 'false');
+document.body.style.overflow = 'hidden';}
+function closeLightbox() {lightbox.setAttribute('aria-hidden', 'true');
+document.body.style.overflow = '';}
+function showNext() {currentIndex = (currentIndex + 1) % artItems.length; openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);}
+function showPrev() {currentIndex = (currentIndex - 1 + artItems.length) % artItems.length; openLightbox(artItems[currentIndex].src, artItems[currentIndex].title);}
 
-  lbClose.addEventListener('click', closeLightbox);
-  lbNext.addEventListener('click', showNext);
-  lbPrev.addEventListener('click', showPrev);
+lbClose.addEventListener('click', closeLightbox);
+lbNext.addEventListener('click', showNext);
+lbPrev.addEventListener('click', showPrev);
 
-  document.addEventListener('keydown', function(e) {if (lightbox.getAttribute('aria-hidden') === 'false') {if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') showNext();
-      if (e.key === 'ArrowLeft') showPrev();}});});
+document.addEventListener('keydown', function(e) {if (lightbox.getAttribute('aria-hidden') === 'false') {if (e.key === 'Escape') closeLightbox();
+if (e.key === 'ArrowRight') showNext();
+if (e.key === 'ArrowLeft') showPrev();}});});
 </script>
 
 <script>
 /* Back to top button */
 const backToTopButton = document.getElementById('backToTop');
 if (backToTopButton) {window.addEventListener('scroll', () => {if (window.pageYOffset > 300) backToTopButton.classList.add('show');
-    else backToTopButton.classList.remove('show');});
-  backToTopButton.addEventListener('click', () => {window.scrollTo({top: 0, behavior: 'smooth'});});}
+else backToTopButton.classList.remove('show');});
+backToTopButton.addEventListener('click', () => {window.scrollTo({top: 0, behavior: 'smooth'});});}
 
 /* FINAL Carousel Logic */
 document.addEventListener('DOMContentLoaded', function() {const wrapper = document.querySelector('.carousel-wrapper');
-  if (!wrapper) return;
+if (!wrapper) return;
 
-  const track = wrapper.querySelector('.carousel-track');
-  let cards = Array.from(track.children);
-  const nextButton = wrapper.querySelector('.carousel-btn--next');
-  const prevButton = wrapper.querySelector('.carousel-btn--prev');
+const track = wrapper.querySelector('.carousel-track');
+let cards = Array.from(track.children);
+const nextButton = wrapper.querySelector('.carousel-btn--next');
+const prevButton = wrapper.querySelector('.carousel-btn--prev');
 
-  if (cards.length <= 1) return; 
+if (cards.length <= 1) return; 
 
-  const cloneCount = Math.max(2, Math.floor(cards.length / 2)); 
-  for (let i = 0; i < cloneCount; i++) {const cloneFirst = cards[i % cards.length].cloneNode(true);
-    const cloneLast = cards[cards.length - 1 - (i % cards.length)].cloneNode(true);
-    track.appendChild(cloneFirst);
-    track.insertBefore(cloneLast, cards[0]);}
+const cloneCount = Math.max(2, Math.floor(cards.length / 2)); 
+for (let i = 0; i < cloneCount; i++) {const cloneFirst = cards[i % cards.length].cloneNode(true);
+const cloneLast = cards[cards.length - 1 - (i % cards.length)].cloneNode(true);
+track.appendChild(cloneFirst);
+track.insertBefore(cloneLast, cards[0]);}
 
-  cards = Array.from(track.children);
+cards = Array.from(track.children);
 
-  let currentIndex = cloneCount;
-  let isTransitioning = false;
+let currentIndex = cloneCount;
+let isTransitioning = false;
 
-  const updateCarousel = (instant = false) => {isTransitioning = !instant;
-    track.style.transition = instant ? 'none': 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+const updateCarousel = (instant = false) => {isTransitioning = !instant;
+track.style.transition = instant ? 'none': 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
 
-    const cardWidth = cards[0].getBoundingClientRect().width;
-    const containerWidth = track.parentElement.clientWidth;
-    const cardCenterPoint = cards[currentIndex].offsetLeft + cardWidth / 2;
-    const containerCenterPoint = containerWidth / 2;
-    const offset = containerCenterPoint - cardCenterPoint - 25; 
-    track.style.transform = `translateX(${offset}px)`;
+const cardWidth = cards[0].getBoundingClientRect().width;
+const containerWidth = track.parentElement.clientWidth;
+const cardCenterPoint = cards[currentIndex].offsetLeft + cardWidth / 2;
+const containerCenterPoint = containerWidth / 2;
+const offset = containerCenterPoint - cardCenterPoint - 25; 
+track.style.transform = `translateX(${offset}px)`;
 
-    cards.forEach((card, index) => card.classList.toggle('is-active', index === currentIndex));
+cards.forEach((card, index) => card.classList.toggle('is-active', index === currentIndex));
 
-    if (!instant) setTimeout(() => {isTransitioning = false;}, 500);};
+if (!instant) setTimeout(() => {isTransitioning = false;}, 500);};
 
-  const handleNext = () => {if (isTransitioning) return;
-    currentIndex++;
-    updateCarousel();
-    if (currentIndex >= cards.length - cloneCount) {setTimeout(() => {currentIndex = currentIndex - (cards.length - 2 * cloneCount);
-        updateCarousel(true);}, 500);}};
+const handleNext = () => {if (isTransitioning) return;
+currentIndex++;
+updateCarousel();
+if (currentIndex >= cards.length - cloneCount) {setTimeout(() => {currentIndex = currentIndex - (cards.length - 2 * cloneCount);
+updateCarousel(true);}, 500);}};
 
-  const handlePrev = () => {if (isTransitioning) return;
-    currentIndex--;
-    updateCarousel();
-    if (currentIndex < cloneCount) {setTimeout(() => {currentIndex = currentIndex + (cards.length - 2 * cloneCount);
-        updateCarousel(true);}, 500);}};
-  
-  nextButton.addEventListener('click', handleNext);
-  prevButton.addEventListener('click', handlePrev);
+const handlePrev = () => {if (isTransitioning) return;
+currentIndex--;
+updateCarousel();
+if (currentIndex < cloneCount) {setTimeout(() => {currentIndex = currentIndex + (cards.length - 2 * cloneCount);
+updateCarousel(true);}, 500);}};
 
-  updateCarousel(true); 
-  window.addEventListener('resize', () => updateCarousel(true));});
+nextButton.addEventListener('click', handleNext);
+prevButton.addEventListener('click', handlePrev);
+
+updateCarousel(true); 
+window.addEventListener('resize', () => updateCarousel(true));});
 </script>
 
 <!-- CONTACT FORM — Formspree version (works on GitHub Pages) -->
 <script>
 (function () {const form     = document.getElementById('contactForm');
-  const sendBtn  = document.getElementById('sendBtn');
-  const statusEl = document.getElementById('formStatus');
-  if (!form) return;
+const sendBtn  = document.getElementById('sendBtn');
+const statusEl = document.getElementById('formStatus');
+if (!form) return;
 
-  const setStatus = (msg, type) => {statusEl.innerHTML = msg || '';
-    statusEl.style.color = type === 'error' ? '#ffb3b3': '#a7f3d0';};
-  const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+const setStatus = (msg, type) => {statusEl.innerHTML = msg || '';
+statusEl.style.color = type === 'error' ? '#ffb3b3': '#a7f3d0';};
+const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
-  form.addEventListener('submit', async (e) => {e.preventDefault();
+form.addEventListener('submit', async (e) => {e.preventDefault();
 
-    // Honeypot
-    const hp = document.getElementById('hp');
-    if (hp && hp.value) return;
+// Honeypot
+const hp = document.getElementById('hp');
+if (hp && hp.value) return;
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+const name = document.getElementById('name').value.trim();
+const email = document.getElementById('email').value.trim();
+const message = document.getElementById('message').value.trim();
 
-    if (!name || !email || !message) {setStatus('Please fill out all fields.', 'error'); return;}
-    if (!validEmail(email)) {setStatus('Please enter a valid email address.', 'error'); return;}
+if (!name || !email || !message) {setStatus('Please fill out all fields.', 'error'); return;}
+if (!validEmail(email)) {setStatus('Please enter a valid email address.', 'error'); return;}
 
-    sendBtn.disabled = true;
-    sendBtn.textContent = 'Sending…';
-    setStatus('');
+sendBtn.disabled = true;
+sendBtn.textContent = 'Sending…';
+setStatus('');
 
-    try {const res = await fetch(form.action, {method: 'POST',
-        headers: {'Accept': 'application/json'},
-        body: new FormData(form)});
+try {const res = await fetch(form.action, {method: 'POST',
+headers: {'Accept': 'application/json'},
+body: new FormData(form)});
 
-      if (res.ok) {form.reset();
-        setStatus('Thanks! Your message was sent.', 'ok');} else {const data = await res.json().catch(() => ({}));
-        const msg = (data && data.errors && data.errors[0] && data.errors[0].message)
-                    || 'Server error. Please try again later.';
-        setStatus(msg, 'error');}} catch (err) {setStatus('Network error. Please check your connection and try again.', 'error');} finally {sendBtn.disabled = false;
-      sendBtn.textContent = 'Send Message';}});})();
+if (res.ok) {form.reset();
+setStatus('Thanks! Your message was sent.', 'ok');} else {const data = await res.json().catch(() => ({}));
+const msg = (data && data.errors && data.errors[0] && data.errors[0].message)
+|| 'Server error. Please try again later.';
+setStatus(msg, 'error');}} catch (err) {setStatus('Network error. Please check your connection and try again.', 'error');} finally {sendBtn.disabled = false;
+sendBtn.textContent = 'Send Message';}});})();
 </script>
 <script>
 (function () {const section    = document.getElementById('contact');
-  const form       = document.getElementById('contactForm');
-  const sendBtn    = document.getElementById('sendBtn');
-  const statusEl   = document.getElementById('formStatus');
-  const successBox = document.getElementById('formSuccess');
+const form       = document.getElementById('contactForm');
+const sendBtn    = document.getElementById('sendBtn');
+const statusEl   = document.getElementById('formStatus');
+const successBox = document.getElementById('formSuccess');
 
-  if (!form) return;
+if (!form) return;
 
-  const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
-  const setStatus  = (msg, type) => {statusEl.textContent = msg || '';
-    statusEl.style.color = type === 'error' ? '#ffb3b3': '#a7f3d0';};
+const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+const setStatus  = (msg, type) => {statusEl.textContent = msg || '';
+statusEl.style.color = type === 'error' ? '#ffb3b3': '#a7f3d0';};
 
-  function enterSuccessMode() {section.classList.add('success-mode');
-    form.hidden = true;
-    successBox.hidden = false;
-    successBox.classList.remove('is-leaving');
-    successBox.classList.add('is-entering');
-    // Ensure users see it even if the form was low on the page
-    section.scrollIntoView({behavior: 'smooth', block: 'start'});}
+function enterSuccessMode() {section.classList.add('success-mode');
+form.hidden = true;
+successBox.hidden = false;
+successBox.classList.remove('is-leaving');
+successBox.classList.add('is-entering');
+// Ensure users see it even if the form was low on the page
+section.scrollIntoView({behavior: 'smooth', block: 'start'});}
 
-  function exitSuccessMode() {successBox.classList.remove('is-entering');
-    successBox.classList.add('is-leaving');
-    successBox.addEventListener('animationend', function onEnd() {successBox.removeEventListener('animationend', onEnd);
-      successBox.hidden = true;
-      section.classList.remove('success-mode');
-      form.hidden = false;
-      sendBtn.disabled = false;
-      sendBtn.textContent = 'Send Message';
-      setStatus('');}, {once: true});}
+function exitSuccessMode() {successBox.classList.remove('is-entering');
+successBox.classList.add('is-leaving');
+successBox.addEventListener('animationend', function onEnd() {successBox.removeEventListener('animationend', onEnd);
+successBox.hidden = true;
+section.classList.remove('success-mode');
+form.hidden = false;
+sendBtn.disabled = false;
+sendBtn.textContent = 'Send Message';
+setStatus('');}, {once: true});}
 
-  form.addEventListener('submit', async (e) => {e.preventDefault();
+form.addEventListener('submit', async (e) => {e.preventDefault();
 
-    // honeypot
-    const hp = document.getElementById('hp');
-    if (hp && hp.value) return;
+// honeypot
+const hp = document.getElementById('hp');
+if (hp && hp.value) return;
 
-    const name    = document.getElementById('name').value.trim();
-    const email   = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    if (!name || !email || !message) {setStatus('Please fill out all fields.', 'error'); return;}
-    if (!validEmail(email))          {setStatus('Please enter a valid email address.', 'error'); return;}
+const name    = document.getElementById('name').value.trim();
+const email   = document.getElementById('email').value.trim();
+const message = document.getElementById('message').value.trim();
+if (!name || !email || !message) {setStatus('Please fill out all fields.', 'error'); return;}
+if (!validEmail(email))          {setStatus('Please enter a valid email address.', 'error'); return;}
 
-    sendBtn.disabled = true;
-    sendBtn.textContent = 'Sending…';
-    setStatus('');
+sendBtn.disabled = true;
+sendBtn.textContent = 'Sending…';
+setStatus('');
 
-    try {const res = await fetch(form.action, {method: 'POST',
-        headers: {'Accept': 'application/json'},
-        body: new FormData(form)});
+try {const res = await fetch(form.action, {method: 'POST',
+headers: {'Accept': 'application/json'},
+body: new FormData(form)});
 
-      const data = await res.json().catch(() => ({}));
-      if (res.ok && !data.error) {form.reset();
-        enterSuccessMode();
-        // Keep the success state for ~5s, then restore
-        setTimeout(exitSuccessMode, 5000);} else {const msg = (data && data.error) ? data.error: 'Something went wrong. Please try again.';
-        setStatus(msg, 'error');
-        sendBtn.disabled = false;
-        sendBtn.textContent = 'Send Message';}} catch (err) {setStatus('Network error. Please try again.', 'error');
-      sendBtn.disabled = false;
-      sendBtn.textContent = 'Send Message';}});})();
+const data = await res.json().catch(() => ({}));
+if (res.ok && !data.error) {form.reset();
+enterSuccessMode();
+// Keep the success state for ~5s, then restore
+setTimeout(exitSuccessMode, 5000);} else {const msg = (data && data.error) ? data.error: 'Something went wrong. Please try again.';
+setStatus(msg, 'error');
+sendBtn.disabled = false;
+sendBtn.textContent = 'Send Message';}} catch (err) {setStatus('Network error. Please try again.', 'error');
+sendBtn.disabled = false;
+sendBtn.textContent = 'Send Message';}});})();
 </script>
 
 <script>
 /* ===== Activepieces workflow player =====
-   - Animates steps + green arrows in order
-   - AFTER the green path completes:
-       1) OTHERWISE rail runs a dashed red "fill" (class: .is-failed)
-       2) When done, base rail locks red (class: .is-failed-done)
-   - Replay button fully resets and replays
+  - Animates steps + green arrows in order
+  - AFTER the green path completes:
+      1) OTHERWISE rail runs a dashed red "fill" (class: .is-failed)
+      2) When done, base rail locks red (class: .is-failed-done)
+  - Replay button fully resets and replays
 */
 (function () {const section    = document.querySelector('#automation');
-  if (!section) return;
+if (!section) return;
 
-  const flowRoot   = section.querySelector('.apflow');               // right column flow root
-  const replayBtn  = section.querySelector('.ap-replay');            // left column replay button
-  const rightRail  = section.querySelector('.ap-branch--right');     // OTHERWISE (desktop/tablet)
-  const rightRailM = section.querySelector('.ap-otherwise-mobile');  // OPTIONAL: OTHERWISE (mobile inline)
+const flowRoot   = section.querySelector('.apflow');               // right column flow root
+const replayBtn  = section.querySelector('.ap-replay');            // left column replay button
+const rightRail  = section.querySelector('.ap-branch--right');     // OTHERWISE (desktop/tablet)
+const rightRailM = section.querySelector('.ap-otherwise-mobile');  // OPTIONAL: OTHERWISE (mobile inline)
 
-  // === Order of elements to animate (MATCH your markup) ===
-  // Remove/adjust items if your HTML differs.
-  const orderSelectors = ['[data-key="gmail"]','[data-key="a1"]',
-    '[data-key="find1"]','[data-key="a2"]',
-    '[data-key="router"]','[data-key="b0"]',
-    '[data-key="askllm"]','[data-key="b1"]',
-    '[data-key="find2"]','[data-key="b2"]',
-    '[data-key="send"]'];
+// === Order of elements to animate (MATCH your markup) ===
+// Remove/adjust items if your HTML differs.
+const orderSelectors = ['[data-key="gmail"]','[data-key="a1"]',
+'[data-key="find1"]','[data-key="a2"]',
+'[data-key="router"]','[data-key="b0"]',
+'[data-key="askllm"]','[data-key="b1"]',
+'[data-key="find2"]','[data-key="b2"]',
+'[data-key="send"]'];
 
-  const nodes  = orderSelectors.map(sel => flowRoot.querySelector(sel)).filter(Boolean);
-  const arrows = Array.from(flowRoot.querySelectorAll('.ap-arrow'));
+const nodes  = orderSelectors.map(sel => flowRoot.querySelector(sel)).filter(Boolean);
+const arrows = Array.from(flowRoot.querySelectorAll('.ap-arrow'));
 
-  // Messages (optional; edit/remove if not needed)
-  const msgs = {gmail:  'Triggered by new email in “Support” label.',
-    find1:  'Found order # A1298 and the billing name.',
-    router: 'Routed to Branch 1 (intent: billing).',
-    askllm: 'LLM drafted a polite, on-brand reply.',
-    find2:  'Extracted customer name + address.',
-    send:   'Email sent. Thread URL logged to Sheet.'};
+// Messages (optional; edit/remove if not needed)
+const msgs = {gmail:  'Triggered by new email in “Support” label.',
+find1:  'Found order # A1298 and the billing name.',
+router: 'Routed to Branch 1 (intent: billing).',
+askllm: 'LLM drafted a polite, on-brand reply.',
+find2:  'Extracted customer name + address.',
+send:   'Email sent. Thread URL logged to Sheet.'};
 
-  let running = false;
-  let t1 = null, t2 = null, tFailStart = null, tFailDone = null;
+let running = false;
+let t1 = null, t2 = null, tFailStart = null, tFailDone = null;
 
-  function clearTimers(){[t1, t2, tFailStart, tFailDone].forEach(id => id && clearTimeout(id));
-    t1 = t2 = tFailStart = tFailDone = null;}
+function clearTimers(){[t1, t2, tFailStart, tFailDone].forEach(id => id && clearTimeout(id));
+t1 = t2 = tFailStart = tFailDone = null;}
 
-  function resetRailStates(){if (rightRail)  rightRail.classList.remove('is-failing','is-failed','is-failed-done');
-    if (rightRailM) rightRailM.classList.remove('is-failing','is-failed','is-failed-done');}
+function resetRailStates(){if (rightRail)  rightRail.classList.remove('is-failing','is-failed','is-failed-done');
+if (rightRailM) rightRailM.classList.remove('is-failing','is-failed','is-failed-done');}
 
-  function resetUI(){clearTimers();
-    resetRailStates();
+function resetUI(){clearTimers();
+resetRailStates();
 
-    // reset steps/cards
-    flowRoot.querySelectorAll('.ap-step').forEach(step=>{step.classList.remove('is-active','is-done','show-result');
-      const res = step.querySelector('.ap-result');
-      if (res) res.textContent = 'Waiting…';});
+// reset steps/cards
+flowRoot.querySelectorAll('.ap-step').forEach(step=>{step.classList.remove('is-active','is-done','show-result');
+const res = step.querySelector('.ap-result');
+if (res) res.textContent = 'Waiting…';});
 
-    // reset arrows (green connectors)
-    arrows.forEach(a=>{a.classList.remove('done');
-      const fill = a.querySelector('.ap-arrow__fill');
-      if (fill) fill.style.height = '0%';});}
+// reset arrows (green connectors)
+arrows.forEach(a=>{a.classList.remove('done');
+const fill = a.querySelector('.ap-arrow__fill');
+if (fill) fill.style.height = '0%';});}
 
-  async function play(){if (running) return;
-    running = true;
-    resetUI();
+async function play(){if (running) return;
+running = true;
+resetUI();
 
-    // play the flow
-    for (const el of nodes){if (!el) continue;
+// play the flow
+for (const el of nodes){if (!el) continue;
 
-      const isArrow = el.classList.contains('ap-arrow');
-      const isStep  = el.classList.contains('ap-step');
+const isArrow = el.classList.contains('ap-arrow');
+const isStep  = el.classList.contains('ap-step');
 
-      if (isArrow){const f = el.querySelector('.ap-arrow__fill');
-        requestAnimationFrame(()=>{if (f) f.style.height = '100%';});
-        await new Promise(r => {t1 = setTimeout(r, 300);});
-        el.classList.add('done');} else if (isStep){el.classList.add('is-active');
-        await new Promise(r => {t2 = setTimeout(r, 300);});
+if (isArrow){const f = el.querySelector('.ap-arrow__fill');
+requestAnimationFrame(()=>{if (f) f.style.height = '100%';});
+await new Promise(r => {t1 = setTimeout(r, 300);});
+el.classList.add('done');} else if (isStep){el.classList.add('is-active');
+await new Promise(r => {t2 = setTimeout(r, 300);});
 
-        const key = el.getAttribute('data-key');
-        const res = el.querySelector('.ap-result');
-        if (res && msgs[key]) res.textContent = msgs[key];
-        el.classList.add('show-result');
+const key = el.getAttribute('data-key');
+const res = el.querySelector('.ap-result');
+if (res && msgs[key]) res.textContent = msgs[key];
+el.classList.add('show-result');
 
-        await new Promise(r => {t2 = setTimeout(r, 340);});
-        el.classList.remove('is-active');
-        el.classList.add('is-done');}}
+await new Promise(r => {t2 = setTimeout(r, 340);});
+el.classList.remove('is-active');
+el.classList.add('is-done');}}
 
-    // AFTER the green path: run OTHERWISE dashed red "fill" gradually
-    // Phase 1: overlay grows (keep base gray)
-    tFailStart = setTimeout(()=>{if (rightRail)  rightRail.classList.add('is-failed','is-failing');
-      if (rightRailM) rightRailM.classList.add('is-failed','is-failing');}, 200);
+// AFTER the green path: run OTHERWISE dashed red "fill" gradually
+// Phase 1: overlay grows (keep base gray)
+tFailStart = setTimeout(()=>{if (rightRail)  rightRail.classList.add('is-failed','is-failing');
+if (rightRailM) rightRailM.classList.add('is-failed','is-failing');}, 200);
 
-    // Phase 2 (after CSS 1.2s): lock base to red dashed; remove overlay state
-    tFailDone = setTimeout(()=>{if (rightRail){rightRail.classList.remove('is-failing');
-        rightRail.classList.add('is-failed-done');}
-      if (rightRailM){rightRailM.classList.remove('is-failing');
-        rightRailM.classList.add('is-failed-done');}}, 200 + 1250); // 200ms delay + ~1.25s fill duration
+// Phase 2 (after CSS 1.2s): lock base to red dashed; remove overlay state
+tFailDone = setTimeout(()=>{if (rightRail){rightRail.classList.remove('is-failing');
+rightRail.classList.add('is-failed-done');}
+if (rightRailM){rightRailM.classList.remove('is-failing');
+rightRailM.classList.add('is-failed-done');}}, 200 + 1250); // 200ms delay + ~1.25s fill duration
 
-    running = false;}
+running = false;}
 
-  function stop(){running = false; clearTimers();}
+function stop(){running = false; clearTimers();}
 
-  // Replay button
-  if (replayBtn){replayBtn.addEventListener('click', (e)=>{e.preventDefault();
-      stop();
-      play();});}
+// Replay button
+if (replayBtn){replayBtn.addEventListener('click', (e)=>{e.preventDefault();
+stop();
+play();});}
 
-  // Autoplay when section comes into view; reset on exit so it replays later
-  const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{if (e.isIntersecting){stop(); play();}
-      else {stop(); resetUI();}});}, {root: null, rootMargin: '-20% 0px -20% 0px', threshold: 0});
+// Autoplay when section comes into view; reset on exit so it replays later
+const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{if (e.isIntersecting){stop(); play();}
+else {stop(); resetUI();}});}, {root: null, rootMargin: '-20% 0px -20% 0px', threshold: 0});
 
-  io.observe(flowRoot);})();
+io.observe(flowRoot);})();
 </script>
 <script>
 (function () {
-  // Toggle "Read more" and mark the row .is-open (so multiline panel shows)
-  // ALSO: briefly add .is-active to trigger dot/rail animations
-  var wrappers = document.querySelectorAll('#workexperience [data-readmore]');
-  function setHeight(el){ el.style.maxHeight = el.scrollHeight + 'px'; }
+// Toggle "Read more" and mark the row .is-open (so multiline panel shows)
+// ALSO: briefly add .is-active to trigger dot/rail animations
+var wrappers = document.querySelectorAll('#workexperience [data-readmore]');
+function setHeight(el){ el.style.maxHeight = el.scrollHeight + 'px'; }
 
-  wrappers.forEach(function (wrap) {
-    var btn = wrap.querySelector('.xp-readmore__btn');
-    var content = wrap.querySelector('.xp-readmore__content');
-    var row = wrap.closest('.t-row');
-    if (!btn || !content || !row) return;
+wrappers.forEach(function (wrap) {
+var btn = wrap.querySelector('.xp-readmore__btn');
+var content = wrap.querySelector('.xp-readmore__content');
+var row = wrap.closest('.t-row');
+if (!btn || !content || !row) return;
 
-    btn.addEventListener('click', function () {
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
+btn.addEventListener('click', function () {
+var expanded = btn.getAttribute('aria-expanded') === 'true';
+btn.setAttribute('aria-expanded', String(!expanded));
 
-      if (expanded) {
-        // Closing
-        content.style.maxHeight = '0px';
-        btn.textContent = 'Read more';
-        row.classList.remove('is-open');
-        row.classList.remove('is-active');
-      } else {
-        // Opening
-        setHeight(content);
-        btn.textContent = 'Read less';
-        row.classList.add('is-open');
+if (expanded) {
+// Closing
+content.style.maxHeight = '0px';
+btn.textContent = 'Read more';
+row.classList.remove('is-open');
+row.classList.remove('is-active');
+} else {
+// Opening
+setHeight(content);
+btn.textContent = 'Read less';
+row.classList.add('is-open');
 
-        // --- trigger the dot/rail pulse (short-lived .is-active) ---
-        // remove then re-add to retrigger if opened repeatedly
-        row.classList.remove('is-active');
-        // next tick so CSS animations restart
-        requestAnimationFrame(function(){
-          row.classList.add('is-active');
-          // auto-remove after animation duration (adjust if your CSS changes)
-          setTimeout(function(){ row.classList.remove('is-active'); }, 1200);
-        });
-      }
-    });
+// --- trigger the dot/rail pulse (short-lived .is-active) ---
+// remove then re-add to retrigger if opened repeatedly
+row.classList.remove('is-active');
+// next tick so CSS animations restart
+requestAnimationFrame(function(){
+row.classList.add('is-active');
+// auto-remove after animation duration (adjust if your CSS changes)
+setTimeout(function(){ row.classList.remove('is-active'); }, 1200);
+});
+}
+});
 
-    // pre-opened state
-    if (btn.getAttribute('aria-expanded') === 'true'){
-      setHeight(content);
-      row.classList.add('is-open');
-    }
+// pre-opened state
+if (btn.getAttribute('aria-expanded') === 'true'){
+setHeight(content);
+row.classList.add('is-open');
+}
 
-    // keep height correct on resize
-    window.addEventListener('resize', function(){
-      if (btn.getAttribute('aria-expanded') === 'true') setHeight(content);
-    });
-  });
+// keep height correct on resize
+window.addEventListener('resize', function(){
+if (btn.getAttribute('aria-expanded') === 'true') setHeight(content);
+});
+});
 })();
 </script>
 
@@ -1773,4 +1794,3 @@ document.addEventListener('DOMContentLoaded', function() {const wrapper = docume
 
 
 </body>
-</html>
